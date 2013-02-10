@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="HUDRoot" >
+        <Property Name="Font" Value="Sans" />
+        <Property Name="InheritsAlpha" Value="False" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        
+        <Window Type="DefaultWindow" Name="HealthPanel" >
+            <Property Name="Alpha" Value="0.7" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0,10},{1,-80},{0,140},{1,-10}}" />
+            
+            <Window Type="Style/StaticImage" Name="HealthIcon" >
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,3},{0,3},{0,67},{0,67}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="Image" Value="set:HUD_Images image:Health" />
+            </Window>
+            
+            <Window Type="Style/StaticText" Name="HealthText" >
+                <Property Name="Font" Value="SansBold" />
+                <Property Name="Text" Value="" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,70},{0,7},{1,-3},{1,-7}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+        </Window>
+        
+        <!--<Window Type="Style/FrameWindow" Name="Userlist_Box" >
+            <Property Name="Visible" Value="False" />
+            <Property Name="Font" Value="Sans" />
+            <Property Name="Alpha" Value="0.4" />
+            <Property Name="TitlebarFont" Value="Sans" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="TitlebarEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0,10},{0,10},{0,300},{0,200}}" />
+            <Property Name="DragMovingEnabled" Value="False" />
+            <Property Name="CloseButtonEnabled" Value="False" />
+            <Window Type="Style/Listbox" Name="Userlist" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1.0,0},{1.0,0}}" />
+            </Window>
+        </Window>-->
+        
+        <!--<Window Type="Style/FrameWindow" Name="DebugPanel" >
+            <Property Name="Font" Value="Sans" />
+            <Property Name="Alpha" Value="0.5" />
+            <Property Name="TitlebarFont" Value="Sans" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="TitlebarEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.2925,0},{0.13,0}}" />
+            <Property Name="DragMovingEnabled" Value="False" />
+            <Property Name="CloseButtonEnabled" Value="False" />
+            <Property Name="EWSizingCursorImage" Value="set:Style-Imageset image:MouseArrow" />
+            <Property Name="NSSizingCursorImage" Value="set:Style-Imageset image:MouseArrow" />
+            <Property Name="NESWSizingCursorImage" Value="set:Style-Imageset image:MouseArrow" />
+            <Property Name="NWSESizingCursorImage" Value="set:Style-Imageset image:MouseArrow" />
+            <Window Type="Style/StaticText" Name="Debug1" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Debug_1" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.018964,0},{0.032917,0},{0.970086,0},{0.3525,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Style/StaticText" Name="Debug2" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Debug_2" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.017682,0},{0.362501,0},{0.973077,0},{0.66875,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Style/StaticText" Name="Debug3" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Debug_3" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0164,0},{0.653751,0},{0.971795,0},{0.933334,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+        </Window>-->
+    </Window>
+</GUILayout>

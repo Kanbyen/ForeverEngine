@@ -1,0 +1,160 @@
+\hypertarget{classAIHandlerBattleSphere}{
+\section{\-A\-I\-Handler\-Battle\-Sphere \-Class \-Reference}
+\label{dc/dfb/classAIHandlerBattleSphere}\index{\-A\-I\-Handler\-Battle\-Sphere@{\-A\-I\-Handler\-Battle\-Sphere}}
+}
+
+
+\-A\-I handler for \char`\"{}battle spheres\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$ai\-Handler\-Battle\-Sphere.\-h$>$}
+
+\-Inheritance diagram for \-A\-I\-Handler\-Battle\-Sphere\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{dc/dfb/classAIHandlerBattleSphere}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIHandlerBattleSphere_a93f449f40f6d0f953d1eabe2a0f0d4c9}{
+void {\bfseries get\-Target\-From\-List} (\-A\-I\-Perception\-::\-Perception\-Map \&list, bool pick\-Last\-Percepted)}
+\label{dc/dfb/classAIHandlerBattleSphere_a93f449f40f6d0f953d1eabe2a0f0d4c9}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a36eeb738095cf0405a2cb7ebc429dd29}{
+void {\bfseries remove\-Targets\-Without\-Attitude\-From\-List} (\-A\-I\-Perception\-::\-Perception\-Map \&list, int attitude\-To\-Preserve)}
+\label{dc/dfb/classAIHandlerBattleSphere_a36eeb738095cf0405a2cb7ebc429dd29}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a4c44c7ffcd5a6037e9cdd57e141fba03}{
+void {\bfseries do\-Target\-Selection} ()}
+\label{dc/dfb/classAIHandlerBattleSphere_a4c44c7ffcd5a6037e9cdd57e141fba03}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a5575087f4971bd2437901bf6376e2fd0}{
+void \hyperlink{classAIHandlerBattleSphere_a5575087f4971bd2437901bf6376e2fd0}{notify\-Neighbours\-Of\-Percepted\-Agents} ()}
+\label{dc/dfb/classAIHandlerBattleSphere_a5575087f4971bd2437901bf6376e2fd0}
+
+\begin{DoxyCompactList}\small\item\em \-Sends a \-C\-O\-M\-P\-M\-S\-G\-\_\-\-A\-I\-\_\-\-P\-E\-R\-C\-E\-P\-T\-I\-O\-N\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N to all friendly neighbours. \end{DoxyCompactList}\item 
+\hypertarget{classAIHandlerBattleSphere_a923f4aad98f8b38afb2b2076d9258a4a}{
+virtual void {\bfseries perception\-Notification} (\hyperlink{classAIPerception}{\-A\-I\-Perception} $\ast$msg)}
+\label{dc/dfb/classAIHandlerBattleSphere_a923f4aad98f8b38afb2b2076d9258a4a}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a717d860dd0e442cb6952a1bd7f7d29a7}{
+virtual void {\bfseries attacked\-By} (\hyperlink{classObject}{\-Object} $\ast$obj, float damage)}
+\label{dc/dfb/classAIHandlerBattleSphere_a717d860dd0e442cb6952a1bd7f7d29a7}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_aa5a608805a63f9cb56bc33c46f558d61}{
+virtual void {\bfseries pos\-Update} (float time\-Since\-Last\-Frame)}
+\label{dc/dfb/classAIHandlerBattleSphere_aa5a608805a63f9cb56bc33c46f558d61}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_af5b96e9b1b6812cf814861653da26ba2}{
+virtual void {\bfseries logic\-Update} ()}
+\label{dc/dfb/classAIHandlerBattleSphere_af5b96e9b1b6812cf814861653da26ba2}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a5d3bcf22cfe32b06d60516323f8f27f2}{
+virtual void {\bfseries init} ()}
+\label{dc/dfb/classAIHandlerBattleSphere_a5d3bcf22cfe32b06d60516323f8f27f2}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a394e8c682f016d9c06560b2dafce6d00}{
+virtual void {\bfseries exit} ()}
+\label{dc/dfb/classAIHandlerBattleSphere_a394e8c682f016d9c06560b2dafce6d00}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIHandlerBattleSphere_a9325ac04b62b567e2e3f25681a36eafd}{
+\hyperlink{classAIPerception}{\-A\-I\-Perception} $\ast$ {\bfseries perception}}
+\label{dc/dfb/classAIHandlerBattleSphere_a9325ac04b62b567e2e3f25681a36eafd}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a2d171705ad0097513982dcbbc3d35f4a}{
+\hyperlink{classJitteredIntervalTimer}{\-Jittered\-Interval\-Timer} $\ast$ {\bfseries perception\-Timer}}
+\label{dc/dfb/classAIHandlerBattleSphere_a2d171705ad0097513982dcbbc3d35f4a}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_ac8ebeef442080f540bf3d694e34c1cdd}{
+\hyperlink{classAIGetNeighbours}{\-A\-I\-Get\-Neighbours} $\ast$ {\bfseries neighbours}}
+\label{dc/dfb/classAIHandlerBattleSphere_ac8ebeef442080f540bf3d694e34c1cdd}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a486c5cfd21d455a3a85acab2181f843b}{
+\hyperlink{classAIMovementController}{\-A\-I\-Movement\-Controller} $\ast$ {\bfseries movement\-Controller}}
+\label{dc/dfb/classAIHandlerBattleSphere_a486c5cfd21d455a3a85acab2181f843b}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_af9c5f65d1e88d2e13b7adb7321554d4c}{
+\hyperlink{classAIStateMachine}{\-A\-I\-State\-Machine}\*
+$<$ \hyperlink{classAIHandlerBattleSphere}{\-A\-I\-Handler\-Battle\-Sphere} $>$ $\ast$ {\bfseries state\-Machine}}
+\label{dc/dfb/classAIHandlerBattleSphere_af9c5f65d1e88d2e13b7adb7321554d4c}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a2068d9968819b1ac4a43e7a156535e51}{
+float {\bfseries time}}
+\label{dc/dfb/classAIHandlerBattleSphere_a2068d9968819b1ac4a43e7a156535e51}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a65306b0ea46211560ee315af32ce17f1}{
+bool {\bfseries has\-Target}}
+\label{dc/dfb/classAIHandlerBattleSphere_a65306b0ea46211560ee315af32ce17f1}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a088021f8f5bb053e1af68f0e942f9b87}{
+int {\bfseries target}}
+\label{dc/dfb/classAIHandlerBattleSphere_a088021f8f5bb053e1af68f0e942f9b87}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_ab2333acfea37dffe4e725c1d4c8ab2e3}{
+\hyperlink{classAIPerceptedObject}{\-A\-I\-Percepted\-Object} $\ast$ {\bfseries target\-Entry}}
+\label{dc/dfb/classAIHandlerBattleSphere_ab2333acfea37dffe4e725c1d4c8ab2e3}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_adcfa4b0ce2dc764301502c17e036ee93}{
+\-Vector3 {\bfseries guard\-Pos}}
+\label{dc/dfb/classAIHandlerBattleSphere_adcfa4b0ce2dc764301502c17e036ee93}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_aa9862ca6087a1b725ae5a7f7b9782ea1}{
+\-Vector3 {\bfseries desired\-Heading}}
+\label{dc/dfb/classAIHandlerBattleSphere_aa9862ca6087a1b725ae5a7f7b9782ea1}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_affafec32a02b57f3489b67b706380758}{
+bt\-Vector3 {\bfseries angular\-Velocity}}
+\label{dc/dfb/classAIHandlerBattleSphere_affafec32a02b57f3489b67b706380758}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a52c3883df286a98ad4ac0137c9c34977}{
+float {\bfseries fire\-Delay}}
+\label{dc/dfb/classAIHandlerBattleSphere_a52c3883df286a98ad4ac0137c9c34977}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_aa832386d7272e826655720caa6add4f7}{
+float {\bfseries shots\-Until\-Reload}}
+\label{dc/dfb/classAIHandlerBattleSphere_aa832386d7272e826655720caa6add4f7}
+
+\item 
+\hypertarget{classAIHandlerBattleSphere_a38c44396179e31f8c89b08b397a51e00}{
+bool {\bfseries has\-Anim\-Fly}}
+\label{dc/dfb/classAIHandlerBattleSphere_a38c44396179e31f8c89b08b397a51e00}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A\-I handler for \char`\"{}battle spheres\char`\"{}. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/ai\-Handler\-Battle\-Sphere.\-h\item 
+src/ai\-Handler\-Battle\-Sphere.\-cpp\end{DoxyCompactItemize}

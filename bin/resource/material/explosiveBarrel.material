@@ -1,0 +1,27 @@
+import * from "celShadingTexture.material"
+
+material ExplosiveBarrel1Material : CelShadingTexture
+{
+	technique
+	{
+		pass
+		{
+			fragment_program_ref CelShadingOutlineFragmentProgram
+			{
+				param_named edge_color float3 0 0 0
+			}
+		}
+		pass
+		{
+			fragment_program_ref CelShadingTextureFragmentProgram
+			{
+				param_named shades float 3
+			}
+
+			texture_unit
+			{
+				texture explosiveBarrel1.tga
+			}
+		}
+	}
+}

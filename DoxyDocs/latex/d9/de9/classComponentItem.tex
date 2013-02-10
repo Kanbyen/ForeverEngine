@@ -1,0 +1,97 @@
+\hypertarget{classComponentItem}{
+\section{\-Component\-Item \-Class \-Reference}
+\label{d9/de9/classComponentItem}\index{\-Component\-Item@{\-Component\-Item}}
+}
+
+
+\-Item \hyperlink{classComponent}{\-Component}.  
+
+
+
+
+{\ttfamily \#include $<$component\-Item.\-h$>$}
+
+\-Inheritance diagram for \-Component\-Item\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d9/de9/classComponentItem}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentItem_ab09298a5e65c927502137dcc63d03020}{
+virtual void \hyperlink{classComponentItem_ab09298a5e65c927502137dcc63d03020}{exit} ()}
+\label{d9/de9/classComponentItem_ab09298a5e65c927502137dcc63d03020}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentItem_adfb824da7216b5c137dce6a8ef781765}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentItem_adfac258c1dbc413f6339703b2ccf3745}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentItem_a70327fd30c0b2b336a37c65eca2a992d}{
+\hyperlink{classComponentTemplateItem}{\-Component\-Template\-Item} $\ast$ {\bfseries creator}}
+\label{d9/de9/classComponentItem_a70327fd30c0b2b336a37c65eca2a992d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Item \hyperlink{classComponent}{\-Component}. 
+
+\-Parameters\-:\par
+ \-Display\-Name\par
+ \-Type (currently available\-: weapon)\par
+ \-Holdable \mbox{[}default\-: false\mbox{]} (if the player can hold it with \-Q)\par
+ \-Takeable \mbox{[}default\-: false\mbox{]} (if the player can take it in his inventory)\par
+ \-Weight \mbox{[}default\-: 0\mbox{]} (in the inventory, not related to the mass for the physics engine)\par
+ 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentItem_adfac258c1dbc413f6339703b2ccf3745}{
+\index{\-Component\-Item@{\-Component\-Item}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentItem@{\-Component\-Item}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Item\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d9/de9/classComponentItem_adfac258c1dbc413f6339703b2ccf3745}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentItem_adfb824da7216b5c137dce6a8ef781765}{
+\index{\-Component\-Item@{\-Component\-Item}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentItem@{\-Component\-Item}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Item\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d9/de9/classComponentItem_adfb824da7216b5c137dce6a8ef781765}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Item.\-h\item 
+src/component\-Item.\-cpp\end{DoxyCompactItemize}

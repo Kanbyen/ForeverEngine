@@ -1,0 +1,74 @@
+vertex_program CelShadingTextureVertexProgram cg
+{
+	source celShadingTexture.cg
+	entry_point vertex_Entry
+	profiles vs_1_1 arbvp1
+}
+fragment_program CelShadingTextureFragmentProgram cg
+{
+	source celShadingTexture.cg
+	entry_point fragment
+	profiles ps_2_0 arbfp1
+}
+
+vertex_program CelShadingColorVertexProgram cg
+{
+	source celShadingColor.cg
+	entry_point vertex_Entry
+	profiles vs_1_1 arbvp1
+}
+vertex_program CelShadingColorVertexProgramHardwareSkinning cg
+{
+	source celShadingColor.cg
+	entry_point vertex_EntryHardwareSkinning
+	profiles vs_1_1 arbvp1
+	includes_skeletal_animation true
+}
+vertex_program CelShadingColorVertexProgramHardwareSkinningShadowCaster cg
+{
+	source celShadingColor.cg
+	entry_point vertex_EntryHardwareSkinningShadowCaster
+	profiles vs_1_1 arbvp1
+	includes_skeletal_animation true
+}
+
+fragment_program CelShadingColorFragmentProgram cg
+{
+	source celShadingColor.cg
+	entry_point fragment
+	profiles ps_2_0 arbfp1
+}
+
+vertex_program CelShadingOutlineVertexProgram cg
+{
+	source celShadingOutline.cg
+	entry_point vertex
+	profiles vs_1_1 arbvp1
+}
+vertex_program CelShadingOutlineVertexProgramHardwareSkinning cg
+{
+	source celShadingOutline.cg
+	entry_point vertexHardwareSkinning
+	profiles vs_1_1 arbvp1
+	includes_skeletal_animation true
+}
+
+fragment_program CelShadingOutlineFragmentProgram cg
+{
+	source celShadingOutline.cg
+	entry_point fragment
+	profiles ps_1_3 arbfp1
+}
+
+vertex_program BulletVertexProgram cg
+{
+	source bullet.cg
+	entry_point vertex_Entry
+	profiles vs_1_1 arbvp1
+}
+fragment_program BulletFragmentProgram cg
+{
+	source bullet.cg
+	entry_point fragment
+	profiles ps_2_0 arbfp1
+}

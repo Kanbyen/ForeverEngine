@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Imageset Name="Style-Imageset" Imagefile="Style.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false" >
+    <Image Name="FrameTop" XPos="17" YPos="8" Width="6" Height="8" />
+    <Image Name="FrameLeft" XPos="8" YPos="17" Width="8" Height="6" />
+    <Image Name="FrameRight" XPos="24" YPos="17" Width="8" Height="6" />
+    <Image Name="MouseArrow" XPos="38" YPos="12" Width="18" Height="33" />
+    <Image Name="FrameBottom" XPos="17" YPos="24" Width="6" Height="8" />
+    <Image Name="ShadowBrush" XPos="5" YPos="37" Width="22" Height="22" />
+    <Image Name="FrameTopLeft" XPos="8" YPos="8" Width="8" Height="8" />
+    <Image Name="FrameTopRight" XPos="24" YPos="8" Width="8" Height="8" />
+    <Image Name="ScrollUpArrow" XPos="61" YPos="6" Width="17" Height="17" />
+    <Image Name="ScrollbarThumb" XPos="62" YPos="45" Width="17" Height="17" />
+    <Image Name="FrameBottomLeft" XPos="8" YPos="24" Width="8" Height="8" />
+    <Image Name="ScrollDownArrow" XPos="80" YPos="25" Width="17" Height="17" />
+    <Image Name="ScrollLeftArrow" XPos="61" YPos="25" Width="17" Height="17" />
+    <Image Name="FrameBottomRight" XPos="24" YPos="24" Width="8" Height="8" />
+    <Image Name="ScrollRightArrow" XPos="80" YPos="6" Width="17" Height="17" />
+    <Image Name="HorzScrollContainer" XPos="82" YPos="51" Width="1" Height="17" />
+    <Image Name="TabButtonScrollLeft" XPos="105" YPos="50" Width="17" Height="17" />
+    <Image Name="TabHorizontalFiller" XPos="16" YPos="30" Width="8" Height="2" />
+    <Image Name="VertScrollContainer" XPos="81" YPos="48" Width="17" Height="1" />
+    <Image Name="TabButtonScrollRight" XPos="105" YPos="32" Width="17" Height="17" />
+    <Image Name="OptionUnchecked" XPos="41" YPos="50" Width="17" Height="17" />
+    <Image Name="OptionChecked" XPos="41" YPos="68" Width="17" Height="17" />
+    <Image Name="CheckUnchecked" XPos="59" YPos="63" Width="17" Height="17" />
+    <Image Name="CheckChecked" XPos="59" YPos="81" Width="17" Height="17" />
+    
+    <Image Name="GenericBrush" XPos="97" YPos="97" Width="30" Height="30" />
+</Imageset>

@@ -1,0 +1,265 @@
+\hypertarget{classAIMovementController}{
+\section{\-A\-I\-Movement\-Controller \-Class \-Reference}
+\label{d2/d30/classAIMovementController}\index{\-A\-I\-Movement\-Controller@{\-A\-I\-Movement\-Controller}}
+}
+
+
+\-Handles the movement of an agent based on multiple \char`\"{}steering behaviours\char`\"{} which can be turned on / off.  
+
+
+
+
+{\ttfamily \#include $<$ai\-Movement\-Controller.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIMovementController_afd3a3e59fa1c03cf0be592998fd7b8af}{
+\hyperlink{classAIMovementController_afd3a3e59fa1c03cf0be592998fd7b8af}{\-A\-I\-Movement\-Controller} (float \hyperlink{classAIMovementController_add1da64ae7c6fab79fb418b15c7fe72b}{max\-Force}, float \hyperlink{classAIMovementController_a9d69a734a62aa7fdad70dba727970a6d}{max\-Speed}, \hyperlink{classComponentPhysics}{\-Component\-Physics} $\ast$\hyperlink{classAIMovementController_a8f940ad2033bac1311b1a2f22f52fb7a}{phys\-Comp}, \hyperlink{classAIGetNeighbours}{\-A\-I\-Get\-Neighbours} $\ast$\hyperlink{classAIMovementController_addc735dc467b412a98c0d15fd4581b7c}{neighbours}=\-N\-U\-L\-L)}
+\label{d2/d30/classAIMovementController_afd3a3e59fa1c03cf0be592998fd7b8af}
+
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a3772cc302fa2746267094e7e09854a49}{
+void \hyperlink{classAIMovementController_a3772cc302fa2746267094e7e09854a49}{set\-Target} (\-Vector3 \hyperlink{classAIMovementController_a2cb43e63ec6273c18ba6bb527ee57324}{target})}
+\label{d2/d30/classAIMovementController_a3772cc302fa2746267094e7e09854a49}
+
+\begin{DoxyCompactList}\small\item\em \-Sets a new target, resets the variables related to measuring the success at getting to the target. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_aac3b848eac34e04b809415cf5f5de7ae}{
+void \hyperlink{classAIMovementController_aac3b848eac34e04b809415cf5f5de7ae}{update\-Target} (\-Vector3 \hyperlink{classAIMovementController_a2cb43e63ec6273c18ba6bb527ee57324}{target})}
+\label{d2/d30/classAIMovementController_aac3b848eac34e04b809415cf5f5de7ae}
+
+\begin{DoxyCompactList}\small\item\em \-Updates the target position (in contrast to \hyperlink{classAIMovementController_a3772cc302fa2746267094e7e09854a49}{set\-Target()} this method does not reset the success variables) \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a36c14ef1408430dfa365598a1f82285f}{
+\-Vector3 \hyperlink{classAIMovementController_a36c14ef1408430dfa365598a1f82285f}{calculate\-Velocity} (float dt)}
+\label{d2/d30/classAIMovementController_a36c14ef1408430dfa365598a1f82285f}
+
+\begin{DoxyCompactList}\small\item\em \-Calculates the updated velocity of the agent. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a1ac55952d3a6a8f5360a285dd3554cb5}{
+\-Vector3 \hyperlink{classAIMovementController_a1ac55952d3a6a8f5360a285dd3554cb5}{calculate\-Force} ()}
+\label{d2/d30/classAIMovementController_a1ac55952d3a6a8f5360a285dd3554cb5}
+
+\begin{DoxyCompactList}\small\item\em \-Calculates and sums the steering forces from any active behaviors. \-Usually, you don't need to call this -\/ use calculate\-Velocity instead. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a77b434b120ac1b0f37a37a799ff2a81c}{
+void \hyperlink{classAIMovementController_a77b434b120ac1b0f37a37a799ff2a81c}{reset\-Movement\-Types} ()}
+\label{d2/d30/classAIMovementController_a77b434b120ac1b0f37a37a799ff2a81c}
+
+\begin{DoxyCompactList}\small\item\em \-Turns off all steering behaviours. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a362dbeec65886ac5e8cf7d566b542151}{
+void \hyperlink{classAIMovementController_a362dbeec65886ac5e8cf7d566b542151}{set\-No\-Progress\-Timeout} (float timeout)}
+\label{d2/d30/classAIMovementController_a362dbeec65886ac5e8cf7d566b542151}
+
+\begin{DoxyCompactList}\small\item\em \-Sets the time after which, if no progress is made at getting to the target, \hyperlink{classAIMovementController_a0ed562421611af8041b8998a65c33993}{get\-Move\-To\-Target\-Failed()} returns true. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a0ed562421611af8041b8998a65c33993}{
+bool \hyperlink{classAIMovementController_a0ed562421611af8041b8998a65c33993}{get\-Move\-To\-Target\-Failed} ()}
+\label{d2/d30/classAIMovementController_a0ed562421611af8041b8998a65c33993}
+
+\begin{DoxyCompactList}\small\item\em \-Returns if the agent failed to get to the target. \-Set the timeout with \hyperlink{classAIMovementController_a362dbeec65886ac5e8cf7d566b542151}{set\-No\-Progress\-Timeout()} \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a85fce22e4b0400cd7947c9655b20ea1b}{
+\-Vector3 \hyperlink{classAIMovementController_a85fce22e4b0400cd7947c9655b20ea1b}{seek} (\-Vector3 target\-Pos)}
+\label{d2/d30/classAIMovementController_a85fce22e4b0400cd7947c9655b20ea1b}
+
+\begin{DoxyCompactList}\small\item\em \-This behavior moves the agent towards a target position. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a011043dd19b70d4e670a4b7ab1831b69}{
+void {\bfseries seek\-On} ()}
+\label{d2/d30/classAIMovementController_a011043dd19b70d4e670a4b7ab1831b69}
+
+\item 
+\hypertarget{classAIMovementController_a5499e71d0aeba1f17d7c24cf03bbff23}{
+void {\bfseries seek\-Off} ()}
+\label{d2/d30/classAIMovementController_a5499e71d0aeba1f17d7c24cf03bbff23}
+
+\item 
+\-Vector3 \hyperlink{classAIMovementController_a00acc2f75e47d354f94d27c05a82dda1}{arrive} (\-Vector3 target\-Pos, float deceleration)
+\item 
+\hypertarget{classAIMovementController_a648dafc01d2fde5d0002193bf1f6a38a}{
+void {\bfseries arrive\-On} ()}
+\label{d2/d30/classAIMovementController_a648dafc01d2fde5d0002193bf1f6a38a}
+
+\item 
+\hypertarget{classAIMovementController_a8a94c78c6b69ece231be6751f5bfdd63}{
+void {\bfseries arrive\-Off} ()}
+\label{d2/d30/classAIMovementController_a8a94c78c6b69ece231be6751f5bfdd63}
+
+\item 
+\-Vector3 \hyperlink{classAIMovementController_a10a45f42bd43e6911d8204d68b58e5f4}{wall\-Avoidance} ()
+\item 
+\hypertarget{classAIMovementController_a470f2c25e0fcacf73a419dbd33eeca84}{
+void {\bfseries wall\-Avoidance\-On} ()}
+\label{d2/d30/classAIMovementController_a470f2c25e0fcacf73a419dbd33eeca84}
+
+\item 
+\hypertarget{classAIMovementController_a89c3a00ef13d96c99d5720c3c5259b4e}{
+void {\bfseries wall\-Avoidance\-Off} ()}
+\label{d2/d30/classAIMovementController_a89c3a00ef13d96c99d5720c3c5259b4e}
+
+\item 
+\hypertarget{classAIMovementController_afc0a67cbcef5fd7b15352769b52ff6b9}{
+\-Vector3 \hyperlink{classAIMovementController_afc0a67cbcef5fd7b15352769b52ff6b9}{separation} (\hyperlink{classAIGetNeighbours}{\-A\-I\-Get\-Neighbours} $\ast$\hyperlink{classAIMovementController_addc735dc467b412a98c0d15fd4581b7c}{neighbours})}
+\label{d2/d30/classAIMovementController_afc0a67cbcef5fd7b15352769b52ff6b9}
+
+\begin{DoxyCompactList}\small\item\em \-This creates a force which separates the agent from other objects. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a4bde024b2d464b71181e387ae72dc57d}{
+void {\bfseries separation\-On} ()}
+\label{d2/d30/classAIMovementController_a4bde024b2d464b71181e387ae72dc57d}
+
+\item 
+\hypertarget{classAIMovementController_ae27a67af8ffe159e35024791b1fbebe4}{
+void {\bfseries separation\-Off} ()}
+\label{d2/d30/classAIMovementController_ae27a67af8ffe159e35024791b1fbebe4}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIMovementController_a9d69a734a62aa7fdad70dba727970a6d}{
+float \hyperlink{classAIMovementController_a9d69a734a62aa7fdad70dba727970a6d}{max\-Speed}}
+\label{d2/d30/classAIMovementController_a9d69a734a62aa7fdad70dba727970a6d}
+
+\begin{DoxyCompactList}\small\item\em \-Maximum speed. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_add1da64ae7c6fab79fb418b15c7fe72b}{
+float \hyperlink{classAIMovementController_add1da64ae7c6fab79fb418b15c7fe72b}{max\-Force}}
+\label{d2/d30/classAIMovementController_add1da64ae7c6fab79fb418b15c7fe72b}
+
+\begin{DoxyCompactList}\small\item\em \-Maximum force. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a045109cbf4b5de5ce40eb7c77412e520}{
+\-Vector3 \hyperlink{classAIMovementController_a045109cbf4b5de5ce40eb7c77412e520}{manual\-Force}}
+\label{d2/d30/classAIMovementController_a045109cbf4b5de5ce40eb7c77412e520}
+
+\begin{DoxyCompactList}\small\item\em \-Manual force set by other \-A\-I parts. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a5abc9cc99ff9bfd4db39e80b09651274}{
+\-Vector3 \hyperlink{classAIMovementController_a5abc9cc99ff9bfd4db39e80b09651274}{resulting\-Force}}
+\label{d2/d30/classAIMovementController_a5abc9cc99ff9bfd4db39e80b09651274}
+
+\begin{DoxyCompactList}\small\item\em \-The calculated force with which the agent should move. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a2cb43e63ec6273c18ba6bb527ee57324}{
+\-Vector3 \hyperlink{classAIMovementController_a2cb43e63ec6273c18ba6bb527ee57324}{target}}
+\label{d2/d30/classAIMovementController_a2cb43e63ec6273c18ba6bb527ee57324}
+
+\begin{DoxyCompactList}\small\item\em \-Target for behaviours like seek, arrive, ... \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a27ebd50119b0af0964353b29b1f3a3c1}{
+\-Vector3 \hyperlink{classAIMovementController_a27ebd50119b0af0964353b29b1f3a3c1}{current\-Pos}}
+\label{d2/d30/classAIMovementController_a27ebd50119b0af0964353b29b1f3a3c1}
+
+\begin{DoxyCompactList}\small\item\em \-Current position of the agent. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_af4ae945d0cee92b4208157248174d3f4}{
+\-Vector3 \hyperlink{classAIMovementController_af4ae945d0cee92b4208157248174d3f4}{velocity}}
+\label{d2/d30/classAIMovementController_af4ae945d0cee92b4208157248174d3f4}
+
+\begin{DoxyCompactList}\small\item\em \-Current velocity of the agent. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a534dbdf5d20d23dac08f002101fdbbc8}{
+bt\-Vector3 {\bfseries bt\-Velocity}}
+\label{d2/d30/classAIMovementController_a534dbdf5d20d23dac08f002101fdbbc8}
+
+\item 
+\hypertarget{classAIMovementController_a8a0752be819f94b838099fabc2f71d75}{
+int \hyperlink{classAIMovementController_a8a0752be819f94b838099fabc2f71d75}{movement\-Types}}
+\label{d2/d30/classAIMovementController_a8a0752be819f94b838099fabc2f71d75}
+
+\begin{DoxyCompactList}\small\item\em \-Which behaviours are turned on? \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a4ab0f981920235787865cef01c6bc186}{
+float \hyperlink{classAIMovementController_a4ab0f981920235787865cef01c6bc186}{arrive\-Deceleration}}
+\label{d2/d30/classAIMovementController_a4ab0f981920235787865cef01c6bc186}
+
+\begin{DoxyCompactList}\small\item\em \-How fast the agent should decelerate in arrive mode. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a32379d197a5ae30e0072b616114d1b61}{
+float \hyperlink{classAIMovementController_a32379d197a5ae30e0072b616114d1b61}{feeler\-Length}}
+\label{d2/d30/classAIMovementController_a32379d197a5ae30e0072b616114d1b61}
+
+\begin{DoxyCompactList}\small\item\em \-Length of the feelers for wall avoidance. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a748bd6fd1048626b79646b4d6c0cabbf}{
+float \hyperlink{classAIMovementController_a748bd6fd1048626b79646b4d6c0cabbf}{separation\-Maximum\-Distance}}
+\label{d2/d30/classAIMovementController_a748bd6fd1048626b79646b4d6c0cabbf}
+
+\begin{DoxyCompactList}\small\item\em \-The maximum distance for which separation takes effect. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_addc735dc467b412a98c0d15fd4581b7c}{
+\hyperlink{classAIGetNeighbours}{\-A\-I\-Get\-Neighbours} $\ast$ \hyperlink{classAIMovementController_addc735dc467b412a98c0d15fd4581b7c}{neighbours}}
+\label{d2/d30/classAIMovementController_addc735dc467b412a98c0d15fd4581b7c}
+
+\begin{DoxyCompactList}\small\item\em \-The neighbour list for separation etc. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a8f940ad2033bac1311b1a2f22f52fb7a}{
+\hyperlink{classComponentPhysics}{\-Component\-Physics} $\ast$ \hyperlink{classAIMovementController_a8f940ad2033bac1311b1a2f22f52fb7a}{phys\-Comp}}
+\label{d2/d30/classAIMovementController_a8f940ad2033bac1311b1a2f22f52fb7a}
+
+\begin{DoxyCompactList}\small\item\em \-The physics component of this agent. \end{DoxyCompactList}\item 
+\hypertarget{classAIMovementController_a6540cb95d5a8da71ca80a4b3354a371c}{
+float {\bfseries weight\-Seek}}
+\label{d2/d30/classAIMovementController_a6540cb95d5a8da71ca80a4b3354a371c}
+
+\item 
+\hypertarget{classAIMovementController_ae3c033e271d1eb23faf875160fd00861}{
+float {\bfseries weight\-Arrive}}
+\label{d2/d30/classAIMovementController_ae3c033e271d1eb23faf875160fd00861}
+
+\item 
+\hypertarget{classAIMovementController_ae0677a5b2373e8d17418fe2dcae0abc9}{
+float {\bfseries weight\-Wall\-Avoidance}}
+\label{d2/d30/classAIMovementController_ae0677a5b2373e8d17418fe2dcae0abc9}
+
+\item 
+\hypertarget{classAIMovementController_ac71ec0b30e9093879a890302ef951dbb}{
+float {\bfseries weight\-Separation}}
+\label{d2/d30/classAIMovementController_ac71ec0b30e9093879a890302ef951dbb}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIMovementController_af3f6ed392153acfb8754adcbe04c2d4d}{
+bool \hyperlink{classAIMovementController_af3f6ed392153acfb8754adcbe04c2d4d}{accumulate\-Force} (\-Vector3 \&sum, \-Vector3 force)}
+\label{d2/d30/classAIMovementController_af3f6ed392153acfb8754adcbe04c2d4d}
+
+\begin{DoxyCompactList}\small\item\em \-Adds force to the sum if the limit isn't reached yet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIMovementController_a165d7b0c4d23378409c82fb423f17c61}{
+float {\bfseries no\-Progress\-Timer}}
+\label{d2/d30/classAIMovementController_a165d7b0c4d23378409c82fb423f17c61}
+
+\item 
+\hypertarget{classAIMovementController_aaff982f6034b340f085c9c23d212717c}{
+float {\bfseries no\-Progress\-Timeout}}
+\label{d2/d30/classAIMovementController_aaff982f6034b340f085c9c23d212717c}
+
+\item 
+\hypertarget{classAIMovementController_a2aff1de5373e46c95220d18d77a39c82}{
+float {\bfseries closest\-Dist\-To\-Target\-Sq}}
+\label{d2/d30/classAIMovementController_a2aff1de5373e46c95220d18d77a39c82}
+
+\item 
+\hypertarget{classAIMovementController_a54dd60f147738a7e194f980dd901cce9}{
+bool {\bfseries move\-To\-Target\-Failed}}
+\label{d2/d30/classAIMovementController_a54dd60f147738a7e194f980dd901cce9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Handles the movement of an agent based on multiple \char`\"{}steering behaviours\char`\"{} which can be turned on / off. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classAIMovementController_a00acc2f75e47d354f94d27c05a82dda1}{
+\index{\-A\-I\-Movement\-Controller@{\-A\-I\-Movement\-Controller}!arrive@{arrive}}
+\index{arrive@{arrive}!AIMovementController@{\-A\-I\-Movement\-Controller}}
+\subsubsection[{arrive}]{\setlength{\rightskip}{0pt plus 5cm}\-Vector3 \-A\-I\-Movement\-Controller\-::arrive (
+\begin{DoxyParamCaption}
+\item[{\-Vector3}]{target\-Pos, }
+\item[{float}]{deceleration}
+\end{DoxyParamCaption}
+)}}
+\label{d2/d30/classAIMovementController_a00acc2f75e47d354f94d27c05a82dda1}
+\-This behavior is similar to seek but it attempts to arrive at the target position with a zero velocity \hypertarget{classAIMovementController_a10a45f42bd43e6911d8204d68b58e5f4}{
+\index{\-A\-I\-Movement\-Controller@{\-A\-I\-Movement\-Controller}!wall\-Avoidance@{wall\-Avoidance}}
+\index{wall\-Avoidance@{wall\-Avoidance}!AIMovementController@{\-A\-I\-Movement\-Controller}}
+\subsubsection[{wall\-Avoidance}]{\setlength{\rightskip}{0pt plus 5cm}\-Vector3 \-A\-I\-Movement\-Controller\-::wall\-Avoidance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{d2/d30/classAIMovementController_a10a45f42bd43e6911d8204d68b58e5f4}
+\-This returns a steering force which will keep the agent away from any walls it may encounter 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/ai\-Movement\-Controller.\-h\item 
+src/ai\-Movement\-Controller.\-cpp\end{DoxyCompactItemize}

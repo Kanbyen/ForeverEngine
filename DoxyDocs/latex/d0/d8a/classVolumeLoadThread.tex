@@ -1,0 +1,93 @@
+\hypertarget{classVolumeLoadThread}{
+\section{\-Volume\-Load\-Thread \-Class \-Reference}
+\label{d0/d8a/classVolumeLoadThread}\index{\-Volume\-Load\-Thread@{\-Volume\-Load\-Thread}}
+}
+
+
+\-Handles the loading of new volume blocks in a thread.  
+
+
+
+
+{\ttfamily \#include $<$volume\-Load\-Thread.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVolumeLoadThread_a081f90a64fad1950dc5e0be8c4f6abb9}{
+\hyperlink{classVolumeLoadThread_a081f90a64fad1950dc5e0be8c4f6abb9}{\-Volume\-Load\-Thread} (\hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$volume)}
+\label{d0/d8a/classVolumeLoadThread_a081f90a64fad1950dc5e0be8c4f6abb9}
+
+\begin{DoxyCompactList}\small\item\em \-Constructor, creates the thread. \end{DoxyCompactList}\item 
+\hypertarget{classVolumeLoadThread_a31d0f8d19dedb82cbb119150c97b5457}{
+void \hyperlink{classVolumeLoadThread_a31d0f8d19dedb82cbb119150c97b5457}{load} (\hyperlink{classPoint3}{\-Point3} position)}
+\label{d0/d8a/classVolumeLoadThread_a31d0f8d19dedb82cbb119150c97b5457}
+
+\begin{DoxyCompactList}\small\item\em \-Tell the thread to load the block located at position. \end{DoxyCompactList}\item 
+\hypertarget{classVolumeLoadThread_a83c615657e19a1e9f3d23a0cf419cb1b}{
+bool \hyperlink{classVolumeLoadThread_a83c615657e19a1e9f3d23a0cf419cb1b}{get\-Result} (\hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$\&out)}
+\label{d0/d8a/classVolumeLoadThread_a83c615657e19a1e9f3d23a0cf419cb1b}
+
+\begin{DoxyCompactList}\small\item\em \-Get a result if there is one -\/ returns true if a result has been written to out. \end{DoxyCompactList}\item 
+\hypertarget{classVolumeLoadThread_adc058f47d90ddce4b9f984d0a13eed46}{
+void \hyperlink{classVolumeLoadThread_adc058f47d90ddce4b9f984d0a13eed46}{clear\-Tasks} ()}
+\label{d0/d8a/classVolumeLoadThread_adc058f47d90ddce4b9f984d0a13eed46}
+
+\begin{DoxyCompactList}\small\item\em \-Clear the task list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVolumeLoadThread_ab4c16e2b23e25727061754b8bdf4a553}{
+boost\-::thread $\ast$ {\bfseries thread}}
+\label{d0/d8a/classVolumeLoadThread_ab4c16e2b23e25727061754b8bdf4a553}
+
+\item 
+\hypertarget{classVolumeLoadThread_a9b7fc692da17da80491ec7157c83fa23}{
+\hyperlink{classVolumeLoadThreadFunctor}{\-Volume\-Load\-Thread\-Functor} $\ast$ {\bfseries functor}}
+\label{d0/d8a/classVolumeLoadThread_a9b7fc692da17da80491ec7157c83fa23}
+
+\item 
+\hypertarget{classVolumeLoadThread_ada9135fc5fcf5098f21da9ef79515e74}{
+\hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$ {\bfseries volume}}
+\label{d0/d8a/classVolumeLoadThread_ada9135fc5fcf5098f21da9ef79515e74}
+
+\item 
+\hypertarget{classVolumeLoadThread_a33a31693d958b90b69bbcc2526c57765}{
+std\-::list$<$ \hyperlink{classPoint3}{\-Point3} $>$ {\bfseries input}}
+\label{d0/d8a/classVolumeLoadThread_a33a31693d958b90b69bbcc2526c57765}
+
+\item 
+\hypertarget{classVolumeLoadThread_ab6967a6d8e15c7a5cd8882641800a8ac}{
+boost\-::condition\-\_\-variable\-\_\-any {\bfseries input\-Cond}}
+\label{d0/d8a/classVolumeLoadThread_ab6967a6d8e15c7a5cd8882641800a8ac}
+
+\item 
+\hypertarget{classVolumeLoadThread_a6a933d0130e238f31a4564f3e396bca0}{
+boost\-::mutex {\bfseries input\-Mut}}
+\label{d0/d8a/classVolumeLoadThread_a6a933d0130e238f31a4564f3e396bca0}
+
+\item 
+\hypertarget{classVolumeLoadThread_aae7bb07877234cd256f55dccac38e7e6}{
+std\-::list$<$ \hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$ $>$ {\bfseries output}}
+\label{d0/d8a/classVolumeLoadThread_aae7bb07877234cd256f55dccac38e7e6}
+
+\item 
+\hypertarget{classVolumeLoadThread_ac86e7a66edd98eb50d9d4aa3e7330a9e}{
+boost\-::mutex {\bfseries output\-Mut}}
+\label{d0/d8a/classVolumeLoadThread_ac86e7a66edd98eb50d9d4aa3e7330a9e}
+
+\item 
+\hypertarget{classVolumeLoadThread_adde87c70b541727209743e90cc13ec7c}{
+bool \hyperlink{classVolumeLoadThread_adde87c70b541727209743e90cc13ec7c}{end\-Thread}}
+\label{d0/d8a/classVolumeLoadThread_adde87c70b541727209743e90cc13ec7c}
+
+\begin{DoxyCompactList}\small\item\em \-Set to true if the thread should terminate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Handles the loading of new volume blocks in a thread. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/volume\-Load\-Thread.\-h\item 
+src/volume\-Load\-Thread.\-cpp\end{DoxyCompactItemize}

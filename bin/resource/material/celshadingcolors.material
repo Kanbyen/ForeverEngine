@@ -1,0 +1,67 @@
+import * from "celShadingColor.material"
+
+material CelShadingBlue : CelShadingColor
+{
+	technique
+	{
+		pass
+		{
+			fragment_program_ref CelShadingOutlineFragmentProgram
+			{
+				param_named edge_color float3 0 0 0
+			}
+		}
+		pass
+		{
+			fragment_program_ref CelShadingColorFragmentProgram
+			{
+				param_named shades float 3
+				param_named base_color float3 0.170323 0.189893 0.640000
+			}
+		}
+	}
+}
+
+material CelShadingRed : CelShadingColor
+{
+	technique
+	{
+		pass
+		{
+			fragment_program_ref CelShadingOutlineFragmentProgram
+			{
+				param_named edge_color float3 0 0 0
+			}
+		}
+		pass
+		{
+			fragment_program_ref CelShadingColorFragmentProgram
+			{
+				param_named shades float 3
+				param_named base_color float3 1 0 0
+			}
+		}
+	}
+}
+
+material CelShadingOrange : CelShadingColor
+{
+	technique
+	{
+		pass
+		{
+			fragment_program_ref CelShadingOutlineFragmentProgram
+			{
+				param_named edge_color float3 0 0 0
+			}
+		}
+		pass
+		{
+			fragment_program_ref CelShadingColorFragmentProgram
+			{
+				param_named shades float 3
+				param_named base_color float3 1 0.698039216 0.215686275
+			}
+		}
+	}
+}

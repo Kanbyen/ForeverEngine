@@ -1,0 +1,5 @@
+If you work with Windows, open CMakeLists.txt and adjust the include paths below the line "ELSE(CMAKE_HOST_UNIX)" to your system.
+Then use the CMake GUI to create the build files for MinGW.
+
+If you work with Linux, create a folder named "build" in this directory, cd into it and run "cmake ../".
+Then you can build the project as usual with make.

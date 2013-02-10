@@ -1,0 +1,41 @@
+material OrangeStreak
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+			
+			diffuse 0.9609375 0.69921875 0
+
+			texture_unit
+			{
+				texture streak.tga
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material ExplosionFire
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+			
+			diffuse 1 0.85546875 0.421875
+
+			texture_unit
+			{
+				texture explosionFire.tga
+				tex_address_mode clamp
+			}
+		}
+	}
+}

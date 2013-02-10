@@ -1,0 +1,68 @@
+\hypertarget{classGameModeManager}{
+\section{\-Game\-Mode\-Manager \-Class \-Reference}
+\label{d0/dab/classGameModeManager}\index{\-Game\-Mode\-Manager@{\-Game\-Mode\-Manager}}
+}
+
+
+\-Keeps a list of game modes.  
+
+
+
+
+{\ttfamily \#include $<$game\-Mode.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGameModeManager_aeb7a41c22689eb427d3d2367727917a1}{
+void \hyperlink{classGameModeManager_aeb7a41c22689eb427d3d2367727917a1}{exit} ()}
+\label{d0/dab/classGameModeManager_aeb7a41c22689eb427d3d2367727917a1}
+
+\begin{DoxyCompactList}\small\item\em \-Clean up. \end{DoxyCompactList}\item 
+\hypertarget{classGameModeManager_a302d93110b00421b6021b2d97468c654}{
+void \hyperlink{classGameModeManager_a302d93110b00421b6021b2d97468c654}{set\-Act\-Mode} (const char $\ast$id)}
+\label{d0/dab/classGameModeManager_a302d93110b00421b6021b2d97468c654}
+
+\begin{DoxyCompactList}\small\item\em \-Sets the active mode by id. \end{DoxyCompactList}\item 
+\hypertarget{classGameModeManager_a5988386246dd3a8c9e42f914c8067343}{
+void \hyperlink{classGameModeManager_a5988386246dd3a8c9e42f914c8067343}{do\-Game\-Mode\-Initialization} ()}
+\label{d0/dab/classGameModeManager_a5988386246dd3a8c9e42f914c8067343}
+
+\begin{DoxyCompactList}\small\item\em \-Call the game mode init script of the acive game mode. \end{DoxyCompactList}\item 
+\hypertarget{classGameModeManager_abbef1e92f3fec7badb5050dd9c733f83}{
+\hyperlink{classGameMode}{\-Game\-Mode} $\ast$ \hyperlink{classGameModeManager_abbef1e92f3fec7badb5050dd9c733f83}{get\-Mode\-By\-I\-D} (const char $\ast$id)}
+\label{d0/dab/classGameModeManager_abbef1e92f3fec7badb5050dd9c733f83}
+
+\begin{DoxyCompactList}\small\item\em \-Get a game mode by \-I\-D. \end{DoxyCompactList}\item 
+\hypertarget{classGameModeManager_a57df15eda971152c88c5765ac024b465}{
+void \hyperlink{classGameModeManager_a57df15eda971152c88c5765ac024b465}{load\-Modes\-From\-Archive} (const char $\ast$filename, const char $\ast$archive\-Type)}
+\label{d0/dab/classGameModeManager_a57df15eda971152c88c5765ac024b465}
+
+\begin{DoxyCompactList}\small\item\em \-Loads modes from an archive. \end{DoxyCompactList}\item 
+\hypertarget{classGameModeManager_a19724c5aabb5e6fbcf6b5c07984338c0}{
+void \hyperlink{classGameModeManager_a19724c5aabb5e6fbcf6b5c07984338c0}{load\-Mode\-From\-File} (const char $\ast$file)}
+\label{d0/dab/classGameModeManager_a19724c5aabb5e6fbcf6b5c07984338c0}
+
+\begin{DoxyCompactList}\small\item\em \-Loads mode from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGameModeManager_a6458a0878b4c1eb17930d68859cedbe0}{
+\hyperlink{classGameMode}{\-Game\-Mode} $\ast$ \hyperlink{classGameModeManager_a6458a0878b4c1eb17930d68859cedbe0}{act\-Mode}}
+\label{d0/dab/classGameModeManager_a6458a0878b4c1eb17930d68859cedbe0}
+
+\begin{DoxyCompactList}\small\item\em \-Active game mode. \end{DoxyCompactList}\item 
+\hypertarget{classGameModeManager_a1c6c832504a45b6c0b5964958c173210}{
+std\-::vector$<$ \hyperlink{classGameMode}{\-Game\-Mode} $\ast$ $>$ \hyperlink{classGameModeManager_a1c6c832504a45b6c0b5964958c173210}{game\-Modes}}
+\label{d0/dab/classGameModeManager_a1c6c832504a45b6c0b5964958c173210}
+
+\begin{DoxyCompactList}\small\item\em \-List of all game modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Keeps a list of game modes. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/game\-Mode.\-h\item 
+src/game\-Mode.\-cpp\end{DoxyCompactItemize}

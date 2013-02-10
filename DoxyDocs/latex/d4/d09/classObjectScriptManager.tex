@@ -1,0 +1,72 @@
+\hypertarget{classObjectScriptManager}{
+\section{\-Object\-Script\-Manager \-Class \-Reference}
+\label{d4/d09/classObjectScriptManager}\index{\-Object\-Script\-Manager@{\-Object\-Script\-Manager}}
+}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObjectScriptManager_aeb0d9d1724d8aaf569e985b8cfc7ad7a}{
+typedef std\-::map$<$ lua\-\_\-\-State \*
+$\ast$, \hyperlink{classObjectScriptExecutor}{\-Object\-Script\-Executor} $\ast$ $>$\*
+\-::iterator {\bfseries state\-Map\-Itr}}
+\label{d4/d09/classObjectScriptManager_aeb0d9d1724d8aaf569e985b8cfc7ad7a}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObjectScriptManager_a7f4ba81389394cab375bf0b30d620df1}{
+void \hyperlink{classObjectScriptManager_a7f4ba81389394cab375bf0b30d620df1}{init} ()}
+\label{d4/d09/classObjectScriptManager_a7f4ba81389394cab375bf0b30d620df1}
+
+\begin{DoxyCompactList}\small\item\em \-Initializes the scripting language and registers the game functions for use by the scripts. \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptManager_aa6fdee490e01fa2af2437e4b73baa23a}{
+void \hyperlink{classObjectScriptManager_aa6fdee490e01fa2af2437e4b73baa23a}{exit} ()}
+\label{d4/d09/classObjectScriptManager_aa6fdee490e01fa2af2437e4b73baa23a}
+
+\begin{DoxyCompactList}\small\item\em \-Cleans up. \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptManager_a5ad4715832f85b153aa60e110462fa68}{
+void \hyperlink{classObjectScriptManager_a5ad4715832f85b153aa60e110462fa68}{load\-Scripts\-From\-Archive} (const char $\ast$filename, const char $\ast$archive\-Type)}
+\label{d4/d09/classObjectScriptManager_a5ad4715832f85b153aa60e110462fa68}
+
+\begin{DoxyCompactList}\small\item\em \-Loads scripts from an archive. \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptManager_a42d350f6ce221a0505c745c107e8552f}{
+void \hyperlink{classObjectScriptManager_a42d350f6ce221a0505c745c107e8552f}{load\-Scripts\-From\-File} (const char $\ast$file)}
+\label{d4/d09/classObjectScriptManager_a42d350f6ce221a0505c745c107e8552f}
+
+\begin{DoxyCompactList}\small\item\em \-Loads scripts from a file. \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptManager_ae79a63a3b04468493009e84a10b9c5d8}{
+void {\bfseries add\-To\-State\-Map} (\hyperlink{classObjectScriptExecutor}{\-Object\-Script\-Executor} $\ast$exec)}
+\label{d4/d09/classObjectScriptManager_ae79a63a3b04468493009e84a10b9c5d8}
+
+\item 
+\hypertarget{classObjectScriptManager_a75c9ed6835afd059b7c3bcec046bc7d8}{
+void {\bfseries remove\-From\-State\-Map} (\hyperlink{classObjectScriptExecutor}{\-Object\-Script\-Executor} $\ast$exec)}
+\label{d4/d09/classObjectScriptManager_a75c9ed6835afd059b7c3bcec046bc7d8}
+
+\item 
+\hypertarget{classObjectScriptManager_a3203ba0aaa5dbe3df849e20ed9a2f350}{
+\hyperlink{classObjectScriptExecutor}{\-Object\-Script\-Executor} $\ast$ {\bfseries get\-Exec} (lua\-\_\-\-State $\ast$state)}
+\label{d4/d09/classObjectScriptManager_a3203ba0aaa5dbe3df849e20ed9a2f350}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObjectScriptManager_a2e84518e303fcbbc9ed6b0c49ed0bd82}{
+lua\-\_\-\-State $\ast$ {\bfseries master\-State}}
+\label{d4/d09/classObjectScriptManager_a2e84518e303fcbbc9ed6b0c49ed0bd82}
+
+\item 
+\hypertarget{classObjectScriptManager_a73e3bde2c236cba7f292459913603494}{
+std\-::map$<$ lua\-\_\-\-State \*
+$\ast$, \hyperlink{classObjectScriptExecutor}{\-Object\-Script\-Executor} $\ast$ $>$ {\bfseries state\-Map}}
+\label{d4/d09/classObjectScriptManager_a73e3bde2c236cba7f292459913603494}
+
+\end{DoxyCompactItemize}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/object\-Script.\-h\item 
+src/object\-Script.\-cpp\end{DoxyCompactItemize}

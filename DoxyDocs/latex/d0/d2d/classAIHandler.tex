@@ -1,0 +1,68 @@
+\hypertarget{classAIHandler}{
+\section{\-A\-I\-Handler \-Class \-Reference}
+\label{d0/d2d/classAIHandler}\index{\-A\-I\-Handler@{\-A\-I\-Handler}}
+}
+
+
+\-Base class for \char`\"{}\-A\-I Handlers\char`\"{} to which the \-A\-I component delegates all the work. \-Important\-: \-Derived classes must not use the class constructor / destructor; init() and exit() have to be used. \-They may be called multiple times in the life of the class.  
+
+
+
+
+{\ttfamily \#include $<$component\-A\-I.\-h$>$}
+
+\-Inheritance diagram for \-A\-I\-Handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/d2d/classAIHandler}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIHandler_ac280ee1dde1c132f15bbdd021a44719d}{
+virtual void {\bfseries perception\-Notification} (\hyperlink{classAIPerception}{\-A\-I\-Perception} $\ast$msg)}
+\label{d0/d2d/classAIHandler_ac280ee1dde1c132f15bbdd021a44719d}
+
+\item 
+\hypertarget{classAIHandler_a39b49ccde4d584df53b361bb7b6c2f3e}{
+virtual void {\bfseries attacked\-By} (\hyperlink{classObject}{\-Object} $\ast$obj, float damage)}
+\label{d0/d2d/classAIHandler_a39b49ccde4d584df53b361bb7b6c2f3e}
+
+\item 
+\hypertarget{classAIHandler_a70d87fbd41aa05a8dc0b5da63493633d}{
+virtual void {\bfseries pos\-Update} (float time\-Since\-Last\-Frame)=0}
+\label{d0/d2d/classAIHandler_a70d87fbd41aa05a8dc0b5da63493633d}
+
+\item 
+\hypertarget{classAIHandler_ae60030ae91b367e8ca3a444fedfe2fb3}{
+virtual void {\bfseries logic\-Update} ()=0}
+\label{d0/d2d/classAIHandler_ae60030ae91b367e8ca3a444fedfe2fb3}
+
+\item 
+\hypertarget{classAIHandler_a85ee4d9b6c24a7f44abe0adfc9b1baf5}{
+virtual void {\bfseries init} ()=0}
+\label{d0/d2d/classAIHandler_a85ee4d9b6c24a7f44abe0adfc9b1baf5}
+
+\item 
+\hypertarget{classAIHandler_aeca648941d1ff91c42f2abe11aa1479e}{
+virtual void {\bfseries exit} ()=0}
+\label{d0/d2d/classAIHandler_aeca648941d1ff91c42f2abe11aa1479e}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIHandler_aa8fdc1389632955e2d91a3d296f8b688}{
+\hyperlink{classComponentAI}{\-Component\-A\-I} $\ast$ {\bfseries ai\-Comp}}
+\label{d0/d2d/classAIHandler_aa8fdc1389632955e2d91a3d296f8b688}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Base class for \char`\"{}\-A\-I Handlers\char`\"{} to which the \-A\-I component delegates all the work. \-Important\-: \-Derived classes must not use the class constructor / destructor; init() and exit() have to be used. \-They may be called multiple times in the life of the class. 
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-A\-I.\-h\end{DoxyCompactItemize}

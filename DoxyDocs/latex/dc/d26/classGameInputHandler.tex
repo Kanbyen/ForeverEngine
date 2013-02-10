@@ -1,0 +1,98 @@
+\hypertarget{classGameInputHandler}{
+\section{\-Game\-Input\-Handler \-Class \-Reference}
+\label{dc/d26/classGameInputHandler}\index{\-Game\-Input\-Handler@{\-Game\-Input\-Handler}}
+}
+
+
+\-Input \-Handler for the \char`\"{}\-Sandbox\char`\"{} mode. \-Pseudo-\/\-Singleton\-: use the global variable game\-Input\-Handler.  
+
+
+
+
+{\ttfamily \#include $<$state\-Game\-Input\-Handler.\-h$>$}
+
+\-Inheritance diagram for \-Game\-Input\-Handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{dc/d26/classGameInputHandler}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGameInputHandler_a3ed9909a85797b157850133dc299f169}{
+virtual void \hyperlink{classGameInputHandler_a3ed9909a85797b157850133dc299f169}{update} (float time\-Since\-Last\-Frame)}
+\label{dc/d26/classGameInputHandler_a3ed9909a85797b157850133dc299f169}
+
+\begin{DoxyCompactList}\small\item\em \-Can be used to query some input states directly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGameInputHandler_ae6fab58311a119a9899fa61488af97cf}{
+static void \hyperlink{classGameInputHandler_ae6fab58311a119a9899fa61488af97cf}{handle\-Common\-Keyboard\-Events} (const \-O\-I\-S\-::\-Key\-Event \&evt)}
+\label{dc/d26/classGameInputHandler_ae6fab58311a119a9899fa61488af97cf}
+
+\begin{DoxyCompactList}\small\item\em \-Handle keyboard events which are posible as player and in sandbox mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGameInputHandler_a01285ca4208442ae37f5555d50d404ac}{
+bool \hyperlink{classGameInputHandler_a01285ca4208442ae37f5555d50d404ac}{gui\-Input\-Mode}}
+\label{dc/d26/classGameInputHandler_a01285ca4208442ae37f5555d50d404ac}
+
+\begin{DoxyCompactList}\small\item\em \-If yes, don't process keyboard events because the user enters something in an input field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGameInputHandler_a95015b4720dbbcf88a2ca24e854fc684}{
+void {\bfseries handle\-Mouse} (float time\-Since\-Last\-Frame)}
+\label{dc/d26/classGameInputHandler_a95015b4720dbbcf88a2ca24e854fc684}
+
+\item 
+\hypertarget{classGameInputHandler_a44da21ce83cc18e7853ca8c9e6ab2863}{
+void {\bfseries handle\-Keyboard} (float time\-Since\-Last\-Frame)}
+\label{dc/d26/classGameInputHandler_a44da21ce83cc18e7853ca8c9e6ab2863}
+
+\item 
+\hypertarget{classGameInputHandler_a49e5283e506fbafc6b931b97041215c8}{
+virtual bool {\bfseries mouse\-Pressed} (const \-O\-I\-S\-::\-Mouse\-Event \&evt, \-O\-I\-S\-::\-Mouse\-Button\-I\-D btn)}
+\label{dc/d26/classGameInputHandler_a49e5283e506fbafc6b931b97041215c8}
+
+\item 
+\hypertarget{classGameInputHandler_af1e4c92860210a8c7913c5584ff41d85}{
+virtual bool {\bfseries key\-Pressed} (const \-O\-I\-S\-::\-Key\-Event \&evt)}
+\label{dc/d26/classGameInputHandler_af1e4c92860210a8c7913c5584ff41d85}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGameInputHandler_a628c8fc247bf2748880476c3944a1201}{
+\-Vector3 \hyperlink{classGameInputHandler_a628c8fc247bf2748880476c3944a1201}{translate\-Vector}}
+\label{dc/d26/classGameInputHandler_a628c8fc247bf2748880476c3944a1201}
+
+\begin{DoxyCompactList}\small\item\em \-Camera movement. \end{DoxyCompactList}\item 
+\hypertarget{classGameInputHandler_a5f3620a1cab5457a55f0f899173947a4}{
+\-Radian {\bfseries rot\-X}}
+\label{dc/d26/classGameInputHandler_a5f3620a1cab5457a55f0f899173947a4}
+
+\item 
+\hypertarget{classGameInputHandler_ac25a2f5df89bb5db999d07aeec9177fc}{
+\-Radian {\bfseries rot\-Y}}
+\label{dc/d26/classGameInputHandler_ac25a2f5df89bb5db999d07aeec9177fc}
+
+\item 
+\hypertarget{classGameInputHandler_ae9fd9f0e39eaa0570cff9fb83384c081}{
+float {\bfseries move\-Scale}}
+\label{dc/d26/classGameInputHandler_ae9fd9f0e39eaa0570cff9fb83384c081}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Input \-Handler for the \char`\"{}\-Sandbox\char`\"{} mode. \-Pseudo-\/\-Singleton\-: use the global variable game\-Input\-Handler. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/state\-Game\-Input\-Handler.\-h\item 
+src/state\-Game\-Input\-Handler.\-cpp\end{DoxyCompactItemize}

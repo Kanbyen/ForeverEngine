@@ -1,0 +1,142 @@
+\hypertarget{classGameDataStorage}{
+\section{\-Game\-Data\-Storage \-Class \-Reference}
+\label{dc/d0b/classGameDataStorage}\index{\-Game\-Data\-Storage@{\-Game\-Data\-Storage}}
+}
+
+
+\-Singleton class which stores objects and voxel blocks which are temporarily unloaded until a player comes close to them again. \-Will also provide functions to store them to disk / load them.  
+
+
+
+
+{\ttfamily \#include $<$game\-Data\-Storage.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGameDataStorage_a3a7a6562f8045fc0ec7adde7c7b3425d}{
+void \hyperlink{classGameDataStorage_a3a7a6562f8045fc0ec7adde7c7b3425d}{clear} ()}
+\label{dc/d0b/classGameDataStorage_a3a7a6562f8045fc0ec7adde7c7b3425d}
+
+\begin{DoxyCompactList}\small\item\em \-Frees all allocated memory. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_aca0b1ee8b50bed0148cab6acbdea2f9c}{
+void \hyperlink{classGameDataStorage_aca0b1ee8b50bed0148cab6acbdea2f9c}{store\-Block} (\hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$block, int x, int y, int z)}
+\label{dc/d0b/classGameDataStorage_aca0b1ee8b50bed0148cab6acbdea2f9c}
+
+\begin{DoxyCompactList}\small\item\em \-Stores the given block. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a282ed9bb0d606664f6e5b2fb81635c38}{
+\hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$ \hyperlink{classGameDataStorage_a282ed9bb0d606664f6e5b2fb81635c38}{fetch\-Block} (int x, int y, int z)}
+\label{dc/d0b/classGameDataStorage_a282ed9bb0d606664f6e5b2fb81635c38}
+
+\begin{DoxyCompactList}\small\item\em \-Returns the block and removes it from the storage or returns \-N\-U\-L\-L if there is no stored block at the specified position. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a6cf52d4b9ab605013cc8d4d6bee825de}{
+bool \hyperlink{classGameDataStorage_a6cf52d4b9ab605013cc8d4d6bee825de}{save\-Modified\-Blocks} (const char $\ast$base\-Path, \hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$volume)}
+\label{dc/d0b/classGameDataStorage_a6cf52d4b9ab605013cc8d4d6bee825de}
+
+\begin{DoxyCompactList}\small\item\em \-Saves all modified blocks in the directory specified by base\-Path (for example \char`\"{}save/\char`\"{}). \-Returns true if successful. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a2a70a7c2efc49ac937ee68b27d9205bb}{
+bool \hyperlink{classGameDataStorage_a2a70a7c2efc49ac937ee68b27d9205bb}{load\-Blocks} (const char $\ast$base\-Path, \hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$volume)}
+\label{dc/d0b/classGameDataStorage_a2a70a7c2efc49ac937ee68b27d9205bb}
+
+\begin{DoxyCompactList}\small\item\em \-Loads all blocks which are saved in the specified directory. \-Returns true if successful. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a12450b53159a6fc02a2c70a7b96f4215}{
+bool \hyperlink{classGameDataStorage_a12450b53159a6fc02a2c70a7b96f4215}{save\-Objects} (const char $\ast$base\-Path)}
+\label{dc/d0b/classGameDataStorage_a12450b53159a6fc02a2c70a7b96f4215}
+
+\begin{DoxyCompactList}\small\item\em \-Saves all objects in the directory specified by base\-Path (for example \char`\"{}save/\char`\"{}). \-Returns true if successful. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a71dd23875efc0fb6d1783031f29e967e}{
+bool \hyperlink{classGameDataStorage_a71dd23875efc0fb6d1783031f29e967e}{load\-Objects} (const char $\ast$base\-Path)}
+\label{dc/d0b/classGameDataStorage_a71dd23875efc0fb6d1783031f29e967e}
+
+\begin{DoxyCompactList}\small\item\em \-Loads all objects which are saved in the specified directory. \-Returns true if successful. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a6073f973df1af79c2680008f15a4e028}{
+void \hyperlink{classGameDataStorage_a6073f973df1af79c2680008f15a4e028}{store\-Object\-Vector} (std\-::vector$<$ \hyperlink{classObject}{\-Object} $\ast$ $>$ \&objects, int x, int y, int z)}
+\label{dc/d0b/classGameDataStorage_a6073f973df1af79c2680008f15a4e028}
+
+\begin{DoxyCompactList}\small\item\em \-Removes the objects in the given vector from the object manager, sends them \-C\-O\-M\-P\-M\-S\-G\-\_\-\-U\-N\-L\-O\-A\-D and stores them. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_ace21670cd13870dff67fbad801ec3b76}{
+void \hyperlink{classGameDataStorage_ace21670cd13870dff67fbad801ec3b76}{store\-Object} (\hyperlink{classObject}{\-Object} $\ast$object, int x, int y, int z)}
+\label{dc/d0b/classGameDataStorage_ace21670cd13870dff67fbad801ec3b76}
+
+\begin{DoxyCompactList}\small\item\em \-Like store\-Object\-Vector, but stores only one object. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a316eac31d1f452bc8de9b683cfe6200a}{
+void \hyperlink{classGameDataStorage_a316eac31d1f452bc8de9b683cfe6200a}{store\-Object} (\hyperlink{classObject}{\-Object} $\ast$object)}
+\label{dc/d0b/classGameDataStorage_a316eac31d1f452bc8de9b683cfe6200a}
+
+\begin{DoxyCompactList}\small\item\em \-Variation which determines the block from the object's position attribute. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_aae67a1ddd34592ce6ca7ad8dd7338986}{
+void \hyperlink{classGameDataStorage_aae67a1ddd34592ce6ca7ad8dd7338986}{fetch\-Objects} (int x, int y, int z)}
+\label{dc/d0b/classGameDataStorage_aae67a1ddd34592ce6ca7ad8dd7338986}
+
+\begin{DoxyCompactList}\small\item\em \-Sends the objects which are stored for the block with the given coordinates \-C\-O\-M\-P\-M\-S\-G\-\_\-\-C\-R\-E\-A\-T\-E (with first parameter \-N\-U\-L\-L) and enters them into the object manager. \-This activates them again. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGameDataStorage_a3d63e9b74a118c6d7de007ab01530051}{
+bool \hyperlink{classGameDataStorage_a3d63e9b74a118c6d7de007ab01530051}{prepare\-Object\-For\-Storage} (\hyperlink{classObject}{\-Object} $\ast$obj)}
+\label{dc/d0b/classGameDataStorage_a3d63e9b74a118c6d7de007ab01530051}
+
+\begin{DoxyCompactList}\small\item\em \-Removes the object from the object manager and sends \-C\-O\-M\-P\-M\-S\-G\-\_\-\-U\-N\-L\-O\-A\-D to it. \-If the object is not worth storing, it deletes itself and the function returns false. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a2cf5e97a4b94ba097b9ca9a224867003}{
+\hyperlink{classObject}{\-Object} $\ast$ \hyperlink{classGameDataStorage_a2cf5e97a4b94ba097b9ca9a224867003}{create\-New\-Object} (\hyperlink{classObject}{\-Object} $\ast$obj)}
+\label{dc/d0b/classGameDataStorage_a2cf5e97a4b94ba097b9ca9a224867003}
+
+\begin{DoxyCompactList}\small\item\em \-Creates the object if only the name and position is stored. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a37864d6adee31b14ddebdebf1c3ca4df}{
+void \hyperlink{classGameDataStorage_a37864d6adee31b14ddebdebf1c3ca4df}{reactivate\-Object} (\hyperlink{classObject}{\-Object} $\ast$obj)}
+\label{dc/d0b/classGameDataStorage_a37864d6adee31b14ddebdebf1c3ca4df}
+
+\begin{DoxyCompactList}\small\item\em \-Called by fetch\-Objects for every object. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a4a6a2cccef5a0b888bed40941976b51e}{
+void \hyperlink{classGameDataStorage_a4a6a2cccef5a0b888bed40941976b51e}{save\-Block} (const char $\ast$base\-Path, \hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$block, \-F\-I\-L\-E $\ast$block\-Index)}
+\label{dc/d0b/classGameDataStorage_a4a6a2cccef5a0b888bed40941976b51e}
+
+\begin{DoxyCompactList}\small\item\em \-Saves a single block into the specified directory. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a0c60a9b6af1d7d30f365ee21ba838c5a}{
+void \hyperlink{classGameDataStorage_a0c60a9b6af1d7d30f365ee21ba838c5a}{save\-Object} (\hyperlink{classObject}{\-Object} $\ast$object, \-F\-I\-L\-E $\ast$file)}
+\label{dc/d0b/classGameDataStorage_a0c60a9b6af1d7d30f365ee21ba838c5a}
+
+\begin{DoxyCompactList}\small\item\em \-Appends a single object to the specified file. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_aab2ffaa4a5c54e295af7c38a6fc0b4f6}{
+void \hyperlink{classGameDataStorage_aab2ffaa4a5c54e295af7c38a6fc0b4f6}{load\-Object} (\-F\-I\-L\-E $\ast$file, int version)}
+\label{dc/d0b/classGameDataStorage_aab2ffaa4a5c54e295af7c38a6fc0b4f6}
+
+\begin{DoxyCompactList}\small\item\em \-Loads a single object from the file. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_addee198c86b81b436e54206c2af90479}{
+\hyperlink{structBlockStorage}{\-Block\-Storage} $\ast$ \hyperlink{classGameDataStorage_addee198c86b81b436e54206c2af90479}{get\-Storage} (int x, int y, int z)}
+\label{dc/d0b/classGameDataStorage_addee198c86b81b436e54206c2af90479}
+
+\begin{DoxyCompactList}\small\item\em \-Returns the specified block storage or \-N\-U\-L\-L if it doesn't exist. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_ac9999e8b553bfcf27161aa5ff4712aea}{
+\hyperlink{structBlockStorage}{\-Block\-Storage} $\ast$ \hyperlink{classGameDataStorage_ac9999e8b553bfcf27161aa5ff4712aea}{get\-Or\-Create\-Storage} (int x, int y, int z)}
+\label{dc/d0b/classGameDataStorage_ac9999e8b553bfcf27161aa5ff4712aea}
+
+\begin{DoxyCompactList}\small\item\em \-Returns the specified block storage, creates it if it doesn't exist. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_a3c596a8068ad9844987cbd0cdfade3f8}{
+void \hyperlink{classGameDataStorage_a3c596a8068ad9844987cbd0cdfade3f8}{delete\-Storage\-If\-Possible} (int x, int y, int z)}
+\label{dc/d0b/classGameDataStorage_a3c596a8068ad9844987cbd0cdfade3f8}
+
+\begin{DoxyCompactList}\small\item\em \-If no data is stored for the given position, but a \hyperlink{structBlockStorage}{\-Block\-Storage} object exists, the object is removed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGameDataStorage_afb23758539288ab7f65fa8bbd7432b3d}{
+std\-::map$<$ int, std\-::map$<$ int, \*
+std\-::map$<$ int, \hyperlink{structBlockStorage}{\-Block\-Storage} $>$ $>$ $>$ \hyperlink{classGameDataStorage_afb23758539288ab7f65fa8bbd7432b3d}{storage}}
+\label{dc/d0b/classGameDataStorage_afb23758539288ab7f65fa8bbd7432b3d}
+
+\begin{DoxyCompactList}\small\item\em \-Access\-: storage\mbox{[}x\mbox{]}\mbox{[}y\mbox{]}\mbox{[}z\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classGameDataStorage_af3a31725626ce217415c029599e4a683}{
+boost\-::mutex {\bfseries access}}
+\label{dc/d0b/classGameDataStorage_af3a31725626ce217415c029599e4a683}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Singleton class which stores objects and voxel blocks which are temporarily unloaded until a player comes close to them again. \-Will also provide functions to store them to disk / load them. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/game\-Data\-Storage.\-h\item 
+src/game\-Data\-Storage.\-cpp\end{DoxyCompactItemize}

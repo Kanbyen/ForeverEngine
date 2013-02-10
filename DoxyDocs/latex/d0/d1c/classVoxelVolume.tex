@@ -1,0 +1,419 @@
+\hypertarget{classVoxelVolume}{
+\section{\-Voxel\-Volume \-Class \-Reference}
+\label{d0/d1c/classVoxelVolume}\index{\-Voxel\-Volume@{\-Voxel\-Volume}}
+}
+
+
+\-Represents a voxel volume which is made up of \-Voxel\-Blocks.  
+
+
+
+
+{\ttfamily \#include $<$volume.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelVolume_a26b4b0c284e35987038eb0825aca4e96}{
+\hyperlink{classVoxelVolume_a26b4b0c284e35987038eb0825aca4e96}{\-Voxel\-Volume} (int \hyperlink{classVoxelVolume_a98c9bdda61574015a5b2e008567f6910}{num\-Blocks\-X}, int num\-Blocks\-Y, int num\-Blocks\-Z, float \hyperlink{classVoxelVolume_a1d986ee8a74dc700d400ed389eea6f6a}{scale}, bool threaded, int \hyperlink{classVoxelVolume_a06763f7a3d2702fbba4b471ae67ce2e1}{window\-X\-In\-Voxels}=0, int window\-Y\-In\-Voxels=0, int window\-Z\-In\-Voxels=0)}
+\label{d0/d1c/classVoxelVolume_a26b4b0c284e35987038eb0825aca4e96}
+
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a32b70f3f162b157c541e9a6a62a50930}{
+bool \hyperlink{classVoxelVolume_a32b70f3f162b157c541e9a6a62a50930}{update} (\-Vector3 camera\-Position)}
+\label{d0/d1c/classVoxelVolume_a32b70f3f162b157c541e9a6a62a50930}
+
+\begin{DoxyCompactList}\small\item\em \-Must be called every frame to update the geometry. \-If threaded, returns if a block has been loaded. \-Else, always returns false. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a0eee3f32fc8066a89ebac3a74128902e}{
+void \hyperlink{classVoxelVolume_a0eee3f32fc8066a89ebac3a74128902e}{reset} ()}
+\label{d0/d1c/classVoxelVolume_a0eee3f32fc8066a89ebac3a74128902e}
+
+\begin{DoxyCompactList}\small\item\em \-Resets all blocks to the \char`\"{}placeholder\char`\"{} state, in effect re-\/generating the whole volume using the block load callbacks. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a70a87cce5bf1641ba8e6e30608fd9217}{
+void \hyperlink{classVoxelVolume_a70a87cce5bf1641ba8e6e30608fd9217}{set\-Material} (string \hyperlink{classVoxelVolume_abed67eb7cc7050692c9db909008bb465}{material\-Name})}
+\label{d0/d1c/classVoxelVolume_a70a87cce5bf1641ba8e6e30608fd9217}
+
+\begin{DoxyCompactList}\small\item\em \-Sets the material used by the blocks. \end{DoxyCompactList}\item 
+void \hyperlink{classVoxelVolume_a835fe48979dc20e9b2ab534fdd74878c}{move\-Window} (int new\-X\-In\-Blocks, int new\-Y\-In\-Blocks, int new\-Z\-In\-Blocks)
+\item 
+\hypertarget{classVoxelVolume_ae64c5d813e837e1fe1dc7d8a807cec02}{
+void \hyperlink{classVoxelVolume_ae64c5d813e837e1fe1dc7d8a807cec02}{set\-Block\-Load\-Callback} (block\-Load\-Function func)}
+\label{d0/d1c/classVoxelVolume_ae64c5d813e837e1fe1dc7d8a807cec02}
+
+\begin{DoxyCompactList}\small\item\em \-Specifies the function to be called when a new block has to be loaded. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_aa8250f421a17cac18ffc99df08d8095d}{
+void \hyperlink{classVoxelVolume_aa8250f421a17cac18ffc99df08d8095d}{set\-Block\-Texture\-Callback} (block\-Texture\-Function func)}
+\label{d0/d1c/classVoxelVolume_aa8250f421a17cac18ffc99df08d8095d}
+
+\begin{DoxyCompactList}\small\item\em \-Specifies the function to be called when a voxel of a new block needs to be assigned a texture. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_aefb59c4252532e687630642d9cf6e4e4}{
+void \hyperlink{classVoxelVolume_aefb59c4252532e687630642d9cf6e4e4}{set\-Data\-Changed\-Abs} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z)}
+\label{d0/d1c/classVoxelVolume_aefb59c4252532e687630642d9cf6e4e4}
+
+\begin{DoxyCompactList}\small\item\em \-Activates all rigid bodies in the specified area and lets the blocks in the area update their geometry. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a5a0b9d0a2b18610cdfe992cddbf55db8}{
+void {\bfseries set\-Data\-Changed\-Rel} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z)}
+\label{d0/d1c/classVoxelVolume_a5a0b9d0a2b18610cdfe992cddbf55db8}
+
+\item 
+\hypertarget{classVoxelVolume_a02ed38f446c2667cdd2f45dd8cf70a73}{
+\hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$ \hyperlink{classVoxelVolume_a02ed38f446c2667cdd2f45dd8cf70a73}{get\-Block\-Abs} (int block\-X, int block\-Y, int block\-Z)}
+\label{d0/d1c/classVoxelVolume_a02ed38f446c2667cdd2f45dd8cf70a73}
+
+\begin{DoxyCompactList}\small\item\em \-Gets the block with the given absolute coordinates (which are specified in blocks, not voxels) \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a3e1364cdd540d28484c455774b626a2b}{
+void \hyperlink{classVoxelVolume_a3e1364cdd540d28484c455774b626a2b}{set\-Block\-Abs} (int x, int y, int z, \hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$new\-Block)}
+\label{d0/d1c/classVoxelVolume_a3e1364cdd540d28484c455774b626a2b}
+
+\begin{DoxyCompactList}\small\item\em \-Sets a new block at the specified absolute position, deletes the old one. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_afa632bf5c41b2f6e64accc9dbd855818}{
+\hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$ \hyperlink{classVoxelVolume_afa632bf5c41b2f6e64accc9dbd855818}{get\-Block\-Rel} (int block\-X, int block\-Y, int block\-Z)}
+\label{d0/d1c/classVoxelVolume_afa632bf5c41b2f6e64accc9dbd855818}
+
+\begin{DoxyCompactList}\small\item\em \-Gets the block with the given coordinates relative to the volume origin (which are specified in blocks, not voxels) \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_aca0cf601c7bc8076cd44638576d555d1}{
+void \hyperlink{classVoxelVolume_aca0cf601c7bc8076cd44638576d555d1}{set\-Block\-Rel} (int x, int y, int z, \hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$new\-Block)}
+\label{d0/d1c/classVoxelVolume_aca0cf601c7bc8076cd44638576d555d1}
+
+\begin{DoxyCompactList}\small\item\em \-Sets a new block at the specified position relative to the volume origin, deletes the old one. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a4a93b4f89d668d5c52d22f7da1d86d61}{
+\hyperlink{classVoxelBlockPersistent}{\-Voxel\-Block\-Persistent} $\ast$ \hyperlink{classVoxelVolume_a4a93b4f89d668d5c52d22f7da1d86d61}{get\-Persistent\-Rel} (int block\-X, int block\-Y, int block\-Z)}
+\label{d0/d1c/classVoxelVolume_a4a93b4f89d668d5c52d22f7da1d86d61}
+
+\begin{DoxyCompactList}\small\item\em \-Gets the block persistent data with the given coordinates (which are specified in blocks, not voxels) \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a837a06d51bb9c35fb7c87fd25284dfc1}{
+\hyperlink{classVoxelBlockPersistent}{\-Voxel\-Block\-Persistent} $\ast$ \hyperlink{classVoxelVolume_a837a06d51bb9c35fb7c87fd25284dfc1}{get\-Persistent\-Abs} (int block\-X, int block\-Y, int block\-Z)}
+\label{d0/d1c/classVoxelVolume_a837a06d51bb9c35fb7c87fd25284dfc1}
+
+\begin{DoxyCompactList}\small\item\em \-Gets the block persistent data with the given coordinates (which are specified in blocks, not voxels) \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_aee09dbed36004ff9f4f8285ce4a48e4a}{
+char \hyperlink{classVoxelVolume_aee09dbed36004ff9f4f8285ce4a48e4a}{get\-Voxel\-At} (\-Vector3 \&pos) const }
+\label{d0/d1c/classVoxelVolume_aee09dbed36004ff9f4f8285ce4a48e4a}
+
+\begin{DoxyCompactList}\small\item\em \-The slowest method to get the value of a voxel. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a7f92e1f1ea1df081f1b302f252cfdb1c}{
+char {\bfseries get\-Voxel\-At} (int x\-Position, int y\-Position, int z\-Position) const }
+\label{d0/d1c/classVoxelVolume_a7f92e1f1ea1df081f1b302f252cfdb1c}
+
+\item 
+\hypertarget{classVoxelVolume_a130dd6f7596d43281276960e075d9d36}{
+char {\bfseries get\-Voxel\-Rel} (int x\-Position, int y\-Position, int z\-Position) const }
+\label{d0/d1c/classVoxelVolume_a130dd6f7596d43281276960e075d9d36}
+
+\item 
+\hypertarget{classVoxelVolume_a5e1bc4d1318f07dfa4ba76d803d4daf7}{
+void \hyperlink{classVoxelVolume_a5e1bc4d1318f07dfa4ba76d803d4daf7}{set\-Voxel\-At} (int x\-Position, int y\-Position, int z\-Position, const char value)}
+\label{d0/d1c/classVoxelVolume_a5e1bc4d1318f07dfa4ba76d803d4daf7}
+
+\begin{DoxyCompactList}\small\item\em \-The slowest method to set the value of a voxel. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a5b89179490cded3b88be626dce75ad6d}{
+void {\bfseries set\-Voxel\-Rel} (int x\-Position, int y\-Position, int z\-Position, const char value)}
+\label{d0/d1c/classVoxelVolume_a5b89179490cded3b88be626dce75ad6d}
+
+\item 
+\hypertarget{classVoxelVolume_a35d9969da031ff91493a28a1b0198990}{
+unsigned char \hyperlink{classVoxelVolume_a35d9969da031ff91493a28a1b0198990}{get\-Texture\-At} (int x\-Position, int y\-Position, int z\-Position) const }
+\label{d0/d1c/classVoxelVolume_a35d9969da031ff91493a28a1b0198990}
+
+\begin{DoxyCompactList}\small\item\em \-The slowest method to get the texture of a voxel. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a76cc383b2e014779b77aedbad680ba19}{
+unsigned char {\bfseries get\-Texture\-Rel} (int x\-Position, int y\-Position, int z\-Position) const }
+\label{d0/d1c/classVoxelVolume_a76cc383b2e014779b77aedbad680ba19}
+
+\item 
+\hypertarget{classVoxelVolume_aaf4744326247ec31706e2dfe8f587670}{
+void \hyperlink{classVoxelVolume_aaf4744326247ec31706e2dfe8f587670}{set\-Texture\-At} (int x\-Position, int y\-Position, int z\-Position, const unsigned char value)}
+\label{d0/d1c/classVoxelVolume_aaf4744326247ec31706e2dfe8f587670}
+
+\begin{DoxyCompactList}\small\item\em \-The slowest method to set the texture of a voxel. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a25cfdf1f0efd2a91201cf40e7042e1ec}{
+void {\bfseries set\-Texture\-Rel} (int x\-Position, int y\-Position, int z\-Position, const unsigned char value)}
+\label{d0/d1c/classVoxelVolume_a25cfdf1f0efd2a91201cf40e7042e1ec}
+
+\item 
+\hypertarget{classVoxelVolume_a3c9a3442d8cfe50e3f9882e4949578a6}{
+bool \hyperlink{classVoxelVolume_a3c9a3442d8cfe50e3f9882e4949578a6}{contains\-Point\-Abs} (\-Vector3 \&pos)}
+\label{d0/d1c/classVoxelVolume_a3c9a3442d8cfe50e3f9882e4949578a6}
+
+\begin{DoxyCompactList}\small\item\em \-Does the volume contain the specified point? -\/ absolute coordinates. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_ad511bed9d9100765ce00fa4ee469f781}{
+bool {\bfseries contains\-Point\-Abs} (int x, int y, int z)}
+\label{d0/d1c/classVoxelVolume_ad511bed9d9100765ce00fa4ee469f781}
+
+\item 
+\hypertarget{classVoxelVolume_a3b6ed327f5f9b718d68e341e053271c5}{
+bool \hyperlink{classVoxelVolume_a3b6ed327f5f9b718d68e341e053271c5}{contains\-Point\-Rel} (int x, int y, int z)}
+\label{d0/d1c/classVoxelVolume_a3b6ed327f5f9b718d68e341e053271c5}
+
+\begin{DoxyCompactList}\small\item\em \-Does the volume contain the specified point? -\/ relative coordinates. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_adce4bd2b9ef0868e0c9b1ffdb2d7b189}{
+bool \hyperlink{classVoxelVolume_adce4bd2b9ef0868e0c9b1ffdb2d7b189}{contains\-Block\-Abs} (int x, int y, int z)}
+\label{d0/d1c/classVoxelVolume_adce4bd2b9ef0868e0c9b1ffdb2d7b189}
+
+\begin{DoxyCompactList}\small\item\em \-Does the volume contain the specified block? -\/ absolute coordinates. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_aef5b3b4fdb28816f534b181c287a77f8}{
+bool \hyperlink{classVoxelVolume_aef5b3b4fdb28816f534b181c287a77f8}{contains\-Block\-Rel} (int x, int y, int z)}
+\label{d0/d1c/classVoxelVolume_aef5b3b4fdb28816f534b181c287a77f8}
+
+\begin{DoxyCompactList}\small\item\em \-Does the volume contain the specified block? -\/ relative coordinates. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a19708d3d9ae802e26f12ec73b9fce76f}{
+bool \hyperlink{classVoxelVolume_a19708d3d9ae802e26f12ec73b9fce76f}{is\-Valid\-Block\-Abs} (int x, int y, int z)}
+\label{d0/d1c/classVoxelVolume_a19708d3d9ae802e26f12ec73b9fce76f}
+
+\begin{DoxyCompactList}\small\item\em \-Is the specified block valid (\hyperlink{classVoxelVolume_adce4bd2b9ef0868e0c9b1ffdb2d7b189}{contains\-Block\-Abs()} == true and the objects in the block, if any, are loaded (this means that its geometry is generated)) -\/ absolute coordinates. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_ab5c746307c6a49866c2c96c0ac4551d0}{
+int \hyperlink{classVoxelVolume_ab5c746307c6a49866c2c96c0ac4551d0}{get\-Loaded\-Blocks} () const }
+\label{d0/d1c/classVoxelVolume_ab5c746307c6a49866c2c96c0ac4551d0}
+
+\begin{DoxyCompactList}\small\item\em \-Returns the number of blocks which are either loaded, empty or full (the remaining blocks are placeholders) \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a2fbd5e22285b0ab8bf783f9e6d078c28}{
+void \hyperlink{classVoxelVolume_a2fbd5e22285b0ab8bf783f9e6d078c28}{check\-Bounds\-Rel} (int \&first\-X, int \&first\-Y, int \&first\-Z, int \&last\-X, int \&last\-Y, int \&last\-Z)}
+\label{d0/d1c/classVoxelVolume_a2fbd5e22285b0ab8bf783f9e6d078c28}
+
+\begin{DoxyCompactList}\small\item\em \-Adjusts the area to fit into the volume; coordinates relative to the volume origin. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_ad1e6366621073b437801621894d4e624}{
+void \hyperlink{classVoxelVolume_ad1e6366621073b437801621894d4e624}{make\-Range\-Relative} (int \&first\-X, int \&first\-Y, int \&first\-Z, int \&last\-X, int \&last\-Y, int \&last\-Z)}
+\label{d0/d1c/classVoxelVolume_ad1e6366621073b437801621894d4e624}
+
+\begin{DoxyCompactList}\small\item\em \-Changes the specified range from relative to absolute coordinates. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a862d840e230107fbb14e7942a82650f8}{
+void \hyperlink{classVoxelVolume_a862d840e230107fbb14e7942a82650f8}{make\-Range\-Absolute} (int \&first\-X, int \&first\-Y, int \&first\-Z, int \&last\-X, int \&last\-Y, int \&last\-Z)}
+\label{d0/d1c/classVoxelVolume_a862d840e230107fbb14e7942a82650f8}
+
+\begin{DoxyCompactList}\small\item\em \-Changes the specified range from absolute to relative coordinates. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_adbcbce0130567e273366e319cbf7d8ef}{
+bool \hyperlink{classVoxelVolume_adbcbce0130567e273366e319cbf7d8ef}{get\-Ray\-Intersection} (\-Ogre\-::\-Vector3 start, \-Ogre\-::\-Vector3 dir, \-Ogre\-::\-Vector3 $\ast$out)}
+\label{d0/d1c/classVoxelVolume_adbcbce0130567e273366e319cbf7d8ef}
+
+\begin{DoxyCompactList}\small\item\em \-Returns the point where the ray hits ground or leaves the volume. \-Attention, if the start point is outside the volume, the start point will be returned! \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a694380cdfb7334c29c86ce8f2038d912}{
+bool \hyperlink{classVoxelVolume_a694380cdfb7334c29c86ce8f2038d912}{get\-Ray\-Intersection\-Ex} (\-Ogre\-::\-Vector3 start, \-Ogre\-::\-Vector3 dir, \-Ogre\-::\-Vector3 $\ast$out, float length)}
+\label{d0/d1c/classVoxelVolume_a694380cdfb7334c29c86ce8f2038d912}
+
+\begin{DoxyCompactList}\small\item\em \-Returns the point where the ray hits the ground or where it ends. \-Also works outside the volume. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a47242d8b5362f17f1f025804e0253d7e}{
+void \hyperlink{classVoxelVolume_a47242d8b5362f17f1f025804e0253d7e}{fill} (char value)}
+\label{d0/d1c/classVoxelVolume_a47242d8b5362f17f1f025804e0253d7e}
+
+\begin{DoxyCompactList}\small\item\em fills the whole volume with the specified value, no bounds checking \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a239f1f381562b5309af764235ab7524e}{
+void \hyperlink{classVoxelVolume_a239f1f381562b5309af764235ab7524e}{exec\-Sphere\-Func} (\-Ogre\-::\-Vector3 centre, \-Ogre\-::\-Real radius, void($\ast$func)(int, int, int, float))}
+\label{d0/d1c/classVoxelVolume_a239f1f381562b5309af764235ab7524e}
+
+\begin{DoxyCompactList}\small\item\em \-For every voxel in the specified sphere, execute the given callback function. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a6b5462a047dcd380e1e079b24332dc3b}{
+void \hyperlink{classVoxelVolume_a6b5462a047dcd380e1e079b24332dc3b}{exec\-Cube\-Func} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, void($\ast$func)(int, int, int, float))}
+\label{d0/d1c/classVoxelVolume_a6b5462a047dcd380e1e079b24332dc3b}
+
+\begin{DoxyCompactList}\small\item\em \-For every voxel in the specified cube, execute the given callback function. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_ae58760e0f0f2523c02d3bad1abb908e8}{
+void \hyperlink{classVoxelVolume_ae58760e0f0f2523c02d3bad1abb908e8}{exec\-Cube\-Func} (\-Ogre\-::\-Vector3 centre, \-Ogre\-::\-Real radius, void($\ast$func)(int, int, int, float))}
+\label{d0/d1c/classVoxelVolume_ae58760e0f0f2523c02d3bad1abb908e8}
+
+\begin{DoxyCompactList}\small\item\em \-For every voxel in the specified cube, execute the given callback function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelVolume_adc4edfa242d9aa7682c6809cf9563be6}{
+static void \hyperlink{classVoxelVolume_adc4edfa242d9aa7682c6809cf9563be6}{static\-Init} ()}
+\label{d0/d1c/classVoxelVolume_adc4edfa242d9aa7682c6809cf9563be6}
+
+\begin{DoxyCompactList}\small\item\em \-Call once at the beginning of the program. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a0a32c9371d8a8b87cb1e80b387deaa90}{
+static \hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$ \hyperlink{classVoxelVolume_a0a32c9371d8a8b87cb1e80b387deaa90}{load\-Block} (\hyperlink{classPoint3}{\-Point3} position, \hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$volume, int \hyperlink{classVoxelVolume_a084a098baa64b78ea2ce9fc609cda0e7}{paging\-Mode}, \hyperlink{classVoxelBlockPersistent}{\-Voxel\-Block\-Persistent} $\ast$persistent, block\-Load\-Function load\-Func, block\-Texture\-Function tex\-Func, int \hyperlink{classVoxelVolume_afa32a6c4d092024ca4a2cf7202637efd}{window\-X\-In\-Blocks}, int window\-Y\-In\-Blocks, int window\-Z\-In\-Blocks, int \hyperlink{classVoxelVolume_a98c9bdda61574015a5b2e008567f6910}{num\-Blocks\-X}, int num\-Blocks\-Y, int num\-Blocks\-Z)}
+\label{d0/d1c/classVoxelVolume_a0a32c9371d8a8b87cb1e80b387deaa90}
+
+\begin{DoxyCompactList}\small\item\em \-Takes a placeholder block position and returns a \hyperlink{classVoxelBlockLoaded}{\-Voxel\-Block\-Loaded} generated by calling the block load callback. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a0a1e8cdc7c5c2ba73b08e3418579efce}{
+static bool \hyperlink{classVoxelVolume_a0a1e8cdc7c5c2ba73b08e3418579efce}{check\-Block} (\hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$block, \hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$volume, \hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$\&out)}
+\label{d0/d1c/classVoxelVolume_a0a1e8cdc7c5c2ba73b08e3418579efce}
+
+\begin{DoxyCompactList}\small\item\em \-Checks if the block is currently a \hyperlink{classVoxelBlockLoaded}{\-Voxel\-Block\-Loaded} and if it is empty or full. \-If yes, returns an instance of the appropriate subclass of \hyperlink{classVoxelBlock}{\-Voxel\-Block} in out and returns true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelVolume_ac5d3454b2ce3d2fea90c431b1aba0f3f}{
+\hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$$\ast$ \hyperlink{classVoxelVolume_ac5d3454b2ce3d2fea90c431b1aba0f3f}{blocks}}
+\label{d0/d1c/classVoxelVolume_ac5d3454b2ce3d2fea90c431b1aba0f3f}
+
+\begin{DoxyCompactList}\small\item\em \-Array of blocks. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_adee15c96fe563a59e2715898b209c68e}{
+\hyperlink{classVoxelBlockPersistent}{\-Voxel\-Block\-Persistent} $\ast$$\ast$ {\bfseries blocks\-Persistent}}
+\label{d0/d1c/classVoxelVolume_adee15c96fe563a59e2715898b209c68e}
+
+\item 
+\hypertarget{classVoxelVolume_a97000d1f3dc5808a9666240184e7fd3d}{
+\hyperlink{classVolumeLoadThread}{\-Volume\-Load\-Thread} $\ast$ \hyperlink{classVoxelVolume_a97000d1f3dc5808a9666240184e7fd3d}{volume\-Load\-Thread}}
+\label{d0/d1c/classVoxelVolume_a97000d1f3dc5808a9666240184e7fd3d}
+
+\begin{DoxyCompactList}\small\item\em \-Thread which loads new blocks or \-N\-U\-L\-L. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a88fe169a5d3eee4ded15a803eeb531e0}{
+int {\bfseries num\-Loaded\-Blocks}}
+\label{d0/d1c/classVoxelVolume_a88fe169a5d3eee4ded15a803eeb531e0}
+
+\item 
+\hypertarget{classVoxelVolume_a035d8438b53aa37705c85e2b9dc4033f}{
+int {\bfseries num\-Full\-Blocks}}
+\label{d0/d1c/classVoxelVolume_a035d8438b53aa37705c85e2b9dc4033f}
+
+\item 
+\hypertarget{classVoxelVolume_ad088d244390dcf695675e42d697b953f}{
+int {\bfseries num\-Empty\-Blocks}}
+\label{d0/d1c/classVoxelVolume_ad088d244390dcf695675e42d697b953f}
+
+\item 
+\hypertarget{classVoxelVolume_a1d986ee8a74dc700d400ed389eea6f6a}{
+float \hyperlink{classVoxelVolume_a1d986ee8a74dc700d400ed389eea6f6a}{scale}}
+\label{d0/d1c/classVoxelVolume_a1d986ee8a74dc700d400ed389eea6f6a}
+
+\begin{DoxyCompactList}\small\item\em \-Value to scale the whole volume. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a06763f7a3d2702fbba4b471ae67ce2e1}{
+int \hyperlink{classVoxelVolume_a06763f7a3d2702fbba4b471ae67ce2e1}{window\-X\-In\-Voxels}}
+\label{d0/d1c/classVoxelVolume_a06763f7a3d2702fbba4b471ae67ce2e1}
+
+\begin{DoxyCompactList}\small\item\em \-Offset from 0, 0, 0 in voxels. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a17c008766c65fea3b1c4f81abd519cb3}{
+int {\bfseries window\-Y\-In\-Voxels}}
+\label{d0/d1c/classVoxelVolume_a17c008766c65fea3b1c4f81abd519cb3}
+
+\item 
+\hypertarget{classVoxelVolume_a38c6aac0d0bf1caa228d65ba8ec2a4d7}{
+int {\bfseries window\-Z\-In\-Voxels}}
+\label{d0/d1c/classVoxelVolume_a38c6aac0d0bf1caa228d65ba8ec2a4d7}
+
+\item 
+\hypertarget{classVoxelVolume_afa32a6c4d092024ca4a2cf7202637efd}{
+int \hyperlink{classVoxelVolume_afa32a6c4d092024ca4a2cf7202637efd}{window\-X\-In\-Blocks}}
+\label{d0/d1c/classVoxelVolume_afa32a6c4d092024ca4a2cf7202637efd}
+
+\begin{DoxyCompactList}\small\item\em \-Offset from 0, 0, 0 in blocks. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_aa38240e5a951bf0dd9c220ac231161c2}{
+int {\bfseries window\-Y\-In\-Blocks}}
+\label{d0/d1c/classVoxelVolume_aa38240e5a951bf0dd9c220ac231161c2}
+
+\item 
+\hypertarget{classVoxelVolume_a0f128aef70d8e163c53ec02c5fba8719}{
+int {\bfseries window\-Z\-In\-Blocks}}
+\label{d0/d1c/classVoxelVolume_a0f128aef70d8e163c53ec02c5fba8719}
+
+\item 
+\hypertarget{classVoxelVolume_a98c9bdda61574015a5b2e008567f6910}{
+int \hyperlink{classVoxelVolume_a98c9bdda61574015a5b2e008567f6910}{num\-Blocks\-X}}
+\label{d0/d1c/classVoxelVolume_a98c9bdda61574015a5b2e008567f6910}
+
+\begin{DoxyCompactList}\small\item\em \-Volume side lengths in blocks. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_ad0ce5a32e6a404628d728457466db1ad}{
+int {\bfseries num\-Blocks\-Y}}
+\label{d0/d1c/classVoxelVolume_ad0ce5a32e6a404628d728457466db1ad}
+
+\item 
+\hypertarget{classVoxelVolume_a2a76355a8963be84f7c756ddca3c9339}{
+int {\bfseries num\-Blocks\-Z}}
+\label{d0/d1c/classVoxelVolume_a2a76355a8963be84f7c756ddca3c9339}
+
+\item 
+\hypertarget{classVoxelVolume_af07ed6e43bdded8fd782872fdd740c95}{
+int \hyperlink{classVoxelVolume_af07ed6e43bdded8fd782872fdd740c95}{num\-Voxels\-X}}
+\label{d0/d1c/classVoxelVolume_af07ed6e43bdded8fd782872fdd740c95}
+
+\begin{DoxyCompactList}\small\item\em \-Volume side lengths in voxels. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a0b2cee09578ef799384a7653951c8758}{
+int {\bfseries num\-Voxels\-Y}}
+\label{d0/d1c/classVoxelVolume_a0b2cee09578ef799384a7653951c8758}
+
+\item 
+\hypertarget{classVoxelVolume_a170dbe9476f3ccbed2687ba1b9ce5d46}{
+int {\bfseries num\-Voxels\-Z}}
+\label{d0/d1c/classVoxelVolume_a170dbe9476f3ccbed2687ba1b9ce5d46}
+
+\item 
+\hypertarget{classVoxelVolume_a4f865495ac1e024232e4a787009852cf}{
+int \hyperlink{classVoxelVolume_a4f865495ac1e024232e4a787009852cf}{num\-Blocks}}
+\label{d0/d1c/classVoxelVolume_a4f865495ac1e024232e4a787009852cf}
+
+\begin{DoxyCompactList}\small\item\em \-Number of blocks. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_abed67eb7cc7050692c9db909008bb465}{
+string \hyperlink{classVoxelVolume_abed67eb7cc7050692c9db909008bb465}{material\-Name}}
+\label{d0/d1c/classVoxelVolume_abed67eb7cc7050692c9db909008bb465}
+
+\begin{DoxyCompactList}\small\item\em \-Material name. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a084a098baa64b78ea2ce9fc609cda0e7}{
+\-Paging\-Mode \hyperlink{classVoxelVolume_a084a098baa64b78ea2ce9fc609cda0e7}{paging\-Mode}}
+\label{d0/d1c/classVoxelVolume_a084a098baa64b78ea2ce9fc609cda0e7}
+
+\begin{DoxyCompactList}\small\item\em \-The paging mode\-: closed displays everything correctly, while open is faster and only correct from the view of the paging\-Target. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_af1e97976181edd66793174024597702f}{
+bool \hyperlink{classVoxelVolume_af1e97976181edd66793174024597702f}{automatic\-Paging}}
+\label{d0/d1c/classVoxelVolume_af1e97976181edd66793174024597702f}
+
+\begin{DoxyCompactList}\small\item\em \-Enable / disable automatic paging; see paging\-Target. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a89da3f7314e1e8ba0d36e809fc6ec291}{
+\-Vector3 \hyperlink{classVoxelVolume_a89da3f7314e1e8ba0d36e809fc6ec291}{paging\-Target}}
+\label{d0/d1c/classVoxelVolume_a89da3f7314e1e8ba0d36e809fc6ec291}
+
+\begin{DoxyCompactList}\small\item\em \-The position which should be in the center of the volume if automatic paging is enabled. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_aa12113b36d399585df80b783b91b3929}{
+\-Vector3 \hyperlink{classVoxelVolume_aa12113b36d399585df80b783b91b3929}{last\-Paging\-Pos}}
+\label{d0/d1c/classVoxelVolume_aa12113b36d399585df80b783b91b3929}
+
+\begin{DoxyCompactList}\small\item\em \-The position where the volume paging position was last updated. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_aef355d6dc18bf2cf8003e0c8a7dc529e}{
+bool \hyperlink{classVoxelVolume_aef355d6dc18bf2cf8003e0c8a7dc529e}{changes\-This\-Frame}}
+\label{d0/d1c/classVoxelVolume_aef355d6dc18bf2cf8003e0c8a7dc529e}
+
+\begin{DoxyCompactList}\small\item\em \-Were changes made to the volume in this frame? \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_af46d1901eca5ba4f74c0a04bf098d065}{
+block\-Load\-Function \hyperlink{classVoxelVolume_af46d1901eca5ba4f74c0a04bf098d065}{block\-Load\-C\-B}}
+\label{d0/d1c/classVoxelVolume_af46d1901eca5ba4f74c0a04bf098d065}
+
+\begin{DoxyCompactList}\small\item\em \-The callback which has to load new blocks. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a4a9247e812b572109a9789139573ae13}{
+block\-Texture\-Function \hyperlink{classVoxelVolume_a4a9247e812b572109a9789139573ae13}{block\-Texture\-C\-B}}
+\label{d0/d1c/classVoxelVolume_a4a9247e812b572109a9789139573ae13}
+
+\begin{DoxyCompactList}\small\item\em \-The callback which has to apply textures to new blocks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelVolume_af60c721fb51fd505466b46b8e65258bf}{
+static std\-::list$<$ int $>$ \hyperlink{classVoxelVolume_af60c721fb51fd505466b46b8e65258bf}{relevant\-Blocks} \mbox{[}2\mbox{]}}
+\label{d0/d1c/classVoxelVolume_af60c721fb51fd505466b46b8e65258bf}
+
+\begin{DoxyCompactList}\small\item\em \-Which blocks to update in the paging mode given as index. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelVolume_a6f1e03e046e24b7ee140e6f4ec7e838c}{
+static char {\bfseries full\-Block\-Buffer} \mbox{[}\-B\-L\-O\-C\-K\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E\mbox{]}}
+\label{d0/d1c/classVoxelVolume_a6f1e03e046e24b7ee140e6f4ec7e838c}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelVolume_acbb12beac7837810c73b433637fa3693}{
+void \hyperlink{classVoxelVolume_acbb12beac7837810c73b433637fa3693}{unload\-Block} (\hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$block, int x, int y, int z)}
+\label{d0/d1c/classVoxelVolume_acbb12beac7837810c73b433637fa3693}
+
+\begin{DoxyCompactList}\small\item\em \-Unloads a block. \-Stores the data if a player made changes to this block so it can be restored later when a player gets to this place again. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Represents a voxel volume which is made up of \-Voxel\-Blocks. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classVoxelVolume_a835fe48979dc20e9b2ab534fdd74878c}{
+\index{\-Voxel\-Volume@{\-Voxel\-Volume}!move\-Window@{move\-Window}}
+\index{move\-Window@{move\-Window}!VoxelVolume@{\-Voxel\-Volume}}
+\subsubsection[{move\-Window}]{\setlength{\rightskip}{0pt plus 5cm}void \-Voxel\-Volume\-::move\-Window (
+\begin{DoxyParamCaption}
+\item[{int}]{new\-X\-In\-Blocks, }
+\item[{int}]{new\-Y\-In\-Blocks, }
+\item[{int}]{new\-Z\-In\-Blocks}
+\end{DoxyParamCaption}
+)}}
+\label{d0/d1c/classVoxelVolume_a835fe48979dc20e9b2ab534fdd74878c}
+\-Moves the volume to display another part of the world -\/ makes only sense with the \char`\"{}open\char`\"{} paging mode. \-The following calls to update\-Geometry() will load and display the new content. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/volume.\-h\item 
+src/volume.\-cpp\item 
+include/volume.\-inl\end{DoxyCompactItemize}

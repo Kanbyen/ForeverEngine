@@ -1,0 +1,104 @@
+\hypertarget{classComponentInventory}{
+\section{\-Component\-Inventory \-Class \-Reference}
+\label{d3/d71/classComponentInventory}\index{\-Component\-Inventory@{\-Component\-Inventory}}
+}
+\-Inheritance diagram for \-Component\-Inventory\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d3/d71/classComponentInventory}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentInventory_a765be6f1e6a82570f6977874ffeb3a4a}{
+typedef std\-::multiset\*
+$<$ \hyperlink{classComponentItem}{\-Component\-Item} \*
+$\ast$, \hyperlink{structComponentItemImportanceComparer}{\-Component\-Item\-Importance\-Comparer} $>$\*
+\-::iterator {\bfseries \-Objects\-Itr}}
+\label{d3/d71/classComponentInventory_a765be6f1e6a82570f6977874ffeb3a4a}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentInventory_a243675cff307f423e226e89388c10f8f}{
+\-Objects\-Itr {\bfseries begin} (int item\-Type)}
+\label{d3/d71/classComponentInventory_a243675cff307f423e226e89388c10f8f}
+
+\item 
+\hypertarget{classComponentInventory_a33f21c804da5132bc4f6fa13beda8002}{
+\-Objects\-Itr {\bfseries end} (int item\-Type)}
+\label{d3/d71/classComponentInventory_a33f21c804da5132bc4f6fa13beda8002}
+
+\item 
+\hypertarget{classComponentInventory_a01629ce4f437896c25e3cf3b7ebb7a35}{
+virtual void \hyperlink{classComponentInventory_a01629ce4f437896c25e3cf3b7ebb7a35}{exit} ()}
+\label{d3/d71/classComponentInventory_a01629ce4f437896c25e3cf3b7ebb7a35}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentInventory_ad9b86329e94b214d9431e333d718c957}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentInventory_a34a1b922c3ee15829efb5b5a35f22687}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentInventory_a8634c221dca61a7a905506843a3dd8f9}{
+\hyperlink{classComponentTemplateInventory}{\-Component\-Template\-Inventory} $\ast$ {\bfseries creator}}
+\label{d3/d71/classComponentInventory_a8634c221dca61a7a905506843a3dd8f9}
+
+\item 
+\hypertarget{classComponentInventory_a857307a94c6bdef9fff64ecc0b537a23}{
+std\-::multiset$<$ \hyperlink{classComponentItem}{\-Component\-Item} \*
+$\ast$, \hyperlink{structComponentItemImportanceComparer}{\-Component\-Item\-Importance\-Comparer} $>$ \hyperlink{classComponentInventory_a857307a94c6bdef9fff64ecc0b537a23}{objects} \mbox{[}\-N\-U\-M\-\_\-\-I\-T\-E\-M\-T\-Y\-P\-E\-S\mbox{]}}
+\label{d3/d71/classComponentInventory_a857307a94c6bdef9fff64ecc0b537a23}
+
+\begin{DoxyCompactList}\small\item\em \-Objects in the inventory, grouped by type (see enum \-Item\-Type in \hyperlink{componentItem_8h_source}{component\-Item.\-h}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentInventory_a34a1b922c3ee15829efb5b5a35f22687}{
+\index{\-Component\-Inventory@{\-Component\-Inventory}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentInventory@{\-Component\-Inventory}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Inventory\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d3/d71/classComponentInventory_a34a1b922c3ee15829efb5b5a35f22687}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentInventory_ad9b86329e94b214d9431e333d718c957}{
+\index{\-Component\-Inventory@{\-Component\-Inventory}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentInventory@{\-Component\-Inventory}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Inventory\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d3/d71/classComponentInventory_ad9b86329e94b214d9431e333d718c957}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Inventory.\-h\item 
+src/component\-Inventory.\-cpp\end{DoxyCompactItemize}

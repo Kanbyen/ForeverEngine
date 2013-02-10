@@ -1,0 +1,117 @@
+\hypertarget{classWindowManager}{
+\section{\-Window\-Manager \-Class \-Reference}
+\label{d9/d6e/classWindowManager}\index{\-Window\-Manager@{\-Window\-Manager}}
+}
+
+
+\-Manages the display of \-C\-E\-G\-U\-I pages. \-Pseudo-\/\-Singleton\-: use the global variable window\-Manager.  
+
+
+
+
+{\ttfamily \#include $<$window\-Manager.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classWindowManager_a1411956e81aab91599dba3e59668bea8}{
+void \hyperlink{classWindowManager_a1411956e81aab91599dba3e59668bea8}{init} (\-Root $\ast$ogre)}
+\label{d9/d6e/classWindowManager_a1411956e81aab91599dba3e59668bea8}
+
+\begin{DoxyCompactList}\small\item\em \-Initializes \-C\-E\-G\-U\-I. \end{DoxyCompactList}\item 
+\hypertarget{classWindowManager_a031f3a087bfb7c54f5f297cff164bfe0}{
+void \hyperlink{classWindowManager_a031f3a087bfb7c54f5f297cff164bfe0}{exit} ()}
+\label{d9/d6e/classWindowManager_a031f3a087bfb7c54f5f297cff164bfe0}
+
+\begin{DoxyCompactList}\small\item\em \-Deinitializes \-C\-E\-G\-U\-I. \end{DoxyCompactList}\item 
+\hypertarget{classWindowManager_aa131bf5caab595509c00312c91cbc706}{
+void \hyperlink{classWindowManager_aa131bf5caab595509c00312c91cbc706}{add\-Page} (const char $\ast$name, const char $\ast$path)}
+\label{d9/d6e/classWindowManager_aa131bf5caab595509c00312c91cbc706}
+
+\begin{DoxyCompactList}\small\item\em \-Registers a \-G\-U\-I page. \end{DoxyCompactList}\item 
+\hypertarget{classWindowManager_af41af6f82ceb5e057e480180c5dafed7}{
+void \hyperlink{classWindowManager_af41af6f82ceb5e057e480180c5dafed7}{set\-Page} (const char $\ast$name)}
+\label{d9/d6e/classWindowManager_af41af6f82ceb5e057e480180c5dafed7}
+
+\begin{DoxyCompactList}\small\item\em \-Sets the active \-G\-U\-I page. \end{DoxyCompactList}\item 
+\hypertarget{classWindowManager_aed8e23d9a6814c065a47113372b6a850}{
+\-C\-E\-G\-U\-I\-::\-Window $\ast$ \hyperlink{classWindowManager_aed8e23d9a6814c065a47113372b6a850}{get\-Page} (const char $\ast$name)}
+\label{d9/d6e/classWindowManager_aed8e23d9a6814c065a47113372b6a850}
+
+\begin{DoxyCompactList}\small\item\em \-Get a \-G\-U\-I page by its name. \end{DoxyCompactList}\item 
+\hypertarget{classWindowManager_aa7039cfa23319cf5fee4765822a56d00}{
+float \hyperlink{classWindowManager_aa7039cfa23319cf5fee4765822a56d00}{get\-Mouse\-X\-Rel} ()}
+\label{d9/d6e/classWindowManager_aa7039cfa23319cf5fee4765822a56d00}
+
+\begin{DoxyCompactList}\small\item\em \-Get the relative mouse cursor position. \end{DoxyCompactList}\item 
+\hypertarget{classWindowManager_a731292eeff712cf32fc0eb431a33b6df}{
+float \hyperlink{classWindowManager_a731292eeff712cf32fc0eb431a33b6df}{get\-Mouse\-Y\-Rel} ()}
+\label{d9/d6e/classWindowManager_a731292eeff712cf32fc0eb431a33b6df}
+
+\begin{DoxyCompactList}\small\item\em \-Get the relative mouse cursor position. \end{DoxyCompactList}\item 
+\hypertarget{classWindowManager_aed7762396f247aaba3103d169cadf4d7}{
+void \hyperlink{classWindowManager_aed7762396f247aaba3103d169cadf4d7}{show\-Cursor} (bool show)}
+\label{d9/d6e/classWindowManager_aed7762396f247aaba3103d169cadf4d7}
+
+\begin{DoxyCompactList}\small\item\em \-Shows or hides the \-C\-E\-G\-U\-I cursor. \end{DoxyCompactList}\item 
+\hypertarget{classWindowManager_a86975bdd7b26e2fab18c8ef0b3715e7e}{
+void \hyperlink{classWindowManager_a86975bdd7b26e2fab18c8ef0b3715e7e}{show\-Mouse\-Cursor\-Hack} ()}
+\label{d9/d6e/classWindowManager_a86975bdd7b26e2fab18c8ef0b3715e7e}
+
+\begin{DoxyCompactList}\small\item\em \-Evil hack. \-Do not use (hahaha). \end{DoxyCompactList}\item 
+\hypertarget{classWindowManager_a8bce37506025f417955a2cff1431a651}{
+\-C\-E\-G\-U\-I\-::\-Ogre\-Renderer $\ast$ {\bfseries get\-Renderer} () const }
+\label{d9/d6e/classWindowManager_a8bce37506025f417955a2cff1431a651}
+
+\item 
+\hypertarget{classWindowManager_a45024db1a31699bcdd23c30bf9dcd75d}{
+\-C\-E\-G\-U\-I\-::\-Font $\ast$ \hyperlink{classWindowManager_a45024db1a31699bcdd23c30bf9dcd75d}{get\-Font} ()}
+\label{d9/d6e/classWindowManager_a45024db1a31699bcdd23c30bf9dcd75d}
+
+\begin{DoxyCompactList}\small\item\em \-Returns the font used for all windows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classWindowManager_ac2178fa5e70017df7166f7f959d64847}{
+\-C\-E\-G\-U\-I\-::\-Font $\ast$ \hyperlink{classWindowManager_ac2178fa5e70017df7166f7f959d64847}{font}}
+\label{d9/d6e/classWindowManager_ac2178fa5e70017df7166f7f959d64847}
+
+\begin{DoxyCompactList}\small\item\em \-The font used for all windows. \end{DoxyCompactList}\item 
+\hypertarget{classWindowManager_a61f0b5ea1707c0cef78ec79a19b05e13}{
+std\-::map$<$ \-Ogre\-::\-String, \*
+\-C\-E\-G\-U\-I\-::\-Window $\ast$ $>$ {\bfseries page\-Map}}
+\label{d9/d6e/classWindowManager_a61f0b5ea1707c0cef78ec79a19b05e13}
+
+\item 
+\hypertarget{classWindowManager_a32a398cc03072cec9b53cc2fc9f4ac52}{
+\-C\-E\-G\-U\-I\-::\-Ogre\-Renderer $\ast$ {\bfseries p\-G\-U\-I\-Renderer}}
+\label{d9/d6e/classWindowManager_a32a398cc03072cec9b53cc2fc9f4ac52}
+
+\item 
+\hypertarget{classWindowManager_a5f75ea8180199a00704ecef1111b3593}{
+\-C\-E\-G\-U\-I\-::\-Ogre\-Resource\-Provider $\ast$ {\bfseries p\-Provider}}
+\label{d9/d6e/classWindowManager_a5f75ea8180199a00704ecef1111b3593}
+
+\item 
+\hypertarget{classWindowManager_a4d2fd3e495a1c0fd7a32256fd3c924e4}{
+\-C\-E\-G\-U\-I\-::\-System $\ast$ {\bfseries p\-System}}
+\label{d9/d6e/classWindowManager_a4d2fd3e495a1c0fd7a32256fd3c924e4}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classWindowManager_a6369d92b7b9756a868e3eef0f9c79d5d}{
+class {\bfseries \-C\-E\-G\-U\-I\-Input\-Handler}}
+\label{d9/d6e/classWindowManager_a6369d92b7b9756a868e3eef0f9c79d5d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Manages the display of \-C\-E\-G\-U\-I pages. \-Pseudo-\/\-Singleton\-: use the global variable window\-Manager. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/window\-Manager.\-h\item 
+src/window\-Manager.\-cpp\end{DoxyCompactItemize}

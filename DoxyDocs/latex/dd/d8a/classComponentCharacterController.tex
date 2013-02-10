@@ -1,0 +1,242 @@
+\hypertarget{classComponentCharacterController}{
+\section{\-Component\-Character\-Controller \-Class \-Reference}
+\label{dd/d8a/classComponentCharacterController}\index{\-Component\-Character\-Controller@{\-Component\-Character\-Controller}}
+}
+\-Inheritance diagram for \-Component\-Character\-Controller\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{dd/d8a/classComponentCharacterController}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentCharacterController_ad45697744704ca863df0cf86159a3e11}{
+void {\bfseries step} (bool move, \-Vector3 direction, bool wants\-To\-Jump, float time\-Since\-Last\-Frame)}
+\label{dd/d8a/classComponentCharacterController_ad45697744704ca863df0cf86159a3e11}
+
+\item 
+\hypertarget{classComponentCharacterController_a1f44d8c1ec615c93badf13313cc2e622}{
+bool {\bfseries can\-Jump} (bt\-Vector3 velocity) const }
+\label{dd/d8a/classComponentCharacterController_a1f44d8c1ec615c93badf13313cc2e622}
+
+\item 
+\hypertarget{classComponentCharacterController_a7bf8e9da6119301c246d09d6998e2cf0}{
+void {\bfseries jump} (float dt, bt\-Vector3 velocity)}
+\label{dd/d8a/classComponentCharacterController_a7bf8e9da6119301c246d09d6998e2cf0}
+
+\item 
+\hypertarget{classComponentCharacterController_abff2071738bd07556e8a21be48d1031e}{
+bool {\bfseries on\-Ground} () const }
+\label{dd/d8a/classComponentCharacterController_abff2071738bd07556e8a21be48d1031e}
+
+\item 
+\hypertarget{classComponentCharacterController_a8194209897515fceaa01672748a05470}{
+void \hyperlink{classComponentCharacterController_a8194209897515fceaa01672748a05470}{select\-Weapon} (\hyperlink{classObject}{\-Object} $\ast$weapon)}
+\label{dd/d8a/classComponentCharacterController_a8194209897515fceaa01672748a05470}
+
+\begin{DoxyCompactList}\small\item\em \-Wields the specified weapon (which should be from the inventory of the character) \end{DoxyCompactList}\item 
+\hypertarget{classComponentCharacterController_a626108369beb5d03ae395d8c424a5578}{
+bool \hyperlink{classComponentCharacterController_a626108369beb5d03ae395d8c424a5578}{is\-Weapon\-Ready} ()}
+\label{dd/d8a/classComponentCharacterController_a626108369beb5d03ae395d8c424a5578}
+
+\begin{DoxyCompactList}\small\item\em \-Returns if the weapon is ready to fire. \end{DoxyCompactList}\item 
+\hypertarget{classComponentCharacterController_a3b3fb59c78ecdcaa84f34ff23bee1695}{
+void \hyperlink{classComponentCharacterController_a3b3fb59c78ecdcaa84f34ff23bee1695}{fire\-Weapon} (int mode)}
+\label{dd/d8a/classComponentCharacterController_a3b3fb59c78ecdcaa84f34ff23bee1695}
+
+\begin{DoxyCompactList}\small\item\em \-Fires the selected weapon. \-Mode 0 equals left mouse button, mode 1 equals right mouse button. \end{DoxyCompactList}\item 
+\hypertarget{classComponentCharacterController_aad1c6495c2a847b156bda7ca02f04860}{
+void \hyperlink{classComponentCharacterController_aad1c6495c2a847b156bda7ca02f04860}{update\-Weapon} (float dt)}
+\label{dd/d8a/classComponentCharacterController_aad1c6495c2a847b156bda7ca02f04860}
+
+\begin{DoxyCompactList}\small\item\em \-Update weapon firing process. \end{DoxyCompactList}\item 
+\hypertarget{classComponentCharacterController_aea2d483e910e4632dbaec17fb69a994f}{
+virtual void \hyperlink{classComponentCharacterController_aea2d483e910e4632dbaec17fb69a994f}{exit} ()}
+\label{dd/d8a/classComponentCharacterController_aea2d483e910e4632dbaec17fb69a994f}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentCharacterController_aaaa328966ec25f292e45b9948dde2d28}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentCharacterController_acd5417a4680dacdfc2b49620053ae9b2}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentCharacterController_ac99ef9c9921b3a30e1b5ec98f95b1cdd}{
+\hyperlink{classComponentTemplateCharacterController}{\-Component\-Template\-Character\-Controller} $\ast$ {\bfseries creator}}
+\label{dd/d8a/classComponentCharacterController_ac99ef9c9921b3a30e1b5ec98f95b1cdd}
+
+\item 
+\hypertarget{classComponentCharacterController_a5e9a0e09d185602e3805cc8dcbac7b66}{
+float {\bfseries time}}
+\label{dd/d8a/classComponentCharacterController_a5e9a0e09d185602e3805cc8dcbac7b66}
+
+\item 
+\hypertarget{classComponentCharacterController_a1de5468dfead9c5ead1f401b3c2a750d}{
+\-Vector3 {\bfseries aim\-Direction}}
+\label{dd/d8a/classComponentCharacterController_a1de5468dfead9c5ead1f401b3c2a750d}
+
+\item 
+\hypertarget{classComponentCharacterController_af918e23c41b655f0426985b097f3313c}{
+int {\bfseries cur\-Anim}}
+\label{dd/d8a/classComponentCharacterController_af918e23c41b655f0426985b097f3313c}
+
+\item 
+\hypertarget{classComponentCharacterController_a6493c29f4342eb448f8c96f82ff81e48}{
+float {\bfseries anim\-Change\-Time}}
+\label{dd/d8a/classComponentCharacterController_a6493c29f4342eb448f8c96f82ff81e48}
+
+\item 
+\hypertarget{classComponentCharacterController_a382c67c3653e7a3c7d46bba6623ccb81}{
+float {\bfseries anim\-Time}}
+\label{dd/d8a/classComponentCharacterController_a382c67c3653e7a3c7d46bba6623ccb81}
+
+\item 
+\hypertarget{classComponentCharacterController_ad7a8858d74c7357901f60f78e43b805d}{
+float {\bfseries time\-Base}}
+\label{dd/d8a/classComponentCharacterController_ad7a8858d74c7357901f60f78e43b805d}
+
+\item 
+\hypertarget{classComponentCharacterController_a91538cd14434f5df384b1d1844b71165}{
+bool {\bfseries has\-Anim\-Run\-Forward}}
+\label{dd/d8a/classComponentCharacterController_a91538cd14434f5df384b1d1844b71165}
+
+\item 
+\hypertarget{classComponentCharacterController_ad891575d6aceea12ee173ee03ee4a39b}{
+bool {\bfseries has\-Anim\-Run\-Backward}}
+\label{dd/d8a/classComponentCharacterController_ad891575d6aceea12ee173ee03ee4a39b}
+
+\item 
+\hypertarget{classComponentCharacterController_a431260cbb0d097f5c26db861035d6ea7}{
+bool {\bfseries has\-Anim\-Run\-Right}}
+\label{dd/d8a/classComponentCharacterController_a431260cbb0d097f5c26db861035d6ea7}
+
+\item 
+\hypertarget{classComponentCharacterController_a8648f5a733b371e27c301de6564ee18f}{
+bool {\bfseries has\-Anim\-Run\-Left}}
+\label{dd/d8a/classComponentCharacterController_a8648f5a733b371e27c301de6564ee18f}
+
+\item 
+\hypertarget{classComponentCharacterController_a1ef51dc05de4269d384b10bc65858718}{
+bool {\bfseries has\-Anim\-Stand}}
+\label{dd/d8a/classComponentCharacterController_a1ef51dc05de4269d384b10bc65858718}
+
+\item 
+\hypertarget{classComponentCharacterController_a76489e1520ab0024fa768033f5b2c328}{
+\hyperlink{classComponentPhysics}{\-Component\-Physics} $\ast$ {\bfseries my\-Physics}}
+\label{dd/d8a/classComponentCharacterController_a76489e1520ab0024fa768033f5b2c328}
+
+\item 
+\hypertarget{classComponentCharacterController_ac5b82155e0c72b4a06b4f37e030149ab}{
+bt\-Rigid\-Body $\ast$ {\bfseries m\-\_\-rigid\-Body}}
+\label{dd/d8a/classComponentCharacterController_ac5b82155e0c72b4a06b4f37e030149ab}
+
+\item 
+\hypertarget{classComponentCharacterController_a470955904bcd03eec96981ceed32d8d7}{
+bt\-Scalar {\bfseries m\-\_\-half\-Height}}
+\label{dd/d8a/classComponentCharacterController_a470955904bcd03eec96981ceed32d8d7}
+
+\item 
+\hypertarget{classComponentCharacterController_a516f46823ac1cf3dad7c1598b0d314a6}{
+bt\-Vector3 {\bfseries m\-\_\-ray\-Source}}
+\label{dd/d8a/classComponentCharacterController_a516f46823ac1cf3dad7c1598b0d314a6}
+
+\item 
+\hypertarget{classComponentCharacterController_a7ed879bc96b49e9f3c8ea707456f5b78}{
+bt\-Vector3 {\bfseries m\-\_\-ray\-Target}}
+\label{dd/d8a/classComponentCharacterController_a7ed879bc96b49e9f3c8ea707456f5b78}
+
+\item 
+\hypertarget{classComponentCharacterController_acc183e30200a0c957dbeb20f503c4756}{
+bt\-Scalar {\bfseries m\-\_\-ray\-Lambda}}
+\label{dd/d8a/classComponentCharacterController_acc183e30200a0c957dbeb20f503c4756}
+
+\item 
+\hypertarget{classComponentCharacterController_a435bfbc2e7b422b673d1950472a6889e}{
+bt\-Scalar {\bfseries m\-\_\-walk\-Velocity}}
+\label{dd/d8a/classComponentCharacterController_a435bfbc2e7b422b673d1950472a6889e}
+
+\item 
+\hypertarget{classComponentCharacterController_ae5e8316269592ae0376cca7114cb1fe2}{
+bt\-Scalar {\bfseries m\-\_\-last\-Jump\-Time}}
+\label{dd/d8a/classComponentCharacterController_ae5e8316269592ae0376cca7114cb1fe2}
+
+\item 
+\hypertarget{classComponentCharacterController_a7e30804dfffc2f372a37460eec1427b7}{
+bool {\bfseries jumped}}
+\label{dd/d8a/classComponentCharacterController_a7e30804dfffc2f372a37460eec1427b7}
+
+\item 
+\hypertarget{classComponentCharacterController_a99974e3bc286fc1c8d9823cec0178425}{
+bool {\bfseries jetpack\-Used\-Last\-Frame}}
+\label{dd/d8a/classComponentCharacterController_a99974e3bc286fc1c8d9823cec0178425}
+
+\item 
+\hypertarget{classComponentCharacterController_a761164e7626488444ce04145288c1a3c}{
+bt\-Vector3 {\bfseries m\-\_\-up\-Vector}}
+\label{dd/d8a/classComponentCharacterController_a761164e7626488444ce04145288c1a3c}
+
+\item 
+\hypertarget{classComponentCharacterController_aa67290a1e63606655824e732d8c0aa5e}{
+\hyperlink{classComponentWeapon}{\-Component\-Weapon} $\ast$ \hyperlink{classComponentCharacterController_aa67290a1e63606655824e732d8c0aa5e}{act\-Weapon}}
+\label{dd/d8a/classComponentCharacterController_aa67290a1e63606655824e732d8c0aa5e}
+
+\begin{DoxyCompactList}\small\item\em \-Weapon in hand. \end{DoxyCompactList}\item 
+\hypertarget{classComponentCharacterController_a97912b0a4350306b26b08673f250842f}{
+\-Entity $\ast$ {\bfseries weapon\-Entity}}
+\label{dd/d8a/classComponentCharacterController_a97912b0a4350306b26b08673f250842f}
+
+\item 
+\hypertarget{classComponentCharacterController_a6fa1e95834b271f813357e2c5f80d6b5}{
+\-Tag\-Point $\ast$ {\bfseries weapon\-Tag\-Point}}
+\label{dd/d8a/classComponentCharacterController_a6fa1e95834b271f813357e2c5f80d6b5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentCharacterController_acd5417a4680dacdfc2b49620053ae9b2}{
+\index{\-Component\-Character\-Controller@{\-Component\-Character\-Controller}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentCharacterController@{\-Component\-Character\-Controller}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Character\-Controller\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{dd/d8a/classComponentCharacterController_acd5417a4680dacdfc2b49620053ae9b2}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentCharacterController_aaaa328966ec25f292e45b9948dde2d28}{
+\index{\-Component\-Character\-Controller@{\-Component\-Character\-Controller}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentCharacterController@{\-Component\-Character\-Controller}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Character\-Controller\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{dd/d8a/classComponentCharacterController_aaaa328966ec25f292e45b9948dde2d28}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Character\-Controller.\-h\item 
+src/component\-Character\-Controller.\-cpp\end{DoxyCompactItemize}

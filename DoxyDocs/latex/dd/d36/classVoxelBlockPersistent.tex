@@ -1,0 +1,170 @@
+\hypertarget{classVoxelBlockPersistent}{
+\section{\-Voxel\-Block\-Persistent \-Class \-Reference}
+\label{dd/d36/classVoxelBlockPersistent}\index{\-Voxel\-Block\-Persistent@{\-Voxel\-Block\-Persistent}}
+}
+
+
+\-Holds reusable data for voxel blocks.  
+
+
+
+
+{\ttfamily \#include $<$block\-Persistent.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelBlockPersistent_abda9d0adcde5d20fa34c79ca714dda02}{
+\hyperlink{classVoxelBlockPersistent_abda9d0adcde5d20fa34c79ca714dda02}{\-Voxel\-Block\-Persistent} (int x, int y, int z, \hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$\hyperlink{classVoxelBlockPersistent_a35ad2d41377b5e9a63718f5366c52cc7}{volume})}
+\label{dd/d36/classVoxelBlockPersistent_abda9d0adcde5d20fa34c79ca714dda02}
+
+\begin{DoxyCompactList}\small\item\em \-Constructor -\/ takes the block's position offset from the volume origin. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPersistent_a738535d09213bac1740ecffccbcbaefd}{
+void \hyperlink{classVoxelBlockPersistent_a738535d09213bac1740ecffccbcbaefd}{change\-Owner} (int x, int y, int z)}
+\label{dd/d36/classVoxelBlockPersistent_a738535d09213bac1740ecffccbcbaefd}
+
+\begin{DoxyCompactList}\small\item\em \-Must be called when a new voxel block owns this object with the new block's (absolute) position. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPersistent_a0288c10edfdaacabaf0aa3423b991ec8}{
+void \hyperlink{classVoxelBlockPersistent_a0288c10edfdaacabaf0aa3423b991ec8}{update} ()}
+\label{dd/d36/classVoxelBlockPersistent_a0288c10edfdaacabaf0aa3423b991ec8}
+
+\begin{DoxyCompactList}\small\item\em \-Is called in \-Voxel\-Volume\-::update\-Geometry(). \-The surface geometry is updated here if the data has changed. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPersistent_afa55f888758a21699c683effc826d81e}{
+void \hyperlink{classVoxelBlockPersistent_afa55f888758a21699c683effc826d81e}{create\-Collision\-Shape} ()}
+\label{dd/d36/classVoxelBlockPersistent_afa55f888758a21699c683effc826d81e}
+
+\begin{DoxyCompactList}\small\item\em \-Call on a loaded block to create the collision data. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPersistent_a49e55e63733b907683031aa531ed41ff}{
+bool \hyperlink{classVoxelBlockPersistent_a49e55e63733b907683031aa531ed41ff}{has\-Surface} ()}
+\label{dd/d36/classVoxelBlockPersistent_a49e55e63733b907683031aa531ed41ff}
+
+\begin{DoxyCompactList}\small\item\em \-Returns if the block has surface data. \-Can only be true for loaded blocks. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPersistent_a9316b3528e8ed5b4055c7732a130cf94}{
+void {\bfseries get\-Mesh\-Data} (int last\-X, int last\-Y, int last\-Z)}
+\label{dd/d36/classVoxelBlockPersistent_a9316b3528e8ed5b4055c7732a130cf94}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_a93cd49dbd33a047ee4cccaca118af1fb}{
+void {\bfseries get\-Mesh\-Data\-Inner} (int last\-X, int last\-Y, int last\-Z, \hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$block)}
+\label{dd/d36/classVoxelBlockPersistent_a93cd49dbd33a047ee4cccaca118af1fb}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_a43b8558272eb0c01f07f2e5a74a45087}{
+void {\bfseries apply\-Marching\-Cubes} (\-Ogre\-::uchar \&i\-Cube\-Index, float $\ast$factorlist, \-Vector3 $\ast$poslist1, \-Vector3 $\ast$poslist2, int $\ast$index\-Field\-Index, \-Vector3 $\ast$vertlist, unsigned char $\ast$texlist, char v000, char v100, char v010, char v110, char v001, char v101, char v011, char v111, unsigned char t000, unsigned char t100, unsigned char t010, unsigned char t110, unsigned char t001, unsigned char t101, unsigned char t011, unsigned char t111, int x, int y, int z)}
+\label{dd/d36/classVoxelBlockPersistent_a43b8558272eb0c01f07f2e5a74a45087}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_ae6239990aaf7e0b365f7b8c4a57644e9}{
+\-Vector3 {\bfseries calc\-Normal} (\-Vector3 pos1, \-Vector3 pos2, float factor)}
+\label{dd/d36/classVoxelBlockPersistent_ae6239990aaf7e0b365f7b8c4a57644e9}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_a68eb71eddbc79b296365b047d29d7ff3}{
+\-Vector3 {\bfseries vertex\-Interp} (\-Vector3 start, \-Vector3 end, float factor)}
+\label{dd/d36/classVoxelBlockPersistent_a68eb71eddbc79b296365b047d29d7ff3}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_a46057aca5a6a1cb0b70246079a9128c0}{
+void {\bfseries get\-Vertex\-Data} (int i, int texture, \-Ogre\-::uint vertex\-Textures)}
+\label{dd/d36/classVoxelBlockPersistent_a46057aca5a6a1cb0b70246079a9128c0}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_a3a9984b1c26b7f72d395d1aa81f59234}{
+void {\bfseries get\-Vertex\-Data\-No\-Limits} (int i, int texture, \-Ogre\-::uint vertex\-Textures)}
+\label{dd/d36/classVoxelBlockPersistent_a3a9984b1c26b7f72d395d1aa81f59234}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_abf266da5d73bcbd31d6ad5aa136ad43d}{
+void {\bfseries get\-Triangle\-Data} (int i0, int i1, int i2)}
+\label{dd/d36/classVoxelBlockPersistent_abf266da5d73bcbd31d6ad5aa136ad43d}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_adcf8c8ffab4099759c3f75bb3d4a6cdd}{
+void {\bfseries get\-Voxel\-Data} (char v000, char v100, char v010, char v110, char v001, char v101, char v011, char v111, unsigned char t000, unsigned char t100, unsigned char t010, unsigned char t110, unsigned char t001, unsigned char t101, unsigned char t011, unsigned char t111, int x, int y, int z)}
+\label{dd/d36/classVoxelBlockPersistent_adcf8c8ffab4099759c3f75bb3d4a6cdd}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelBlockPersistent_a0ba875ea8aeb20280f51920ad73a83b6}{
+static void {\bfseries init\-Static} ()}
+\label{dd/d36/classVoxelBlockPersistent_a0ba875ea8aeb20280f51920ad73a83b6}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_a3902dc7d545f56083316f249bcd74910}{
+static void {\bfseries exit\-Static} ()}
+\label{dd/d36/classVoxelBlockPersistent_a3902dc7d545f56083316f249bcd74910}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelBlockPersistent_a35ad2d41377b5e9a63718f5366c52cc7}{
+\hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$ \hyperlink{classVoxelBlockPersistent_a35ad2d41377b5e9a63718f5366c52cc7}{volume}}
+\label{dd/d36/classVoxelBlockPersistent_a35ad2d41377b5e9a63718f5366c52cc7}
+
+\begin{DoxyCompactList}\small\item\em \-Pointer to the volume this block belongs to. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPersistent_a56978bb0e5182ac9e95c47adddd39ae1}{
+\hyperlink{classPoint3}{\-Point3} \hyperlink{classVoxelBlockPersistent_a56978bb0e5182ac9e95c47adddd39ae1}{position}}
+\label{dd/d36/classVoxelBlockPersistent_a56978bb0e5182ac9e95c47adddd39ae1}
+
+\begin{DoxyCompactList}\small\item\em \-Offset from the origin of the volume in blocks. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPersistent_a8f427bbd446c20bb83f4309724de439f}{
+\-Vector3 {\bfseries position\-Vec}}
+\label{dd/d36/classVoxelBlockPersistent_a8f427bbd446c20bb83f4309724de439f}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_af43f2aeb3606d2618d4c69d27cf75755}{
+\-Scene\-Node $\ast$ {\bfseries scene\-Node}}
+\label{dd/d36/classVoxelBlockPersistent_af43f2aeb3606d2618d4c69d27cf75755}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_a638baae740949b9d61850519999cba2b}{
+\hyperlink{classSurfacePatch}{\-Surface\-Patch} $\ast$ {\bfseries surface}}
+\label{dd/d36/classVoxelBlockPersistent_a638baae740949b9d61850519999cba2b}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_a0d07369ee574b7a8480a517255ab2bd1}{
+\hyperlink{classSurfacePatchRenderable}{\-Surface\-Patch\-Renderable} $\ast$ {\bfseries surface\-Renderable}}
+\label{dd/d36/classVoxelBlockPersistent_a0d07369ee574b7a8480a517255ab2bd1}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelBlockPersistent_affc347d8975d92fcb4b66dbd917ef2c5}{
+static int {\bfseries index\-Field\-Index} \mbox{[}12\mbox{]}}
+\label{dd/d36/classVoxelBlockPersistent_affc347d8975d92fcb4b66dbd917ef2c5}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_aceb7b1b24d888960448108e552d85779}{
+static \-Vector3 {\bfseries vertlist} \mbox{[}12\mbox{]}}
+\label{dd/d36/classVoxelBlockPersistent_aceb7b1b24d888960448108e552d85779}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_af1380a4f374927714927b77a573e1025}{
+static unsigned char {\bfseries texlist} \mbox{[}12\mbox{]}}
+\label{dd/d36/classVoxelBlockPersistent_af1380a4f374927714927b77a573e1025}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_a05c62e006e9aad5f2a5e422f615bcf91}{
+static \-Vector3 {\bfseries poslist} \mbox{[}2\mbox{]}\mbox{[}12\mbox{]}}
+\label{dd/d36/classVoxelBlockPersistent_a05c62e006e9aad5f2a5e422f615bcf91}
+
+\item 
+\hypertarget{classVoxelBlockPersistent_ab1e70c277a879fa959135555c1364847}{
+static float {\bfseries factorlist} \mbox{[}12\mbox{]}}
+\label{dd/d36/classVoxelBlockPersistent_ab1e70c277a879fa959135555c1364847}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Holds reusable data for voxel blocks. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/block\-Persistent.\-h\item 
+src/block\-Persistent.\-cpp\item 
+include/block\-Persistent.\-inl\end{DoxyCompactItemize}

@@ -1,0 +1,324 @@
+\hypertarget{classObjectManager}{
+\section{\-Object\-Manager \-Class \-Reference}
+\label{d6/d6f/classObjectManager}\index{\-Object\-Manager@{\-Object\-Manager}}
+}
+
+
+\-Manages all active objects. \-Inactive objects are handled by the \hyperlink{classGameDataStorage}{\-Game\-Data\-Storage}.  
+
+
+
+
+{\ttfamily \#include $<$object.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObjectManager_a60f8da162c9922d0f162742427b4a657}{
+typedef std\-::list\*
+$<$ \hyperlink{structComponentCreateInfo}{\-Component\-Create\-Info} $>$ {\bfseries comp\-Create\-List}}
+\label{d6/d6f/classObjectManager_a60f8da162c9922d0f162742427b4a657}
+
+\item 
+\hypertarget{classObjectManager_ad9c27d50795992b7411490d3cf15c273}{
+typedef std\-::map$<$ int, \hyperlink{classObject}{\-Object} $\ast$ $>$ {\bfseries \-Object\-Map}}
+\label{d6/d6f/classObjectManager_ad9c27d50795992b7411490d3cf15c273}
+
+\item 
+\hypertarget{classObjectManager_ae5b72540cc7d9b0db6a5d973042d5abb}{
+typedef std\-::map$<$ int, \hyperlink{classObject}{\-Object} $\ast$ $>$\*
+\-::iterator {\bfseries \-Object\-Map\-Itr}}
+\label{d6/d6f/classObjectManager_ae5b72540cc7d9b0db6a5d973042d5abb}
+
+\item 
+\hypertarget{classObjectManager_ac3c04689acbeec175c38510b64754ed5}{
+typedef \-Object\-Map\-Itr {\bfseries iterator}}
+\label{d6/d6f/classObjectManager_ac3c04689acbeec175c38510b64754ed5}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObjectManager_a752b7dfb106a187bdab922d468e0a11d}{
+void \hyperlink{classObjectManager_a752b7dfb106a187bdab922d468e0a11d}{read\-Objects\-From\-Archive} (const char $\ast$filename, const char $\ast$archive\-Type)}
+\label{d6/d6f/classObjectManager_a752b7dfb106a187bdab922d468e0a11d}
+
+\begin{DoxyCompactList}\small\item\em \-Reads all .object files in the given archive (not recursive) \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a0c356c951d827bfa79ead0d7d338f39a}{
+void \hyperlink{classObjectManager_a0c356c951d827bfa79ead0d7d338f39a}{read\-Objects\-From\-File} (const char $\ast$file)}
+\label{d6/d6f/classObjectManager_a0c356c951d827bfa79ead0d7d338f39a}
+
+\begin{DoxyCompactList}\small\item\em \-Tries to read the object descriptions from the specified file. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_aa3fe9dd66c7e4b287fc26feaf9268084}{
+void \hyperlink{classObjectManager_aa3fe9dd66c7e4b287fc26feaf9268084}{add\-Object\-Type} (\hyperlink{classTiXmlElement}{\-Ti\-Xml\-Element} $\ast$elem)}
+\label{d6/d6f/classObjectManager_aa3fe9dd66c7e4b287fc26feaf9268084}
+
+\begin{DoxyCompactList}\small\item\em \-Adds a new object type. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_ad115ccf6634175927a7d2e45099664aa}{
+\hyperlink{classObject}{\-Object} $\ast$ \hyperlink{classObjectManager_ad115ccf6634175927a7d2e45099664aa}{create\-Object} (const char $\ast$name, int creator\-I\-D)}
+\label{d6/d6f/classObjectManager_ad115ccf6634175927a7d2e45099664aa}
+
+\begin{DoxyCompactList}\small\item\em \-Creates an object of the specified type and adds it to the list of active objects. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a5a7cbf68bdc8cb41546276bf8939913a}{
+\hyperlink{classObject}{\-Object} $\ast$ \hyperlink{classObjectManager_a5a7cbf68bdc8cb41546276bf8939913a}{create\-Inactive\-Object} (const char $\ast$name, int creator\-I\-D)}
+\label{d6/d6f/classObjectManager_a5a7cbf68bdc8cb41546276bf8939913a}
+
+\begin{DoxyCompactList}\small\item\em \-Creates an object of the specified type, doesn't add it to the list of active objects. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a6dfe981ac2c57e2a1a48bc0b88bafaaf}{
+void \hyperlink{classObjectManager_a6dfe981ac2c57e2a1a48bc0b88bafaaf}{add\-Existing\-Object\-To\-List} (\hyperlink{classObject}{\-Object} $\ast$object)}
+\label{d6/d6f/classObjectManager_a6dfe981ac2c57e2a1a48bc0b88bafaaf}
+
+\begin{DoxyCompactList}\small\item\em \-Adds an existing object (probably from the game\-Object\-Storage) to the object list. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_ae8a4bc8e9f47afb162191576c2b59e4d}{
+void \hyperlink{classObjectManager_ae8a4bc8e9f47afb162191576c2b59e4d}{delete\-Object} (\hyperlink{classObject}{\-Object} $\ast$object)}
+\label{d6/d6f/classObjectManager_ae8a4bc8e9f47afb162191576c2b59e4d}
+
+\begin{DoxyCompactList}\small\item\em \-Deletes the specified object; if the update loop is running, the action is delayed. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a1242095b8b729f06071cf65696cf998d}{
+void \hyperlink{classObjectManager_a1242095b8b729f06071cf65696cf998d}{remove\-Object\-From\-List} (\hyperlink{classObject}{\-Object} $\ast$object)}
+\label{d6/d6f/classObjectManager_a1242095b8b729f06071cf65696cf998d}
+
+\begin{DoxyCompactList}\small\item\em \-Removes the specified object from the list, but doesn't delete it; if the update loop is running, the action is delayed. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_ac15552e1387aa93d47b03a7e2860021a}{
+\hyperlink{classObject}{\-Object} $\ast$ \hyperlink{classObjectManager_ac15552e1387aa93d47b03a7e2860021a}{get\-Object\-By\-I\-D} (int id)}
+\label{d6/d6f/classObjectManager_ac15552e1387aa93d47b03a7e2860021a}
+
+\begin{DoxyCompactList}\small\item\em \-Gets the pointer to an object by its id; if that id doesn't exist, it returns \-N\-U\-L\-L. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_ae02d666157fcf6ae9115a38edc74215d}{
+void \hyperlink{classObjectManager_ae02d666157fcf6ae9115a38edc74215d}{set\-Edit\-Objects} (bool edit)}
+\label{d6/d6f/classObjectManager_ae02d666157fcf6ae9115a38edc74215d}
+
+\begin{DoxyCompactList}\small\item\em \-Enable or disable object editing. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a5977e3a568570d02b52c61cf95206df4}{
+bool {\bfseries get\-Edit\-Objects} () const }
+\label{d6/d6f/classObjectManager_a5977e3a568570d02b52c61cf95206df4}
+
+\item 
+\hypertarget{classObjectManager_acbe50d32193f57b9dcfcb79beaccf155}{
+void \hyperlink{classObjectManager_acbe50d32193f57b9dcfcb79beaccf155}{update} ()}
+\label{d6/d6f/classObjectManager_acbe50d32193f57b9dcfcb79beaccf155}
+
+\begin{DoxyCompactList}\small\item\em \-Sends the update message to all objects, handles triggers, and deletes objects and triggers with the \char`\"{}deleted\char`\"{} flag. \-Should be called after every physics step. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a6052a1ffb8d47ae64fb4739db613e7ef}{
+void \hyperlink{classObjectManager_a6052a1ffb8d47ae64fb4739db613e7ef}{update\-Manager} ()}
+\label{d6/d6f/classObjectManager_a6052a1ffb8d47ae64fb4739db613e7ef}
+
+\begin{DoxyCompactList}\small\item\em \-Updates other stuff (object anchors) which should also be updated if the simulation is paused. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_ad422a4b2f4819fd388b623001e5544c8}{
+void {\bfseries select\-Object\-Below\-Cursor} ()}
+\label{d6/d6f/classObjectManager_ad422a4b2f4819fd388b623001e5544c8}
+
+\item 
+\hypertarget{classObjectManager_a04e89e381b554f81476af68a9172b4b3}{
+\hyperlink{classObject}{\-Object} $\ast$ {\bfseries get\-Selected\-Object} () const }
+\label{d6/d6f/classObjectManager_a04e89e381b554f81476af68a9172b4b3}
+
+\item 
+\hypertarget{classObjectManager_aaa10a5d36fd5e3c610aa8eb06b11804f}{
+void {\bfseries select\-Object} (\hyperlink{classObject}{\-Object} $\ast$new\-Selection)}
+\label{d6/d6f/classObjectManager_aaa10a5d36fd5e3c610aa8eb06b11804f}
+
+\item 
+\hypertarget{classObjectManager_a1548324710faf79c8e6e19ac80a8cb99}{
+void {\bfseries set\-Edit\-Mode} (\-E\-Edit\-Mode mode)}
+\label{d6/d6f/classObjectManager_a1548324710faf79c8e6e19ac80a8cb99}
+
+\item 
+\hypertarget{classObjectManager_a2e8a17b64dacd40e354581b1866e4071}{
+void {\bfseries set\-Edit\-Direction} (\-Vector3 direction)}
+\label{d6/d6f/classObjectManager_a2e8a17b64dacd40e354581b1866e4071}
+
+\item 
+\hypertarget{classObjectManager_a0cd4bc362bb95aed2e85ed1bd812064a}{
+bool {\bfseries is\-Edit\-Mode\-Active} ()}
+\label{d6/d6f/classObjectManager_a0cd4bc362bb95aed2e85ed1bd812064a}
+
+\item 
+\hypertarget{classObjectManager_a5c2b46719b9a82dde5e27a9b848ba170}{
+void {\bfseries finish\-Editing} ()}
+\label{d6/d6f/classObjectManager_a5c2b46719b9a82dde5e27a9b848ba170}
+
+\item 
+\hypertarget{classObjectManager_ad1b8185fe4f4d70615ceabcd9fda33a1}{
+void {\bfseries abort\-Editing} ()}
+\label{d6/d6f/classObjectManager_ad1b8185fe4f4d70615ceabcd9fda33a1}
+
+\item 
+\hypertarget{classObjectManager_ad1e07f4f04454fec14b623a7fe0e7ef1}{
+int \hyperlink{classObjectManager_ad1e07f4f04454fec14b623a7fe0e7ef1}{add\-Trigger} (\hyperlink{classObject}{\-Object} $\ast$source, \hyperlink{classComponent}{\-Component} $\ast$source\-Comp, \-Trigger\-Type type, \-Trigger\-Sub\-Type sub\-Type, float radius, \-Ogre\-::\-Vector3 position=\-Ogre\-::\-Vector3(0, 0, 0))}
+\label{d6/d6f/classObjectManager_ad1e07f4f04454fec14b623a7fe0e7ef1}
+
+\begin{DoxyCompactList}\small\item\em \-Adds a trigger. \-Returns the trigger \-I\-D with which it can / must be deleted. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_ae2bb176bb4705bc5711e048b0724a3e2}{
+void \hyperlink{classObjectManager_ae2bb176bb4705bc5711e048b0724a3e2}{set\-Trigger\-Pos} (int \-I\-D, \-Ogre\-::\-Vector3 position)}
+\label{d6/d6f/classObjectManager_ae2bb176bb4705bc5711e048b0724a3e2}
+
+\begin{DoxyCompactList}\small\item\em \-Sets the position of an existing trigger. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a747b67428e3b8141ad0d98e92becf1bb}{
+void \hyperlink{classObjectManager_a747b67428e3b8141ad0d98e92becf1bb}{delete\-Trigger} (int \-I\-D)}
+\label{d6/d6f/classObjectManager_a747b67428e3b8141ad0d98e92becf1bb}
+
+\begin{DoxyCompactList}\small\item\em \-Deletes a trigger. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_acc1cf399b64bcf64a960ab3912c8a847}{
+void \hyperlink{classObjectManager_acc1cf399b64bcf64a960ab3912c8a847}{init} ()}
+\label{d6/d6f/classObjectManager_acc1cf399b64bcf64a960ab3912c8a847}
+
+\begin{DoxyCompactList}\small\item\em \-Initializes the object manager. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a2c88de9cf50e8273125babb3c8dd2e5f}{
+void \hyperlink{classObjectManager_a2c88de9cf50e8273125babb3c8dd2e5f}{delete\-All\-Objects} ()}
+\label{d6/d6f/classObjectManager_a2c88de9cf50e8273125babb3c8dd2e5f}
+
+\begin{DoxyCompactList}\small\item\em \-Deletes all objects. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_ab7429e1337fd450e5bd60b57ce0b6fb7}{
+void \hyperlink{classObjectManager_ab7429e1337fd450e5bd60b57ce0b6fb7}{exit} ()}
+\label{d6/d6f/classObjectManager_ab7429e1337fd450e5bd60b57ce0b6fb7}
+
+\begin{DoxyCompactList}\small\item\em \-Cleans up. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_ade4efccf7b40f67c3b01dbd19f666aee}{
+const iterator {\bfseries begin} ()}
+\label{d6/d6f/classObjectManager_ade4efccf7b40f67c3b01dbd19f666aee}
+
+\item 
+\hypertarget{classObjectManager_a828125daaf87e66802a2faa0c562aed4}{
+const iterator {\bfseries end} ()}
+\label{d6/d6f/classObjectManager_a828125daaf87e66802a2faa0c562aed4}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObjectManager_ab1976369e21885575b8de234d84bd912}{
+std\-::map$<$ string, comp\-Create\-List $>$ \hyperlink{classObjectManager_ab1976369e21885575b8de234d84bd912}{object\-Component\-Map}}
+\label{d6/d6f/classObjectManager_ab1976369e21885575b8de234d84bd912}
+
+\begin{DoxyCompactList}\small\item\em \-Maps object names to lists of functions (+ parameters for the init function) which create the components required for the object. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_ac9661ed13a7ef1db6cff6e5e6db1880b}{
+\-Object\-Map \hyperlink{classObjectManager_ac9661ed13a7ef1db6cff6e5e6db1880b}{object\-Map}}
+\label{d6/d6f/classObjectManager_ac9661ed13a7ef1db6cff6e5e6db1880b}
+
+\begin{DoxyCompactList}\small\item\em \-Map of all existing objects. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a8a4b9cd0ec9499de2937c8891d5b6625}{
+int \hyperlink{classObjectManager_a8a4b9cd0ec9499de2937c8891d5b6625}{new\-I\-D}}
+\label{d6/d6f/classObjectManager_a8a4b9cd0ec9499de2937c8891d5b6625}
+
+\begin{DoxyCompactList}\small\item\em \-The id assigned to the next object created (if the id is not in use) \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_af1c99cb2cff2e4333576d27dc1b2adf5}{
+bool \hyperlink{classObjectManager_af1c99cb2cff2e4333576d27dc1b2adf5}{updating}}
+\label{d6/d6f/classObjectManager_af1c99cb2cff2e4333576d27dc1b2adf5}
+
+\begin{DoxyCompactList}\small\item\em \-If the object update loop is currently active (if yes, objects cannot be deleted instantly, their deletion is delayed to the object delete loop) \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a800777a8713c5db92541aca23c81a424}{
+std\-::map$<$ int, \hyperlink{classTrigger}{\-Trigger} $>$ \hyperlink{classObjectManager_a800777a8713c5db92541aca23c81a424}{trigger\-Map}}
+\label{d6/d6f/classObjectManager_a800777a8713c5db92541aca23c81a424}
+
+\begin{DoxyCompactList}\small\item\em \-Maps trigger \-I\-Ds to trigger classes. \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a32a29f2b415ac93811605013539af8aa}{
+int \hyperlink{classObjectManager_a32a29f2b415ac93811605013539af8aa}{new\-Trigger\-I\-D}}
+\label{d6/d6f/classObjectManager_a32a29f2b415ac93811605013539af8aa}
+
+\begin{DoxyCompactList}\small\item\em \-I\-D for the next trigger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObjectManager_a2839b93ae3703d493f994901d336926b}{
+void {\bfseries update\-Editing} (float modify\-Amount)}
+\label{d6/d6f/classObjectManager_a2839b93ae3703d493f994901d336926b}
+
+\item 
+\hypertarget{classObjectManager_ad6404a2903ff680ff242e0dcbc426c5d}{
+float {\bfseries get\-Edit\-Amount} ()}
+\label{d6/d6f/classObjectManager_ad6404a2903ff680ff242e0dcbc426c5d}
+
+\item 
+\hypertarget{classObjectManager_a60577e37e4f2d7f1550680e62825eda8}{
+void \hyperlink{classObjectManager_a60577e37e4f2d7f1550680e62825eda8}{add\-Object} (\hyperlink{classObject}{\-Object} $\ast$new\-Object)}
+\label{d6/d6f/classObjectManager_a60577e37e4f2d7f1550680e62825eda8}
+
+\begin{DoxyCompactList}\small\item\em calculates the edit amount based on the cursor position \end{DoxyCompactList}\item 
+\hypertarget{classObjectManager_a1ba2909e0184849f2b68ce225b398850}{
+void {\bfseries remove\-Object} (\hyperlink{classObject}{\-Object} $\ast$old\-Object)}
+\label{d6/d6f/classObjectManager_a1ba2909e0184849f2b68ce225b398850}
+
+\item 
+\hypertarget{classObjectManager_aedd984e24f54985c01dc6a0ed4b745c4}{
+\hyperlink{classObject}{\-Object} $\ast$ {\bfseries get\-Object\-Below\-Cursor} ()}
+\label{d6/d6f/classObjectManager_aedd984e24f54985c01dc6a0ed4b745c4}
+
+\item 
+\hypertarget{classObjectManager_add415a33c5c165da53d832c9d7b1c85f}{
+void {\bfseries init\-Tooltip} ()}
+\label{d6/d6f/classObjectManager_add415a33c5c165da53d832c9d7b1c85f}
+
+\item 
+\hypertarget{classObjectManager_ac94351e3ac91ef7f3485488cc851feea}{
+void {\bfseries exit\-Tooltip} ()}
+\label{d6/d6f/classObjectManager_ac94351e3ac91ef7f3485488cc851feea}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObjectManager_a2d558c93ba01b8c4048c2f4d44305b37}{
+bool {\bfseries edit\-Objects}}
+\label{d6/d6f/classObjectManager_a2d558c93ba01b8c4048c2f4d44305b37}
+
+\item 
+\hypertarget{classObjectManager_a98a9c6118c979531d4af61d161e23a75}{
+int {\bfseries object\-Anchor\-Number}}
+\label{d6/d6f/classObjectManager_a98a9c6118c979531d4af61d161e23a75}
+
+\item 
+\hypertarget{classObjectManager_ad0439071bb4ff81569ebb2de6939b677}{
+\-Ray\-Scene\-Query $\ast$ {\bfseries scene\-Query}}
+\label{d6/d6f/classObjectManager_ad0439071bb4ff81569ebb2de6939b677}
+
+\item 
+\hypertarget{classObjectManager_af639c1ab1483668b115830fd6ebed292}{
+\hyperlink{classStaticText}{\-Static\-Text} $\ast$ {\bfseries tooltip}}
+\label{d6/d6f/classObjectManager_af639c1ab1483668b115830fd6ebed292}
+
+\item 
+\hypertarget{classObjectManager_aeabe24b8ca97af5f2358ebfc978310bb}{
+\hyperlink{classObject}{\-Object} $\ast$ {\bfseries sel\-Object}}
+\label{d6/d6f/classObjectManager_aeabe24b8ca97af5f2358ebfc978310bb}
+
+\item 
+\hypertarget{classObjectManager_a5ba3634c7d18117db593f5768936b6ff}{
+bool {\bfseries edit\-Mode\-Active}}
+\label{d6/d6f/classObjectManager_a5ba3634c7d18117db593f5768936b6ff}
+
+\item 
+\hypertarget{classObjectManager_a4995eada9162444c369cca8abd8abb62}{
+\-E\-Edit\-Mode {\bfseries edit\-Mode}}
+\label{d6/d6f/classObjectManager_a4995eada9162444c369cca8abd8abb62}
+
+\item 
+\hypertarget{classObjectManager_a6ff6c036526e0a8f43dc02e107f0fb91}{
+\-Vector3 {\bfseries edit\-Direction}}
+\label{d6/d6f/classObjectManager_a6ff6c036526e0a8f43dc02e107f0fb91}
+
+\item 
+\hypertarget{classObjectManager_aa7b534e05b7fd681c829bbb6a1b8e9e3}{
+float {\bfseries edit\-Start\-Cursor\-Pos}}
+\label{d6/d6f/classObjectManager_aa7b534e05b7fd681c829bbb6a1b8e9e3}
+
+\item 
+\hypertarget{classObjectManager_a61f5e9cc25dfe248964c8add54188f62}{
+\-Vector3 {\bfseries edit\-Base\-Vector}}
+\label{d6/d6f/classObjectManager_a61f5e9cc25dfe248964c8add54188f62}
+
+\item 
+\hypertarget{classObjectManager_a9282549cec0a2f539f6b710bfeabf208}{
+bt\-Quaternion {\bfseries edit\-Base\-Quaternion}}
+\label{d6/d6f/classObjectManager_a9282549cec0a2f539f6b710bfeabf208}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Manages all active objects. \-Inactive objects are handled by the \hyperlink{classGameDataStorage}{\-Game\-Data\-Storage}. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/object.\-h\item 
+src/object.\-cpp\end{DoxyCompactItemize}

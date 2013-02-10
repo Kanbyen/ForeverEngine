@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<GUIScheme Name="VoxelWarsSkin">
+	<Imageset Name="Style-Imageset" Filename="Style.imageset" />
+	<LookNFeel Filename="Style.looknfeel" />
+	<WindowRendererSet Filename="CEGUIFalagardWRBase" />
+	<FalagardMapping WindowType="Style/Titlebar" TargetType="CEGUI/Titlebar" Renderer="Falagard/Titlebar" LookNFeel="Style/Titlebar" />
+	<FalagardMapping WindowType="Style/Button" TargetType="CEGUI/PushButton" Renderer="Falagard/Button" LookNFeel="Style/Button" />
+	<FalagardMapping WindowType="Style/FrameWindow" TargetType="CEGUI/FrameWindow" Renderer="Falagard/FrameWindow" LookNFeel="Style/FrameWindow" />
+	<FalagardMapping WindowType="Style/Editbox" TargetType="CEGUI/Editbox" Renderer="Falagard/Editbox" LookNFeel="Style/Editbox" />
+	<FalagardMapping WindowType="Style/StaticImage" TargetType="DefaultWindow" Renderer="Falagard/StaticImage" LookNFeel="Style/StaticImage" />
+	<FalagardMapping WindowType="Style/StaticText" TargetType="DefaultWindow" Renderer="Falagard/StaticText" LookNFeel="Style/StaticText" />
+	<FalagardMapping WindowType="Style/VerticalScrollbarThumb" TargetType="CEGUI/Thumb" Renderer="Falagard/Button" LookNFeel="Style/VerticalScrollbarThumb" />
+	<FalagardMapping WindowType="Style/VerticalScrollbar" TargetType="CEGUI/Scrollbar" Renderer="Falagard/Scrollbar" LookNFeel="Style/VerticalScrollbar" />
+	<FalagardMapping WindowType="Style/HorizontalScrollbarThumb" TargetType="CEGUI/Thumb" Renderer="Falagard/Button" LookNFeel="Style/HorizontalScrollbarThumb" />
+	<FalagardMapping WindowType="Style/HorizontalScrollbar" TargetType="CEGUI/Scrollbar" Renderer="Falagard/Scrollbar" LookNFeel="Style/HorizontalScrollbar" />
+	
+	<FalagardMapping WindowType="Style/Listbox" TargetType="CEGUI/Listbox" Renderer="Falagard/Listbox" LookNFeel="Style/Listbox" />
+
+	<FalagardMapping WindowType="Style/MultiLineEditbox" TargetType="CEGUI/MultiLineEditbox" Renderer="Falagard/MultiLineEditbox" LookNFeel="Style/MultiLineEditbox" />
+	
+	<FalagardMapping WindowType="Style/TabButton"  TargetType="CEGUI/TabButton"  Renderer="Falagard/TabButton"  LookNFeel="Style/TabButton" />
+	<FalagardMapping WindowType="Style/TabControl" TargetType="CEGUI/TabControl" Renderer="Falagard/TabControl" LookNFeel="Style/TabControl" />
+	<FalagardMapping WindowType="Style/TabContentPane"    TargetType="DefaultWindow"    Renderer="Falagard/Default"    LookNFeel="Style/TabContentPane" />
+	<FalagardMapping WindowType="Style/TabButtonPane"    TargetType="DefaultWindow"    Renderer="Falagard/Default"    LookNFeel="Style/TabButtonPane" />
+	
+	<FalagardMapping WindowType="Style/IconButton"  TargetType="CEGUI/PushButton"  Renderer="Falagard/Button"       LookNFeel="Style/IconButton" />
+	
+	<FalagardMapping WindowType="Style/RadioButton" TargetType="CEGUI/RadioButton" Renderer="Falagard/ToggleButton" LookNFeel="Style/RadioButton" />
+	<FalagardMapping WindowType="Style/Checkbox"    TargetType="CEGUI/Checkbox"    Renderer="Falagard/ToggleButton" LookNFeel="Style/Checkbox" />
+	
+<!--	
+	<FalagardMapping WindowType="Style/ComboDropList" TargetType="Falagard/ComboDropList" LookNFeel="Style/ComboDropList" />
+	<FalagardMapping WindowType="Style/ComboboxButton" TargetType="Falagard/Button" LookNFeel="Style/ComboboxButton" />
+	<FalagardMapping WindowType="Style/Combobox" TargetType="Falagard/Combobox" LookNFeel="Style/Combobox" />
+	<FalagardMapping WindowType="Style/ProgressBar" TargetType="Falagard/ProgressBar" LookNFeel="Style/ProgressBar" />
+	<FalagardMapping WindowType="Style/ScrollablePane" TargetType="Falagard/ScrollablePane" LookNFeel="Style/ScrollablePane" />
+	<FalagardMapping WindowType="Style/Checkbox" TargetType="Falagard/Checkbox" LookNFeel="Style/Checkbox" />
+	<FalagardMapping WindowType="Style/RadioButton" TargetType="Falagard/RadioButton" LookNFeel="Style/RadioButton" />
+	<FalagardMapping WindowType="Style/ScrollablePane" TargetType="Falagard/ScrollablePane" LookNFeel="Style/ScrollablePane" />
+-->
+</GUIScheme>

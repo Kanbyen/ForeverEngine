@@ -1,0 +1,29 @@
+<Objects>
+	<Object name="big blue light">
+		<Component name="Light">
+			<Radius value="20"/>
+			<Color value="0.0 0.0 1.0"/>
+		</Component>
+	</Object>
+	
+	<Object name="small red light">
+		<Component name="Light">
+			<Radius value="5"/>
+			<Color value="1.0 0.0 0.0"/>
+		</Component>
+	</Object>
+	
+	<Object name="big white light">
+		<Component name="Light">
+			<Radius value="20"/>
+			<Color value="1.0 1.0 1.0"/>
+		</Component>
+	</Object>
+	
+	<Object name="sunlight">
+		<Component name="Light">
+			<Radius value="100"/>
+			<Color value="1.0 1.0 1.0"/>
+		</Component>
+	</Object>
+</Objects>

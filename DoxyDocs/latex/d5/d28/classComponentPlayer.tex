@@ -1,0 +1,267 @@
+\hypertarget{classComponentPlayer}{
+\section{\-Component\-Player \-Class \-Reference}
+\label{d5/d28/classComponentPlayer}\index{\-Component\-Player@{\-Component\-Player}}
+}
+
+
+\-Player \hyperlink{classComponent}{\-Component}.  
+
+
+
+
+{\ttfamily \#include $<$component\-Player.\-h$>$}
+
+\-Inheritance diagram for \-Component\-Player\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d5/d28/classComponentPlayer}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentPlayer_a9181ecf4d4afbbd8fce8abd7614c6cf6}{
+void {\bfseries show\-Weapon\-Inventory} (int number, bool show\-Desc=true)}
+\label{d5/d28/classComponentPlayer_a9181ecf4d4afbbd8fce8abd7614c6cf6}
+
+\item 
+\hypertarget{classComponentPlayer_a70c19dd2b6e670fc6f7629e0bb543de3}{
+\hyperlink{classComponentWeapon}{\-Component\-Weapon} $\ast$ {\bfseries get\-Act\-L\-M\-B\-Weapon} ()}
+\label{d5/d28/classComponentPlayer_a70c19dd2b6e670fc6f7629e0bb543de3}
+
+\item 
+\hypertarget{classComponentPlayer_a3314a8bfb6b045f9517c8d350b4dbdab}{
+\hyperlink{classComponentWeapon}{\-Component\-Weapon} $\ast$ {\bfseries get\-Act\-Shift\-Weapon} ()}
+\label{d5/d28/classComponentPlayer_a3314a8bfb6b045f9517c8d350b4dbdab}
+
+\item 
+\hypertarget{classComponentPlayer_ae570481b3d41d6d0b1d17cbbcf4dbcb4}{
+bool {\bfseries throw\-Grenade} ()}
+\label{d5/d28/classComponentPlayer_ae570481b3d41d6d0b1d17cbbcf4dbcb4}
+
+\item 
+\hypertarget{classComponentPlayer_a32ed62bf78c00e970961f0001f84ae06}{
+void {\bfseries player\-Step} (bool move, \-Vector3 direction, bool wants\-To\-Jump, float time\-Since\-Last\-Frame)}
+\label{d5/d28/classComponentPlayer_a32ed62bf78c00e970961f0001f84ae06}
+
+\item 
+\hypertarget{classComponentPlayer_aeaaf91455fcdfca3acbe04893d07c521}{
+void {\bfseries show\-Text\-Entry\-Line} ()}
+\label{d5/d28/classComponentPlayer_aeaaf91455fcdfca3acbe04893d07c521}
+
+\item 
+\hypertarget{classComponentPlayer_aa1737307547d679cd1926e84f9182430}{
+void {\bfseries hide\-Text\-Entry\-Line} ()}
+\label{d5/d28/classComponentPlayer_aa1737307547d679cd1926e84f9182430}
+
+\item 
+\hypertarget{classComponentPlayer_aae9348b16d0d8a8eb9e9f0300cf41f72}{
+void {\bfseries update\-Text\-Entry\-Line} ()}
+\label{d5/d28/classComponentPlayer_aae9348b16d0d8a8eb9e9f0300cf41f72}
+
+\item 
+\hypertarget{classComponentPlayer_a58c21cd8acfdd3244c7de3c7edd40e50}{
+void {\bfseries text\-Entry\-Line\-Enter} ()}
+\label{d5/d28/classComponentPlayer_a58c21cd8acfdd3244c7de3c7edd40e50}
+
+\item 
+\hypertarget{classComponentPlayer_ac450ea4fc6a7e8d9fb7d05b4cdcd2882}{
+void {\bfseries text\-Entry\-Line\-Key\-Event} (const \-O\-I\-S\-::\-Key\-Event \&evt)}
+\label{d5/d28/classComponentPlayer_ac450ea4fc6a7e8d9fb7d05b4cdcd2882}
+
+\item 
+\hypertarget{classComponentPlayer_ac4496f255396b1dbe6dfbc3b03c38b64}{
+virtual void \hyperlink{classComponentPlayer_ac4496f255396b1dbe6dfbc3b03c38b64}{exit} ()}
+\label{d5/d28/classComponentPlayer_ac4496f255396b1dbe6dfbc3b03c38b64}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentPlayer_ac889012da1621a530330cedf9da5fd3c}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentPlayer_a3df43bc31af62c1af4ba2c30ae9fe04f}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentPlayer_ad795da31d48a82f18f03e23ac3c865f6}{
+static void {\bfseries create\-Player\-Damaged\-Overlay} ()}
+\label{d5/d28/classComponentPlayer_ad795da31d48a82f18f03e23ac3c865f6}
+
+\item 
+\hypertarget{classComponentPlayer_a9268a24965814b11a6bfe1751cade0f2}{
+static void {\bfseries destroy\-Player\-Damaged\-Overlay} ()}
+\label{d5/d28/classComponentPlayer_a9268a24965814b11a6bfe1751cade0f2}
+
+\item 
+\hypertarget{classComponentPlayer_a0f455b5d81967c1f2f1c8fa7f9cdd83b}{
+static void {\bfseries handle\-Player\-Damaged\-Overlay} (float dt)}
+\label{d5/d28/classComponentPlayer_a0f455b5d81967c1f2f1c8fa7f9cdd83b}
+
+\item 
+\hypertarget{classComponentPlayer_a1e07540d443c3893d9d5dca814b4d413}{
+static void {\bfseries add\-Hint} (string text)}
+\label{d5/d28/classComponentPlayer_a1e07540d443c3893d9d5dca814b4d413}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentPlayer_ab0e6d89577ef6bd713c8259b572066f7}{
+\hyperlink{classWeaponControlsInfo}{\-Weapon\-Controls\-Info} {\bfseries weapon\-Controls\-Info}}
+\label{d5/d28/classComponentPlayer_ab0e6d89577ef6bd713c8259b572066f7}
+
+\item 
+\hypertarget{classComponentPlayer_a41250c89951c3c79c9e35fa007986cd3}{
+\hyperlink{classWeaponInHand}{\-Weapon\-In\-Hand} {\bfseries weapon\-In\-Hand}}
+\label{d5/d28/classComponentPlayer_a41250c89951c3c79c9e35fa007986cd3}
+
+\item 
+\hypertarget{classComponentPlayer_adc0824c1a2a9c04bce0dbb795569f60e}{
+\hyperlink{classWeaponInventory}{\-Weapon\-Inventory} {\bfseries weapons} \mbox{[}3\mbox{]}}
+\label{d5/d28/classComponentPlayer_adc0824c1a2a9c04bce0dbb795569f60e}
+
+\item 
+\hypertarget{classComponentPlayer_a519e3e128c11dfc2567c0c397b493acf}{
+int {\bfseries act\-Weapon\-Inventory}}
+\label{d5/d28/classComponentPlayer_a519e3e128c11dfc2567c0c397b493acf}
+
+\item 
+\hypertarget{classComponentPlayer_af6035a7a4805d61f6121847395c57f9c}{
+bool {\bfseries is\-Using\-A\-Tool}}
+\label{d5/d28/classComponentPlayer_af6035a7a4805d61f6121847395c57f9c}
+
+\item 
+\hypertarget{classComponentPlayer_a1f4dc283de36244d3a137d5129185167}{
+float {\bfseries inventory\-Show\-Time}}
+\label{d5/d28/classComponentPlayer_a1f4dc283de36244d3a137d5129185167}
+
+\item 
+\hypertarget{classComponentPlayer_a798a9b9a661f388b2fac3bef27bfcf5f}{
+int {\bfseries weapon\-Picked\-Up}}
+\label{d5/d28/classComponentPlayer_a798a9b9a661f388b2fac3bef27bfcf5f}
+
+\item 
+\hypertarget{classComponentPlayer_abbc5bdda4ee78cfe86163c4f36eff6dc}{
+bool {\bfseries grenade\-Picked\-Up}}
+\label{d5/d28/classComponentPlayer_abbc5bdda4ee78cfe86163c4f36eff6dc}
+
+\item 
+\hypertarget{classComponentPlayer_a04b39f8bcb3d7268f14b10f5566dce82}{
+bool {\bfseries tool\-Picked\-Up}}
+\label{d5/d28/classComponentPlayer_a04b39f8bcb3d7268f14b10f5566dce82}
+
+\item 
+\hypertarget{classComponentPlayer_ad8037048b27ba4693990ced43a5eedb4}{
+bool {\bfseries dont\-Respawn}}
+\label{d5/d28/classComponentPlayer_ad8037048b27ba4693990ced43a5eedb4}
+
+\item 
+\hypertarget{classComponentPlayer_af7c42ef5900e9d62ced3523b7686cf85}{
+\hyperlink{classComponentItem}{\-Component\-Item} $\ast$ {\bfseries target\-Item}}
+\label{d5/d28/classComponentPlayer_af7c42ef5900e9d62ced3523b7686cf85}
+
+\item 
+\hypertarget{classComponentPlayer_a15b6245d4a067a769169a520307ff5a0}{
+\-Overlay $\ast$ \hyperlink{classComponentPlayer_a15b6245d4a067a769169a520307ff5a0}{crosshair}}
+\label{d5/d28/classComponentPlayer_a15b6245d4a067a769169a520307ff5a0}
+
+\begin{DoxyCompactList}\small\item\em \-The crosshair overlay. \end{DoxyCompactList}\item 
+\hypertarget{classComponentPlayer_ac1beab9d4871378b41e2cea69cbd279f}{
+\hyperlink{classComponentCharacterController}{\-Component\-Character\-Controller} $\ast$ {\bfseries my\-Character\-Controller}}
+\label{d5/d28/classComponentPlayer_ac1beab9d4871378b41e2cea69cbd279f}
+
+\item 
+\hypertarget{classComponentPlayer_ac511e7910673fe2bd9ad0a36bcd8324a}{
+char {\bfseries text\-Entry\-Line\-Text} \mbox{[}\-T\-E\-X\-T\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N+1\mbox{]}}
+\label{d5/d28/classComponentPlayer_ac511e7910673fe2bd9ad0a36bcd8324a}
+
+\item 
+\hypertarget{classComponentPlayer_a2d2e2f99c8b5c3179b31864c452a6c5d}{
+int {\bfseries text\-Entry\-Line\-Cursor}}
+\label{d5/d28/classComponentPlayer_a2d2e2f99c8b5c3179b31864c452a6c5d}
+
+\item 
+\hypertarget{classComponentPlayer_a86eb5c098f810e739c8112a770e31d2a}{
+\hyperlink{classStaticText}{\-Static\-Text} {\bfseries text\-Entry\-Line}}
+\label{d5/d28/classComponentPlayer_a86eb5c098f810e739c8112a770e31d2a}
+
+\item 
+\hypertarget{classComponentPlayer_a10ad75ca2e9273f50ec7ed4257cb1324}{
+\hyperlink{classStaticText}{\-Static\-Text} {\bfseries target\-Name}}
+\label{d5/d28/classComponentPlayer_a10ad75ca2e9273f50ec7ed4257cb1324}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentPlayer_a32549049edbcc9b0453b42a36cfc20aa}{
+static \-Ogre\-::\-Manual\-Object $\ast$ {\bfseries player\-Damaged\-Overlay}}
+\label{d5/d28/classComponentPlayer_a32549049edbcc9b0453b42a36cfc20aa}
+
+\item 
+\hypertarget{classComponentPlayer_af9fb9bc1e7f30fc8d5890e818e8de79e}{
+static \-Ogre\-::\-Scene\-Node $\ast$ {\bfseries player\-Damaged\-Scene\-Node}}
+\label{d5/d28/classComponentPlayer_af9fb9bc1e7f30fc8d5890e818e8de79e}
+
+\item 
+\hypertarget{classComponentPlayer_a636f852b0b2c6f79c3b0381f7af327f1}{
+static \-Ogre\-::\-Material\-Ptr {\bfseries player\-Damaged\-Material\-Ptr}}
+\label{d5/d28/classComponentPlayer_a636f852b0b2c6f79c3b0381f7af327f1}
+
+\item 
+\hypertarget{classComponentPlayer_ad7f97b3dfc0a71433c435b890af9cdf0}{
+static float {\bfseries player\-Damaged\-Blend}}
+\label{d5/d28/classComponentPlayer_ad7f97b3dfc0a71433c435b890af9cdf0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Player \hyperlink{classComponent}{\-Component}. 
+
+\-Parameters\-: none 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentPlayer_a3df43bc31af62c1af4ba2c30ae9fe04f}{
+\index{\-Component\-Player@{\-Component\-Player}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentPlayer@{\-Component\-Player}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Player\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d5/d28/classComponentPlayer_a3df43bc31af62c1af4ba2c30ae9fe04f}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentPlayer_ac889012da1621a530330cedf9da5fd3c}{
+\index{\-Component\-Player@{\-Component\-Player}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentPlayer@{\-Component\-Player}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Player\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d5/d28/classComponentPlayer_ac889012da1621a530330cedf9da5fd3c}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Player.\-h\item 
+src/component\-Player.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,166 @@
+\hypertarget{classPhysics}{
+\section{\-Physics \-Class \-Reference}
+\label{d4/d2d/classPhysics}\index{\-Physics@{\-Physics}}
+}
+
+
+\-Handles physics engine integration. \-Pseudo-\/\-Singleton, use the global variable \char`\"{}physics\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$physics.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPhysics_a89a94b62b65b884201c0951db6334a77}{
+void \hyperlink{classPhysics_a89a94b62b65b884201c0951db6334a77}{init} (\hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$volume)}
+\label{d4/d2d/classPhysics_a89a94b62b65b884201c0951db6334a77}
+
+\begin{DoxyCompactList}\small\item\em \-Initializes the physics object. \end{DoxyCompactList}\item 
+\hypertarget{classPhysics_acc4e6b8a225f1c3f848bd8a3400c2d69}{
+void \hyperlink{classPhysics_acc4e6b8a225f1c3f848bd8a3400c2d69}{exit} ()}
+\label{d4/d2d/classPhysics_acc4e6b8a225f1c3f848bd8a3400c2d69}
+
+\begin{DoxyCompactList}\small\item\em \-Deinitializes the physics object. \end{DoxyCompactList}\item 
+\hypertarget{classPhysics_abf968a6c0c4273bfb26f48ed3a9d7f0c}{
+void \hyperlink{classPhysics_abf968a6c0c4273bfb26f48ed3a9d7f0c}{step} (float time\-Since\-Last\-Frame)}
+\label{d4/d2d/classPhysics_abf968a6c0c4273bfb26f48ed3a9d7f0c}
+
+\begin{DoxyCompactList}\small\item\em \-Must be called every frame to update the physics world. \end{DoxyCompactList}\item 
+void \hyperlink{classPhysics_a90a2e01f1d338a1fcd3ec244737fefdc}{add\-Object} (bt\-Rigid\-Body $\ast$body, \hyperlink{classObject}{\-Object} $\ast$object, short int collision\-Group=-\/1)
+\begin{DoxyCompactList}\small\item\em \-Adds a dynamic object to the physics world. \end{DoxyCompactList}\item 
+\hypertarget{classPhysics_a3a439e86a540e10027703190e0b6d340}{
+void \hyperlink{classPhysics_a3a439e86a540e10027703190e0b6d340}{remove\-Object} (bt\-Rigid\-Body $\ast$body)}
+\label{d4/d2d/classPhysics_a3a439e86a540e10027703190e0b6d340}
+
+\begin{DoxyCompactList}\small\item\em \-Removes a dynamic object from the physics world. \end{DoxyCompactList}\item 
+\hypertarget{classPhysics_a0e90b954e53aaf8693a292379a435534}{
+void \hyperlink{classPhysics_a0e90b954e53aaf8693a292379a435534}{add\-Static} (bt\-Rigid\-Body $\ast$body)}
+\label{d4/d2d/classPhysics_a0e90b954e53aaf8693a292379a435534}
+
+\begin{DoxyCompactList}\small\item\em \-Adds a static object to the physics world. \end{DoxyCompactList}\item 
+\hypertarget{classPhysics_ae6533c95865251e8f690c0843ede59d3}{
+void \hyperlink{classPhysics_ae6533c95865251e8f690c0843ede59d3}{remove\-Static} (bt\-Rigid\-Body $\ast$body)}
+\label{d4/d2d/classPhysics_ae6533c95865251e8f690c0843ede59d3}
+
+\begin{DoxyCompactList}\small\item\em \-Removes a static object from the physics world. \end{DoxyCompactList}\item 
+\hypertarget{classPhysics_aab4c3c0c6a3180b995f24e5bc035e679}{
+void \hyperlink{classPhysics_aab4c3c0c6a3180b995f24e5bc035e679}{activate\-Objects\-In\-Box} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z)}
+\label{d4/d2d/classPhysics_aab4c3c0c6a3180b995f24e5bc035e679}
+
+\begin{DoxyCompactList}\small\item\em \-Activates all rigid bodies in the box with the given coordinates. \-Useful for example if the volume was modified inside this box. \end{DoxyCompactList}\item 
+\hypertarget{classPhysics_adc70eee1d1fa72512fe500efe481f4c5}{
+void \hyperlink{classPhysics_adc70eee1d1fa72512fe500efe481f4c5}{ray\-Test} (const bt\-Vector3 \&ray\-From\-World, const bt\-Vector3 \&ray\-To\-World, bt\-Collision\-World\-::\-Ray\-Result\-Callback \&result\-Callback) const }
+\label{d4/d2d/classPhysics_adc70eee1d1fa72512fe500efe481f4c5}
+
+\begin{DoxyCompactList}\small\item\em \-Calls dynamics\-World-\/$>$ray\-Test(...) \end{DoxyCompactList}\item 
+\hypertarget{classPhysics_a643be9878aa896a426db9ba7ebc763e4}{
+\hyperlink{classObject}{\-Object} $\ast$ \hyperlink{classPhysics_a643be9878aa896a426db9ba7ebc763e4}{get\-Object\-From\-Body} (bt\-Rigid\-Body $\ast$body)}
+\label{d4/d2d/classPhysics_a643be9878aa896a426db9ba7ebc763e4}
+
+\begin{DoxyCompactList}\small\item\em \-Gets the \hyperlink{classObject}{\-Object} which owns the specified rigid body or \-N\-U\-L\-L if the body isn't owned by an \hyperlink{classObject}{\-Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPhysics_a3ed5d1495f629d339b122a97883d7f7f}{
+typedef std\-::list$<$ bt\-Rigid\-Body $\ast$ $>$\*
+\-::iterator {\bfseries object\-List\-Itr}}
+\label{d4/d2d/classPhysics_a3ed5d1495f629d339b122a97883d7f7f}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPhysics_a307ff9df1ce6b101b81255b8ba392556}{
+void \hyperlink{classPhysics_a307ff9df1ce6b101b81255b8ba392556}{check\-Shape\-Calculation} (int x, int y, int z)}
+\label{d4/d2d/classPhysics_a307ff9df1ce6b101b81255b8ba392556}
+
+\begin{DoxyCompactList}\small\item\em \-Creates collision data for the specified block if not already there. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPhysics_a4af4b513fb5f32264062088a7aea4c86}{
+static void \hyperlink{classPhysics_a4af4b513fb5f32264062088a7aea4c86}{internal\-Tick\-Callback} (bt\-Dynamics\-World $\ast$world, bt\-Scalar time\-Step)}
+\label{d4/d2d/classPhysics_a4af4b513fb5f32264062088a7aea4c86}
+
+\begin{DoxyCompactList}\small\item\em \-Bullet's callbacks. \end{DoxyCompactList}\item 
+\hypertarget{classPhysics_ade3ad9b6f0925b9e89c2a082660a49fe}{
+static void {\bfseries internal\-Tick\-Callback\-Send\-Messages} (bt\-Rigid\-Body $\ast$co, bt\-Rigid\-Body $\ast$co2, bt\-Persistent\-Manifold $\ast$contact\-Manifold)}
+\label{d4/d2d/classPhysics_ade3ad9b6f0925b9e89c2a082660a49fe}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPhysics_a5a82b789aed9986b2921b2fc33e3d1d7}{
+bt\-Default\-Collision\-Configuration $\ast$ {\bfseries collision\-Configuration}}
+\label{d4/d2d/classPhysics_a5a82b789aed9986b2921b2fc33e3d1d7}
+
+\item 
+\hypertarget{classPhysics_afa19fa215f96745d01f76da8273c1509}{
+bt\-Collision\-Dispatcher $\ast$ {\bfseries dispatcher}}
+\label{d4/d2d/classPhysics_afa19fa215f96745d01f76da8273c1509}
+
+\item 
+\hypertarget{classPhysics_a27a621d3ee9bc7f816d0c72a175751f9}{
+bt\-Broadphase\-Interface $\ast$ {\bfseries broadphase}}
+\label{d4/d2d/classPhysics_a27a621d3ee9bc7f816d0c72a175751f9}
+
+\item 
+\hypertarget{classPhysics_af9660444c78edf3c0f81070a6e803c48}{
+bt\-Sequential\-Impulse\-Constraint\-Solver $\ast$ {\bfseries solver}}
+\label{d4/d2d/classPhysics_af9660444c78edf3c0f81070a6e803c48}
+
+\item 
+\hypertarget{classPhysics_acc5baebffeedb496a9b25ed80a3e969c}{
+bt\-Discrete\-Dynamics\-World $\ast$ {\bfseries dynamics\-World}}
+\label{d4/d2d/classPhysics_acc5baebffeedb496a9b25ed80a3e969c}
+
+\item 
+\hypertarget{classPhysics_a85a4aec352eb9b30ed095df4dcde27b2}{
+\hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$ {\bfseries volume}}
+\label{d4/d2d/classPhysics_a85a4aec352eb9b30ed095df4dcde27b2}
+
+\item 
+\hypertarget{classPhysics_a8614dd49cb2d0bb49ca16029fbd79206}{
+std\-::list$<$ bt\-Rigid\-Body $\ast$ $>$ {\bfseries object\-List}}
+\label{d4/d2d/classPhysics_a8614dd49cb2d0bb49ca16029fbd79206}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPhysics_a1fea93fdcedfc99d5061d6904d6a93e6}{
+class {\bfseries \-Component\-Physics}}
+\label{d4/d2d/classPhysics_a1fea93fdcedfc99d5061d6904d6a93e6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Handles physics engine integration. \-Pseudo-\/\-Singleton, use the global variable \char`\"{}physics\char`\"{}. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classPhysics_a90a2e01f1d338a1fcd3ec244737fefdc}{
+\index{\-Physics@{\-Physics}!add\-Object@{add\-Object}}
+\index{add\-Object@{add\-Object}!Physics@{\-Physics}}
+\subsubsection[{add\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void \-Physics\-::add\-Object (
+\begin{DoxyParamCaption}
+\item[{bt\-Rigid\-Body $\ast$}]{body, }
+\item[{{\bf \-Object} $\ast$}]{object, }
+\item[{short int}]{collision\-Group = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}
+\label{d4/d2d/classPhysics_a90a2e01f1d338a1fcd3ec244737fefdc}
+
+
+\-Adds a dynamic object to the physics world. 
+
+\-Method using contact callbacks -\/ doesn't work properly. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/physics.\-h\item 
+src/physics.\-cpp\end{DoxyCompactItemize}

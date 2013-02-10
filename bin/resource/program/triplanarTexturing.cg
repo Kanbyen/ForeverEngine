@@ -1,0 +1,164 @@
+#define NUM_LIGHTS 3
+
+struct a2v
+{
+    float4 Position		: POSITION;		// in object space
+    float3 Normal		: NORMAL;
+    float3 TexWeights	: TEXCOORD0;
+    float3 TexNumbers	: TEXCOORD1;
+};
+
+struct v2f
+{
+    float4 Position		: POSITION;		// in projection space
+    float4 Color		: TEXCOORD4;		// determined by lighting + ambient
+    float3 TexWeights	: TEXCOORD0;
+    float3 TexNumbers	: TEXCOORD1;
+    float3 TexCoords	: TEXCOORD2;
+    float3 Normal		: TEXCOORD3;
+};
+
+struct light
+{
+    float4 position;
+    float4 diffuseColour;
+    float4 attenuation;
+};
+
+float3 triplanarTexturing(float material, const float3 texCoords, const float3 normal, const float noOfTexturesPerDimension, sampler2D colourMap)
+{
+	// Compute the offset of the texture in the texture atlas
+	material = floor(material);
+	float y = floor(material / noOfTexturesPerDimension);
+	float x = fmod(material, noOfTexturesPerDimension);
+	float2 offset = float2(x, y);
+	offset /= noOfTexturesPerDimension;
+	
+	// Do Tri-planar texturing
+	float3 colourMapValueXY = tex2D(colourMap, texCoords.xy + offset).rgb * normal.z*normal.z;
+	float3 colourMapValueZY = tex2D(colourMap, texCoords.zy + offset).rgb * normal.x*normal.x;
+	float3 colourMapValueXZ = tex2D(colourMap, texCoords.xz + offset).rgb * normal.y*normal.y;
+
+	return colourMapValueXY + colourMapValueZY + colourMapValueXZ;
+}
+
+float4 fragment(v2f IN, uniform sampler2D colourMap : TEXUNIT0, uniform float3 fogColor, uniform float textureSize, uniform float noOfTexturesPerDimension) : COLOR
+{
+	//return float4(IN.TexNumbers.x / 32.0f, IN.TexNumbers.y / 32.0f, IN.TexNumbers.z / 32.0f, 1);
+	
+	IN.Normal = normalize(IN.Normal);
+
+	// Make sure texture coordinates are in the range 0.0 - 1.0
+	IN.TexCoords.x = frac(IN.TexCoords.x);
+	IN.TexCoords.y = frac(IN.TexCoords.y);
+	IN.TexCoords.z = frac(IN.TexCoords.z);
+	
+	// Avoid sampling the texels at the edge of each texture. To do this, compress the range of texture coordinates.
+	// To work with mipmaping we can't use a constant addition of 0.5 - it needs to be dependent the number of mipmap levels.
+	const float border = 16.0f;	// 0.5 * pow(2, num_mipmaps)
+	IN.TexCoords *= (textureSize - 2 * border);
+	IN.TexCoords += border;
+	IN.TexCoords /= textureSize;
+	
+	// Scale the texture coordinates to the right range for the texture atlas.
+	IN.TexCoords /= noOfTexturesPerDimension;
+
+	float3 colorMapValue;
+	// It seems to be faster to access the textures always and don't do the if-clause
+	/*if ((IN.TexNumbers.x == IN.TexNumbers.y) && (IN.TexNumbers.x == IN.TexNumbers.z))
+	{
+		colorMapValue = triplanarTexturing(IN.TexNumbers.x, IN.TexCoords, IN.Normal, noOfTexturesPerDimension, colourMap);
+	}
+	else
+	{*/
+		/*if (IN.TexWeights.x > IN.TexWeights.y)
+		{
+			if (IN.TexWeights.x > IN.TexWeights.z)
+				colorMapValue = triplanarTexturing(IN.TexNumbers.x, IN.TexCoords, IN.Normal, noOfTexturesPerDimension, colourMap);
+			else
+				colorMapValue = triplanarTexturing(IN.TexNumbers.z, IN.TexCoords, IN.Normal, noOfTexturesPerDimension, colourMap);
+		}
+		else
+		{
+			if (IN.TexWeights.y > IN.TexWeights.z)
+				colorMapValue = triplanarTexturing(IN.TexNumbers.y, IN.TexCoords, IN.Normal, noOfTexturesPerDimension, colourMap);
+			else
+				colorMapValue = triplanarTexturing(IN.TexNumbers.z, IN.TexCoords, IN.Normal, noOfTexturesPerDimension, colourMap);
+		}*/
+				
+		float3 colorMapValueX = float3(0.0f, 0.0f, 0.0f);
+		float3 colorMapValueY = float3(0.0f, 0.0f, 0.0f);
+		float3 colorMapValueZ = float3(0.0f, 0.0f, 0.0f);
+		if (IN.TexWeights.x > 0.005f)
+			colorMapValueX = triplanarTexturing(IN.TexNumbers.x, IN.TexCoords, IN.Normal, noOfTexturesPerDimension, colourMap);
+		if (IN.TexWeights.y > 0.005f)
+			colorMapValueY = triplanarTexturing(IN.TexNumbers.y, IN.TexCoords, IN.Normal, noOfTexturesPerDimension, colourMap);
+		if (IN.TexWeights.z > 0.005f)
+			colorMapValueZ = triplanarTexturing(IN.TexNumbers.z, IN.TexCoords, IN.Normal, noOfTexturesPerDimension, colourMap);
+
+		/*float3 colorMapValueX = triplanarTexturing(IN.TexNumbers.x, IN.TexCoords, IN.Normal, noOfTexturesPerDimension, colourMap);
+		float3 colorMapValueY = triplanarTexturing(IN.TexNumbers.y, IN.TexCoords, IN.Normal, noOfTexturesPerDimension, colourMap);
+		float3 colorMapValueZ = triplanarTexturing(IN.TexNumbers.z, IN.TexCoords, IN.Normal, noOfTexturesPerDimension, colourMap);*/
+
+		colorMapValue = colorMapValueX * IN.TexWeights.x +
+							   colorMapValueY * IN.TexWeights.y +
+							   colorMapValueZ * IN.TexWeights.z;
+	//}
+	
+	float3 color = colorMapValue * IN.Color.rgb;
+	color = lerp(color, fogColor, floor(3 * IN.Color.a) / 2);
+
+	return float4(color, 1.0f);
+}
+
+v2f vertex(a2v IN, float4x4 world, float4x4 viewProj, float3 camPos, float textureScale, float3 lightColor, float3 darkColor, float3 dirToLight, float4 fogParams, light lights[4])
+{
+    v2f OUT;
+	
+	OUT.TexWeights = IN.TexWeights;
+	OUT.TexNumbers = IN.TexNumbers;
+	
+    OUT.Position = mul(world, IN.Position);
+    OUT.Normal = normalize(IN.Normal);	// we don't need rotations, so take the normal as it is
+
+    OUT.TexCoords = OUT.Position.xyz;
+    OUT.TexCoords *= textureScale;
+    
+	// Hemispheric ambient lighting
+	float factor = 0.5f * (1 + dot(IN.Normal, dirToLight));
+	//factor *= factor;
+    OUT.Color.rgb = lerp(darkColor, lightColor, factor);
+
+	// Other lighting
+    for (int lightCt = 0; lightCt < NUM_LIGHTS; lightCt++)
+    {
+		float3 L = normalize(lights[lightCt].position.xyz - OUT.Position.xyz);
+		
+		// Calculate attenuation factor.
+		float d = distance(lights[lightCt].position.xyz, OUT.Position.xyz);
+		float attenuationFactor = 1.0 / (lights[lightCt].attenuation.y + lights[lightCt].attenuation.z * d + lights[lightCt].attenuation.w * d * d);
+		
+		// Calculate diffuse component
+		float LdotN = max(dot(L, IN.Normal) , 0);
+		OUT.Color.rgb += lights[lightCt].diffuseColour.rgb * LdotN * attenuationFactor;
+    }
+    
+    // Fog
+    float dist = length(OUT.Position.xyz - camPos);
+    OUT.Color.a = max((dist - fogParams.y) * fogParams.w, 0);
+
+    OUT.Position = mul(viewProj, OUT.Position);
+    return OUT;
+}
+
+v2f vertex_FourLights(a2v IN,uniform float4x4 world, uniform float4x4 viewProj, uniform float3 camPos, uniform float textureScale, uniform float3 lightColor, uniform float3 darkColor, uniform float3 dirToLight, uniform float4 fogParams, uniform light light0, uniform light light1, uniform light light2, uniform light light3)
+{   
+    light lights[4];
+    lights[0] = light0;
+    lights[1] = light1;
+    lights[2] = light2;
+    lights[3] = light3;
+    
+    return vertex(IN, world, viewProj, camPos, textureScale, lightColor, darkColor, dirToLight, fogParams, lights);
+}
+

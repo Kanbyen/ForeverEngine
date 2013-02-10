@@ -1,0 +1,82 @@
+\hypertarget{classComponentTemplatePhysics}{
+\section{\-Component\-Template\-Physics \-Class \-Reference}
+\label{d3/dcb/classComponentTemplatePhysics}\index{\-Component\-Template\-Physics@{\-Component\-Template\-Physics}}
+}
+\-Inheritance diagram for \-Component\-Template\-Physics\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d3/dcb/classComponentTemplatePhysics}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentTemplatePhysics_adbac8f8b10f133416db9bbf9e0c76da2}{
+virtual \hyperlink{classNamedComponent}{\-Named\-Component} $\ast$ \hyperlink{classComponentTemplatePhysics_adbac8f8b10f133416db9bbf9e0c76da2}{create\-Instance} (\hyperlink{classObject}{\-Object} $\ast$object)}
+\label{d3/dcb/classComponentTemplatePhysics_adbac8f8b10f133416db9bbf9e0c76da2}
+
+\begin{DoxyCompactList}\small\item\em \-Must create an instance of this template. \end{DoxyCompactList}\item 
+\hypertarget{classComponentTemplatePhysics_a6b5ecf21988ee49e791c1be509d0d90e}{
+virtual bool \hyperlink{classComponentTemplatePhysics_a6b5ecf21988ee49e791c1be509d0d90e}{init} (\hyperlink{classTiXmlElement}{\-Ti\-Xml\-Element} $\ast$params)}
+\label{d3/dcb/classComponentTemplatePhysics_a6b5ecf21988ee49e791c1be509d0d90e}
+
+\begin{DoxyCompactList}\small\item\em \-Must initialize the component template by retrieving the needed parameters from the xml file. \end{DoxyCompactList}\item 
+\hypertarget{classComponentTemplatePhysics_a9885a6ddb26e3b2333e58b3994d00ac0}{
+virtual void \hyperlink{classComponentTemplatePhysics_a9885a6ddb26e3b2333e58b3994d00ac0}{exit} ()}
+\label{d3/dcb/classComponentTemplatePhysics_a9885a6ddb26e3b2333e58b3994d00ac0}
+
+\begin{DoxyCompactList}\small\item\em \-Must clean up everything and delete itself. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentTemplatePhysics_a5b8f0ff60881988f4567b832b18c39a2}{
+\-Vector3 {\bfseries radius}}
+\label{d3/dcb/classComponentTemplatePhysics_a5b8f0ff60881988f4567b832b18c39a2}
+
+\item 
+\hypertarget{classComponentTemplatePhysics_a2d29021ca3fc68f7d5718d318d71bd2f}{
+\-Vector3 {\bfseries radius\-Factor}}
+\label{d3/dcb/classComponentTemplatePhysics_a2d29021ca3fc68f7d5718d318d71bd2f}
+
+\item 
+\hypertarget{classComponentTemplatePhysics_acd8c551b068f0602578b633bdb19f6e5}{
+bt\-Vector3 {\bfseries gravity}}
+\label{d3/dcb/classComponentTemplatePhysics_acd8c551b068f0602578b633bdb19f6e5}
+
+\item 
+\hypertarget{classComponentTemplatePhysics_aa25e5501666b80d15487a0d1165121ac}{
+float {\bfseries mass}}
+\label{d3/dcb/classComponentTemplatePhysics_aa25e5501666b80d15487a0d1165121ac}
+
+\item 
+\hypertarget{classComponentTemplatePhysics_a13d3d7bc77575a74f3d71a2f1925bea5}{
+\-Collision\-Shape {\bfseries shape}}
+\label{d3/dcb/classComponentTemplatePhysics_a13d3d7bc77575a74f3d71a2f1925bea5}
+
+\item 
+\hypertarget{classComponentTemplatePhysics_a162f55a04cecde51596aa7b9c29f2d91}{
+bt\-Collision\-Shape $\ast$ {\bfseries bt\-Shape}}
+\label{d3/dcb/classComponentTemplatePhysics_a162f55a04cecde51596aa7b9c29f2d91}
+
+\item 
+\hypertarget{classComponentTemplatePhysics_ad05c7b64441b050c9138cd2256b06513}{
+short int {\bfseries collision\-Group}}
+\label{d3/dcb/classComponentTemplatePhysics_ad05c7b64441b050c9138cd2256b06513}
+
+\item 
+\hypertarget{classComponentTemplatePhysics_ad8bff9ae398d6ec1cffd732be89dc491}{
+std\-::vector$<$ bt\-Vector3 $>$ \hyperlink{classComponentTemplatePhysics_ad8bff9ae398d6ec1cffd732be89dc491}{sphere\-Positions}}
+\label{d3/dcb/classComponentTemplatePhysics_ad8bff9ae398d6ec1cffd732be89dc491}
+
+\begin{DoxyCompactList}\small\item\em \-For \-Multi-\/\-Sphere shape. \end{DoxyCompactList}\item 
+\hypertarget{classComponentTemplatePhysics_aeb645a1a180234c95b94a902026a97c1}{
+std\-::vector$<$ float $>$ {\bfseries sphere\-Radii}}
+\label{d3/dcb/classComponentTemplatePhysics_aeb645a1a180234c95b94a902026a97c1}
+
+\end{DoxyCompactItemize}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Physics.\-h\item 
+src/component\-Physics.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,165 @@
+\hypertarget{classWeaponInventory}{
+\section{\-Weapon\-Inventory \-Class \-Reference}
+\label{d8/da9/classWeaponInventory}\index{\-Weapon\-Inventory@{\-Weapon\-Inventory}}
+}
+
+
+\-Manages lists of weapons and displays them if neccessary.  
+
+
+
+
+{\ttfamily \#include $<$weapon\-Inventory.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classWeaponInventory_a9f331e48ebdcfdcedb5a61fafcdb1cf9}{
+typedef std\-::multiset\*
+$<$ \hyperlink{classComponentWeapon}{\-Component\-Weapon} \*
+$\ast$, \hyperlink{structcomponentWeaponImportance}{component\-Weapon\-Importance} $>$\*
+\-::iterator {\bfseries weapon\-Set\-Itr}}
+\label{d8/da9/classWeaponInventory_a9f331e48ebdcfdcedb5a61fafcdb1cf9}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classWeaponInventory_afe9ad216841e201c857a8b7d525e183d}{
+void \hyperlink{classWeaponInventory_afe9ad216841e201c857a8b7d525e183d}{display\-List} ()}
+\label{d8/da9/classWeaponInventory_afe9ad216841e201c857a8b7d525e183d}
+
+\begin{DoxyCompactList}\small\item\em \-Shows the weapon list. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_aa9745377e5eedd0bf4193bca6134cbeb}{
+void \hyperlink{classWeaponInventory_aa9745377e5eedd0bf4193bca6134cbeb}{hide\-List} ()}
+\label{d8/da9/classWeaponInventory_aa9745377e5eedd0bf4193bca6134cbeb}
+
+\begin{DoxyCompactList}\small\item\em \-Hides the weapon list. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_adc48c0bd9bcbec0a0b2d95edbec10821}{
+void \hyperlink{classWeaponInventory_adc48c0bd9bcbec0a0b2d95edbec10821}{create\-List} ()}
+\label{d8/da9/classWeaponInventory_adc48c0bd9bcbec0a0b2d95edbec10821}
+
+\begin{DoxyCompactList}\small\item\em (\-Re)creates the visible weapon list \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_a5ff0102ab3fe322c493b65309b067da4}{
+void \hyperlink{classWeaponInventory_a5ff0102ab3fe322c493b65309b067da4}{delete\-List} ()}
+\label{d8/da9/classWeaponInventory_a5ff0102ab3fe322c493b65309b067da4}
+
+\begin{DoxyCompactList}\small\item\em \-Deletes the visible weapon list. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_a9a3795501043232ac18430abc4e1c29d}{
+void \hyperlink{classWeaponInventory_a9a3795501043232ac18430abc4e1c29d}{update\-List\-Alpha} ()}
+\label{d8/da9/classWeaponInventory_a9a3795501043232ac18430abc4e1c29d}
+
+\begin{DoxyCompactList}\small\item\em \-Sets the visibility of the list. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_a807b3672966e62210b8f943af373d801}{
+bool \hyperlink{classWeaponInventory_a807b3672966e62210b8f943af373d801}{empty} ()}
+\label{d8/da9/classWeaponInventory_a807b3672966e62210b8f943af373d801}
+
+\begin{DoxyCompactList}\small\item\em \-Returns if there is a weapon in this inventory. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_abf8b8c594ae9e528561d133f11b02dfa}{
+bool \hyperlink{classWeaponInventory_abf8b8c594ae9e528561d133f11b02dfa}{add\-Weapon} (\hyperlink{classComponentWeapon}{\-Component\-Weapon} $\ast$weapon)}
+\label{d8/da9/classWeaponInventory_abf8b8c594ae9e528561d133f11b02dfa}
+
+\begin{DoxyCompactList}\small\item\em \-Adds a weapon to the inventory. \-Returns true if it already exists. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_ab3d4ca590be6c47adf542e92ebd0747e}{
+void \hyperlink{classWeaponInventory_ab3d4ca590be6c47adf542e92ebd0747e}{remove\-Weapon} (\hyperlink{classComponentWeapon}{\-Component\-Weapon} $\ast$weapon)}
+\label{d8/da9/classWeaponInventory_ab3d4ca590be6c47adf542e92ebd0747e}
+
+\begin{DoxyCompactList}\small\item\em \-Remove a weapon from the list. \-Does not destroy the removed component / object! \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_afd0aaa6a17b403e292c62201c4677e44}{
+void \hyperlink{classWeaponInventory_afd0aaa6a17b403e292c62201c4677e44}{init} (\-C\-E\-G\-U\-I\-::\-Window $\ast$\hyperlink{classWeaponInventory_a6359c329d9d27e34197f42a09f6d5ff3}{root}, float start\-X, float start\-Y, float fade\-Time, \-Weapon\-Type type)}
+\label{d8/da9/classWeaponInventory_afd0aaa6a17b403e292c62201c4677e44}
+
+\begin{DoxyCompactList}\small\item\em \-Initializes the weapon inventory. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_a7753c2aeb0715a1e5eeb91e83171b535}{
+void \hyperlink{classWeaponInventory_a7753c2aeb0715a1e5eeb91e83171b535}{update} (float timepassed)}
+\label{d8/da9/classWeaponInventory_a7753c2aeb0715a1e5eeb91e83171b535}
+
+\begin{DoxyCompactList}\small\item\em \-Should be called every frame. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_afd3c416fcf1e8a22e403347c4ad29197}{
+void \hyperlink{classWeaponInventory_afd3c416fcf1e8a22e403347c4ad29197}{delete\-Objects} ()}
+\label{d8/da9/classWeaponInventory_afd3c416fcf1e8a22e403347c4ad29197}
+
+\begin{DoxyCompactList}\small\item\em \-Deletes al contained objects. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_ad4c7abbb6285f25cb34db56b8a1e6b22}{
+void \hyperlink{classWeaponInventory_ad4c7abbb6285f25cb34db56b8a1e6b22}{exit} ()}
+\label{d8/da9/classWeaponInventory_ad4c7abbb6285f25cb34db56b8a1e6b22}
+
+\begin{DoxyCompactList}\small\item\em \-Cleans up. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classWeaponInventory_a6359c329d9d27e34197f42a09f6d5ff3}{
+\-C\-E\-G\-U\-I\-::\-Window $\ast$ \hyperlink{classWeaponInventory_a6359c329d9d27e34197f42a09f6d5ff3}{root}}
+\label{d8/da9/classWeaponInventory_a6359c329d9d27e34197f42a09f6d5ff3}
+
+\begin{DoxyCompactList}\small\item\em \-Parent window + start position of all windows created by this class. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_a7bc46e9eb905aed36834ff41fdcbb6c3}{
+float {\bfseries start\-X}}
+\label{d8/da9/classWeaponInventory_a7bc46e9eb905aed36834ff41fdcbb6c3}
+
+\item 
+\hypertarget{classWeaponInventory_af95d3e2d3d9f9c820952d818f831cbf7}{
+float {\bfseries start\-Y}}
+\label{d8/da9/classWeaponInventory_af95d3e2d3d9f9c820952d818f831cbf7}
+
+\item 
+\hypertarget{classWeaponInventory_a94ff91dc06a38c83d19cb57838fb6028}{
+\-Weapon\-Type {\bfseries type}}
+\label{d8/da9/classWeaponInventory_a94ff91dc06a38c83d19cb57838fb6028}
+
+\item 
+\hypertarget{classWeaponInventory_a10ff4837f1c739e514e43e68de7a2edb}{
+bool {\bfseries list\-Shown}}
+\label{d8/da9/classWeaponInventory_a10ff4837f1c739e514e43e68de7a2edb}
+
+\item 
+\hypertarget{classWeaponInventory_a3437fe9cf1172e872d02854a49435c0a}{
+bool {\bfseries list\-Dirty}}
+\label{d8/da9/classWeaponInventory_a3437fe9cf1172e872d02854a49435c0a}
+
+\item 
+\hypertarget{classWeaponInventory_a0b7cd38aa0fb47a67070891220103679}{
+float {\bfseries time\-Since\-Last\-Change}}
+\label{d8/da9/classWeaponInventory_a0b7cd38aa0fb47a67070891220103679}
+
+\item 
+\hypertarget{classWeaponInventory_a90882278a6c3739e065fa566c01684ef}{
+float {\bfseries fade\-Time}}
+\label{d8/da9/classWeaponInventory_a90882278a6c3739e065fa566c01684ef}
+
+\item 
+\hypertarget{classWeaponInventory_a8a74e279a87fa5f0473e3868533f40c1}{
+std\-::multiset$<$ \hyperlink{classComponentWeapon}{\-Component\-Weapon} \*
+$\ast$, \hyperlink{structcomponentWeaponImportance}{component\-Weapon\-Importance} $>$ \hyperlink{classWeaponInventory_a8a74e279a87fa5f0473e3868533f40c1}{weapon\-Set}}
+\label{d8/da9/classWeaponInventory_a8a74e279a87fa5f0473e3868533f40c1}
+
+\begin{DoxyCompactList}\small\item\em \-Sorted list of weapon components. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_a1bb7834f1f5547b5fa91be385feeb964}{
+std\-::vector$<$ \hyperlink{classStaticText}{\-Static\-Text} $>$ \hyperlink{classWeaponInventory_a1bb7834f1f5547b5fa91be385feeb964}{weapon\-Display}}
+\label{d8/da9/classWeaponInventory_a1bb7834f1f5547b5fa91be385feeb964}
+
+\begin{DoxyCompactList}\small\item\em \-The visible weapon list, generated from the list above. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_aca0755d77218575eef91fc54777ef3c1}{
+bool \hyperlink{classWeaponInventory_aca0755d77218575eef91fc54777ef3c1}{display\-Created}}
+\label{d8/da9/classWeaponInventory_aca0755d77218575eef91fc54777ef3c1}
+
+\begin{DoxyCompactList}\small\item\em \-Is the weapon\-Display vector already generated? \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_adfa9884dd1d4963e8e7d422378fabb07}{
+\hyperlink{classStaticText}{\-Static\-Text} \hyperlink{classWeaponInventory_adfa9884dd1d4963e8e7d422378fabb07}{weapon\-Display\-Info}}
+\label{d8/da9/classWeaponInventory_adfa9884dd1d4963e8e7d422378fabb07}
+
+\begin{DoxyCompactList}\small\item\em \-The information text above the weapon list. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInventory_a43109964fa78e2a9a4fdc8c1657d578e}{
+weapon\-Set\-Itr \hyperlink{classWeaponInventory_a43109964fa78e2a9a4fdc8c1657d578e}{active\-Weapon}}
+\label{d8/da9/classWeaponInventory_a43109964fa78e2a9a4fdc8c1657d578e}
+
+\begin{DoxyCompactList}\small\item\em \-The currently active weapon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Manages lists of weapons and displays them if neccessary. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/weapon\-Inventory.\-h\item 
+src/weapon\-Inventory.\-cpp\end{DoxyCompactItemize}

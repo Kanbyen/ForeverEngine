@@ -1,0 +1,8 @@
+<Imageset Name="HUD_Images" Imagefile="hud_images.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+	<Image Name="Health" XPos="1" YPos="1" Width="62" Height="62" />
+	<Image Name="Ammo" XPos="65" YPos="1" Width="62" Height="62" />
+	<Image Name="Weapon" XPos="1" YPos="65" Width="62" Height="62" />
+	<Image Name="Grenade" XPos="65" YPos="65" Width="62" Height="62" />
+	
+	<Image Name="Cam" XPos="128" YPos="128" Width="128" Height="128" />
+</Imageset>

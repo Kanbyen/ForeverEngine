@@ -1,0 +1,115 @@
+particle_system OrangeStreakExplosion
+{
+	material        	OrangeStreak
+	particle_width  	0.7
+	particle_height 	8
+	quota           	25
+	billboard_type		oriented_self
+	sorted				true
+
+	emitter Ellipsoid
+	{
+		width				1
+		height				1
+		depth				1
+		//inner_width			0.99
+		//inner_height		0.99
+		//inner_depth			0.99
+		duration			0.1
+		angle           	180
+    	emission_rate   	200
+    	time_to_live_min	0.1
+    	time_to_live_max	0.3
+    	velocity_min    	3
+    	velocity_max    	7
+    	colour 0.9609375 0.69921875 0
+	}
+   	
+	affector ColourInterpolator
+	{
+		time0	0
+		colour0	0.9609375 0.8 0 0.8
+		time1	0.8
+		colour1	0.9609375 0.69921875 0 0.8
+		time2	1
+		colour2	0.9609375 0.69921875 0 0
+	}
+}
+
+particle_system OrangeStreakSmall
+{
+	material        	OrangeStreak
+	particle_width  	0.7
+	particle_height 	2
+	quota           	14
+	billboard_type		oriented_self
+	sorted				true
+
+	emitter Ellipsoid
+	{
+		width				0.1
+		height				0.1
+		depth				0.1
+		duration			0.1
+		angle           	180
+    	emission_rate   	140
+    	time_to_live_min	0.05
+    	time_to_live_max	0.25
+    	velocity_min    	1
+    	velocity_max    	4
+    	colour 0.9609375 0.69921875 0
+	}
+   	
+	affector ColourInterpolator
+	{
+		time0	0
+		colour0	0.9609375 0.8 0 0.8
+		time1	0.8
+		colour1	0.9609375 0.69921875 0 0.8
+		time2	1
+		colour2	0.9609375 0.69921875 0 0
+	}
+}
+
+particle_system ExplosionFireBall
+{
+	material        	ExplosionFire
+	particle_width  	3
+	particle_height 	3
+	quota           	60
+	billboard_type  	point
+	sorted				true
+
+	emitter Ellipsoid
+	{
+		width				4
+		height				4
+		depth				4
+		duration			0.4
+		angle           	180
+    	emission_rate   	2000
+    	time_to_live_min	1
+    	time_to_live_max	2.5
+    	velocity_min    	0.6
+    	velocity_max    	1.5
+    	colour				1 0.85546875 0.421875
+	}
+
+   	affector Rotator
+   	{
+    	rotation_range_start  		0
+    	rotation_range_end   	 	360
+    	rotation_speed_range_start  -20
+    	rotation_speed_range_end    30
+   	}
+   	
+	affector ColourInterpolator
+	{
+		time0	0
+		colour0	1 0.9 0.8 1
+		time1	0.6
+		colour1	1 0.9 0.4 0.5
+		time2	1
+		colour2	1 0.85546875 0.221875 0
+	}
+}

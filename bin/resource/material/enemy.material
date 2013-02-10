@@ -1,0 +1,101 @@
+import * from "celShadingTexture.material"
+import * from "celShadingColor.material"
+
+material BatMaterialDigiSpe
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			ambient 0.500000 0.500000 0.500000 1.000000
+			diffuse 0.640000 0.640000 0.640000 1.000000
+			specular 0.500000 0.500000 0.500000 1.000000 12.500000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			texture_unit
+			{
+				texture bat.jpg
+				tex_address_mode wrap
+				filtering trilinear
+				colour_op alpha_blend
+			}
+		}
+	}
+}
+
+material BatMaterial : CelShadingTexture
+{
+	technique
+	{
+		pass
+		{
+			fragment_program_ref CelShadingOutlineFragmentProgram
+			{
+				param_named edge_color float3 0 0 0
+			}
+		}
+		pass
+		{
+			fragment_program_ref CelShadingTextureFragmentProgram
+			{
+				param_named shades float 2
+			}
+
+			texture_unit
+			{
+				texture bat.jpg
+			}
+		}
+	}
+}
+
+material BattleSphereMaterial : CelShadingTexture
+{
+	technique
+	{
+		pass
+		{
+			fragment_program_ref CelShadingOutlineFragmentProgram
+			{
+				param_named edge_color float3 0 0 0
+			}
+		}
+		pass
+		{
+			vertex_program_ref CelShadingTextureVertexProgram
+			{
+				param_named shininess float 1.7
+			}
+			fragment_program_ref CelShadingTextureFragmentProgram
+			{
+				param_named shades float 3
+			}
+
+			texture_unit
+			{
+				texture battleSphere.tga
+			}
+		}
+	}
+}
+material HumanRobotMaterial : CelShadingColor
+{
+	technique
+	{
+		pass
+		{
+			fragment_program_ref CelShadingOutlineFragmentProgram
+			{
+				param_named edge_color float3 0 0 0
+			}
+		}
+		pass
+		{
+			fragment_program_ref CelShadingColorFragmentProgram
+			{
+				param_named shades float 3
+				param_named base_color float3 0.189893 0.189893 0.189893
+			}
+		}
+	}
+}

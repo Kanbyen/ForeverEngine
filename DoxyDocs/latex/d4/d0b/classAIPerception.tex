@@ -1,0 +1,131 @@
+\hypertarget{classAIPerception}{
+\section{\-A\-I\-Perception \-Class \-Reference}
+\label{d4/d0b/classAIPerception}\index{\-A\-I\-Perception@{\-A\-I\-Perception}}
+}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIPerception_a6141c8fe30127ed32230c1af66b57399}{
+typedef std\-::map$<$ int, \*
+\hyperlink{classAIPerceptedObject}{\-A\-I\-Percepted\-Object} $>$ {\bfseries \-Perception\-Map}}
+\label{d4/d0b/classAIPerception_a6141c8fe30127ed32230c1af66b57399}
+
+\item 
+\hypertarget{classAIPerception_ac3fac80d3bd76bf161d2ce3e92dfcd39}{
+typedef std\-::map$<$ int, \*
+\hyperlink{classAIPerceptedObject}{\-A\-I\-Percepted\-Object} $>$\-::iterator {\bfseries \-Perception\-Map\-Itr}}
+\label{d4/d0b/classAIPerception_ac3fac80d3bd76bf161d2ce3e92dfcd39}
+
+\item 
+\hypertarget{classAIPerception_a3e39dd20b82f383d9925a286e4846489}{
+typedef \-Perception\-Map\-Itr {\bfseries iterator}}
+\label{d4/d0b/classAIPerception_a3e39dd20b82f383d9925a286e4846489}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIPerception_ab92fd77d63f3e33a0712d71f25716091}{
+\hyperlink{classAIPerception_ab92fd77d63f3e33a0712d71f25716091}{\-A\-I\-Perception} (\-Object\-Tag \hyperlink{classAIPerception_a03846948a5a7d9ea6043b67b28172e78}{tag}, float view\-Range, \-Degree \hyperlink{classAIPerception_a58033209cd3ef65646a7e3296b5f7530}{field\-Of\-View}, float \hyperlink{classAIPerception_a465a687df63900dab25613b7dceba964}{memory\-Span}, \hyperlink{classObject}{\-Object} $\ast$\hyperlink{classAIPerception_a081f61b494e193c528b6fb9562c1d050}{owner})}
+\label{d4/d0b/classAIPerception_ab92fd77d63f3e33a0712d71f25716091}
+
+\begin{DoxyCompactList}\small\item\em \-Constructor; the field of view angle stands just for one side, so if you specify 90° you see everything in front of you! \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_ad227e639363dc91a20e8a98f3d39b29d}{
+void \hyperlink{classAIPerception_ad227e639363dc91a20e8a98f3d39b29d}{update\-Time} (float dt)}
+\label{d4/d0b/classAIPerception_ad227e639363dc91a20e8a98f3d39b29d}
+
+\begin{DoxyCompactList}\small\item\em \-Must be called to update the internal timer. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a7adc400461ee9d1101b08b291e6aeead}{
+void \hyperlink{classAIPerception_a7adc400461ee9d1101b08b291e6aeead}{update\-Vision} (\-Vector3 view\-Dir)}
+\label{d4/d0b/classAIPerception_a7adc400461ee9d1101b08b291e6aeead}
+
+\begin{DoxyCompactList}\small\item\em \-Should be called regularly to update the list of percepted objects; also deletes old entries. view\-Dir must be normalized. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a2025c6cac04e67f41deb91074c2505c2}{
+void \hyperlink{classAIPerception_a2025c6cac04e67f41deb91074c2505c2}{update\-Neighbours} (\hyperlink{classAIGetNeighbours}{\-A\-I\-Get\-Neighbours} $\ast$neighbours)}
+\label{d4/d0b/classAIPerception_a2025c6cac04e67f41deb91074c2505c2}
+
+\begin{DoxyCompactList}\small\item\em \-Can be called to make the owner aware of its neighbours. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a3b03a2f17f3cce4bdd4d92edcc9ac2c5}{
+void \hyperlink{classAIPerception_a3b03a2f17f3cce4bdd4d92edcc9ac2c5}{update\-By\-Message} (\hyperlink{classAIPerception}{\-A\-I\-Perception} $\ast$message)}
+\label{d4/d0b/classAIPerception_a3b03a2f17f3cce4bdd4d92edcc9ac2c5}
+
+\begin{DoxyCompactList}\small\item\em \-Can be called to add the percepted objects of another \hyperlink{classAIPerception}{\-A\-I\-Perception}. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a1a589b0a4664ec9f51184c75e30b31a0}{
+void \hyperlink{classAIPerception_a1a589b0a4664ec9f51184c75e30b31a0}{update\-Percepted\-Object} (\hyperlink{classObject}{\-Object} $\ast$object, bool in\-View\-Known=false, bool in\-View=false)}
+\label{d4/d0b/classAIPerception_a1a589b0a4664ec9f51184c75e30b31a0}
+
+\begin{DoxyCompactList}\small\item\em \-Call this if the owner can percieve the object in any way. \-You can optionally specify if the object is shootable if you know it. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a6c85763901310b8a53c54b4e554f984b}{
+bool \hyperlink{classAIPerception_a6c85763901310b8a53c54b4e554f984b}{view\-Check} (\-Vector3 view\-Dir, \hyperlink{classObject}{\-Object} $\ast$obj)}
+\label{d4/d0b/classAIPerception_a6c85763901310b8a53c54b4e554f984b}
+
+\begin{DoxyCompactList}\small\item\em \-Checks if the owner can see the object. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a4b078bfc632269d90bd99b9eeef92056}{
+\hyperlink{classAIPerceptedObject}{\-A\-I\-Percepted\-Object} $\ast$ \hyperlink{classAIPerception_a4b078bfc632269d90bd99b9eeef92056}{get\-Perception\-By\-I\-D} (int object\-I\-D)}
+\label{d4/d0b/classAIPerception_a4b078bfc632269d90bd99b9eeef92056}
+
+\begin{DoxyCompactList}\small\item\em \-Gets the \hyperlink{classAIPerceptedObject}{\-A\-I\-Percepted\-Object} entry for the object with the given id or \-N\-U\-L\-L if none exists. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a9a3d0746f204f589a9287319c6fc3575}{
+\-Perception\-Map \hyperlink{classAIPerception_a9a3d0746f204f589a9287319c6fc3575}{get\-Objects\-In\-View} ()}
+\label{d4/d0b/classAIPerception_a9a3d0746f204f589a9287319c6fc3575}
+
+\begin{DoxyCompactList}\small\item\em \-Returns a list of objects in view. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_aeb4c4fd34118fc80a142d2afa48f36f5}{
+iterator {\bfseries begin} ()}
+\label{d4/d0b/classAIPerception_aeb4c4fd34118fc80a142d2afa48f36f5}
+
+\item 
+\hypertarget{classAIPerception_a5b55ddbcd0ef1b81e93550e2fab02eee}{
+iterator {\bfseries end} ()}
+\label{d4/d0b/classAIPerception_a5b55ddbcd0ef1b81e93550e2fab02eee}
+
+\item 
+\hypertarget{classAIPerception_a5aade684939ae00576bdb9ded74d854e}{
+int {\bfseries size} ()}
+\label{d4/d0b/classAIPerception_a5aade684939ae00576bdb9ded74d854e}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIPerception_a44062bea501fad232dfa24f0c71ea5b4}{
+\-Perception\-Map \hyperlink{classAIPerception_a44062bea501fad232dfa24f0c71ea5b4}{perception\-Map}}
+\label{d4/d0b/classAIPerception_a44062bea501fad232dfa24f0c71ea5b4}
+
+\begin{DoxyCompactList}\small\item\em \-Maps object ids to \hyperlink{classAIPerceptedObject}{\-A\-I\-Percepted\-Object} entries. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a081f61b494e193c528b6fb9562c1d050}{
+\hyperlink{classObject}{\-Object} $\ast$ \hyperlink{classAIPerception_a081f61b494e193c528b6fb9562c1d050}{owner}}
+\label{d4/d0b/classAIPerception_a081f61b494e193c528b6fb9562c1d050}
+
+\begin{DoxyCompactList}\small\item\em \-The object to which this class belongs to. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a03846948a5a7d9ea6043b67b28172e78}{
+\-Object\-Tag \hyperlink{classAIPerception_a03846948a5a7d9ea6043b67b28172e78}{tag}}
+\label{d4/d0b/classAIPerception_a03846948a5a7d9ea6043b67b28172e78}
+
+\begin{DoxyCompactList}\small\item\em \-The \hyperlink{classAIPerception}{\-A\-I\-Perception} class will find objects with this tag. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a58033209cd3ef65646a7e3296b5f7530}{
+float \hyperlink{classAIPerception_a58033209cd3ef65646a7e3296b5f7530}{field\-Of\-View}}
+\label{d4/d0b/classAIPerception_a58033209cd3ef65646a7e3296b5f7530}
+
+\begin{DoxyCompactList}\small\item\em \-The cosine of the field of view angle (to compare it with the dot product of two vectors) \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a465a687df63900dab25613b7dceba964}{
+float \hyperlink{classAIPerception_a465a687df63900dab25613b7dceba964}{memory\-Span}}
+\label{d4/d0b/classAIPerception_a465a687df63900dab25613b7dceba964}
+
+\begin{DoxyCompactList}\small\item\em \-How long should objects which are not percepted anymore stay in memory? \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a6c2cbfaf6c2b1565b6b45aa81fe00f7a}{
+float \hyperlink{classAIPerception_a6c2cbfaf6c2b1565b6b45aa81fe00f7a}{view\-Range\-Sq}}
+\label{d4/d0b/classAIPerception_a6c2cbfaf6c2b1565b6b45aa81fe00f7a}
+
+\begin{DoxyCompactList}\small\item\em \-Squared maximum view distance. \end{DoxyCompactList}\item 
+\hypertarget{classAIPerception_a66efe86999421a03e25bc334125d87b2}{
+float {\bfseries time}}
+\label{d4/d0b/classAIPerception_a66efe86999421a03e25bc334125d87b2}
+
+\end{DoxyCompactItemize}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/ai\-Perception.\-h\item 
+src/ai\-Perception.\-cpp\end{DoxyCompactItemize}

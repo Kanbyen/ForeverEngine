@@ -1,0 +1,99 @@
+\hypertarget{classComponentPhysics}{
+\section{\-Component\-Physics \-Class \-Reference}
+\label{d5/d44/classComponentPhysics}\index{\-Component\-Physics@{\-Component\-Physics}}
+}
+
+
+\hyperlink{classPhysics}{\-Physics} \hyperlink{classComponent}{\-Component}.  
+
+
+
+
+{\ttfamily \#include $<$component\-Physics.\-h$>$}
+
+\-Inheritance diagram for \-Component\-Physics\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d5/d44/classComponentPhysics}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentPhysics_a2beb27e9cfc3bdc040dc1d0ecee2f901}{
+virtual void \hyperlink{classComponentPhysics_a2beb27e9cfc3bdc040dc1d0ecee2f901}{exit} ()}
+\label{d5/d44/classComponentPhysics_a2beb27e9cfc3bdc040dc1d0ecee2f901}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentPhysics_ac2ef9e611328dc2e2cbf772384426c28}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentPhysics_a0979ce28418cf3ef7387e2bbb68c5411}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentPhysics_aece7e73946831b121da4bc85ccf35695}{
+bt\-Rigid\-Body $\ast$ {\bfseries body}}
+\label{d5/d44/classComponentPhysics_aece7e73946831b121da4bc85ccf35695}
+
+\item 
+\hypertarget{classComponentPhysics_a2b3c6f86d22f133d22ec30184cbf3e8b}{
+\hyperlink{classComponentTemplatePhysics}{\-Component\-Template\-Physics} $\ast$ {\bfseries creator}}
+\label{d5/d44/classComponentPhysics_a2b3c6f86d22f133d22ec30184cbf3e8b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{classPhysics}{\-Physics} \hyperlink{classComponent}{\-Component}. 
+
+\-Parameters\-:\par
+ \-Shape \mbox{[}required\mbox{]} -\/ \-Collision shape (parameter\-: value), one of the following\-: \-Bounding\-Sphere, \-Bounding\-Box, \-Sphere, \-Box, \-Cylinder, \-Multi\-Sphere\par
+ \-Mass \mbox{[}required\mbox{]} -\/ the mass of the collision shape (parameter\-: value)\par
+ \-Radius -\/ the radius of the shape (parameters\-: value, factor) 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentPhysics_a0979ce28418cf3ef7387e2bbb68c5411}{
+\index{\-Component\-Physics@{\-Component\-Physics}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentPhysics@{\-Component\-Physics}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Physics\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d5/d44/classComponentPhysics_a0979ce28418cf3ef7387e2bbb68c5411}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentPhysics_ac2ef9e611328dc2e2cbf772384426c28}{
+\index{\-Component\-Physics@{\-Component\-Physics}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentPhysics@{\-Component\-Physics}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Physics\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d5/d44/classComponentPhysics_ac2ef9e611328dc2e2cbf772384426c28}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Physics.\-h\item 
+src/component\-Physics.\-cpp\end{DoxyCompactItemize}

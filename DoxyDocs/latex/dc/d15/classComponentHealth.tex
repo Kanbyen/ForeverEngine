@@ -1,0 +1,131 @@
+\hypertarget{classComponentHealth}{
+\section{\-Component\-Health \-Class \-Reference}
+\label{dc/d15/classComponentHealth}\index{\-Component\-Health@{\-Component\-Health}}
+}
+
+
+\-Health \hyperlink{classComponent}{\-Component}.  
+
+
+
+
+{\ttfamily \#include $<$component\-Health.\-h$>$}
+
+\-Inheritance diagram for \-Component\-Health\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{dc/d15/classComponentHealth}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentHealth_acfba9c633c4a9c28d44f6d0a02c2d808}{
+bool {\bfseries check\-Health\-Depleted} ()}
+\label{dc/d15/classComponentHealth_acfba9c633c4a9c28d44f6d0a02c2d808}
+
+\item 
+\hypertarget{classComponentHealth_a13d546d8db12ffb620fd975231a579f5}{
+virtual void \hyperlink{classComponentHealth_a13d546d8db12ffb620fd975231a579f5}{exit} ()}
+\label{dc/d15/classComponentHealth_a13d546d8db12ffb620fd975231a579f5}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentHealth_ad444abae855c20c8acc484437c76ec82}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentHealth_aedc8600f4ab85c67af5dd47a94a018b1}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentHealth_a1f1f1775d3ef6b5277bfb5b9d3e5b1e1}{
+float {\bfseries max\-Health}}
+\label{dc/d15/classComponentHealth_a1f1f1775d3ef6b5277bfb5b9d3e5b1e1}
+
+\item 
+\hypertarget{classComponentHealth_ae48ec4e2e5653f023de3b02f3c0f1421}{
+float {\bfseries health}}
+\label{dc/d15/classComponentHealth_ae48ec4e2e5653f023de3b02f3c0f1421}
+
+\item 
+\hypertarget{classComponentHealth_a11c5a668c3bf84eaa4b4547db2711905}{
+float {\bfseries old\-Collision\-Strength}}
+\label{dc/d15/classComponentHealth_a11c5a668c3bf84eaa4b4547db2711905}
+
+\item 
+\hypertarget{classComponentHealth_a00eef2a3589f1d4188cfa4b804ce698a}{
+float {\bfseries new\-Collision\-Strength}}
+\label{dc/d15/classComponentHealth_a00eef2a3589f1d4188cfa4b804ce698a}
+
+\item 
+\hypertarget{classComponentHealth_ad48e344014fc7a72502665b4e95641e1}{
+float {\bfseries damage\-Factors} \mbox{[}\-D\-A\-M\-A\-G\-E\-T\-Y\-P\-E\-\_\-\-C\-O\-U\-N\-T\mbox{]}}
+\label{dc/d15/classComponentHealth_ad48e344014fc7a72502665b4e95641e1}
+
+\item 
+\hypertarget{classComponentHealth_a7362c59b62e8cf9b4f8a25f715e2ec54}{
+\hyperlink{classObjectScriptExecutor}{\-Object\-Script\-Executor} $\ast$ {\bfseries script}}
+\label{dc/d15/classComponentHealth_a7362c59b62e8cf9b4f8a25f715e2ec54}
+
+\item 
+\hypertarget{classComponentHealth_aa7ff728e46427534a9dc2e7ce979b958}{
+\-Health\-Zero\-Action {\bfseries mode}}
+\label{dc/d15/classComponentHealth_aa7ff728e46427534a9dc2e7ce979b958}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Health \hyperlink{classComponent}{\-Component}. 
+
+\-Parameters\-:\par
+ \-Max\-Health \mbox{[}required\mbox{]} -\/ the maximum health (parameter\-: value)\par
+ \-Start\-Health -\/ the health when the component is created\par
+ \-Damage\-Taken -\/ script to execute when damaged. \-W\-A\-R\-N\-I\-N\-G\-: \-If this script wait()s, it might not be called every time if it is still running!\par
+ \-Mode -\/ what should the healthcomp do when the health is depleted. (parameter\-: value, default\-: delete\-Component, other values\-: delete\-Object, none)\par
+ \-Factors -\/ damage factors for the damage types collision, heat, frost and energy 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentHealth_aedc8600f4ab85c67af5dd47a94a018b1}{
+\index{\-Component\-Health@{\-Component\-Health}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentHealth@{\-Component\-Health}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Health\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{dc/d15/classComponentHealth_aedc8600f4ab85c67af5dd47a94a018b1}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentHealth_ad444abae855c20c8acc484437c76ec82}{
+\index{\-Component\-Health@{\-Component\-Health}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentHealth@{\-Component\-Health}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Health\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{dc/d15/classComponentHealth_ad444abae855c20c8acc484437c76ec82}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Health.\-h\item 
+src/component\-Health.\-cpp\end{DoxyCompactItemize}

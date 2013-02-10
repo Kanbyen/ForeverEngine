@@ -1,0 +1,71 @@
+struct a2v
+{
+    float4 Position : POSITION; //in object space
+    float3 Normal : NORMAL;
+};
+
+struct v2f
+{
+    float4 Position : POSITION; //in projection space
+    float FogAmount : COLOR;
+};
+
+float4 fragment(v2f IN, uniform float3 edge_color, uniform float3 fogColor) : COLOR
+{
+	return float4(lerp(edge_color, fogColor, IN.FogAmount), 1.0);
+}
+
+v2f vertex(a2v IN,uniform float4x4 world, uniform float4x4 viewProj, uniform float3 camera, uniform float scaleFactor, uniform float4 fogParams)
+{   
+    v2f OUT;
+	
+    OUT.Position = mul(world, IN.Position);
+	IN.Normal = mul((float3x3)world, IN.Normal);
+	
+	// Make bigger if camera is further away
+	float3 cameraVector = (camera - OUT.Position.xyz);
+	float cameraDistance = length(cameraVector);
+	cameraDistance = sqrt(cameraDistance);
+	OUT.Position += float4(normalize(IN.Normal) * cameraDistance * scaleFactor, 0.0f);
+	
+    // Fog
+    float dist = length(OUT.Position - camera);
+    OUT.FogAmount = max((dist - fogParams.y) * fogParams.w, 0);
+	
+    OUT.Position = mul(viewProj, OUT.Position);
+
+    return OUT;
+}
+
+v2f vertexHardwareSkinning(a2v IN, float4 blendIdx : BLENDINDICES, float4 blendWgt : BLENDWEIGHT, uniform float3x4 worldMatrix3x4Array[24], uniform float4x4 viewProj, uniform float3 camera, uniform float scaleFactor, uniform float4 fogParams)
+{   
+    v2f OUT;
+    
+    
+	float3 normal = float3(0, 0, 0);
+	for (int i = 0; i < 2; ++i)
+	{
+		normal += mul((float3x3)worldMatrix3x4Array[blendIdx[i]], IN.Normal) * blendWgt[i];
+	}
+	//normal = normalize(normal);
+
+	OUT.Position = float4(0, 0, 0, 0);
+	for (int i = 0; i < 2; ++i)
+	{
+		OUT.Position += float4(mul(worldMatrix3x4Array[blendIdx[i]], IN.Position).xyz, 1.0) * blendWgt[i];
+	}
+	
+	// Make bigger if camera is further away
+	float3 cameraVector = (camera - OUT.Position.xyz);
+	float cameraDistance = length(cameraVector);
+	cameraDistance = sqrt(cameraDistance);
+	OUT.Position += float4(normal * cameraDistance * scaleFactor, 0);
+	
+    // Fog
+    float dist = length(OUT.Position - camera);
+    OUT.FogAmount = max((dist - fogParams.y) * fogParams.w, 0);
+	
+    OUT.Position = mul(viewProj, OUT.Position);
+
+    return OUT;
+}

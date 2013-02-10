@@ -1,0 +1,79 @@
+import * from "celShadingTexture.material"
+
+material GrenadeGreenMaterial : CelShadingTexture
+{
+	technique
+	{
+		pass
+		{
+			fragment_program_ref CelShadingOutlineFragmentProgram
+			{
+				param_named edge_color float3 0 0 0
+			}
+		}
+		pass
+		{
+			fragment_program_ref CelShadingTextureFragmentProgram
+			{
+				param_named shades float 3
+			}
+
+			texture_unit
+			{
+				texture grenadeGreen.tga
+			}
+		}
+	}
+}
+
+material GrenadeRedMaterial : CelShadingTexture
+{
+	technique
+	{
+		pass
+		{
+			fragment_program_ref CelShadingOutlineFragmentProgram
+			{
+				param_named edge_color float3 0 0 0
+			}
+		}
+		pass
+		{
+			fragment_program_ref CelShadingTextureFragmentProgram
+			{
+				param_named shades float 3
+			}
+
+			texture_unit
+			{
+				texture grenadeRed.tga
+			}
+		}
+	}
+}
+
+material GrenadeYellowMaterial : CelShadingTexture
+{
+	technique
+	{
+		pass
+		{
+			fragment_program_ref CelShadingOutlineFragmentProgram
+			{
+				param_named edge_color float3 0 0 0
+			}
+		}
+		pass
+		{
+			fragment_program_ref CelShadingTextureFragmentProgram
+			{
+				param_named shades float 3
+			}
+
+			texture_unit
+			{
+				texture grenadeYellow.tga
+			}
+		}
+	}
+}

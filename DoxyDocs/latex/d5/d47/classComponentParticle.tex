@@ -1,0 +1,97 @@
+\hypertarget{classComponentParticle}{
+\section{\-Component\-Particle \-Class \-Reference}
+\label{d5/d47/classComponentParticle}\index{\-Component\-Particle@{\-Component\-Particle}}
+}
+
+
+\-Particle \hyperlink{classComponent}{\-Component}.  
+
+
+
+
+{\ttfamily \#include $<$component\-Particle.\-h$>$}
+
+\-Inheritance diagram for \-Component\-Particle\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d5/d47/classComponentParticle}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentParticle_aff7392837b24dbd61be9c163bc01f8d0}{
+virtual void \hyperlink{classComponentParticle_aff7392837b24dbd61be9c163bc01f8d0}{exit} ()}
+\label{d5/d47/classComponentParticle_aff7392837b24dbd61be9c163bc01f8d0}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentParticle_a370ce255d55dcc0363ec67fa4038ddaf}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentParticle_a1fd33aca0505c4602b9e5c6bbbfcf94b}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentParticle_a16a81ceb400b227a3910180af7d2995a}{
+\-Scene\-Node $\ast$ {\bfseries scene\-Node}}
+\label{d5/d47/classComponentParticle_a16a81ceb400b227a3910180af7d2995a}
+
+\item 
+\hypertarget{classComponentParticle_aca2cddec7d11b7d4d00b6289e8d1fdd0}{
+\-Particle\-System $\ast$ {\bfseries particle}}
+\label{d5/d47/classComponentParticle_aca2cddec7d11b7d4d00b6289e8d1fdd0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Particle \hyperlink{classComponent}{\-Component}. 
+
+\-Parameters\-:\par
+ \-Particle \mbox{[}required\mbox{]} -\/ the name of the particle system to load (parameter\-: value) 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentParticle_a1fd33aca0505c4602b9e5c6bbbfcf94b}{
+\index{\-Component\-Particle@{\-Component\-Particle}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentParticle@{\-Component\-Particle}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Particle\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d5/d47/classComponentParticle_a1fd33aca0505c4602b9e5c6bbbfcf94b}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentParticle_a370ce255d55dcc0363ec67fa4038ddaf}{
+\index{\-Component\-Particle@{\-Component\-Particle}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentParticle@{\-Component\-Particle}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Particle\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d5/d47/classComponentParticle_a370ce255d55dcc0363ec67fa4038ddaf}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Particle.\-h\item 
+src/component\-Particle.\-cpp\end{DoxyCompactItemize}

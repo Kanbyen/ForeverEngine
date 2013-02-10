@@ -1,0 +1,107 @@
+\hypertarget{classComponentAI}{
+\section{\-Component\-A\-I \-Class \-Reference}
+\label{da/d09/classComponentAI}\index{\-Component\-A\-I@{\-Component\-A\-I}}
+}
+
+
+\-A\-I \hyperlink{classComponent}{\-Component}.  
+
+
+
+
+{\ttfamily \#include $<$component\-A\-I.\-h$>$}
+
+\-Inheritance diagram for \-Component\-A\-I\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{da/d09/classComponentAI}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentAI_acd4637106cad4777efd6870b22c0673e}{
+virtual void \hyperlink{classComponentAI_acd4637106cad4777efd6870b22c0673e}{exit} ()}
+\label{da/d09/classComponentAI_acd4637106cad4777efd6870b22c0673e}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentAI_a923f3644961af176d3c6e3d316185272}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentAI_a0d7b0390215d032d1388843458a5211e}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentAI_a6db82cc348935b7a01ed7e02cbb2678d}{
+bt\-Rigid\-Body $\ast$ {\bfseries rigid\-Body}}
+\label{da/d09/classComponentAI_a6db82cc348935b7a01ed7e02cbb2678d}
+
+\item 
+\hypertarget{classComponentAI_a64d1b3f8e1f91cc16c74ed1caafd79a8}{
+\hyperlink{classAIHandler}{\-A\-I\-Handler} $\ast$ {\bfseries ai\-Handler}}
+\label{da/d09/classComponentAI_a64d1b3f8e1f91cc16c74ed1caafd79a8}
+
+\item 
+\hypertarget{classComponentAI_a0c97818ba9bfe5bf0c23ed32a1e1eab7}{
+bool {\bfseries ai\-Handler\-Initialized}}
+\label{da/d09/classComponentAI_a0c97818ba9bfe5bf0c23ed32a1e1eab7}
+
+\item 
+\hypertarget{classComponentAI_ad25447d81f8dbfa88b2f9d55e80c2aae}{
+\hyperlink{classComponentTemplateAI}{\-Component\-Template\-A\-I} $\ast$ {\bfseries creator}}
+\label{da/d09/classComponentAI_ad25447d81f8dbfa88b2f9d55e80c2aae}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A\-I \hyperlink{classComponent}{\-Component}. 
+
+\-Parameters\-:\par
+ \-Type -\/ one of the \-A\-I types (currently only \char`\"{}battle sphere\char`\"{}) 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentAI_a0d7b0390215d032d1388843458a5211e}{
+\index{\-Component\-A\-I@{\-Component\-A\-I}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentAI@{\-Component\-A\-I}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-A\-I\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{da/d09/classComponentAI_a0d7b0390215d032d1388843458a5211e}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentAI_a923f3644961af176d3c6e3d316185272}{
+\index{\-Component\-A\-I@{\-Component\-A\-I}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentAI@{\-Component\-A\-I}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-A\-I\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{da/d09/classComponentAI_a923f3644961af176d3c6e3d316185272}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-A\-I.\-h\item 
+src/component\-A\-I.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\hypertarget{classVoxelBlockPlaceholder}{
+\section{\-Voxel\-Block\-Placeholder \-Class \-Reference}
+\label{d0/def/classVoxelBlockPlaceholder}\index{\-Voxel\-Block\-Placeholder@{\-Voxel\-Block\-Placeholder}}
+}
+
+
+\-Is a placeholder for another subclass of \hyperlink{classVoxelBlock}{\-Voxel\-Block} until the other block is loaded. \-Doesn't allow any changes, returns \-B\-L\-O\-C\-K\-\_\-\-F\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E for all voxels so that \-A\-I agents don't try to fly into these blocks.  
+
+
+
+
+{\ttfamily \#include $<$block\-Placeholder.\-h$>$}
+
+\-Inheritance diagram for \-Voxel\-Block\-Placeholder\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/def/classVoxelBlockPlaceholder}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelBlockPlaceholder_a440e94d2fa44c8d1dbfd8f997fe6e48d}{
+\hyperlink{classVoxelBlockPlaceholder_a440e94d2fa44c8d1dbfd8f997fe6e48d}{\-Voxel\-Block\-Placeholder} (int block\-X, int block\-Y, int block\-Z, \hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$\hyperlink{classVoxelBlock_aa8398251c9d5d3ba466e8993bcb6eb38}{volume}, \hyperlink{classVoxelBlockPersistent}{\-Voxel\-Block\-Persistent} $\ast$\hyperlink{classVoxelBlock_ad9d2e2c26398379b6a92e2e5ea4ab20d}{persistent})}
+\label{d0/def/classVoxelBlockPlaceholder_a440e94d2fa44c8d1dbfd8f997fe6e48d}
+
+\begin{DoxyCompactList}\small\item\em \-Contructor. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPlaceholder_ad3ef6a4b4dfa83895a3e9e95bb164edf}{
+virtual bool \hyperlink{classVoxelBlockPlaceholder_ad3ef6a4b4dfa83895a3e9e95bb164edf}{is\-Placeholder} ()}
+\label{d0/def/classVoxelBlockPlaceholder_ad3ef6a4b4dfa83895a3e9e95bb164edf}
+
+\begin{DoxyCompactList}\small\item\em \-If this returns true, the block must be loaded if the player comes closer. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPlaceholder_a9d3446d2e53449a9d553ba55b6e2e666}{
+virtual int \hyperlink{classVoxelBlockPlaceholder_a9d3446d2e53449a9d553ba55b6e2e666}{type\-I\-D} ()}
+\label{d0/def/classVoxelBlockPlaceholder_a9d3446d2e53449a9d553ba55b6e2e666}
+
+\begin{DoxyCompactList}\small\item\em \-Must return an unique \-I\-D for the type of block (full / empty / loaded). \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPlaceholder_ac880ec621166c7dd1b735e4398d26fe2}{
+virtual void \hyperlink{classVoxelBlockPlaceholder_ac880ec621166c7dd1b735e4398d26fe2}{fill} (char value)}
+\label{d0/def/classVoxelBlockPlaceholder_ac880ec621166c7dd1b735e4398d26fe2}
+
+\begin{DoxyCompactList}\small\item\em \-Fill the whole block with the specified value. \-Warning\-: if this is a \hyperlink{classVoxelBlockEmpty}{\-Voxel\-Block\-Empty} or -\/\-Full, it might replace itself, so you have to re-\/fetch the \-Block pointer! \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPlaceholder_a21e9a2d8d669cc94a82dd42f8be15463}{
+virtual char \hyperlink{classVoxelBlockPlaceholder_a21e9a2d8d669cc94a82dd42f8be15463}{get\-Voxel\-At} (int x\-Position, int y\-Position, int z\-Position)}
+\label{d0/def/classVoxelBlockPlaceholder_a21e9a2d8d669cc94a82dd42f8be15463}
+
+\begin{DoxyCompactList}\small\item\em \-Get the value of the voxel at the specified position. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPlaceholder_a48557a293c5c61efbaa4232deeac725e}{
+virtual void \hyperlink{classVoxelBlockPlaceholder_a48557a293c5c61efbaa4232deeac725e}{set\-Voxel\-At} (int x\-Position, int y\-Position, int z\-Position, const char value)}
+\label{d0/def/classVoxelBlockPlaceholder_a48557a293c5c61efbaa4232deeac725e}
+
+\begin{DoxyCompactList}\small\item\em \-Set the voxel to the specified value. \-Warning\-: if this is a \hyperlink{classVoxelBlockEmpty}{\-Voxel\-Block\-Empty} or -\/\-Full, it might replace itself, so you have to re-\/fetch the \-Block pointer! \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPlaceholder_a0afb17a9606b2e000acbeb4ddb1a6e0f}{
+virtual unsigned char \hyperlink{classVoxelBlockPlaceholder_a0afb17a9606b2e000acbeb4ddb1a6e0f}{get\-Texture\-At} (int x\-Position, int y\-Position, int z\-Position)}
+\label{d0/def/classVoxelBlockPlaceholder_a0afb17a9606b2e000acbeb4ddb1a6e0f}
+
+\begin{DoxyCompactList}\small\item\em \-Get the texture of the voxel at the specified position. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockPlaceholder_a600a2919a76d47db366d2ddb1bf8754a}{
+virtual void \hyperlink{classVoxelBlockPlaceholder_a600a2919a76d47db366d2ddb1bf8754a}{set\-Texture\-At} (int x\-Position, int y\-Position, int z\-Position, const unsigned char value)}
+\label{d0/def/classVoxelBlockPlaceholder_a600a2919a76d47db366d2ddb1bf8754a}
+
+\begin{DoxyCompactList}\small\item\em \-Set the texture of the voxel at the specified position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelBlockPlaceholder_a59ec484ff8323f1a8826aa23a199f830}{
+bool {\bfseries is\-Being\-Loaded}}
+\label{d0/def/classVoxelBlockPlaceholder_a59ec484ff8323f1a8826aa23a199f830}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Is a placeholder for another subclass of \hyperlink{classVoxelBlock}{\-Voxel\-Block} until the other block is loaded. \-Doesn't allow any changes, returns \-B\-L\-O\-C\-K\-\_\-\-F\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E for all voxels so that \-A\-I agents don't try to fly into these blocks. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/block\-Placeholder.\-h\item 
+src/block\-Placeholder.\-cpp\end{DoxyCompactItemize}

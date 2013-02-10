@@ -1,0 +1,109 @@
+\hypertarget{classAIHandlerBot}{
+\section{\-A\-I\-Handler\-Bot \-Class \-Reference}
+\label{d9/d8c/classAIHandlerBot}\index{\-A\-I\-Handler\-Bot@{\-A\-I\-Handler\-Bot}}
+}
+
+
+\-A\-I handler for bots.  
+
+
+
+
+{\ttfamily \#include $<$ai\-Handler\-Bot.\-h$>$}
+
+\-Inheritance diagram for \-A\-I\-Handler\-Bot\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d9/d8c/classAIHandlerBot}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIHandlerBot_a86e179c1e31a47338b63e81dac865854}{
+void {\bfseries select\-Weapon} ()}
+\label{d9/d8c/classAIHandlerBot_a86e179c1e31a47338b63e81dac865854}
+
+\item 
+\hypertarget{classAIHandlerBot_ae781efedd9372cb19b8e3a485e52ed5f}{
+virtual void {\bfseries perception\-Notification} (\hyperlink{classAIPerception}{\-A\-I\-Perception} $\ast$msg)}
+\label{d9/d8c/classAIHandlerBot_ae781efedd9372cb19b8e3a485e52ed5f}
+
+\item 
+\hypertarget{classAIHandlerBot_a4e08a817ea2a7c1ec21d05efd66ec7dc}{
+virtual void {\bfseries attacked\-By} (\hyperlink{classObject}{\-Object} $\ast$obj, float damage)}
+\label{d9/d8c/classAIHandlerBot_a4e08a817ea2a7c1ec21d05efd66ec7dc}
+
+\item 
+\hypertarget{classAIHandlerBot_a1e293d321cb54c36794129b90dfeec89}{
+virtual void {\bfseries pos\-Update} (float time\-Since\-Last\-Frame)}
+\label{d9/d8c/classAIHandlerBot_a1e293d321cb54c36794129b90dfeec89}
+
+\item 
+\hypertarget{classAIHandlerBot_af3d0ff3f5ba69e890ff4af68498d2c7f}{
+virtual void {\bfseries logic\-Update} ()}
+\label{d9/d8c/classAIHandlerBot_af3d0ff3f5ba69e890ff4af68498d2c7f}
+
+\item 
+\hypertarget{classAIHandlerBot_aa246ca75a93f16cb7b7f30fe71abd082}{
+virtual void {\bfseries init} ()}
+\label{d9/d8c/classAIHandlerBot_aa246ca75a93f16cb7b7f30fe71abd082}
+
+\item 
+\hypertarget{classAIHandlerBot_a034bc4e265b5d68925c9e52ce7ad7478}{
+virtual void {\bfseries exit} ()}
+\label{d9/d8c/classAIHandlerBot_a034bc4e265b5d68925c9e52ce7ad7478}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIHandlerBot_a249e91d1d87b342754db433019090298}{
+\hyperlink{classAIPerception}{\-A\-I\-Perception} $\ast$ {\bfseries perception}}
+\label{d9/d8c/classAIHandlerBot_a249e91d1d87b342754db433019090298}
+
+\item 
+\hypertarget{classAIHandlerBot_a45cd36d9aa2be49e79d4b1f56848805a}{
+\hyperlink{classJitteredIntervalTimer}{\-Jittered\-Interval\-Timer} $\ast$ {\bfseries perception\-Timer}}
+\label{d9/d8c/classAIHandlerBot_a45cd36d9aa2be49e79d4b1f56848805a}
+
+\item 
+\hypertarget{classAIHandlerBot_a9486c006e3697eb5b62d145831c77d57}{
+\hyperlink{classAIGetNeighbours}{\-A\-I\-Get\-Neighbours} $\ast$ {\bfseries neighbours}}
+\label{d9/d8c/classAIHandlerBot_a9486c006e3697eb5b62d145831c77d57}
+
+\item 
+\hypertarget{classAIHandlerBot_af432c11137fc0abe60b2afc89ac89e9c}{
+\hyperlink{classComponentCharacterController}{\-Component\-Character\-Controller} $\ast$ {\bfseries my\-Character\-Controller}}
+\label{d9/d8c/classAIHandlerBot_af432c11137fc0abe60b2afc89ac89e9c}
+
+\item 
+\hypertarget{classAIHandlerBot_a10fa0b5ef26c9750a3b3047ef3e56fb5}{
+\hyperlink{classComponentInventory}{\-Component\-Inventory} $\ast$ {\bfseries my\-Inventory}}
+\label{d9/d8c/classAIHandlerBot_a10fa0b5ef26c9750a3b3047ef3e56fb5}
+
+\item 
+\hypertarget{classAIHandlerBot_a616deb4875e7862fb1e4813fef028dee}{
+float {\bfseries time}}
+\label{d9/d8c/classAIHandlerBot_a616deb4875e7862fb1e4813fef028dee}
+
+\item 
+\hypertarget{classAIHandlerBot_a0cbc113d0b99ff9946cf182b952fda37}{
+\-Vector3 {\bfseries aim\-Direction}}
+\label{d9/d8c/classAIHandlerBot_a0cbc113d0b99ff9946cf182b952fda37}
+
+\item 
+\hypertarget{classAIHandlerBot_a973c8929afb7b38b5cded908692539e0}{
+\-Vector3 {\bfseries move\-Direction}}
+\label{d9/d8c/classAIHandlerBot_a973c8929afb7b38b5cded908692539e0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A\-I handler for bots. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/ai\-Handler\-Bot.\-h\item 
+src/ai\-Handler\-Bot.\-cpp\end{DoxyCompactItemize}

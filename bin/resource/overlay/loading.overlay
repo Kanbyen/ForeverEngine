@@ -1,0 +1,16 @@
+LoadingOverlay
+{
+    zorder 200
+
+    container Panel(LoadingTitlePanel)
+    {
+		horz_align center
+		vert_align center
+		metrics_mode pixels
+        left -256
+        top -256
+        width 512
+        height 512
+        material Title512Material
+    }
+}

@@ -1,0 +1,106 @@
+\hypertarget{classInputManager}{
+\section{\-Input\-Manager \-Class \-Reference}
+\label{d5/d39/classInputManager}\index{\-Input\-Manager@{\-Input\-Manager}}
+}
+
+
+\-Deals with \-O\-I\-S. \-Sends all input to the current \hyperlink{classInputHandler}{\-Input\-Handler}. \-Pseudo-\/\-Singleton\-: use the global variable input\-Manager.  
+
+
+
+
+{\ttfamily \#include $<$input.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classInputManager_ad1f5cd1a0344762fdb12b0ca0a9275a0}{
+\hyperlink{classInputManager_ad1f5cd1a0344762fdb12b0ca0a9275a0}{\-Input\-Manager} (unsigned long h\-Wnd, bool exclusive)}
+\label{d5/d39/classInputManager_ad1f5cd1a0344762fdb12b0ca0a9275a0}
+
+\begin{DoxyCompactList}\small\item\em \-Initializes \-O\-I\-S in the given window. \end{DoxyCompactList}\item 
+\hypertarget{classInputManager_af518290877dd183606709d5852db5491}{
+\hyperlink{classInputManager_af518290877dd183606709d5852db5491}{$\sim$\-Input\-Manager} ()}
+\label{d5/d39/classInputManager_af518290877dd183606709d5852db5491}
+
+\begin{DoxyCompactList}\small\item\em \-Deinitializes \-O\-I\-S. \end{DoxyCompactList}\item 
+\hypertarget{classInputManager_a8affb2d7b491b3aee25e9e25180d5c29}{
+void \hyperlink{classInputManager_a8affb2d7b491b3aee25e9e25180d5c29}{set\-Input\-Handler} (\hyperlink{classInputHandler}{\-Input\-Handler} $\ast$new\-Handler)}
+\label{d5/d39/classInputManager_a8affb2d7b491b3aee25e9e25180d5c29}
+
+\begin{DoxyCompactList}\small\item\em \-Sets a new input handler. \end{DoxyCompactList}\item 
+\hypertarget{classInputManager_a43a4691029d25a2e334f383bdf610e18}{
+void \hyperlink{classInputManager_a43a4691029d25a2e334f383bdf610e18}{center\-Mouse} ()}
+\label{d5/d39/classInputManager_a43a4691029d25a2e334f383bdf610e18}
+
+\begin{DoxyCompactList}\small\item\em \-Centers the mouse in the window. \end{DoxyCompactList}\item 
+\hypertarget{classInputManager_a57d2104a82aa83960bd0e888ee03a1a2}{
+void \hyperlink{classInputManager_a57d2104a82aa83960bd0e888ee03a1a2}{set\-Window\-Extents} (int width, int height)}
+\label{d5/d39/classInputManager_a57d2104a82aa83960bd0e888ee03a1a2}
+
+\begin{DoxyCompactList}\small\item\em \-Sets a new window size. \end{DoxyCompactList}\item 
+\hypertarget{classInputManager_a81e5485d8163efd13bbc01a59cd141a9}{
+void \hyperlink{classInputManager_a81e5485d8163efd13bbc01a59cd141a9}{capture} (float time\-Since\-Last\-Frame)}
+\label{d5/d39/classInputManager_a81e5485d8163efd13bbc01a59cd141a9}
+
+\begin{DoxyCompactList}\small\item\em \-Gets new input data. \-Must be called every frame. \end{DoxyCompactList}\item 
+\hypertarget{classInputManager_a45c8501e0882d38c58a60e4ecdc80cc9}{
+bool \hyperlink{classInputManager_a45c8501e0882d38c58a60e4ecdc80cc9}{is\-Key\-Down} (\-O\-I\-S\-::\-Key\-Code key)}
+\label{d5/d39/classInputManager_a45c8501e0882d38c58a60e4ecdc80cc9}
+
+\begin{DoxyCompactList}\small\item\em \-Returns if the specified key is currently pressed. \end{DoxyCompactList}\item 
+\hypertarget{classInputManager_ad9ffdd4e629efeafc8cc3f6d6cac9238}{
+bool \hyperlink{classInputManager_ad9ffdd4e629efeafc8cc3f6d6cac9238}{is\-Mouse\-Down} (\-O\-I\-S\-::\-Mouse\-Button\-I\-D button)}
+\label{d5/d39/classInputManager_ad9ffdd4e629efeafc8cc3f6d6cac9238}
+
+\begin{DoxyCompactList}\small\item\em \-Returns if the specified mouse button is currently pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classInputManager_acc28ea87d6d5ef326713c701a6ff78e9}{
+\-O\-I\-S\-::\-Mouse\-State \hyperlink{classInputManager_acc28ea87d6d5ef326713c701a6ff78e9}{mouse\-State}}
+\label{d5/d39/classInputManager_acc28ea87d6d5ef326713c701a6ff78e9}
+
+\begin{DoxyCompactList}\small\item\em \-Mouse state information, can be accessed by input handlers. \end{DoxyCompactList}\item 
+\hypertarget{classInputManager_a60e0707d7d0069d5bfaf5fe968302726}{
+bool \hyperlink{classInputManager_a60e0707d7d0069d5bfaf5fe968302726}{process\-Mouse}}
+\label{d5/d39/classInputManager_a60e0707d7d0069d5bfaf5fe968302726}
+
+\begin{DoxyCompactList}\small\item\em \-If false, input handlers should not process mouse\-Moved and mouse\-Released events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classInputManager_a339e02e0d2e405c1107ecf57f6a14c2f}{
+\-O\-I\-S\-::\-Input\-Manager $\ast$ {\bfseries m\-\_\-ois}}
+\label{d5/d39/classInputManager_a339e02e0d2e405c1107ecf57f6a14c2f}
+
+\item 
+\hypertarget{classInputManager_a8c44ba031e327eb7d6b58d0164381f84}{
+\-O\-I\-S\-::\-Mouse $\ast$ {\bfseries m\-Mouse}}
+\label{d5/d39/classInputManager_a8c44ba031e327eb7d6b58d0164381f84}
+
+\item 
+\hypertarget{classInputManager_af4b794dea8a8e3cd3edf9a1272827cf3}{
+\-O\-I\-S\-::\-Keyboard $\ast$ {\bfseries m\-Keyboard}}
+\label{d5/d39/classInputManager_af4b794dea8a8e3cd3edf9a1272827cf3}
+
+\item 
+\hypertarget{classInputManager_a2f4211be345369a1388ed132d5c47639}{
+unsigned long {\bfseries m\-\_\-h\-Wnd}}
+\label{d5/d39/classInputManager_a2f4211be345369a1388ed132d5c47639}
+
+\item 
+\hypertarget{classInputManager_aad48b24997e308a49325aa23ae9cbeae}{
+\hyperlink{classInputHandler}{\-Input\-Handler} $\ast$ {\bfseries handler}}
+\label{d5/d39/classInputManager_aad48b24997e308a49325aa23ae9cbeae}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Deals with \-O\-I\-S. \-Sends all input to the current \hyperlink{classInputHandler}{\-Input\-Handler}. \-Pseudo-\/\-Singleton\-: use the global variable input\-Manager. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/input.\-h\item 
+src/input.\-cpp\end{DoxyCompactItemize}

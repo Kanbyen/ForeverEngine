@@ -1,0 +1,240 @@
+\hypertarget{classNetwork}{
+\section{\-Network \-Class \-Reference}
+\label{d5/d16/classNetwork}\index{\-Network@{\-Network}}
+}
+
+
+\-Handles networking using \-E\-Net.  
+
+
+
+
+{\ttfamily \#include $<$network.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNetwork_a9bb2b36cd30320df7ce6671acfb51432}{
+typedef std\-::vector\*
+$<$ \hyperlink{structNetworkPlayer}{\-Network\-Player} $\ast$ $>$ {\bfseries \-Player\-List}}
+\label{d5/d16/classNetwork_a9bb2b36cd30320df7ce6671acfb51432}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}{
+\hyperlink{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}{\-Network} ()}
+\label{d5/d16/classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}
+
+\begin{DoxyCompactList}\small\item\em \-Initialize the network library. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_ab26b36fc6072ff01a1d97e163522ab22}{
+void \hyperlink{classNetwork_ab26b36fc6072ff01a1d97e163522ab22}{update} (float dt)}
+\label{d5/d16/classNetwork_ab26b36fc6072ff01a1d97e163522ab22}
+
+\begin{DoxyCompactList}\small\item\em \-Call this regularly to update the networking. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a65a873da1bcc9b2af1f4c6bdf965e2fd}{
+bool \hyperlink{classNetwork_a65a873da1bcc9b2af1f4c6bdf965e2fd}{host} ()}
+\label{d5/d16/classNetwork_a65a873da1bcc9b2af1f4c6bdf965e2fd}
+
+\begin{DoxyCompactList}\small\item\em \-Try to create a server to host a game. \-Returns true on success. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a3cd71654e09805dc0dac6d01ca59da52}{
+bool \hyperlink{classNetwork_a3cd71654e09805dc0dac6d01ca59da52}{join} (const char $\ast$host\-Name)}
+\label{d5/d16/classNetwork_a3cd71654e09805dc0dac6d01ca59da52}
+
+\begin{DoxyCompactList}\small\item\em \-Try to create a client to join a game. \-Returns true on success. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_ad45ce733e0433ec516e516fb0bfd93a0}{
+void \hyperlink{classNetwork_ad45ce733e0433ec516e516fb0bfd93a0}{set\-State} (\-E\-Network\-State new\-State)}
+\label{d5/d16/classNetwork_ad45ce733e0433ec516e516fb0bfd93a0}
+
+\begin{DoxyCompactList}\small\item\em \-Set networking state. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a721c9fc65b0221ba1cfae46d73b8e417}{
+void \hyperlink{classNetwork_a721c9fc65b0221ba1cfae46d73b8e417}{close\-Connection} ()}
+\label{d5/d16/classNetwork_a721c9fc65b0221ba1cfae46d73b8e417}
+
+\begin{DoxyCompactList}\small\item\em \-Disconnect. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a0ceadd8cd7b3cebd68ecc63648f4e4f1}{
+void \hyperlink{classNetwork_a0ceadd8cd7b3cebd68ecc63648f4e4f1}{loading\-Percentage\-Changed} (int new\-Percentage)}
+\label{d5/d16/classNetwork_a0ceadd8cd7b3cebd68ecc63648f4e4f1}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame}{\-Game} start screen\-: the loading percentage has changed. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a5d10e938ea117fc254033ad911843cb9}{
+bool \hyperlink{classNetwork_a5d10e938ea117fc254033ad911843cb9}{are\-All\-Players\-Ready} ()}
+\label{d5/d16/classNetwork_a5d10e938ea117fc254033ad911843cb9}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame}{\-Game} start screen\-: all players are ready (server only) \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a2f36a5683e8bcf83ce767c79a92c507b}{
+void \hyperlink{classNetwork_a2f36a5683e8bcf83ce767c79a92c507b}{send\-Chat\-Message} (const std\-::string \&msg, int playerno=-\/1)}
+\label{d5/d16/classNetwork_a2f36a5683e8bcf83ce767c79a92c507b}
+
+\begin{DoxyCompactList}\small\item\em \-Send a chat message. playerno is only relevant if this is the server. \-If playerno is negative, this player is used. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a37295c10288c1435a734d2a437188e9a}{
+const \-Player\-List \& \hyperlink{classNetwork_a37295c10288c1435a734d2a437188e9a}{get\-Player\-List} () const }
+\label{d5/d16/classNetwork_a37295c10288c1435a734d2a437188e9a}
+
+\begin{DoxyCompactList}\small\item\em \-Get a list of players. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a5e24715b385b3102eca387e89da60f85}{
+\hyperlink{structNetworkPlayer}{\-Network\-Player} $\ast$ \hyperlink{classNetwork_a5e24715b385b3102eca387e89da60f85}{get\-This\-Player} () const }
+\label{d5/d16/classNetwork_a5e24715b385b3102eca387e89da60f85}
+
+\begin{DoxyCompactList}\small\item\em \-Get this player. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a913ef79a8af4c3459707d78db4799b83}{
+bool \hyperlink{classNetwork_a913ef79a8af4c3459707d78db4799b83}{is\-Connected} () const }
+\label{d5/d16/classNetwork_a913ef79a8af4c3459707d78db4799b83}
+
+\begin{DoxyCompactList}\small\item\em \-Are we connected to a server or client? \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a5c210cee6b83cb8fa8d40964eb83a823}{
+bool \hyperlink{classNetwork_a5c210cee6b83cb8fa8d40964eb83a823}{is\-Server} () const }
+\label{d5/d16/classNetwork_a5c210cee6b83cb8fa8d40964eb83a823}
+
+\begin{DoxyCompactList}\small\item\em \-Is this a server (as opposed to a client)? \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a48a2e060dbc8de0dca6ec1d48ffd2028}{
+bool \hyperlink{classNetwork_a48a2e060dbc8de0dca6ec1d48ffd2028}{is\-Ok} () const }
+\label{d5/d16/classNetwork_a48a2e060dbc8de0dca6ec1d48ffd2028}
+
+\begin{DoxyCompactList}\small\item\em \-Is the network library initialized correctly? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNetwork_a11cffa914d9942854970be5f4f78b274}{
+void {\bfseries server\-Update} ()}
+\label{d5/d16/classNetwork_a11cffa914d9942854970be5f4f78b274}
+
+\item 
+\hypertarget{classNetwork_abd5e033c1574d8d392236d89b59394cb}{
+void {\bfseries server\-Handle\-Connect} (\-E\-Net\-Event $\ast$event)}
+\label{d5/d16/classNetwork_abd5e033c1574d8d392236d89b59394cb}
+
+\item 
+\hypertarget{classNetwork_ab803a06abb20add63eb4955c643993dc}{
+void {\bfseries server\-Handle\-Disconnect} (\-E\-Net\-Event $\ast$event)}
+\label{d5/d16/classNetwork_ab803a06abb20add63eb4955c643993dc}
+
+\item 
+\hypertarget{classNetwork_ab09fab805ae0232c4469bda8dbe2d9d2}{
+bool {\bfseries server\-Handle\-Receive} (\-E\-Net\-Event $\ast$event)}
+\label{d5/d16/classNetwork_ab09fab805ae0232c4469bda8dbe2d9d2}
+
+\item 
+\hypertarget{classNetwork_a286a2f2e78addfc6300cfbcaf270c53c}{
+bool {\bfseries host\-Custom} ()}
+\label{d5/d16/classNetwork_a286a2f2e78addfc6300cfbcaf270c53c}
+
+\item 
+\hypertarget{classNetwork_a5a494725824a4126389086608dfe35e4}{
+void {\bfseries server\-Update\-Loading\-Percentages} ()}
+\label{d5/d16/classNetwork_a5a494725824a4126389086608dfe35e4}
+
+\item 
+\hypertarget{classNetwork_a2225ba5fd30eb9de8f4d140ea6d708ec}{
+void {\bfseries server\-Send\-Ping} (\-E\-Net\-Peer $\ast$peer, bool resend)}
+\label{d5/d16/classNetwork_a2225ba5fd30eb9de8f4d140ea6d708ec}
+
+\item 
+\hypertarget{classNetwork_a414676aec00f597d6fc32997bddbf03e}{
+void {\bfseries client\-Update} ()}
+\label{d5/d16/classNetwork_a414676aec00f597d6fc32997bddbf03e}
+
+\item 
+\hypertarget{classNetwork_a9f7923916188b77e3536ae0a30d4d898}{
+void {\bfseries client\-Handle\-Disconnect} (\-E\-Net\-Event $\ast$event)}
+\label{d5/d16/classNetwork_a9f7923916188b77e3536ae0a30d4d898}
+
+\item 
+\hypertarget{classNetwork_a183e48488c63532c8672d85cb3b22ea7}{
+bool {\bfseries client\-Handle\-Receive} (\-E\-Net\-Event $\ast$event)}
+\label{d5/d16/classNetwork_a183e48488c63532c8672d85cb3b22ea7}
+
+\item 
+\hypertarget{classNetwork_a3187fc0a5a97d371e356defc773b155a}{
+bool {\bfseries join\-Custom} ()}
+\label{d5/d16/classNetwork_a3187fc0a5a97d371e356defc773b155a}
+
+\item 
+\hypertarget{classNetwork_a759454d790f1bb80fbb6ef6f7734d8d3}{
+void {\bfseries client\-Send\-Ping} ()}
+\label{d5/d16/classNetwork_a759454d790f1bb80fbb6ef6f7734d8d3}
+
+\item 
+\hypertarget{classNetwork_aa11e7d1ad5db08f98e8f5b73f4d3aa6f}{
+void {\bfseries display\-Chat\-Message} (const std\-::string \&msg, int playerno)}
+\label{d5/d16/classNetwork_aa11e7d1ad5db08f98e8f5b73f4d3aa6f}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNetwork_aad43b0f0f4ff64e90ffb1789dd8e99fc}{
+bool {\bfseries ok}}
+\label{d5/d16/classNetwork_aad43b0f0f4ff64e90ffb1789dd8e99fc}
+
+\item 
+\hypertarget{classNetwork_a7d2924bf7015344715a62583f3a9e89d}{
+float {\bfseries current\-Time}}
+\label{d5/d16/classNetwork_a7d2924bf7015344715a62583f3a9e89d}
+
+\item 
+\hypertarget{classNetwork_a7268216e5b37822be239f61e2edc1afe}{
+\-E\-Net\-Host $\ast$ {\bfseries enet\-Host}}
+\label{d5/d16/classNetwork_a7268216e5b37822be239f61e2edc1afe}
+
+\item 
+\hypertarget{classNetwork_a6a3fd4306f434be321ccbf8a739dee65}{
+bool {\bfseries b\-Is\-Server}}
+\label{d5/d16/classNetwork_a6a3fd4306f434be321ccbf8a739dee65}
+
+\item 
+\hypertarget{classNetwork_aeb1b570d742541573b19ba20c76dabc3}{
+int {\bfseries bufsiz}}
+\label{d5/d16/classNetwork_aeb1b570d742541573b19ba20c76dabc3}
+
+\item 
+\hypertarget{classNetwork_a2293dec40555b8525077453a7b42d933}{
+char {\bfseries buffer} \mbox{[}512\mbox{]}}
+\label{d5/d16/classNetwork_a2293dec40555b8525077453a7b42d933}
+
+\item 
+\hypertarget{classNetwork_a72e558a6667a9f65d770081401e9124a}{
+\-E\-Network\-State {\bfseries state}}
+\label{d5/d16/classNetwork_a72e558a6667a9f65d770081401e9124a}
+
+\item 
+\hypertarget{classNetwork_a61d7f57049bb03db5790c070af231b57}{
+\-E\-Net\-Peer $\ast$ \hyperlink{classNetwork_a61d7f57049bb03db5790c070af231b57}{server}}
+\label{d5/d16/classNetwork_a61d7f57049bb03db5790c070af231b57}
+
+\begin{DoxyCompactList}\small\item\em \-If we are a client, this is the server peer. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_aff7768fa8c9af0b0214d8cc02148d7e0}{
+\-Player\-List \hyperlink{classNetwork_aff7768fa8c9af0b0214d8cc02148d7e0}{player\-List}}
+\label{d5/d16/classNetwork_aff7768fa8c9af0b0214d8cc02148d7e0}
+
+\begin{DoxyCompactList}\small\item\em \-List of all players. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_adb566caccece918c1c256e7caf5d21a5}{
+\hyperlink{structNetworkPlayer}{\-Network\-Player} $\ast$ \hyperlink{classNetwork_adb566caccece918c1c256e7caf5d21a5}{this\-Player}}
+\label{d5/d16/classNetwork_adb566caccece918c1c256e7caf5d21a5}
+
+\begin{DoxyCompactList}\small\item\em \-Pointer to this player. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_ae738fed0856ac70d5a23549636eace8a}{
+\-Player\-List \hyperlink{classNetwork_ae738fed0856ac70d5a23549636eace8a}{not\-Authenticated\-Players}}
+\label{d5/d16/classNetwork_ae738fed0856ac70d5a23549636eace8a}
+
+\begin{DoxyCompactList}\small\item\em \-List of all players which connected but didn't send the \-N\-E\-T\-M\-S\-G\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-J\-O\-I\-N yet; this is only used for the server. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a5fd7f9344b0ce8c791ce59301dab6193}{
+bool \hyperlink{classNetwork_a5fd7f9344b0ce8c791ce59301dab6193}{loading\-Percentages\-Dirty}}
+\label{d5/d16/classNetwork_a5fd7f9344b0ce8c791ce59301dab6193}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame}{\-Game} start screen\-: if an update of the player loading percentages must be sent somewhen. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_ab7424e2bd94a50c2916a1e7cd004a1b6}{
+float {\bfseries loading\-Percentages\-Dirty\-Time}}
+\label{d5/d16/classNetwork_ab7424e2bd94a50c2916a1e7cd004a1b6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Handles networking using \-E\-Net. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/network.\-h\item 
+src/network.\-cpp\end{DoxyCompactItemize}

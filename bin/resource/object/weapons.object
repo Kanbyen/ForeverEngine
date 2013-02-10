@@ -1,0 +1,149 @@
+<Objects>
+	<Object name="pistol">
+		<Component name="Mesh">
+			<File value="pistol.mesh"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingBox"/>
+			<Mass value="2"/>
+			<Radius factor="3.2 1.3 1.2"/>
+		</Component>
+		<Component name="Weapon">
+			<Type value="normal"/>
+			<Description name="pistol" value="An archaic weapon which was modern in the 20th century."/>
+			<Importance value="500"/>
+			
+			<HoldPos position="0.479 -0.4 -1.406" rotation="0 0 0"/>
+			<MuzzlePos position="0 0.18 -0.338"/>
+			
+			<LMB name="fire" ammo="0" script="pistolLMB"/>
+		</Component>
+		<Component name="DamageEffects"/>
+		<Component name="Item">
+			<DisplayName value="pistol"/>
+			<Type value="weapon"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="1"/>
+			<Importance value="500"/>
+		</Component>
+	</Object>
+	
+	<Object name="plasma pistol">
+		<Component name="Mesh">
+			<File value="pistol.mesh"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingBox"/>
+			<Mass value="2"/>
+			<Radius factor="3.2 1.3 1.2"/>
+		</Component>
+		<Component name="Weapon">
+			<Type value="normal"/>
+			<Description name="plasma pistol" value="A dangerous weapon firing slow but lethal energy bullets."/>
+			<Importance value="800"/>
+			
+			<HoldPos position="0.479 -0.4 -1.406" rotation="0 0 0"/>
+			<MuzzlePos position="0 0.18 -0.338"/>
+			
+			<LMB name="fire" ammo="0" script="plasmapistolLMB"/>
+		</Component>
+		<Component name="DamageEffects"/>
+		<Component name="Item">
+			<DisplayName value="plasma pistol"/>
+			<Type value="weapon"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="1"/>
+			<Importance value="800"/>
+		</Component>
+	</Object>
+	
+	<Object name="machine gun">
+		<Component name="Mesh">
+			<File value="pistol.mesh"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingBox"/>
+			<Mass value="2"/>
+			<Radius factor="3.2 1.3 1.2"/>
+		</Component>
+		<Component name="Weapon">
+			<Type value="normal"/>
+			<Description name="machine gun" value="A rapid firing gun."/>
+			<Importance value="700"/>
+			
+			<HoldPos position="0.479 -0.4 -1.406" rotation="0 0 0"/>
+			<MuzzlePos position="0 0.18 -0.338"/>
+			
+			<LMB name="fire" ammo="0" script="machinegunLMB"/>
+		</Component>
+		<Component name="DamageEffects"/>
+		<Component name="Item">
+			<DisplayName value="machine gun"/>
+			<Type value="weapon"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="1"/>
+			<Importance value="700"/>
+		</Component>
+	</Object>
+	
+	<Object name="knife">
+		<Component name="Mesh">
+			<File value="knife.mesh"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingBox"/>
+			<Mass value="2"/>
+			<Radius factor="8 1 8"/>
+		</Component>
+		<Component name="Weapon">
+			<Type value="normal"/>
+			<Description name="knife" value="A normal knife, as commonly used in the kitchen."/>
+			<Importance value="100"/>
+			
+			<HoldPos position="0.584 -0.110 -1.660" rotation="0 42.903 5.391"/>
+			
+			<LMB name="hit" ammo="0" script="knifeLMB"/>
+		</Component>
+		<Component name="DamageEffects"/>
+		<Component name="Item">
+			<DisplayName value="knife"/>
+			<Type value="weapon"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="1"/>
+			<Importance value="100"/>
+		</Component>
+	</Object>
+	
+	<Object name="rocket launcher">
+		<Component name="Mesh">
+			<File value="geometryGun.mesh"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingBox"/>
+			<Mass value="3"/>
+		</Component>
+		<Component name="Weapon">
+			<Type value="normal"/>
+			<Description name="rocket launcher" value=""/>
+			<Importance value="1000"/>
+			
+			<HoldPos position="0.699 -0.523 -1.513" rotation="0 0 0"/>
+			<MuzzlePos position="0 0 -0.9"/>
+			
+			<LMB name="shoot" ammo="0" script="rocketlauncherLMB"/>
+		</Component>
+		<Component name="DamageEffects"/>
+		<Component name="Item">
+			<DisplayName value="rocket launcher"/>
+			<Type value="weapon"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="3"/>
+			<Importance value="1000"/>
+		</Component>
+	</Object>
+</Objects>

@@ -1,0 +1,52 @@
+struct a2v
+{
+    float4 Position : POSITION; //in object space
+    float3 Normal : NORMAL;
+	float2 TexCoords : TEXCOORD0;
+};
+
+struct v2f
+{
+    float4 Position : POSITION; //in projection space
+    float FogAmount : COLOR;
+    float2 TexCoords : TEXCOORD0;
+    float Alpha : TEXCOORD1;
+};
+
+float4 fragment(v2f IN, uniform sampler2D colourMap : TEXUNIT0, uniform float3 fogColor) : COLOR
+{
+	float4 color;
+	
+	// Texture
+	color = tex2D(colourMap, IN.TexCoords);
+
+	return float4(lerp(color, fogColor, IN.FogAmount), color.a * IN.Alpha);
+}
+
+v2f vertex(a2v IN, float4x4 world, float4x4 viewProj, float4 camera, float4 fogParams)
+{
+    v2f OUT;
+	
+	IN.Normal = mul((float3x3)world, IN.Normal);
+	IN.Normal = normalize(IN.Normal);
+
+    OUT.Position = mul(world, IN.Position);
+	OUT.TexCoords = IN.TexCoords;
+	
+	// Alpha
+	float3 vertexToCamera = (camera - OUT.Position).xyz;
+	OUT.Alpha = abs(dot(normalize(vertexToCamera), IN.Normal));
+	
+    // Fog
+    float dist = length(vertexToCamera);
+    OUT.FogAmount = max((dist - fogParams.y) * fogParams.w, 0);
+	
+    OUT.Position = mul(viewProj, OUT.Position);
+
+    return OUT;
+}
+
+v2f vertex_Entry(a2v IN,uniform float4x4 world, uniform float4x4 viewProj, uniform float4 camera, uniform float4 fogParams)
+{
+    return vertex(IN, world, viewProj, camera, fogParams);
+}

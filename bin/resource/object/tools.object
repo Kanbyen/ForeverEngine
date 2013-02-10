@@ -1,0 +1,31 @@
+<Objects>
+	<Object name="geometry gun">
+		<Component name="Mesh">
+			<File value="geometryGun.mesh"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingBox"/>
+			<Mass value="3"/>
+		</Component>
+		<Component name="Weapon">
+			<Type value="tool"/>
+			<Description name="geometry gun" value="You read on the geometry gun:^The new, long anticipated hi-tech product from T.S. Designs!^Your life will never be the same again!^^Notes:^Never, NEVER, cross the beams of two geometry guns!^Needs special waste disposal because it contains anti-matter."/>
+			<Importance value="100"/>
+			
+			<HoldPos position="0.699 -0.523 -1.513" rotation="0 0 0"/>
+			<MuzzlePos position="0 0 -0.9"/>
+			
+			<LMB name="build" ammo="0" script="geometryGunLMB"/>
+			
+			<RMB name="dig" ammo="0" script="geometryGunRMB"/>
+		</Component>
+		<Component name="DamageEffects"/>
+		<Component name="Item">
+			<DisplayName value="geometry gun"/>
+			<Type value="weapon"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="3"/>
+		</Component>
+	</Object>
+</Objects>

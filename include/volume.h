@@ -1,0 +1,230 @@
+/*****************************************************************************************
+
+Forever War - a NetHack-like FPS
+
+Copyright (C) 2008 Thomas Schöps
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software Foundation;
+either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program;
+if not, see <http://www.gnu.org/licenses/>.
+
+*****************************************************************************************/
+
+#ifndef _VOLUME_H_
+#define _VOLUME_H_
+
+#include <list>
+#include "OgrePrerequisites.h"
+#include "OgreVector3.h"
+using namespace Ogre;
+#include "block.h"
+#include "blockConstants.h"
+
+class VoxelBlockPersistent;
+class VoxelBlockLoaded;
+class VolumeLoadThread;
+
+/// The volume can operate in two modes: open and closed mode.
+enum PagingMode
+{
+	/// In open mode, the volume is only displayed correctly from the view of the pagingTarget (usually the camera).
+	PAGINGMODE_CLOSED = 0,
+ 	/// In closed mode, the volume is (surprise!) closed at the borders and thus displayed correctly from all views
+	PAGINGMODE_OPEN = 1,
+};
+
+typedef int (*blockLoadFunction)(int,int,int,int,int,int,char*);
+typedef void (*blockTextureFunction)(int,int,int,int,int,int,char*,unsigned char*);
+
+/// Represents a voxel volume which is made up of VoxelBlocks
+class VoxelVolume
+{
+public:
+	/// Array of blocks
+	VoxelBlock** blocks;
+	VoxelBlockPersistent** blocksPersistent;
+
+	/// Thread which loads new blocks or NULL
+	VolumeLoadThread* volumeLoadThread;
+
+	/// Which blocks to update in the paging mode given as index
+	static std::list<int> relevantBlocks[2];
+
+	// Information about the number of blocks of any loaded type (the remaining blocks are placeholders)
+	int numLoadedBlocks;
+	int numFullBlocks;
+	int numEmptyBlocks;
+
+	// Internal
+	static char fullBlockBuffer[BLOCKBUFFER_SIZE];
+
+	/// Value to scale the whole volume
+	float scale;
+
+	/// Offset from 0, 0, 0 in voxels
+	int windowXInVoxels, windowYInVoxels, windowZInVoxels;
+	/// Offset from 0, 0, 0 in blocks
+	int windowXInBlocks, windowYInBlocks, windowZInBlocks;
+
+	/// Volume side lengths in blocks
+	int numBlocksX, numBlocksY, numBlocksZ;
+	/// Volume side lengths in voxels
+	int numVoxelsX, numVoxelsY, numVoxelsZ;
+	/// Number of blocks
+	int numBlocks;
+	
+	/// Material name
+	string materialName;
+
+
+	/// The paging mode: closed displays everything correctly, while open is faster and only correct from the view of the pagingTarget
+	PagingMode pagingMode;
+
+	/// Enable / disable automatic paging; see pagingTarget
+	bool automaticPaging;
+
+	/// The position which should be in the center of the volume if automatic paging is enabled
+	Vector3 pagingTarget;
+
+	/// The position where the volume paging position was last updated
+	Vector3 lastPagingPos;
+
+
+	/// Were changes made to the volume in this frame?
+	bool changesThisFrame;
+
+	/// The callback which has to load new blocks
+	blockLoadFunction blockLoadCB;
+
+	/// The callback which has to apply textures to new blocks
+	blockTextureFunction blockTextureCB;
+
+	/// Call once at the beginning of the program
+	static void staticInit();
+
+	/// Constructor
+	VoxelVolume(int numBlocksX, int numBlocksY, int numBlocksZ, float scale, bool threaded, int windowXInVoxels = 0, int windowYInVoxels = 0, int windowZInVoxels = 0);
+	~VoxelVolume();
+
+	/// Must be called every frame to update the geometry. If threaded, returns if a block has been loaded. Else, always returns false.
+	bool update(Vector3 cameraPosition);
+
+	/// Resets all blocks to the "placeholder" state, in effect re-generating the whole volume using the block load callbacks
+	void reset();
+	
+	/// Sets the material used by the blocks
+	void setMaterial(string materialName);
+
+	/// Moves the volume to display another part of the world - makes only sense with the "open" paging mode.
+	/// The following calls to updateGeometry() will load and display the new content.
+	void moveWindow(int newXInBlocks, int newYInBlocks, int newZInBlocks);
+
+	/// Specifies the function to be called when a new block has to be loaded
+	void setBlockLoadCallback(blockLoadFunction func);
+
+	/// Specifies the function to be called when a voxel of a new block needs to be assigned a texture
+	void setBlockTextureCallback(blockTextureFunction func);
+
+	/// Activates all rigid bodies in the specified area and lets the blocks in the area update their geometry
+	void setDataChangedAbs(int firstX, int firstY, int firstZ, int lastX, int lastY, int lastZ);
+	void setDataChangedRel(int firstX, int firstY, int firstZ, int lastX, int lastY, int lastZ);
+
+	/// Takes a placeholder block position and returns a VoxelBlockLoaded generated by calling the block load callback
+	static VoxelBlock* loadBlock(Point3 position, VoxelVolume* volume, int pagingMode, VoxelBlockPersistent* persistent, blockLoadFunction loadFunc, blockTextureFunction texFunc, int windowXInBlocks, int windowYInBlocks, int windowZInBlocks, int numBlocksX, int numBlocksY, int numBlocksZ);
+
+	/// Checks if the block is currently a VoxelBlockLoaded and if it is empty or full. If yes, returns an instance of the appropriate subclass of VoxelBlock in out and returns true.
+	static bool checkBlock(VoxelBlock* block, VoxelVolume* volume, VoxelBlock*& out);
+
+	/// Gets the block with the given absolute coordinates (which are specified in blocks, not voxels)
+	inline VoxelBlock* getBlockAbs(int blockX, int blockY, int blockZ);
+
+	/// Sets a new block at the specified absolute position, deletes the old one
+	inline void setBlockAbs(int x, int y, int z, VoxelBlock* newBlock);
+
+	/// Gets the block with the given coordinates relative to the volume origin (which are specified in blocks, not voxels)
+	inline VoxelBlock* getBlockRel(int blockX, int blockY, int blockZ);
+
+	/// Sets a new block at the specified position relative to the volume origin, deletes the old one
+	inline void setBlockRel(int x, int y, int z, VoxelBlock* newBlock);
+
+	/// Gets the block persistent data with the given coordinates (which are specified in blocks, not voxels)
+	inline VoxelBlockPersistent* getPersistentRel(int blockX, int blockY, int blockZ);
+
+	/// Gets the block persistent data with the given coordinates (which are specified in blocks, not voxels)
+	inline VoxelBlockPersistent* getPersistentAbs(int blockX, int blockY, int blockZ);
+
+	/// The slowest method to get the value of a voxel
+	inline char getVoxelAt(Vector3& pos) const;
+	inline char getVoxelAt(int xPosition, int yPosition, int zPosition) const;
+	inline char getVoxelRel(int xPosition, int yPosition, int zPosition) const;
+
+	/// The slowest method to set the value of a voxel
+	inline void setVoxelAt(int xPosition, int yPosition, int zPosition, const char value);
+	inline void setVoxelRel(int xPosition, int yPosition, int zPosition, const char value);
+
+	/// The slowest method to get the texture of a voxel
+	inline unsigned char getTextureAt(int xPosition, int yPosition, int zPosition) const;
+	inline unsigned char getTextureRel(int xPosition, int yPosition, int zPosition) const;
+
+	/// The slowest method to set the texture of a voxel
+	inline void setTextureAt(int xPosition, int yPosition, int zPosition, const unsigned char value);
+	inline void setTextureRel(int xPosition, int yPosition, int zPosition, const unsigned char value);
+
+	/// Does the volume contain the specified point? - absolute coordinates
+	inline bool containsPointAbs(Vector3& pos);
+	inline bool containsPointAbs(int x, int y, int z);
+
+	/// Does the volume contain the specified point? - relative coordinates
+	inline bool containsPointRel(int x, int y, int z);
+
+	/// Does the volume contain the specified block? - absolute coordinates
+	inline bool containsBlockAbs(int x, int y, int z);
+
+	/// Does the volume contain the specified block? - relative coordinates
+	inline bool containsBlockRel(int x, int y, int z);
+
+	/// Is the specified block valid (containsBlockAbs() == true and the objects in the block, if any, are loaded (this means that its geometry is generated)) - absolute coordinates
+	inline bool isValidBlockAbs(int x, int y, int z);
+	
+	/// Returns the number of blocks which are either loaded, empty or full (the remaining blocks are placeholders)
+	inline int getLoadedBlocks() const {return numLoadedBlocks + numEmptyBlocks + numFullBlocks;}
+
+	/// Adjusts the area to fit into the volume; coordinates relative to the volume origin
+	void checkBoundsRel(int& firstX, int& firstY, int& firstZ, int& lastX, int& lastY, int& lastZ);
+
+	/// Changes the specified range from relative to absolute coordinates
+	void makeRangeRelative(int& firstX, int& firstY, int& firstZ, int& lastX, int& lastY, int& lastZ);
+	/// Changes the specified range from absolute to relative coordinates
+	void makeRangeAbsolute(int& firstX, int& firstY, int& firstZ, int& lastX, int& lastY, int& lastZ);
+
+	/// Returns the point where the ray hits ground or leaves the volume. Attention, if the start point is outside the volume, the start point will be returned!
+	bool getRayIntersection(Ogre::Vector3 start, Ogre::Vector3 dir, Ogre::Vector3* out);
+	/// Returns the point where the ray hits the ground or where it ends. Also works outside the volume.
+	bool getRayIntersectionEx(Ogre::Vector3 start, Ogre::Vector3 dir, Ogre::Vector3* out, float length);
+
+	/// fills the whole volume with the specified value, no bounds checking
+	void fill(char value);
+
+	/// For every voxel in the specified sphere, execute the given callback function
+	void execSphereFunc(Ogre::Vector3 centre, Ogre::Real radius, void (*func)(int,int,int,float));
+	/// For every voxel in the specified cube, execute the given callback function
+	void execCubeFunc(int firstX, int firstY, int firstZ, int lastX, int lastY, int lastZ, void (*func)(int,int,int,float));
+	/// For every voxel in the specified cube, execute the given callback function
+	void execCubeFunc(Ogre::Vector3 centre, Ogre::Real radius, void (*func)(int,int,int,float));
+
+protected:
+
+	/// Unloads a block. Stores the data if a player made changes to this block so it can be restored later when a player gets to this place again
+	void unloadBlock(VoxelBlock* block, int x, int y, int z);
+};
+
+#include "volume.inl"
+
+#endif

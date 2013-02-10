@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="MenuRoot" >
+        <Property Name="Font" Value="Sans" />
+        <Property Name="InheritsAlpha" Value="False" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="MousePassThroughEnabled" Value="True" />
+        
+        <Window Type="Style/FrameWindow" Name="MultiplayerWindow" >
+            <Property Name="Font" Value="Sans" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="TitlebarFont" Value="Sans" />
+            <Property Name="SizingEnabled" Value="False" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="TitlebarEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.5,-150},{0.5,-200},{0.5,150},{0.5,200}}" />
+            <Property Name="DragMovingEnabled" Value="False" />
+            <Property Name="CloseButtonEnabled" Value="False" />
+            
+            <Window Type="Style/StaticText" Name="MP_Text" >
+                <Property Name="Font" Value="SansBold" />
+                <Property Name="Text" Value="Multiplayer Prototype" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,10},{1,0},{0,50}}" />
+            </Window>
+            
+            <Window Type="Style/Button" Name="MP_Quit" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Quit" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,20},{1,-60},{1,-20},{1,-20}}" />
+            </Window>
+            <Window Type="Style/Button" Name="MP_Sandbox" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Sandbox" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,20},{1,-120},{1,-20},{1,-80}}" />
+            </Window>
+            <Window Type="Style/Button" Name="MP_Host" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Host" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,20},{1,-170},{1,-20},{1,-130}}" />
+            </Window>
+            <Window Type="Style/Button" Name="MP_Join" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Join" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,20},{1,-220},{1,-20},{1,-180}}" />
+            </Window>
+            
+            <Window Type="Style/StaticText" Name="MP_Player" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Player:" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,20},{0,60},{0,100},{0,95}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Style/Editbox" Name="MP_Player_Edit" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="PLAYER_NAME" />
+                <Property Name="MaxTextLength" Value="32" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,110},{0,60},{0,290},{0,95}}" />
+            </Window>
+            <Window Type="Style/StaticText" Name="MP_Server" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Server:" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,20},{0,105},{0,100},{0,140}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Style/Editbox" Name="MP_Server_Edit" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="SERVER_ADDR" />
+                <Property Name="MaxTextLength" Value="128" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,110},{0,105},{0,290},{0,140}}" />
+            </Window>
+        </Window>
+        
+    </Window>
+</GUILayout>

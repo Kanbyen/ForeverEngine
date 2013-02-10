@@ -1,0 +1,177 @@
+\hypertarget{structLevel_1_1Building}{
+\section{\-Level\-:\-:\-Building \-Struct \-Reference}
+\label{db/da2/structLevel_1_1Building}\index{\-Level\-::\-Building@{\-Level\-::\-Building}}
+}
+
+
+\-Information about buildings.  
+
+
+
+
+{\ttfamily \#include $<$level.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structLevel_1_1Building_ad97691b46f6ed26a9b0481210d1f086c}{
+\hyperlink{structLevel_1_1Building_ad97691b46f6ed26a9b0481210d1f086c}{\-Building} ()}
+\label{db/da2/structLevel_1_1Building_ad97691b46f6ed26a9b0481210d1f086c}
+
+\begin{DoxyCompactList}\small\item\em \-Constructor \& \-Destructor (clears up bmap if non-\/\-N\-U\-L\-L) \end{DoxyCompactList}\item 
+\hypertarget{structLevel_1_1Building_a9e4afff8f83b146347eb6d99f8401b38}{
+void \hyperlink{structLevel_1_1Building_a9e4afff8f83b146347eb6d99f8401b38}{generate\-Building\-Base} (int door\-Dirs, int tex\-Floor, int door\-Width, int window\-Width)}
+\label{db/da2/structLevel_1_1Building_a9e4afff8f83b146347eb6d99f8401b38}
+
+\begin{DoxyCompactList}\small\item\em \-Places a hollow block and inserts the first door space for the entrance. \end{DoxyCompactList}\item 
+void \hyperlink{structLevel_1_1Building_ac893ad0cee7261ef8aab9000c8510bea}{calculate\-Split\-Sizes} (int split\-Free\-Space\-Needed)
+\item 
+\hypertarget{structLevel_1_1Building_ab508a1d117de524ccc7185fa4327988e}{
+void \hyperlink{structLevel_1_1Building_ab508a1d117de524ccc7185fa4327988e}{create\-B\-Map} ()}
+\label{db/da2/structLevel_1_1Building_ab508a1d117de524ccc7185fa4327988e}
+
+\begin{DoxyCompactList}\small\item\em \-Creates the bmap, fills it with the initial room. \end{DoxyCompactList}\item 
+\hypertarget{structLevel_1_1Building_a0d0d3e166434975a106cabdabf995f2d}{
+void \hyperlink{structLevel_1_1Building_a0d0d3e166434975a106cabdabf995f2d}{split\-Up} (int num\-Split\-Tries, int split\-Free\-Space\-Needed, int door\-Width, bool carve\-Corner\-Allowed, int carve\-Out\-Percentage)}
+\label{db/da2/structLevel_1_1Building_a0d0d3e166434975a106cabdabf995f2d}
+
+\begin{DoxyCompactList}\small\item\em \-Splits the building up into smaller rooms. \end{DoxyCompactList}\item 
+\hypertarget{structLevel_1_1Building_adeebf13463350a14c851271a7dcaead0}{
+void \hyperlink{structLevel_1_1Building_adeebf13463350a14c851271a7dcaead0}{create\-Doors\-And\-Windows} (int door\-Width, int door\-Height, int window\-Width, int window\-Height, int window\-Height\-Above\-Ground)}
+\label{db/da2/structLevel_1_1Building_adeebf13463350a14c851271a7dcaead0}
+
+\begin{DoxyCompactList}\small\item\em \-Makes doors from door\-Spaces; does not clear the door spaces list. \end{DoxyCompactList}\item 
+\hypertarget{structLevel_1_1Building_abb742299d41e431c9f3cf8c6a4b99ef9}{
+int \hyperlink{structLevel_1_1Building_abb742299d41e431c9f3cf8c6a4b99ef9}{get\-Room\-Volume} ()}
+\label{db/da2/structLevel_1_1Building_abb742299d41e431c9f3cf8c6a4b99ef9}
+
+\begin{DoxyCompactList}\small\item\em \-Calculates the volume defined by roombbmin and roombbmax. \end{DoxyCompactList}\item 
+\hypertarget{structLevel_1_1Building_a6dc68340332de9de8bd7299046d6a540}{
+void \hyperlink{structLevel_1_1Building_a6dc68340332de9de8bd7299046d6a540}{get\-Door\-Or\-Window\-Space\-In\-Building\-Side} (int dir, int floor, bool window, int door\-Width, int window\-Width)}
+\label{db/da2/structLevel_1_1Building_a6dc68340332de9de8bd7299046d6a540}
+
+\begin{DoxyCompactList}\small\item\em \-Called by generate\-Building\-Base. dir is form the \-Building\-Direction enum. \end{DoxyCompactList}\item 
+\hypertarget{structLevel_1_1Building_a701e5eacd9ec89eb3b4e85cdc4e4a081}{
+void \hyperlink{structLevel_1_1Building_a701e5eacd9ec89eb3b4e85cdc4e4a081}{calc\-Num\-Floors\-And\-Adjust\-B\-B} (int floor\-Height)}
+\label{db/da2/structLevel_1_1Building_a701e5eacd9ec89eb3b4e85cdc4e4a081}
+
+\begin{DoxyCompactList}\small\item\em \-Calculate the number of floors which fit into the given bb and adjust the bb to the minimum possible size. \end{DoxyCompactList}\item 
+\hypertarget{structLevel_1_1Building_a3224b49575fa8e4ec1f31012421de85b}{
+void \hyperlink{structLevel_1_1Building_a3224b49575fa8e4ec1f31012421de85b}{set\-Act\-Floor} (int floor)}
+\label{db/da2/structLevel_1_1Building_a3224b49575fa8e4ec1f31012421de85b}
+
+\begin{DoxyCompactList}\small\item\em \-Set roombbmin / roombbmax. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structLevel_1_1Building_aa28ab856555f670ddffd9fa348b93b40}{
+\hyperlink{classPoint3}{\-Point3} \hyperlink{structLevel_1_1Building_aa28ab856555f670ddffd9fa348b93b40}{bbmin}}
+\label{db/da2/structLevel_1_1Building_aa28ab856555f670ddffd9fa348b93b40}
+
+\begin{DoxyCompactList}\small\item\em \-Bounding box. \end{DoxyCompactList}\item 
+\hypertarget{structLevel_1_1Building_a7ecbaec7832f9df4a999dd5f5649e90f}{
+\hyperlink{classPoint3}{\-Point3} {\bfseries bbmax}}
+\label{db/da2/structLevel_1_1Building_a7ecbaec7832f9df4a999dd5f5649e90f}
+
+\item 
+\hypertarget{structLevel_1_1Building_ab980b2fe0973ad81dbe1172df50fb6ff}{
+\hyperlink{classPoint3}{\-Point3} \hyperlink{structLevel_1_1Building_ab980b2fe0973ad81dbe1172df50fb6ff}{roombbmin}}
+\label{db/da2/structLevel_1_1Building_ab980b2fe0973ad81dbe1172df50fb6ff}
+
+\begin{DoxyCompactList}\small\item\em \-Bounding box of the floor which is currently being worked on; set this using \hyperlink{structLevel_1_1Building_a3224b49575fa8e4ec1f31012421de85b}{set\-Act\-Floor()} \end{DoxyCompactList}\item 
+\hypertarget{structLevel_1_1Building_a8b854edc5bf65928c47aef0dd7377688}{
+\hyperlink{classPoint3}{\-Point3} {\bfseries roombbmax}}
+\label{db/da2/structLevel_1_1Building_a8b854edc5bf65928c47aef0dd7377688}
+
+\item 
+\hypertarget{structLevel_1_1Building_ae4e82454c0d62ab2967748f0bf690252}{
+\-Door\-Or\-Window\-Space\-List $\ast$ \hyperlink{structLevel_1_1Building_ae4e82454c0d62ab2967748f0bf690252}{door\-Spaces}}
+\label{db/da2/structLevel_1_1Building_ae4e82454c0d62ab2967748f0bf690252}
+
+\begin{DoxyCompactList}\small\item\em \-List of bounding boxes in which doors must be placed to guarantee accessibility of every room; access\-: door\-Spaces\mbox{[}floor\mbox{]}. \end{DoxyCompactList}\item 
+char $\ast$$\ast$$\ast$ \hyperlink{structLevel_1_1Building_a684eaeadb756c94a6d81f1b6c3f27e84}{bmap}
+\item 
+\hypertarget{structLevel_1_1Building_ac1d9615b43944f9e17121a32e3cdf188}{
+int \hyperlink{structLevel_1_1Building_ac1d9615b43944f9e17121a32e3cdf188}{bsizex}}
+\label{db/da2/structLevel_1_1Building_ac1d9615b43944f9e17121a32e3cdf188}
+
+\begin{DoxyCompactList}\small\item\em information for splits \end{DoxyCompactList}\item 
+\hypertarget{structLevel_1_1Building_a02724f162415fb2af78a7e4a0bd8626d}{
+int {\bfseries bsizez}}
+\label{db/da2/structLevel_1_1Building_a02724f162415fb2af78a7e4a0bd8626d}
+
+\item 
+\hypertarget{structLevel_1_1Building_a3fd062700b1290b92a9028ffb21534c4}{
+int {\bfseries pos\-X\-Min}}
+\label{db/da2/structLevel_1_1Building_a3fd062700b1290b92a9028ffb21534c4}
+
+\item 
+\hypertarget{structLevel_1_1Building_a9fd92c3eb51dd8fdb55a7300e4083bc0}{
+int {\bfseries pos\-X\-Max}}
+\label{db/da2/structLevel_1_1Building_a9fd92c3eb51dd8fdb55a7300e4083bc0}
+
+\item 
+\hypertarget{structLevel_1_1Building_ae08be9b67d0cb16d97897f1bfad811ab}{
+int {\bfseries pos\-Z\-Min}}
+\label{db/da2/structLevel_1_1Building_ae08be9b67d0cb16d97897f1bfad811ab}
+
+\item 
+\hypertarget{structLevel_1_1Building_ab7430e8cdd35aab0a1b2d17d5d4fb22a}{
+int {\bfseries pos\-Z\-Max}}
+\label{db/da2/structLevel_1_1Building_ab7430e8cdd35aab0a1b2d17d5d4fb22a}
+
+\item 
+\hypertarget{structLevel_1_1Building_a569805f57ee1727b59210d339ab38d23}{
+bool {\bfseries xsplit\-Possible}}
+\label{db/da2/structLevel_1_1Building_a569805f57ee1727b59210d339ab38d23}
+
+\item 
+\hypertarget{structLevel_1_1Building_aa66d819f1a4e21310c0fcf012f02035d}{
+bool {\bfseries zsplit\-Possible}}
+\label{db/da2/structLevel_1_1Building_aa66d819f1a4e21310c0fcf012f02035d}
+
+\item 
+\hypertarget{structLevel_1_1Building_a81f8ebdec56ddd67cad54e23546cae1b}{
+int \hyperlink{structLevel_1_1Building_a81f8ebdec56ddd67cad54e23546cae1b}{num\-Floors}}
+\label{db/da2/structLevel_1_1Building_a81f8ebdec56ddd67cad54e23546cae1b}
+
+\begin{DoxyCompactList}\small\item\em if multiple floors are present \end{DoxyCompactList}\item 
+\hypertarget{structLevel_1_1Building_a944d1b735fdec683b31ed9f7b4c9a55c}{
+int {\bfseries act\-Floor}}
+\label{db/da2/structLevel_1_1Building_a944d1b735fdec683b31ed9f7b4c9a55c}
+
+\item 
+\hypertarget{structLevel_1_1Building_aca3051c2aae1e6309ea95be880c78ecc}{
+int {\bfseries floor\-Height}}
+\label{db/da2/structLevel_1_1Building_aca3051c2aae1e6309ea95be880c78ecc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Information about buildings. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{structLevel_1_1Building_ac893ad0cee7261ef8aab9000c8510bea}{
+\index{\-Level\-::\-Building@{\-Level\-::\-Building}!calculate\-Split\-Sizes@{calculate\-Split\-Sizes}}
+\index{calculate\-Split\-Sizes@{calculate\-Split\-Sizes}!Level::Building@{\-Level\-::\-Building}}
+\subsubsection[{calculate\-Split\-Sizes}]{\setlength{\rightskip}{0pt plus 5cm}void \-Level\-::\-Building\-::calculate\-Split\-Sizes (
+\begin{DoxyParamCaption}
+\item[{int}]{split\-Free\-Space\-Needed}
+\end{DoxyParamCaption}
+)}}
+\label{db/da2/structLevel_1_1Building_ac893ad0cee7261ef8aab9000c8510bea}
+\-Calculates internal variables split\-Free\-Space\-Needed\-: \-Number of free voxels (split point voxel excluded) before / behind door needed for a valid split point position; determines the minimum size of the resulting rooms\-: 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{structLevel_1_1Building_a684eaeadb756c94a6d81f1b6c3f27e84}{
+\index{\-Level\-::\-Building@{\-Level\-::\-Building}!bmap@{bmap}}
+\index{bmap@{bmap}!Level::Building@{\-Level\-::\-Building}}
+\subsubsection[{bmap}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$$\ast$ {\bf \-Level\-::\-Building\-::bmap}}}
+\label{db/da2/structLevel_1_1Building_a684eaeadb756c94a6d81f1b6c3f27e84}
+a 2\-D map of the building, 0 means free space, 1 means wall, 2 means free space which should remain free; access\-: bmap\mbox{[}floor\mbox{]}\mbox{[}x\mbox{]}\mbox{[}y\mbox{]}; bmap\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}\mbox{[}0\mbox{]} is the voxel at bbmin; size\-: bmap\mbox{[}num\-Floors\mbox{]}\mbox{[}bsizex\mbox{]}\mbox{[}bsizez\mbox{]} 
+
+\-The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/level.\-h\item 
+src/level.\-cpp\end{DoxyCompactItemize}

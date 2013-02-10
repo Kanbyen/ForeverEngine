@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout>
+    <Window Type="DefaultWindow" Name="GameStartRoot" >
+        <Property Name="Font" Value="Sans" />
+        <Property Name="InheritsAlpha" Value="False" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="MousePassThroughEnabled" Value="True" />
+
+        <Window Type="Style/StaticText" Name="GameStartTitle" >
+            <Property Name="Font" Value="SansBig" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="Text" Value="Waiting for next round" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{0,80}}" />
+        </Window>
+
+		<Window Type="Style/Listbox" Name="GameStartPlayerlist" >
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0.1,0},{0,100},{0.9,0},{0,400}}" />
+        </Window>
+        
+		<Window Type="Style/Listbox" Name="GameStartMessages" >
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0.1,0},{0,420},{0.9,0},{1,-110}}" />
+        </Window>
+        
+        <Window Type="Style/Editbox" Name="GameStartChat" >
+            <Property Name="Text" Value="" />
+            <Property Name="MaxTextLength" Value="253" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0.1,0},{1,-110},{0.9,0},{1,-80}}" />
+        </Window>
+        
+        <Window Type="Style/StaticText" Name="GameStartInstructions" >
+            <Property Name="Font" Value="SansBold" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="Text" Value="" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{1,-60},{1,0},{1,0}}" />
+        </Window>
+    </Window>
+</GUILayout>

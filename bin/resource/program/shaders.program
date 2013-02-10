@@ -1,0 +1,25 @@
+vertex_program TriplanarTexturingVertexProgram cg
+{
+	source triplanarTexturing.cg
+	entry_point vertex_FourLights
+	profiles vs_1_1 arbvp1
+}
+fragment_program TriplanarTexturingFragmentProgram cg
+{
+	source triplanarTexturing.cg
+	entry_point fragment
+	profiles ps_3_0 arbfp1
+}
+
+vertex_program SkyVertexProgram cg
+{
+	source sky.cg
+	entry_point vertex
+	profiles vs_1_1 arbvp1
+}
+fragment_program SkyFragmentProgram cg
+{
+	source sky.cg
+	entry_point fragment
+	profiles ps_1_1 arbfp1
+}

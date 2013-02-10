@@ -1,0 +1,95 @@
+\hypertarget{classComponentDamageEffects}{
+\section{\-Component\-Damage\-Effects \-Class \-Reference}
+\label{d0/d4e/classComponentDamageEffects}\index{\-Component\-Damage\-Effects@{\-Component\-Damage\-Effects}}
+}
+
+
+\-Damage\-Effects \hyperlink{classComponent}{\-Component}.  
+
+
+
+
+{\ttfamily \#include $<$component\-Damage\-Effects.\-h$>$}
+
+\-Inheritance diagram for \-Component\-Damage\-Effects\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d0/d4e/classComponentDamageEffects}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentDamageEffects_a4aa5ed92d581f76ee9f39428ba3a3577}{
+virtual void \hyperlink{classComponentDamageEffects_a4aa5ed92d581f76ee9f39428ba3a3577}{exit} ()}
+\label{d0/d4e/classComponentDamageEffects_a4aa5ed92d581f76ee9f39428ba3a3577}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentDamageEffects_a23f743603c14c36d34ecabcf71b9e36e}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentDamageEffects_a68a72231eac1370f8d5169cdf592cbc4}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentDamageEffects_a7f21853eaa4e9e8ae1368ba5ff31a2aa}{
+\hyperlink{classComponentTemplateDamageEffects}{\-Component\-Template\-Damage\-Effects} $\ast$ {\bfseries creator}}
+\label{d0/d4e/classComponentDamageEffects_a7f21853eaa4e9e8ae1368ba5ff31a2aa}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Damage\-Effects \hyperlink{classComponent}{\-Component}. 
+
+\-Parameters\-:\par
+ \-Collision \mbox{[}default\-: sparkle small yellow\mbox{]} (parameter\-: name) -\/ the name of the effect to produce when damaged by the \char`\"{}collision\char`\"{} damage type; same for the following damage types\-:\par
+ \-Heat \mbox{[}default\-: none\mbox{]}\par
+ \-Frost \mbox{[}default\-: none\mbox{]}\par
+ \-Energy \mbox{[}default\-: none\mbox{]} 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentDamageEffects_a68a72231eac1370f8d5169cdf592cbc4}{
+\index{\-Component\-Damage\-Effects@{\-Component\-Damage\-Effects}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentDamageEffects@{\-Component\-Damage\-Effects}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Damage\-Effects\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d0/d4e/classComponentDamageEffects_a68a72231eac1370f8d5169cdf592cbc4}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentDamageEffects_a23f743603c14c36d34ecabcf71b9e36e}{
+\index{\-Component\-Damage\-Effects@{\-Component\-Damage\-Effects}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentDamageEffects@{\-Component\-Damage\-Effects}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Damage\-Effects\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d0/d4e/classComponentDamageEffects_a23f743603c14c36d34ecabcf71b9e36e}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Damage\-Effects.\-h\item 
+src/component\-Damage\-Effects.\-cpp\end{DoxyCompactItemize}

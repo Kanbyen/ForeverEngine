@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<GameMode Value="dm" />
+<RenderSystem Value="RenderSystem_GL" />
+<Resolution Width="1920" Height="1080" />
+<Fullscreen Value="true" />
+<VSync Value="false" />
+<Bloom Value="false" />
+<Nickname Value="Unnamed Player" />
+<LastServer Value="www.TODO.org" />
+<MouseSensitivity Value="0.06" />

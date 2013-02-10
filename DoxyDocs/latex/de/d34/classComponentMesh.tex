@@ -1,0 +1,104 @@
+\hypertarget{classComponentMesh}{
+\section{\-Component\-Mesh \-Class \-Reference}
+\label{de/d34/classComponentMesh}\index{\-Component\-Mesh@{\-Component\-Mesh}}
+}
+
+
+\-Mesh \hyperlink{classComponent}{\-Component}.  
+
+
+
+
+{\ttfamily \#include $<$component\-Mesh.\-h$>$}
+
+\-Inheritance diagram for \-Component\-Mesh\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{de/d34/classComponentMesh}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentMesh_aa1592d479a961a82bf85ce7cca7a5919}{
+virtual void \hyperlink{classComponentMesh_aa1592d479a961a82bf85ce7cca7a5919}{exit} ()}
+\label{de/d34/classComponentMesh_aa1592d479a961a82bf85ce7cca7a5919}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentMesh_af96a8a4f56dca6233cf173890d5d928f}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentMesh_a6a1f699ac12e969283ef9b71670e91c2}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentMesh_a6a13100cdaad0559931b150efceba615}{
+\-Scene\-Node $\ast$ {\bfseries scene\-Node}}
+\label{de/d34/classComponentMesh_a6a13100cdaad0559931b150efceba615}
+
+\item 
+\hypertarget{classComponentMesh_a6903321cadf7d37a8430b9b85a5ebca2}{
+\-Entity $\ast$ {\bfseries entity}}
+\label{de/d34/classComponentMesh_a6903321cadf7d37a8430b9b85a5ebca2}
+
+\item 
+\hypertarget{classComponentMesh_adc0f2fcf746b0ba8103d90cbe9116685}{
+bool {\bfseries hidden}}
+\label{de/d34/classComponentMesh_adc0f2fcf746b0ba8103d90cbe9116685}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Mesh \hyperlink{classComponent}{\-Component}. 
+
+\-Parameters\-:\par
+ \-File \mbox{[}required\mbox{]} -\/ the filename of the model to load (parameter\-: value)\par
+ \-Scale -\/ the scale applied to the model (parameters\-: x, y, z)\par
+ \-Material -\/ the material to apply to the model (parameter\-: value) 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentMesh_a6a1f699ac12e969283ef9b71670e91c2}{
+\index{\-Component\-Mesh@{\-Component\-Mesh}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentMesh@{\-Component\-Mesh}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Mesh\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{de/d34/classComponentMesh_a6a1f699ac12e969283ef9b71670e91c2}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentMesh_af96a8a4f56dca6233cf173890d5d928f}{
+\index{\-Component\-Mesh@{\-Component\-Mesh}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentMesh@{\-Component\-Mesh}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Mesh\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{de/d34/classComponentMesh_af96a8a4f56dca6233cf173890d5d928f}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Mesh.\-h\item 
+src/component\-Mesh.\-cpp\end{DoxyCompactItemize}

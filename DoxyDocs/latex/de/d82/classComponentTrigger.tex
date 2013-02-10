@@ -1,0 +1,102 @@
+\hypertarget{classComponentTrigger}{
+\section{\-Component\-Trigger \-Class \-Reference}
+\label{de/d82/classComponentTrigger}\index{\-Component\-Trigger@{\-Component\-Trigger}}
+}
+\-Inheritance diagram for \-Component\-Trigger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{de/d82/classComponentTrigger}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentTrigger_ab90a8c82cb4b163e28f9e56827801598}{
+bool {\bfseries finished\-Action} ()}
+\label{de/d82/classComponentTrigger_ab90a8c82cb4b163e28f9e56827801598}
+
+\item 
+\hypertarget{classComponentTrigger_aeaf0381d4d4e9295e64a9643372f95d4}{
+virtual void \hyperlink{classComponentTrigger_aeaf0381d4d4e9295e64a9643372f95d4}{exit} ()}
+\label{de/d82/classComponentTrigger_aeaf0381d4d4e9295e64a9643372f95d4}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentTrigger_af59fa164bcae065d5bb763077fdae39d}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentTrigger_a1e38ef841918a6ca9094e50225499249}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentTrigger_a73b357ee54ca3095cdb02d72c579254f}{
+\hyperlink{classObjectScriptExecutor}{\-Object\-Script\-Executor} $\ast$ {\bfseries script}}
+\label{de/d82/classComponentTrigger_a73b357ee54ca3095cdb02d72c579254f}
+
+\item 
+\hypertarget{classComponentTrigger_a9bfe396c13e047bd7a4c5bd691ddf3a7}{
+\hyperlink{classComponentTemplateTrigger}{\-Component\-Template\-Trigger} $\ast$ {\bfseries creator}}
+\label{de/d82/classComponentTrigger_a9bfe396c13e047bd7a4c5bd691ddf3a7}
+
+\item 
+\hypertarget{classComponentTrigger_a1f48c55fa284e3d78f97565e4c496afc}{
+float {\bfseries act\-Time}}
+\label{de/d82/classComponentTrigger_a1f48c55fa284e3d78f97565e4c496afc}
+
+\item 
+\hypertarget{classComponentTrigger_ac9040462d3bcf5529bb3788827e59cbd}{
+bool {\bfseries script\-Running}}
+\label{de/d82/classComponentTrigger_ac9040462d3bcf5529bb3788827e59cbd}
+
+\item 
+\hypertarget{classComponentTrigger_abc258cc52500c9d82c6fcde2bbf807a9}{
+\-Action\-Mode {\bfseries mode}}
+\label{de/d82/classComponentTrigger_abc258cc52500c9d82c6fcde2bbf807a9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentTrigger_a1e38ef841918a6ca9094e50225499249}{
+\index{\-Component\-Trigger@{\-Component\-Trigger}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentTrigger@{\-Component\-Trigger}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Trigger\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{de/d82/classComponentTrigger_a1e38ef841918a6ca9094e50225499249}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentTrigger_af59fa164bcae065d5bb763077fdae39d}{
+\index{\-Component\-Trigger@{\-Component\-Trigger}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentTrigger@{\-Component\-Trigger}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Trigger\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{de/d82/classComponentTrigger_af59fa164bcae065d5bb763077fdae39d}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Trigger.\-h\item 
+src/component\-Trigger.\-cpp\end{DoxyCompactItemize}

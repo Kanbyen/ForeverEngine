@@ -1,0 +1,98 @@
+\hypertarget{classObjectScriptExecutor}{
+\section{\-Object\-Script\-Executor \-Class \-Reference}
+\label{de/d7c/classObjectScriptExecutor}\index{\-Object\-Script\-Executor@{\-Object\-Script\-Executor}}
+}
+
+
+\-Executes an \hyperlink{classObjectScript}{\-Object\-Script}. \-Needed because multiple executions of a script at the same time should be possible.  
+
+
+
+
+{\ttfamily \#include $<$object\-Script.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObjectScriptExecutor_a2f16923bb5998d30ee05dab19292c1f0}{
+\hyperlink{classObjectScriptExecutor_a2f16923bb5998d30ee05dab19292c1f0}{\-Object\-Script\-Executor} (\hyperlink{classObjectScript}{\-Object\-Script} $\ast$script, \hyperlink{classObject}{\-Object} $\ast$\hyperlink{classObjectScriptExecutor_a2ec38fb28f01a38be9e9d76205c0715e}{object})}
+\label{de/d7c/classObjectScriptExecutor_a2f16923bb5998d30ee05dab19292c1f0}
+
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptExecutor_a0067b1b8bb72dd9c73c6b0bc0f43df61}{
+\hyperlink{classObjectScriptExecutor_a0067b1b8bb72dd9c73c6b0bc0f43df61}{$\sim$\-Object\-Script\-Executor} ()}
+\label{de/d7c/classObjectScriptExecutor_a0067b1b8bb72dd9c73c6b0bc0f43df61}
+
+\begin{DoxyCompactList}\small\item\em \-Destructor. \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptExecutor_a328e3f4fe88be8a101f08a769beb88e4}{
+void \hyperlink{classObjectScriptExecutor_a328e3f4fe88be8a101f08a769beb88e4}{run} ()}
+\label{de/d7c/classObjectScriptExecutor_a328e3f4fe88be8a101f08a769beb88e4}
+
+\begin{DoxyCompactList}\small\item\em \-Starts the execution of the script. \-If the script has a duration (calls wait()), regular calls to update are also neccessary! \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptExecutor_a9f97c50f7f23a8732bca7f6830a0d3de}{
+{\footnotesize template$<$class T1 , class T2 $>$ }\\void \hyperlink{classObjectScriptExecutor_a9f97c50f7f23a8732bca7f6830a0d3de}{run} (\-T1 param1, \-T2 param2)}
+\label{de/d7c/classObjectScriptExecutor_a9f97c50f7f23a8732bca7f6830a0d3de}
+
+\begin{DoxyCompactList}\small\item\em \-Starts the execution of the script and passes 2 additional parameters to it. \-See also \hyperlink{classObjectScriptExecutor_a328e3f4fe88be8a101f08a769beb88e4}{run()} \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptExecutor_abd7c0595c73d6f28a800039fa95599bd}{
+{\footnotesize template$<$class T1 $>$ }\\void \hyperlink{classObjectScriptExecutor_abd7c0595c73d6f28a800039fa95599bd}{run} (\-T1 param1)}
+\label{de/d7c/classObjectScriptExecutor_abd7c0595c73d6f28a800039fa95599bd}
+
+\begin{DoxyCompactList}\small\item\em \-Starts the execution of the script and passes 1 additional parameter to it. \-See also \hyperlink{classObjectScriptExecutor_a328e3f4fe88be8a101f08a769beb88e4}{run()} \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptExecutor_adb7ea47a741001ee23b8f563ed696282}{
+void \hyperlink{classObjectScriptExecutor_adb7ea47a741001ee23b8f563ed696282}{stop} ()}
+\label{de/d7c/classObjectScriptExecutor_adb7ea47a741001ee23b8f563ed696282}
+
+\begin{DoxyCompactList}\small\item\em \-Stops the script execution. \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptExecutor_a29498674490e773c26a9af5b0e19b9ce}{
+void \hyperlink{classObjectScriptExecutor_a29498674490e773c26a9af5b0e19b9ce}{update} (float dt)}
+\label{de/d7c/classObjectScriptExecutor_a29498674490e773c26a9af5b0e19b9ce}
+
+\begin{DoxyCompactList}\small\item\em \-Should be called every logic update; see \hyperlink{classObjectScriptExecutor_a328e3f4fe88be8a101f08a769beb88e4}{run()} \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptExecutor_a0a04b74bbb93b5682ffe3767d6e7e05f}{
+bool \hyperlink{classObjectScriptExecutor_a0a04b74bbb93b5682ffe3767d6e7e05f}{is\-Running} ()}
+\label{de/d7c/classObjectScriptExecutor_a0a04b74bbb93b5682ffe3767d6e7e05f}
+
+\begin{DoxyCompactList}\small\item\em self-\/explanatory \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObjectScriptExecutor_a644eeb507e3fd8ef21ab4f9d2bcfdba7}{
+bool {\bfseries running}}
+\label{de/d7c/classObjectScriptExecutor_a644eeb507e3fd8ef21ab4f9d2bcfdba7}
+
+\item 
+\hypertarget{classObjectScriptExecutor_af20c3c8b7cb8f5f1ed14a422d985b617}{
+float {\bfseries time}}
+\label{de/d7c/classObjectScriptExecutor_af20c3c8b7cb8f5f1ed14a422d985b617}
+
+\item 
+\hypertarget{classObjectScriptExecutor_ac1928debde95ba1abffdae3a4dda2bff}{
+\hyperlink{classObjectScript}{\-Object\-Script} $\ast$ {\bfseries script}}
+\label{de/d7c/classObjectScriptExecutor_ac1928debde95ba1abffdae3a4dda2bff}
+
+\item 
+\hypertarget{classObjectScriptExecutor_a8c771397c1b681d4a5e3141aedd3d371}{
+lua\-\_\-\-State $\ast$ {\bfseries thread\-State}}
+\label{de/d7c/classObjectScriptExecutor_a8c771397c1b681d4a5e3141aedd3d371}
+
+\item 
+\hypertarget{classObjectScriptExecutor_a6e2c56b81933f6e2e9eda479aeb30726}{
+float \hyperlink{classObjectScriptExecutor_a6e2c56b81933f6e2e9eda479aeb30726}{sleep\-Time}}
+\label{de/d7c/classObjectScriptExecutor_a6e2c56b81933f6e2e9eda479aeb30726}
+
+\begin{DoxyCompactList}\small\item\em \-Time the execution of the script has to wait. \end{DoxyCompactList}\item 
+\hypertarget{classObjectScriptExecutor_a2ec38fb28f01a38be9e9d76205c0715e}{
+\hyperlink{classObject}{\-Object} $\ast$ \hyperlink{classObjectScriptExecutor_a2ec38fb28f01a38be9e9d76205c0715e}{object}}
+\label{de/d7c/classObjectScriptExecutor_a2ec38fb28f01a38be9e9d76205c0715e}
+
+\begin{DoxyCompactList}\small\item\em \-Parent object of this script. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Executes an \hyperlink{classObjectScript}{\-Object\-Script}. \-Needed because multiple executions of a script at the same time should be possible. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/object\-Script.\-h\item 
+src/object\-Script.\-cpp\end{DoxyCompactItemize}

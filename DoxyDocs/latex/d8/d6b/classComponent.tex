@@ -1,0 +1,93 @@
+\hypertarget{classComponent}{
+\section{\-Component \-Class \-Reference}
+\label{d8/d6b/classComponent}\index{\-Component@{\-Component}}
+}
+
+
+\-Base class for all components.  
+
+
+
+
+{\ttfamily \#include $<$component.\-h$>$}
+
+\-Inheritance diagram for \-Component\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{d8/d6b/classComponent}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponent_a20c69384bdaaba048482af0a83b7a13d}{
+virtual void \hyperlink{classComponent_a20c69384bdaaba048482af0a83b7a13d}{exit} ()=0}
+\label{d8/d6b/classComponent_a20c69384bdaaba048482af0a83b7a13d}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+\hypertarget{classComponent_a1aa5af742ac26a6d065e7005d7e1b3e0}{
+virtual const string \& \hyperlink{classComponent_a1aa5af742ac26a6d065e7005d7e1b3e0}{name} ()=0}
+\label{d8/d6b/classComponent_a1aa5af742ac26a6d065e7005d7e1b3e0}
+
+\begin{DoxyCompactList}\small\item\em \-Must return a uniqe name... use \hyperlink{classNamedComponent}{\-Named\-Component} for easy handling of this. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)=0
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const =0
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponent_a2aa0e777f7b39ffc4e57b04fdf6293e7}{
+\hyperlink{classObject}{\-Object} $\ast$ {\bfseries object}}
+\label{d8/d6b/classComponent_a2aa0e777f7b39ffc4e57b04fdf6293e7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Base class for all components. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponent_aee22af179cf21f929cd273a22bc6324c}{
+\index{\-Component@{\-Component}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!Component@{\-Component}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool \-Component\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{d8/d6b/classComponent_aee22af179cf21f929cd273a22bc6324c}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implemented in \hyperlink{classComponentCharacterController_acd5417a4680dacdfc2b49620053ae9b2}{\-Component\-Character\-Controller}, \hyperlink{classComponentPlayer_a3df43bc31af62c1af4ba2c30ae9fe04f}{\-Component\-Player}, \hyperlink{classComponentWeapon_a487f0d3fe05e8f8dec2f672739f6a87d}{\-Component\-Weapon}, \hyperlink{classComponentHealth_aedc8600f4ab85c67af5dd47a94a018b1}{\-Component\-Health}, \hyperlink{classComponentAI_a0d7b0390215d032d1388843458a5211e}{\-Component\-A\-I}, \hyperlink{classComponentInventory_a34a1b922c3ee15829efb5b5a35f22687}{\-Component\-Inventory}, \hyperlink{classComponentItem_adfac258c1dbc413f6339703b2ccf3745}{\-Component\-Item}, \hyperlink{classComponentTrigger_a1e38ef841918a6ca9094e50225499249}{\-Component\-Trigger}, \hyperlink{classComponentPhysics_a0979ce28418cf3ef7387e2bbb68c5411}{\-Component\-Physics}, \hyperlink{classComponentBullet_a1d46b3e25953f19ae208f86d6d47ab33}{\-Component\-Bullet}, \hyperlink{classComponentMesh_a6a1f699ac12e969283ef9b71670e91c2}{\-Component\-Mesh}, \hyperlink{classComponentDamageEffects_a68a72231eac1370f8d5169cdf592cbc4}{\-Component\-Damage\-Effects}, \hyperlink{classComponentLight_a0510cdf9e4488e0ac07c262d8b02544d}{\-Component\-Light}, and \hyperlink{classComponentParticle_a1fd33aca0505c4602b9e5c6bbbfcf94b}{\-Component\-Particle}.
+
+\hypertarget{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{
+\index{\-Component@{\-Component}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!Component@{\-Component}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool \-Component\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{d8/d6b/classComponent_a5c34b629ba4b6e2925045ef965d4d560}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implemented in \hyperlink{classComponentCharacterController_aaaa328966ec25f292e45b9948dde2d28}{\-Component\-Character\-Controller}, \hyperlink{classComponentPlayer_ac889012da1621a530330cedf9da5fd3c}{\-Component\-Player}, \hyperlink{classComponentWeapon_a4392a86c64f4334559d0692b54595b0c}{\-Component\-Weapon}, \hyperlink{classComponentHealth_ad444abae855c20c8acc484437c76ec82}{\-Component\-Health}, \hyperlink{classComponentAI_a923f3644961af176d3c6e3d316185272}{\-Component\-A\-I}, \hyperlink{classComponentInventory_ad9b86329e94b214d9431e333d718c957}{\-Component\-Inventory}, \hyperlink{classComponentItem_adfb824da7216b5c137dce6a8ef781765}{\-Component\-Item}, \hyperlink{classComponentTrigger_af59fa164bcae065d5bb763077fdae39d}{\-Component\-Trigger}, \hyperlink{classComponentPhysics_ac2ef9e611328dc2e2cbf772384426c28}{\-Component\-Physics}, \hyperlink{classComponentBullet_a75f91f4d92ce327ab00776caf551b4da}{\-Component\-Bullet}, \hyperlink{classComponentMesh_af96a8a4f56dca6233cf173890d5d928f}{\-Component\-Mesh}, \hyperlink{classComponentDamageEffects_a23f743603c14c36d34ecabcf71b9e36e}{\-Component\-Damage\-Effects}, \hyperlink{classComponentLight_a7782881c1c2c38287c6f3d9d53eb8acf}{\-Component\-Light}, and \hyperlink{classComponentParticle_a370ce255d55dcc0363ec67fa4038ddaf}{\-Component\-Particle}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/component.\-h\end{DoxyCompactItemize}

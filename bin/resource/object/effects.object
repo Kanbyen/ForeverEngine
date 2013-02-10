@@ -1,0 +1,149 @@
+<Objects>
+	<Object name="smoke small">
+		<Component name="Particle">
+			<Particle value="SmokeSmall"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="1.5"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="smoke big">
+		<Component name="Particle">
+			<Particle value="SmokeBig"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="5"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="smoke ring big">
+		<Component name="Particle">
+			<Particle value="SmokeRingBig"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="5"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="fire splash small">
+		<Component name="Particle">
+			<Particle value="FireSplashSmall"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="1"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="orange streak explosion">
+		<Component name="Particle">
+			<Particle value="OrangeStreakExplosion"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="0.5"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="explosion light flash">
+		<Component name="Light">
+			<Radius value="4"/>
+			<Color value="0.9609375 0.69921875 0"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="0.15"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="orange streak small">
+		<Component name="Particle">
+			<Particle value="OrangeStreakSmall"/>
+		</Component>
+		<Component name="Light">
+			<Radius value="3"/>
+			<Color value="0.9609375 0.69921875 0"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="0.4"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="explosion fire ball">
+		<Component name="Particle">
+			<Particle value="ExplosionFireBall"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="5"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="glow ring red">
+		<Component name="Particle">
+			<Particle value="GlowRingRed"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="2"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="glow ring blue">
+		<Component name="Particle">
+			<Particle value="GlowRingBlue"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="2"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="sparkle small yellow">
+		<Component name="Particle">
+			<Particle value="SparkleSmallYellow"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="1"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="ring emit blue">
+		<Component name="Particle">
+			<Particle value="RingEmitBlue"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="2"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="water splash small">
+		<Component name="Particle">
+			<Particle value="WaterSplashSmall"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="0.5"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+</Objects>

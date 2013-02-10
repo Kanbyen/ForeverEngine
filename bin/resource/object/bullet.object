@@ -1,0 +1,103 @@
+<Objects>
+	<Object name="energy bullet">
+		<Component name="Mesh">
+			<File value="energyBullet.mesh"/>
+			<Scale value="0.3 0.3 0.5"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="Sphere"/>
+			<Mass value="1"/>
+			<Radius value="0.5"/>
+			<Gravity value="0 0 0"/>
+			<CollisionGroup value="bullet"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Collision"/>
+			<Script script="energyBulletHit"/>
+			<Mode value="deleteObject"/>
+		</Component>
+		<Component name="Bullet">
+			<Velocity value="60"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="20"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="rocket test">
+		<Component name="Mesh">
+			<File value="rocket.mesh"/>
+			<Scale value="1 1 1"/>
+		</Component>
+	</Object>
+	
+	<Object name="rocket">
+		<Component name="Mesh">
+			<File value="rocket.mesh"/>
+			<Scale value="1 1 1"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="Sphere"/>
+			<Mass value="1"/>
+			<Radius value="0.5"/>
+			<Gravity value="0 0 0"/>
+			<CollisionGroup value="bullet"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Collision"/>
+			<Script script="rocketHit"/>
+			<Mode value="deleteObject"/>
+		</Component>
+		<Component name="Bullet">
+			<Velocity value="20"/>
+			<Gravity value="-12"/>
+		</Component>
+		<Component name="Particle">
+			<Particle value="RocketSmoke"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="20"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="water drop">
+		<Component name="Mesh">
+			<File value="energyBullet.mesh"/>
+			<Material value="WaterDropMaterial"/>
+			<Scale value="0.08 0.08 0.10"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="Sphere"/>
+			<Mass value="1"/>
+			<Radius value="0.2"/>
+			<Gravity value="0 0 0"/>
+			<CollisionGroup value="bullet"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Collision"/>
+			<Script script="waterDropHit"/>
+			<Mode value="deleteObject"/>
+		</Component>
+		<Component name="Bullet">
+			<Velocity value="0.01"/>
+			<Acceleration value="9.81"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="20"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="water drop source fast">
+		<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="2"/>
+			<Script script="waterDropGenerate"/>
+		</Component>
+	</Object>
+</Objects>

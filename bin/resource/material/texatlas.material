@@ -1,0 +1,15 @@
+import * from "triplanarTexturing.material"
+
+material TexAtlasMaterial : TriplanarTexturing
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture texatlas.tga 2d 5
+			}
+		}
+	}
+}

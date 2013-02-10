@@ -1,0 +1,30 @@
+particle_system SparkleSmallYellow
+{
+	material        	SparkleYellow
+	particle_width  	0.3
+	particle_height 	1
+	quota           	8
+	billboard_type		oriented_self
+	sorted				true
+
+	emitter Point
+	{
+		duration			0.1
+		angle           	180
+    	emission_rate   	270
+    	time_to_live_min	0.015
+    	time_to_live_max	0.045
+    	velocity_min    	6
+    	velocity_max    	12
+	}
+   	
+	affector ColourInterpolator
+	{
+		time0	0
+		colour0	1 1 1 1
+		time1	0.8
+		colour1	1 1 1 0.9
+		time2	1
+		colour2	1 1 1 0
+	}
+}

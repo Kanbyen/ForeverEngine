@@ -1,0 +1,203 @@
+<Objects>
+	<Object name="explosive barrel 1">
+		<Component name="Mesh">
+			<File value="cylinder.mesh"/>
+			<Scale value="2 3 2"/>
+			<Material value="ExplosiveBarrel1Material"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="Cylinder"/>
+			<Mass value="5"/>
+			<Radius value="0.5 0.5 0.5"/>
+		</Component>
+		<Component name="Health">
+			<MaxHealth value="15"/>
+			<Mode value="deleteObject"/>
+			<Factors collision="1" heat="2" frost="0.4" energy="1.2"/>
+			<DamageTaken script="explosiveBarrel1DamageTaken"/>
+		</Component>
+		<Component name="DamageEffects"/>
+		<Component name="Item">
+			<DisplayName value="barrel"/>
+			<Holdable value="true"/>
+		</Component>
+	</Object>
+
+	<Object name="ball">
+		<Component name="Mesh">
+			<File value="ball.mesh"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingSphere"/>
+			<Mass value="3"/>
+		</Component>
+		<Component name="Item">
+			<DisplayName value="ball"/>
+			<Type value="misc"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="2"/>
+		</Component>
+	</Object>
+	
+	<Object name="light ball">
+		<Component name="Mesh">
+			<File value="ball.mesh"/>
+			<Scale value="0.5"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingSphere"/>
+			<Mass value="1"/>
+		</Component>
+		<Component name="Item">
+			<DisplayName value="ball"/>
+			<Type value="misc"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="0.8"/>
+		</Component>
+		<Component name="Light">
+			<Radius value="5"/>
+			<Color value="0.4 0.4 0.4"/>
+		</Component>
+	</Object>
+	
+	<Object name="invisible light ball">
+		<Component name="Physics">
+			<Shape value="Sphere"/>
+			<Radius value="1"/>
+			<Mass value="1"/>
+		</Component>
+		<Component name="Light">
+			<Radius value="6"/>
+			<Color value="0.4 0.4 0.4"/>
+		</Component>
+	</Object>
+
+	<Object name="big ball">
+		<Component name="Mesh">
+			<File value="ball.mesh"/>
+			<Scale value="5"/>
+			<Material value="CelShadingOrange"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingSphere"/>
+			<Mass value="20"/>
+		</Component>
+		<Component name="Item">
+			<DisplayName value="huge ball"/>
+			<Type value="misc"/>
+		</Component>
+	</Object>
+	
+	<Object name="red box">
+		<Component name="Mesh">
+			<File value="smoothCube.mesh"/>
+			<Scale value="3"/>
+			<Material value="CelShadingRed"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingBox"/>
+			<Mass value="4"/>
+		</Component>
+		<Component name="Item">
+			<DisplayName value="red box"/>
+			<Type value="misc"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="5"/>
+		</Component>
+	</Object>
+	
+	<Object name="box 1">
+		<Component name="Mesh">
+			<File value="smoothCube.mesh"/>
+			<Scale value="5"/>
+			<Material value="Box1Material"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingBox"/>
+			<Mass value="18"/>
+		</Component>
+		<Component name="DamageEffects"/>
+		<Component name="Item">
+			<DisplayName value="container"/>
+		</Component>
+	</Object>
+	
+	<Object name="box 2">
+		<Component name="Mesh">
+			<File value="smoothCube.mesh"/>
+			<Scale value="6"/>
+			<Material value="Box2Material"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingBox"/>
+			<Mass value="20"/>
+		</Component>
+		<Component name="DamageEffects"/>
+		<Component name="Item">
+			<DisplayName value="container"/>
+		</Component>
+	</Object>
+	
+	<Object name="mesh test">
+		<Component name="Mesh">
+			<File value="humanRobot.mesh"/>
+			<Scale value="0.9"/>
+			<Material value="CelShadingOrange"/>
+		</Component>
+	</Object>
+	
+	<Object name="playermodel">
+		<Component name="Mesh">
+			<File value="humanRobot.mesh"/>
+			<Scale value="0.9"/>
+			<Material value="CelShadingRed"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="MultiSphere" inertiaHalfExtents="1.15 2.5 1.15">
+				<Sphere position="0 0.2 0" radius="2.3"/>
+				<Sphere position="0 -0.2 0" radius="2.3"/>
+			</Shape>
+			<Mass value="10"/>
+		</Component>
+		<Component name="CharacterController">
+			<Height value="5"/>
+			<GravityFactor value="4"/>
+			<MoveSpeed value="21"/>
+			<JumpFactor value="37.44"/>
+			<AirSteeringFactor value="4.32"/>
+		</Component>
+		<Component name="Health">
+			<MaxHealth value="100"/>
+			<Mode value="deleteObject"/>
+			<Factors collision="1" heat="1" frost="1" energy="1"/>
+			<DamageTaken script="ShortWaitWhenDamageTaken"/>
+		</Component>
+    </Object>
+    
+	<Object name="player">
+		<Component name="Physics">
+			<Shape value="MultiSphere" inertiaHalfExtents="1.15 2.5 1.15">
+				<Sphere position="0 0.2 0" radius="2.3"/>
+				<Sphere position="0 -0.2 0" radius="2.3"/>
+			</Shape>
+			<Mass value="10"/>
+		</Component>
+		<Component name="CharacterController">
+			<Height value="5"/>
+			<GravityFactor value="4"/>
+			<MoveSpeed value="21"/>
+			<JumpFactor value="37.44"/>
+			<AirSteeringFactor value="4.32"/>
+		</Component>
+		<Component name="Player"/>
+		<Component name="Health">
+			<MaxHealth value="100"/>
+			<Mode value="deleteObject"/>
+			<Factors collision="1" heat="1" frost="1" energy="1"/>
+			<DamageTaken script="ShortWaitWhenDamageTaken"/>
+		</Component>
+	</Object>
+</Objects>

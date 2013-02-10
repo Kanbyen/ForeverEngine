@@ -1,0 +1,28 @@
+material SkySphereMaterial
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			cull_hardware anticlockwise
+
+			vertex_program_ref SkyVertexProgram
+			{
+				param_named_auto world world_matrix
+				param_named_auto viewProj viewproj_matrix
+			}
+			fragment_program_ref SkyFragmentProgram
+			{
+				//param_named lightFogColor float3 0.9 0.9 1.0
+				//param_named darkFogColor float3 0.5 0.5 0.7
+			}
+			
+			texture_unit
+			{
+				texture skyColor.tga
+			}
+		}
+	}
+}

@@ -1,0 +1,61 @@
+material EnergyBulletMaterial
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+			cull_hardware none
+
+			vertex_program_ref BulletVertexProgram
+			{
+				param_named_auto world world_matrix
+				param_named_auto viewProj viewproj_matrix
+				param_named_auto camera camera_position
+				param_named_auto fogParams fog_params
+			}
+			fragment_program_ref BulletFragmentProgram
+			{
+				param_named_auto fogColor fog_colour
+			}
+			texture_unit
+			{
+				texture energyBulletOrange.tga
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material WaterDropMaterial
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+			cull_hardware none
+		
+			vertex_program_ref BulletVertexProgram
+			{
+				param_named_auto world world_matrix
+				param_named_auto viewProj viewproj_matrix
+				param_named_auto camera camera_position
+				param_named_auto fogParams fog_params
+			}
+			fragment_program_ref BulletFragmentProgram
+			{
+				param_named_auto fogColor fog_colour
+			}
+			texture_unit
+			{
+				texture waterDrop.tga
+				tex_address_mode clamp
+			}
+		}
+	}
+}

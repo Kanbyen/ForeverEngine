@@ -1,0 +1,118 @@
+<Objects>
+	<Object name="grenade">
+		<Component name="Mesh">
+			<File value="grenade.mesh"/>
+			<Material value="GrenadeGreenMaterial"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingSphere"/>
+			<Mass value="1.1"/>
+			<Radius factor="1.4"/>
+		</Component>
+		<Component name="Weapon">
+			<Type value="grenade"/>
+			<Throw object="grenade thrown"/>
+			<Description name="normal" value="A normal grenade, explodes as soon as^it collides with something."/>
+			<Importance value="1000"/>
+		</Component>
+		<Component name="Item">
+			<DisplayName value="grenade"/>
+			<Type value="grenade"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="1"/>
+		</Component>
+		<Component name="DamageEffects"/>
+	</Object>
+	
+	<Object name="grenade thrown">
+		<Component name="Mesh">
+			<File value="grenadeThrown.mesh"/>
+			<Material value="GrenadeGreenMaterial"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingSphere"/>
+			<Mass value="1"/>
+			<Radius factor="1.8"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Collision"/>
+			<Script script="explodeGrenade"/>
+			<Mode value="deleteObject"/>
+		</Component>
+		<!--<Component name="Trigger">
+			<Type value="Timer"/>
+			<Time value="3"/>
+			<Script script="explodeGrenade"/>
+			<Mode value="deleteObject"/>
+		</Component>-->
+	</Object>
+	
+	<Object name="geometry grenade">
+		<Component name="Mesh">
+			<File value="grenade.mesh"/>
+			<Material value="GrenadeRedMaterial"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingSphere"/>
+			<Mass value="1.1"/>
+			<Radius factor="1.4"/>
+		</Component>
+		<Component name="Weapon">
+			<Type value="grenade"/>
+			<Throw object="geometry grenade thrown"/>
+			<Description name="geometry" value="You read on the geometry grenade:^Stunning technology meets groundbreaking design: the geometry grenade!^Creates material when exploding. Does not damage living organisms.^^Notes:^Not suitable for children under 6 years.^Do not put the grenade into a microwave!"/>
+			<Importance value="800"/>
+		</Component>
+		<Component name="Item">
+			<DisplayName value="geometry grenade"/>
+			<Type value="grenade"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="1"/>
+		</Component>
+		<Component name="DamageEffects"/>
+	</Object>
+	
+	<Object name="geometry grenade thrown">
+		<Component name="Mesh">
+			<File value="grenadeThrown.mesh"/>
+			<Material value="GrenadeRedMaterial"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingSphere"/>
+			<Mass value="1"/>
+			<Radius factor="1.8"/>
+		</Component>
+		<Component name="Trigger">
+			<Type value="Collision"/>
+			<Script script="explodeGeometryGrenade"/>
+			<Mode value="deleteObject"/>
+		</Component>
+	</Object>
+	
+	<Object name="cluster grenade">
+		<Component name="Mesh">
+			<File value="grenade.mesh"/>
+			<Material value="GrenadeYellowMaterial"/>
+		</Component>
+		<Component name="Physics">
+			<Shape value="BoundingSphere"/>
+			<Mass value="1.1"/>
+			<Radius factor="1.4"/>
+		</Component>
+		<Component name="Weapon">
+			<Type value="grenade"/>
+			<Description name="cluster" value="The cluster grenade will split into^several smaller pieces when exploding,^causing lots of damage."/>
+			<Importance value="900"/>
+		</Component>
+		<Component name="Item">
+			<DisplayName value="cluster grenade"/>
+			<Type value="grenade"/>
+			<Holdable value="true"/>
+			<Takeable value="true"/>
+			<Weight value="1"/>
+		</Component>
+		<Component name="DamageEffects"/>
+	</Object>
+</Objects>

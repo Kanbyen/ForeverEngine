@@ -1,0 +1,49 @@
+\hypertarget{classComponentTemplateManager}{
+\section{\-Component\-Template\-Manager \-Class \-Reference}
+\label{d8/d74/classComponentTemplateManager}\index{\-Component\-Template\-Manager@{\-Component\-Template\-Manager}}
+}
+
+
+\-Creates component templates for object templates.  
+
+
+
+
+{\ttfamily \#include $<$component.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentTemplateManager_a0a85bea8cbd5a4170b659506425f1c61}{
+void \hyperlink{classComponentTemplateManager_a0a85bea8cbd5a4170b659506425f1c61}{register\-Template} (string name, \-Component\-Template\-Create\-Func create\-Func)}
+\label{d8/d74/classComponentTemplateManager_a0a85bea8cbd5a4170b659506425f1c61}
+
+\begin{DoxyCompactList}\small\item\em \-Every component type must be registered with this method. \end{DoxyCompactList}\item 
+\hypertarget{classComponentTemplateManager_aa25c7b2296e94ebead2fe069f3b7aa7f}{
+\hyperlink{classComponentTemplate}{\-Component\-Template} $\ast$ \hyperlink{classComponentTemplateManager_aa25c7b2296e94ebead2fe069f3b7aa7f}{create\-Template} (const char $\ast$name, \hyperlink{classTiXmlElement}{\-Ti\-Xml\-Element} $\ast$params)}
+\label{d8/d74/classComponentTemplateManager_aa25c7b2296e94ebead2fe069f3b7aa7f}
+
+\begin{DoxyCompactList}\small\item\em \-Retrieves the creation function for the component of the specified type. \end{DoxyCompactList}\item 
+\hypertarget{classComponentTemplateManager_ac388f68c5c223801cd56728e73a5e3e3}{
+void \hyperlink{classComponentTemplateManager_ac388f68c5c223801cd56728e73a5e3e3}{exit} ()}
+\label{d8/d74/classComponentTemplateManager_ac388f68c5c223801cd56728e73a5e3e3}
+
+\begin{DoxyCompactList}\small\item\em \-Cleans up. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentTemplateManager_ae03e02a1eaabec86f9fefb883deaf42f}{
+std\-::map$<$ string, \*
+\-Component\-Template\-Create\-Func $>$ {\bfseries comp\-Map}}
+\label{d8/d74/classComponentTemplateManager_ae03e02a1eaabec86f9fefb883deaf42f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Creates component templates for object templates. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component.\-h\item 
+src/component.\-cpp\end{DoxyCompactItemize}

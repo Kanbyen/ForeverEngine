@@ -1,0 +1,28 @@
+import * from "celShadingTexture.material"
+
+material RocketMaterial : CelShadingTexture
+{
+	technique
+	{
+		pass
+		{
+			fragment_program_ref CelShadingOutlineFragmentProgram
+			{
+				param_named edge_color float3 0 0 0
+			}
+		}
+		pass
+		{
+			fragment_program_ref CelShadingTextureFragmentProgram
+			{
+				param_named shades float 3
+			}
+
+			texture_unit
+			{
+				texture rocket.tga
+				tex_address_mode clamp
+			}
+		}
+	}
+}

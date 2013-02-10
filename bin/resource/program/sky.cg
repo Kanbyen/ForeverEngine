@@ -1,0 +1,27 @@
+struct a2v
+{
+    float4 Position : POSITION; //in object space
+    float Factor : TEXCOORD0;
+};
+
+struct v2f
+{
+    float4 Position : POSITION; //in projection space
+    float Factor : TEXCOORD0;
+};
+
+float4 fragment(v2f IN, uniform sampler2D colourMap : TEXUNIT0) : COLOR
+{
+	return float4(tex2D(colourMap, float2(IN.Factor, 0.0f)).rgb, 1.0);
+}
+
+v2f vertex(a2v IN, uniform float4x4 world, uniform float4x4 viewProj)
+{   
+    v2f OUT;
+	
+    OUT.Position = mul(world, IN.Position);
+	OUT.Position = mul(viewProj, OUT.Position);
+	OUT.Factor = IN.Factor;
+
+    return OUT;
+}

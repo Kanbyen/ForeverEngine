@@ -1,0 +1,112 @@
+\hypertarget{classComponentBullet}{
+\section{\-Component\-Bullet \-Class \-Reference}
+\label{d0/d26/classComponentBullet}\index{\-Component\-Bullet@{\-Component\-Bullet}}
+}
+
+
+\-Bullet \hyperlink{classComponent}{\-Component}.  
+
+
+
+
+{\ttfamily \#include $<$component\-Bullet.\-h$>$}
+
+\-Inheritance diagram for \-Component\-Bullet\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d0/d26/classComponentBullet}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentBullet_a299b9dcdffd6b9b5d46eada9c59f05f8}{
+virtual void \hyperlink{classComponentBullet_a299b9dcdffd6b9b5d46eada9c59f05f8}{exit} ()}
+\label{d0/d26/classComponentBullet_a299b9dcdffd6b9b5d46eada9c59f05f8}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentBullet_a75f91f4d92ce327ab00776caf551b4da}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentBullet_a1d46b3e25953f19ae208f86d6d47ab33}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentBullet_ac7513dff8b3e5d2c8235f4cb1d0c3380}{
+float {\bfseries velocity}}
+\label{d0/d26/classComponentBullet_ac7513dff8b3e5d2c8235f4cb1d0c3380}
+
+\item 
+\hypertarget{classComponentBullet_a08fafe48bd45978ceb9886aedf6d7005}{
+float {\bfseries acceleration}}
+\label{d0/d26/classComponentBullet_a08fafe48bd45978ceb9886aedf6d7005}
+
+\item 
+\hypertarget{classComponentBullet_affc49c6fbcbe5e32633f971797926df1}{
+bt\-Rigid\-Body $\ast$ {\bfseries rigid\-Body}}
+\label{d0/d26/classComponentBullet_affc49c6fbcbe5e32633f971797926df1}
+
+\item 
+\hypertarget{classComponentBullet_a6779f7676718b78e076afde514696f33}{
+\-Vector3 {\bfseries aim}}
+\label{d0/d26/classComponentBullet_a6779f7676718b78e076afde514696f33}
+
+\item 
+\hypertarget{classComponentBullet_a53c46b3f646f8df97f28233d98374390}{
+float {\bfseries gravity}}
+\label{d0/d26/classComponentBullet_a53c46b3f646f8df97f28233d98374390}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Bullet \hyperlink{classComponent}{\-Component}. 
+
+\-Parameters\-:\par
+ \-Velocity -\/ no comment needed 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentBullet_a1d46b3e25953f19ae208f86d6d47ab33}{
+\index{\-Component\-Bullet@{\-Component\-Bullet}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentBullet@{\-Component\-Bullet}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Bullet\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d0/d26/classComponentBullet_a1d46b3e25953f19ae208f86d6d47ab33}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentBullet_a75f91f4d92ce327ab00776caf551b4da}{
+\index{\-Component\-Bullet@{\-Component\-Bullet}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentBullet@{\-Component\-Bullet}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Bullet\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d0/d26/classComponentBullet_a75f91f4d92ce327ab00776caf551b4da}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Bullet.\-h\item 
+src/component\-Bullet.\-cpp\end{DoxyCompactItemize}

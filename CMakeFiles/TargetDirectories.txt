@@ -1,0 +1,2 @@
+/home/s0998dm1/dev_enviroment/foreverwar.svn.latest/foreverwar/trunk/CMakeFiles/foreverwar.dir
+/home/s0998dm1/dev_enviroment/foreverwar.svn.latest/foreverwar/trunk/CMakeFiles/foreverwar_gch.dir

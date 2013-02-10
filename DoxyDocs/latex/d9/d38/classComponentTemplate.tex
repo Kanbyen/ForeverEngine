@@ -1,0 +1,72 @@
+\hypertarget{classComponentTemplate}{
+\section{\-Component\-Template \-Class \-Reference}
+\label{d9/d38/classComponentTemplate}\index{\-Component\-Template@{\-Component\-Template}}
+}
+
+
+\-Creates \-Components. \-Derived classes store all information needed for this process.  
+
+
+
+
+{\ttfamily \#include $<$component.\-h$>$}
+
+\-Inheritance diagram for \-Component\-Template\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{d9/d38/classComponentTemplate}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentTemplate_a8c3f747259d43ab2748ae117cd319a27}{
+const string \& {\bfseries name} () const }
+\label{d9/d38/classComponentTemplate_a8c3f747259d43ab2748ae117cd319a27}
+
+\item 
+\hypertarget{classComponentTemplate_ae120e04416b8cda673156ec589e368b2}{
+virtual bool \hyperlink{classComponentTemplate_ae120e04416b8cda673156ec589e368b2}{init} (\hyperlink{classTiXmlElement}{\-Ti\-Xml\-Element} $\ast$params)=0}
+\label{d9/d38/classComponentTemplate_ae120e04416b8cda673156ec589e368b2}
+
+\begin{DoxyCompactList}\small\item\em \-Must initialize the component template by retrieving the needed parameters from the xml file. \end{DoxyCompactList}\item 
+\hypertarget{classComponentTemplate_a7ac9c5fead9f257e8531c1ddeff07da0}{
+virtual void \hyperlink{classComponentTemplate_a7ac9c5fead9f257e8531c1ddeff07da0}{exit} ()=0}
+\label{d9/d38/classComponentTemplate_a7ac9c5fead9f257e8531c1ddeff07da0}
+
+\begin{DoxyCompactList}\small\item\em \-Must clean up everything and delete itself. \end{DoxyCompactList}\item 
+\hypertarget{classComponentTemplate_a3b0b62fd03f7f414644ce2bcec2e5cc1}{
+virtual \hyperlink{classNamedComponent}{\-Named\-Component} $\ast$ \hyperlink{classComponentTemplate_a3b0b62fd03f7f414644ce2bcec2e5cc1}{create\-Instance} (\hyperlink{classObject}{\-Object} $\ast$object)=0}
+\label{d9/d38/classComponentTemplate_a3b0b62fd03f7f414644ce2bcec2e5cc1}
+
+\begin{DoxyCompactList}\small\item\em \-Must create an instance of this template. \end{DoxyCompactList}\item 
+\hypertarget{classComponentTemplate_ac6c17ffc053508e841dbf65977543b15}{
+\hyperlink{classComponent}{\-Component} $\ast$ {\bfseries new\-Instance} (\hyperlink{classObject}{\-Object} $\ast$object)}
+\label{d9/d38/classComponentTemplate_ac6c17ffc053508e841dbf65977543b15}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentTemplate_abbad3c585c5e8af3d812e83b5752e483}{
+string {\bfseries \-\_\-name}}
+\label{d9/d38/classComponentTemplate_abbad3c585c5e8af3d812e83b5752e483}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentTemplate_a0c3e6f2c47e603302a2f708067cdf487}{
+{\footnotesize template$<$class T $>$ }\\\hyperlink{classComponentTemplate}{\-Component\-Template} $\ast$ {\bfseries create\-Template} (const string \&name)}
+\label{d9/d38/classComponentTemplate_a0c3e6f2c47e603302a2f708067cdf487}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Creates \-Components. \-Derived classes store all information needed for this process. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component.\-h\item 
+src/component.\-cpp\end{DoxyCompactItemize}

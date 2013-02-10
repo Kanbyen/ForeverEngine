@@ -1,0 +1,109 @@
+\hypertarget{classVoxelBlockLoaded}{
+\section{\-Voxel\-Block\-Loaded \-Class \-Reference}
+\label{d0/df8/classVoxelBlockLoaded}\index{\-Voxel\-Block\-Loaded@{\-Voxel\-Block\-Loaded}}
+}
+
+
+\-A fully loaded voxel block with voxel and texture data.  
+
+
+
+
+{\ttfamily \#include $<$block\-Loaded.\-h$>$}
+
+\-Inheritance diagram for \-Voxel\-Block\-Loaded\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/df8/classVoxelBlockLoaded}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelBlockLoaded_afc35c39898f806e5a40ce6348168c108}{
+\hyperlink{classVoxelBlockLoaded_afc35c39898f806e5a40ce6348168c108}{\-Voxel\-Block\-Loaded} (int block\-X, int block\-Y, int block\-Z, \hyperlink{classVoxelVolume}{\-Voxel\-Volume} $\ast$\hyperlink{classVoxelBlock_aa8398251c9d5d3ba466e8993bcb6eb38}{volume}, \hyperlink{classVoxelBlockPersistent}{\-Voxel\-Block\-Persistent} $\ast$\hyperlink{classVoxelBlock_ad9d2e2c26398379b6a92e2e5ea4ab20d}{persistent})}
+\label{d0/df8/classVoxelBlockLoaded_afc35c39898f806e5a40ce6348168c108}
+
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockLoaded_a2c0a021b86f70dea2b9e493c1f3548bc}{
+virtual bool \hyperlink{classVoxelBlockLoaded_a2c0a021b86f70dea2b9e493c1f3548bc}{inner\-Voxels\-Relevant} ()}
+\label{d0/df8/classVoxelBlockLoaded_a2c0a021b86f70dea2b9e493c1f3548bc}
+
+\begin{DoxyCompactList}\small\item\em \-Must return if it's possible that a surface can be created in the middle of the block. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockLoaded_a628f6108d4d2c8106ea881043fe71de7}{
+virtual int \hyperlink{classVoxelBlockLoaded_a628f6108d4d2c8106ea881043fe71de7}{type\-I\-D} ()}
+\label{d0/df8/classVoxelBlockLoaded_a628f6108d4d2c8106ea881043fe71de7}
+
+\begin{DoxyCompactList}\small\item\em \-Must return an unique \-I\-D for the type of block (full / empty / loaded). \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockLoaded_ab211d4e87e15205691ec73c47cb6a11a}{
+virtual void \hyperlink{classVoxelBlockLoaded_ab211d4e87e15205691ec73c47cb6a11a}{fill} (char value)}
+\label{d0/df8/classVoxelBlockLoaded_ab211d4e87e15205691ec73c47cb6a11a}
+
+\begin{DoxyCompactList}\small\item\em \-Fill the whole block with the specified value. \-Warning\-: if this is a \hyperlink{classVoxelBlockEmpty}{\-Voxel\-Block\-Empty} or -\/\-Full, it might replace itself, so you have to re-\/fetch the \-Block pointer! \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockLoaded_ac6636b342ecb9087c838c0cb3a832c85}{
+void {\bfseries fill\-Tex} (unsigned char value)}
+\label{d0/df8/classVoxelBlockLoaded_ac6636b342ecb9087c838c0cb3a832c85}
+
+\item 
+\hypertarget{classVoxelBlockLoaded_a268fb7ff77d612e98f940d12524c72dd}{
+virtual char \hyperlink{classVoxelBlockLoaded_a268fb7ff77d612e98f940d12524c72dd}{get\-Voxel\-At} (int x\-Position, int y\-Position, int z\-Position)}
+\label{d0/df8/classVoxelBlockLoaded_a268fb7ff77d612e98f940d12524c72dd}
+
+\begin{DoxyCompactList}\small\item\em \-Get the value of the voxel at the specified position. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockLoaded_a0d9c149feb489387938b945c6c4171bd}{
+virtual void \hyperlink{classVoxelBlockLoaded_a0d9c149feb489387938b945c6c4171bd}{set\-Voxel\-At} (int x\-Position, int y\-Position, int z\-Position, char value)}
+\label{d0/df8/classVoxelBlockLoaded_a0d9c149feb489387938b945c6c4171bd}
+
+\begin{DoxyCompactList}\small\item\em \-Set the voxel to the specified value. \-Warning\-: if this is a \hyperlink{classVoxelBlockEmpty}{\-Voxel\-Block\-Empty} or -\/\-Full, it might replace itself, so you have to re-\/fetch the \-Block pointer! \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockLoaded_ab831a4b64ff2c248b8d00af4ebae4ebc}{
+virtual unsigned char \hyperlink{classVoxelBlockLoaded_ab831a4b64ff2c248b8d00af4ebae4ebc}{get\-Texture\-At} (int x\-Position, int y\-Position, int z\-Position)}
+\label{d0/df8/classVoxelBlockLoaded_ab831a4b64ff2c248b8d00af4ebae4ebc}
+
+\begin{DoxyCompactList}\small\item\em \-Get the texture of the voxel at the specified position. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockLoaded_a14cb89b5ae8bfbe790d803f6b2a81932}{
+virtual void \hyperlink{classVoxelBlockLoaded_a14cb89b5ae8bfbe790d803f6b2a81932}{set\-Texture\-At} (int x\-Position, int y\-Position, int z\-Position, const unsigned char value)}
+\label{d0/df8/classVoxelBlockLoaded_a14cb89b5ae8bfbe790d803f6b2a81932}
+
+\begin{DoxyCompactList}\small\item\em \-Set the texture of the voxel at the specified position. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockLoaded_a2c3d0312ccea4227115b006061ce8882}{
+char {\bfseries \-\_\-get\-Voxel\-At} (int x\-Position, int y\-Position, int z\-Position)}
+\label{d0/df8/classVoxelBlockLoaded_a2c3d0312ccea4227115b006061ce8882}
+
+\item 
+\hypertarget{classVoxelBlockLoaded_a9788f8467a9904eb17e25ed9fbd16dbb}{
+void {\bfseries \-\_\-set\-Voxel\-At} (int x\-Position, int y\-Position, int z\-Position, char value)}
+\label{d0/df8/classVoxelBlockLoaded_a9788f8467a9904eb17e25ed9fbd16dbb}
+
+\item 
+\hypertarget{classVoxelBlockLoaded_ae07a4c7a7d1c476a7eb32c066647eab2}{
+unsigned char {\bfseries \-\_\-get\-Texture\-At} (int x\-Position, int y\-Position, int z\-Position)}
+\label{d0/df8/classVoxelBlockLoaded_ae07a4c7a7d1c476a7eb32c066647eab2}
+
+\item 
+\hypertarget{classVoxelBlockLoaded_aa6aac23ce37590ab632a4760048aa64d}{
+void {\bfseries \-\_\-set\-Texture\-At} (int x\-Position, int y\-Position, int z\-Position, const unsigned char value)}
+\label{d0/df8/classVoxelBlockLoaded_aa6aac23ce37590ab632a4760048aa64d}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVoxelBlockLoaded_a9ea7dc2206d5ff1a545bcfdb3ef20d6e}{
+signed char \hyperlink{classVoxelBlockLoaded_a9ea7dc2206d5ff1a545bcfdb3ef20d6e}{data} \mbox{[}\-N\-U\-M\-\_\-\-V\-O\-X\-E\-L\-S\-\_\-\-I\-N\-\_\-\-B\-L\-O\-C\-K\mbox{]}}
+\label{d0/df8/classVoxelBlockLoaded_a9ea7dc2206d5ff1a545bcfdb3ef20d6e}
+
+\begin{DoxyCompactList}\small\item\em \-Voxel values. \end{DoxyCompactList}\item 
+\hypertarget{classVoxelBlockLoaded_a1eb14b44a18266615605c6310f420ddf}{
+unsigned char \hyperlink{classVoxelBlockLoaded_a1eb14b44a18266615605c6310f420ddf}{texture} \mbox{[}\-N\-U\-M\-\_\-\-V\-O\-X\-E\-L\-S\-\_\-\-I\-N\-\_\-\-B\-L\-O\-C\-K\mbox{]}}
+\label{d0/df8/classVoxelBlockLoaded_a1eb14b44a18266615605c6310f420ddf}
+
+\begin{DoxyCompactList}\small\item\em \-Texture values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A fully loaded voxel block with voxel and texture data. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/block\-Loaded.\-h\item 
+src/block\-Loaded.\-cpp\end{DoxyCompactItemize}

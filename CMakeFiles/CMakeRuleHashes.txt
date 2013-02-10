@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+470f4089ebc0bb4de7064bb3ef36b159 CMakeFiles/foreverwar_gch
+e133b6e91eea477a41f29ab4ca6fc3f4 precompiled.h
+67bc9e655c699f6a5ee5fea1a3d3605b precompiled.h.gch
+d41ad4927dc17e409ba48df52d6c989c precompiled.h.gch/Debug.c++

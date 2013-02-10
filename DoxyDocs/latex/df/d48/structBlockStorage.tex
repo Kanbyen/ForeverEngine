@@ -1,0 +1,34 @@
+\hypertarget{structBlockStorage}{
+\section{\-Block\-Storage \-Struct \-Reference}
+\label{df/d48/structBlockStorage}\index{\-Block\-Storage@{\-Block\-Storage}}
+}
+
+
+\-Stores data of one voxel block which is currently unloaded, including all objects which are in this block \-T\-O\-D\-O\-: block and objects could be separated for more performance; access has to be synchronized between volume load thread $<$-\/$>$ main thread for the blocks, but objects are only accessed by the main thread.  
+
+
+
+
+{\ttfamily \#include $<$game\-Data\-Storage.\-h$>$}
+
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structBlockStorage_af73dacab5d84baf0f9cddc39479e0b4b}{
+\hyperlink{classVoxelBlock}{\-Voxel\-Block} $\ast$ \hyperlink{structBlockStorage_af73dacab5d84baf0f9cddc39479e0b4b}{block}}
+\label{df/d48/structBlockStorage_af73dacab5d84baf0f9cddc39479e0b4b}
+
+\begin{DoxyCompactList}\small\item\em \-The stored voxel block at this position (with custom modifications) or \-N\-U\-L\-L if no custom changes were made to the block and it can thus be regenerated from the level data. \end{DoxyCompactList}\item 
+\hypertarget{structBlockStorage_a0f533a897292f3f5846df82725c9ee01}{
+std\-::vector$<$ \hyperlink{classObject}{\-Object} $\ast$ $>$ \hyperlink{structBlockStorage_a0f533a897292f3f5846df82725c9ee01}{objects}}
+\label{df/d48/structBlockStorage_a0f533a897292f3f5846df82725c9ee01}
+
+\begin{DoxyCompactList}\small\item\em \-List of temporarily unloaded objects in this block. \-These objects are not handled by the object manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Stores data of one voxel block which is currently unloaded, including all objects which are in this block \-T\-O\-D\-O\-: block and objects could be separated for more performance; access has to be synchronized between volume load thread $<$-\/$>$ main thread for the blocks, but objects are only accessed by the main thread. 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/game\-Data\-Storage.\-h\end{DoxyCompactItemize}

@@ -1,0 +1,122 @@
+\hypertarget{classConsole}{
+\section{\-Console \-Class \-Reference}
+\label{d2/d24/classConsole}\index{\-Console@{\-Console}}
+}
+
+
+\-Displays messages on the screen.  
+
+
+
+
+{\ttfamily \#include $<$console.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classConsole_adef0801921bfd9023d168f30f8086016}{
+typedef std\-::list\*
+$<$ \hyperlink{structConsoleMessage}{\-Console\-Message} $>$\-::iterator {\bfseries msg\-List\-Itr}}
+\label{d2/d24/classConsole_adef0801921bfd9023d168f30f8086016}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classConsole_abe8469565f7c663334d1fe931275ffb6}{
+\hyperlink{classConsole_abe8469565f7c663334d1fe931275ffb6}{\-Console} (\-C\-E\-G\-U\-I\-::\-Window $\ast$\hyperlink{classConsole_a12561be00e1ffed1e3e9e3166f064934}{root}, float start\-X, float start\-Y, int max\-Lines, float message\-Duration, float fade\-Time, \-Text\-Alignment alignment=\-T\-E\-X\-T\-A\-L\-I\-G\-N\-\_\-\-L\-E\-F\-T, bool bottom\-Up=false, bool has\-Border=false)}
+\label{d2/d24/classConsole_abe8469565f7c663334d1fe931275ffb6}
+
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classConsole_a32e8c79c8579b1b076e53848c540d4e7}{
+\hyperlink{classConsole_a32e8c79c8579b1b076e53848c540d4e7}{$\sim$\-Console} ()}
+\label{d2/d24/classConsole_a32e8c79c8579b1b076e53848c540d4e7}
+
+\begin{DoxyCompactList}\small\item\em \-Destructor, cleans up. \end{DoxyCompactList}\item 
+\hypertarget{classConsole_a9b60f177e6a6e31ac88f6554d6e7d2ae}{
+void \hyperlink{classConsole_a9b60f177e6a6e31ac88f6554d6e7d2ae}{add\-Message} (string text, float duration=-\/1.\-0f, string color=\char`\"{}\-F\-F\-F\-F\-F\-F\char`\"{})}
+\label{d2/d24/classConsole_a9b60f177e6a6e31ac88f6554d6e7d2ae}
+
+\begin{DoxyCompactList}\small\item\em \-Adds a new message to the console. \end{DoxyCompactList}\item 
+\hypertarget{classConsole_a5d3569628e0df8574c3384e27b148556}{
+void \hyperlink{classConsole_a5d3569628e0df8574c3384e27b148556}{update} (float timepassed)}
+\label{d2/d24/classConsole_a5d3569628e0df8574c3384e27b148556}
+
+\begin{DoxyCompactList}\small\item\em \-Must be called every frame with the time passed since the last update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classConsole_a12561be00e1ffed1e3e9e3166f064934}{
+\-C\-E\-G\-U\-I\-::\-Window $\ast$ \hyperlink{classConsole_a12561be00e1ffed1e3e9e3166f064934}{root}}
+\label{d2/d24/classConsole_a12561be00e1ffed1e3e9e3166f064934}
+
+\begin{DoxyCompactList}\small\item\em \-Parent window for all messages. \end{DoxyCompactList}\item 
+\hypertarget{classConsole_ae14853b06a1d64ff9cf9cd29f7ccfb3a}{
+float {\bfseries start\-X}}
+\label{d2/d24/classConsole_ae14853b06a1d64ff9cf9cd29f7ccfb3a}
+
+\item 
+\hypertarget{classConsole_a064bfd7d2e4b0ebeb58f1350fa3377de}{
+float {\bfseries start\-Y}}
+\label{d2/d24/classConsole_a064bfd7d2e4b0ebeb58f1350fa3377de}
+
+\item 
+\hypertarget{classConsole_a4e85480dd44f3059ffafb323123b3528}{
+float {\bfseries act\-Y}}
+\label{d2/d24/classConsole_a4e85480dd44f3059ffafb323123b3528}
+
+\item 
+\hypertarget{classConsole_a9ac56ce3f911d2b10eacbf353af77653}{
+int {\bfseries lines\-Shown}}
+\label{d2/d24/classConsole_a9ac56ce3f911d2b10eacbf353af77653}
+
+\item 
+\hypertarget{classConsole_a20f18d8c95dac1d6819fa23b3f1d44ac}{
+int {\bfseries max\-Lines}}
+\label{d2/d24/classConsole_a20f18d8c95dac1d6819fa23b3f1d44ac}
+
+\item 
+\hypertarget{classConsole_a5625f315c2bd2fa632167e24e42067b2}{
+float {\bfseries message\-Duration}}
+\label{d2/d24/classConsole_a5625f315c2bd2fa632167e24e42067b2}
+
+\item 
+\hypertarget{classConsole_a330f4e296768fc41be73d6f44b4c289e}{
+float {\bfseries fade\-Time}}
+\label{d2/d24/classConsole_a330f4e296768fc41be73d6f44b4c289e}
+
+\item 
+\hypertarget{classConsole_a4996727a194b81aceec3836bed3e82b5}{
+float {\bfseries current\-Time}}
+\label{d2/d24/classConsole_a4996727a194b81aceec3836bed3e82b5}
+
+\item 
+\hypertarget{classConsole_ae927aac3e63f911d134aa707264e8dc1}{
+bool {\bfseries has\-Border}}
+\label{d2/d24/classConsole_ae927aac3e63f911d134aa707264e8dc1}
+
+\item 
+\hypertarget{classConsole_ac96d0427972c9cdcb1ea9be8b4acfe84}{
+\-Text\-Alignment {\bfseries alignment}}
+\label{d2/d24/classConsole_ac96d0427972c9cdcb1ea9be8b4acfe84}
+
+\item 
+\hypertarget{classConsole_a56fc08c91cedd091c4c1f19d8e4dbcfc}{
+int {\bfseries direction}}
+\label{d2/d24/classConsole_a56fc08c91cedd091c4c1f19d8e4dbcfc}
+
+\item 
+\hypertarget{classConsole_aa005de6cc3507e9c76fb3a5d14efa561}{
+std\-::list$<$ \hyperlink{structConsoleMessage}{\-Console\-Message} $>$ {\bfseries msg\-List}}
+\label{d2/d24/classConsole_aa005de6cc3507e9c76fb3a5d14efa561}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Displays messages on the screen. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/console.\-h\item 
+src/console.\-cpp\end{DoxyCompactItemize}

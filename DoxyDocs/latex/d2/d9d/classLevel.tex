@@ -1,0 +1,319 @@
+\hypertarget{classLevel}{
+\section{\-Level \-Class \-Reference}
+\label{d2/d9d/classLevel}\index{\-Level@{\-Level}}
+}
+
+
+\-Represents the game world. \-Provides functions for level generation and callbacks to fill the voxel blocks accordingly. \-Also creates the objects in the level.  
+
+
+
+
+{\ttfamily \#include $<$level.\-h$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structLevel_1_1Building}{\-Building}
+\begin{DoxyCompactList}\small\item\em \-Information about buildings. \end{DoxyCompactList}\item 
+class \hyperlink{classLevel_1_1Connection}{\-Connection}
+\begin{DoxyCompactList}\small\item\em \-Connects two level elements. \-This class only holds the data; how the connection will be used is up to the level generation function. \end{DoxyCompactList}\item 
+struct \hyperlink{structLevel_1_1DoorOrWindowSpace}{\-Door\-Or\-Window\-Space}
+\begin{DoxyCompactList}\small\item\em \-Information about spaces inside walls where doors or windows will be placed. \end{DoxyCompactList}\item 
+struct \hyperlink{structLevel_1_1LevelObject}{\-Level\-Object}
+\begin{DoxyCompactList}\small\item\em \-Represents an object generated in the level generation process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLevel_af5225ae3dcc579a4b339c2c731cdb1ac}{
+typedef std\-::vector$<$ \hyperlink{classPoint3}{\-Point3} $>$ {\bfseries \-Position\-List}}
+\label{d2/d9d/classLevel_af5225ae3dcc579a4b339c2c731cdb1ac}
+
+\item 
+\hypertarget{classLevel_acfda2c619231d9623457ebb133ef6b84}{
+typedef std\-::vector\*
+$<$ \hyperlink{classLevelElement}{\-Level\-Element} $\ast$ $>$ \hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List}}
+\label{d2/d9d/classLevel_acfda2c619231d9623457ebb133ef6b84}
+
+\begin{DoxyCompactList}\small\item\em \-The level generation functions fill this list with the elements (cubes, spheres) of the level. \-When a new voxel block is requested, its voxel data is determined using this list. \end{DoxyCompactList}\item 
+\hypertarget{classLevel_a676b4b6c06284472d9042d259c0eeb48}{
+typedef \-Element\-List\-::iterator {\bfseries \-Element\-List\-Itr}}
+\label{d2/d9d/classLevel_a676b4b6c06284472d9042d259c0eeb48}
+
+\item 
+\hypertarget{classLevel_a428c83121a224ffd28a71b01d808352b}{
+typedef std\-::vector\*
+$<$ \hyperlink{classLevelTextureElement}{\-Level\-Texture\-Element} $\ast$ $>$ \hyperlink{classLevel_a428c83121a224ffd28a71b01d808352b}{\-Texture\-List}}
+\label{d2/d9d/classLevel_a428c83121a224ffd28a71b01d808352b}
+
+\begin{DoxyCompactList}\small\item\em \-The equivalent to \-Element\-List for textures. \end{DoxyCompactList}\item 
+\hypertarget{classLevel_afda4dd48d5f4fb276d1254118c2350ec}{
+typedef \-Texture\-List\-::iterator {\bfseries \-Texture\-List\-Itr}}
+\label{d2/d9d/classLevel_afda4dd48d5f4fb276d1254118c2350ec}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLevel_ae153822123767559c1951df8e112ee2b}{
+{\bfseries \-Level} (float scale)}
+\label{d2/d9d/classLevel_ae153822123767559c1951df8e112ee2b}
+
+\item 
+\hypertarget{classLevel_a1c6d2997eb3741c8b22f4a4623eabdc3}{
+void \hyperlink{classLevel_a1c6d2997eb3741c8b22f4a4623eabdc3}{generate} ()}
+\label{d2/d9d/classLevel_a1c6d2997eb3741c8b22f4a4623eabdc3}
+
+\begin{DoxyCompactList}\small\item\em \-Generate level layout. \end{DoxyCompactList}\item 
+\hypertarget{classLevel_a89a0d88fbfc4f215946b5b3645545859}{
+void {\bfseries generate\-\_\-\-Cave} (\hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List} \&entrances, \hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List} \&exits, int start\-Height, int end\-Height)}
+\label{d2/d9d/classLevel_a89a0d88fbfc4f215946b5b3645545859}
+
+\item 
+\hypertarget{classLevel_a14c6378b57f1966fe8a090eebf08d161}{
+void {\bfseries generate\-\_\-\-City} (\hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List} \&entrances, \hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List} \&exits, int start\-Height, int end\-Height)}
+\label{d2/d9d/classLevel_a14c6378b57f1966fe8a090eebf08d161}
+
+\item 
+\hypertarget{classLevel_a18690f87f99b79af7faadeb90137324a}{
+void {\bfseries generate\-\_\-\-Rock\-Field} (\hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List} \&entrances, \hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List} \&exits, int start\-Height, int end\-Height)}
+\label{d2/d9d/classLevel_a18690f87f99b79af7faadeb90137324a}
+
+\item 
+\hypertarget{classLevel_a392ed200d9ebaacebba7c1196924a4d2}{
+void {\bfseries generate\-House} (\hyperlink{structLevel_1_1Building}{\-Building} \&b, int door\-Dirs, int tex\-Floor)}
+\label{d2/d9d/classLevel_a392ed200d9ebaacebba7c1196924a4d2}
+
+\item 
+\hypertarget{classLevel_a443d93952f09f39762a14ce29ad1fc28}{
+void {\bfseries generate\-Skyscraper} (\hyperlink{structLevel_1_1Building}{\-Building} \&b, int door\-Dirs, int tex\-Floor)}
+\label{d2/d9d/classLevel_a443d93952f09f39762a14ce29ad1fc28}
+
+\item 
+\hypertarget{classLevel_a7638c5ac622464c69e568e293511dfda}{
+void {\bfseries generate\-Obj\-\_\-\-Starting\-Equipment} (\hyperlink{classPoint3}{\-Point3} midpoint)}
+\label{d2/d9d/classLevel_a7638c5ac622464c69e568e293511dfda}
+
+\item 
+\hypertarget{classLevel_a4d7c8e304c3c2ffd664e34980b845655}{
+void {\bfseries generate\-Obj\-\_\-\-Small\-Room} (const \hyperlink{classObjectSpawnArea}{\-Object\-Spawn\-Area} \&area)}
+\label{d2/d9d/classLevel_a4d7c8e304c3c2ffd664e34980b845655}
+
+\item 
+\hypertarget{classLevel_acbbc46b52cf383aea1e499e94c5483ab}{
+void {\bfseries generate\-Obj\-\_\-\-Open\-Street} (const \hyperlink{classObjectSpawnArea}{\-Object\-Spawn\-Area} \&area)}
+\label{d2/d9d/classLevel_acbbc46b52cf383aea1e499e94c5483ab}
+
+\item 
+\hypertarget{classLevel_a17b0222a7bbc0453c137a072dccd8d36}{
+void \hyperlink{classLevel_a17b0222a7bbc0453c137a072dccd8d36}{create\-Entrances\-From\-Exits} (\hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List} \&dest, \hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List} \&src, int n)}
+\label{d2/d9d/classLevel_a17b0222a7bbc0453c137a072dccd8d36}
+
+\begin{DoxyCompactList}\small\item\em \-Generates entrances of level n+1 from exits of level n. \end{DoxyCompactList}\item 
+\hypertarget{classLevel_ab23ec9b0fd08c6fe617464d7adb6e964}{
+void \hyperlink{classLevel_ab23ec9b0fd08c6fe617464d7adb6e964}{create\-Random\-Spheres\-At} (\-Vector3 min, \-Vector3 max, int rmin, int rmax, int mindist, int num, bool inversed, \hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List} \&out, float radius\-Cap=1.\-0f)}
+\label{d2/d9d/classLevel_ab23ec9b0fd08c6fe617464d7adb6e964}
+
+\begin{DoxyCompactList}\small\item\em \-Fill the given area with random spheres which keep a minimum distance from each other. \end{DoxyCompactList}\item 
+\hypertarget{classLevel_aa57d8167606982c9d71bb0087977b506}{
+void \hyperlink{classLevel_aa57d8167606982c9d71bb0087977b506}{create\-Random\-Cubes\-At} (\-Vector3 min, \-Vector3 max, \-Vector3 rmin, \-Vector3 rmax, int mindist, int num, bool inversed, \hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List} \&out)}
+\label{d2/d9d/classLevel_aa57d8167606982c9d71bb0087977b506}
+
+\begin{DoxyCompactList}\small\item\em \-Fill the given area with random cubes which keep a minimum distance from each other. \end{DoxyCompactList}\item 
+\hypertarget{classLevel_a9055e073da191dce6384fbe5879b754b}{
+\hyperlink{classPoint3}{\-Point3} \hyperlink{classLevel_a9055e073da191dce6384fbe5879b754b}{get\-Random\-Free\-Position} (\hyperlink{classPoint3}{\-Point3} min, \hyperlink{classPoint3}{\-Point3} max, \-Position\-List \&blocker\-List, float mindist)}
+\label{d2/d9d/classLevel_a9055e073da191dce6384fbe5879b754b}
+
+\begin{DoxyCompactList}\small\item\em \-Get a random position in the given area which has a minimum distance to other specified positions. \end{DoxyCompactList}\item 
+\hypertarget{classLevel_a6bd5b177bd5fab4f972f1959ff216ce9}{
+int \hyperlink{classLevel_a6bd5b177bd5fab4f972f1959ff216ce9}{create} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, int blx, int bly, int base\-X, int level\-Number, int level\-Trans\-Min, int level\-Trans\-Max, bool one\-Level, char $\ast$buffer)}
+\label{d2/d9d/classLevel_a6bd5b177bd5fab4f972f1959ff216ce9}
+
+\begin{DoxyCompactList}\small\item\em \-Range must be completely in one level for this function. \end{DoxyCompactList}\item 
+\hypertarget{classLevel_afa588c198e7baad9a59aa4aafcaddc58}{
+void \hyperlink{classLevel_afa588c198e7baad9a59aa4aafcaddc58}{create\-Tex} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, int blx, int bly, int base\-X, int level\-Number, char $\ast$voxel\-Buffer, unsigned char $\ast$buffer)}
+\label{d2/d9d/classLevel_afa588c198e7baad9a59aa4aafcaddc58}
+
+\begin{DoxyCompactList}\small\item\em \-Range must be completely in one level for this function. \end{DoxyCompactList}\item 
+\hypertarget{classLevel_ad26bbcb3c92743de569b8a9558ec2ae4}{
+\-Vector3 \hyperlink{classLevel_ad26bbcb3c92743de569b8a9558ec2ae4}{point\-To\-Vector} (const \hyperlink{classPoint3}{\-Point3} \&point)}
+\label{d2/d9d/classLevel_ad26bbcb3c92743de569b8a9558ec2ae4}
+
+\begin{DoxyCompactList}\small\item\em \-Converts the level-\/space point to a vector with \char`\"{}real\char`\"{} coordinates which can be used, for example, for object placement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLevel_a89514a6df260914d339030da4b62b583}{
+static int \hyperlink{classLevel_a89514a6df260914d339030da4b62b583}{create\-Func} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, char $\ast$buffer)}
+\label{d2/d9d/classLevel_a89514a6df260914d339030da4b62b583}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classLevel}{\-Level} creation function, splits the range if it contains two levels and calls \hyperlink{classLevel_a6bd5b177bd5fab4f972f1959ff216ce9}{create()} \end{DoxyCompactList}\item 
+\hypertarget{classLevel_a1441eecefb5f758c0770768cd831c3ee}{
+static void \hyperlink{classLevel_a1441eecefb5f758c0770768cd831c3ee}{texture\-Func} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, char $\ast$voxel\-Buffer, unsigned char $\ast$buffer)}
+\label{d2/d9d/classLevel_a1441eecefb5f758c0770768cd831c3ee}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classLevel}{\-Level} texturing function. \end{DoxyCompactList}\item 
+\hypertarget{classLevel_a102cb88c96cdc510eed205127c4b8f7e}{
+static int {\bfseries other\-\_\-\-Inv\-Cube\-\_\-\-Voxel\-C\-B} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, char $\ast$buffer)}
+\label{d2/d9d/classLevel_a102cb88c96cdc510eed205127c4b8f7e}
+
+\item 
+\hypertarget{classLevel_a9c2bb3ec4d076c53f064263f6a4ca54a}{
+static int {\bfseries other\-\_\-\-Cube\-\_\-\-Voxel\-C\-B} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, char $\ast$buffer)}
+\label{d2/d9d/classLevel_a9c2bb3ec4d076c53f064263f6a4ca54a}
+
+\item 
+\hypertarget{classLevel_a4f8c483f7817d049d6fef2544efd6b14}{
+static int {\bfseries other\-\_\-\-Cave\-\_\-\-Voxel\-C\-B} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, char $\ast$buffer)}
+\label{d2/d9d/classLevel_a4f8c483f7817d049d6fef2544efd6b14}
+
+\item 
+\hypertarget{classLevel_ae5b82cc5a68b06d00501b504359ef94b}{
+static int {\bfseries other\-\_\-\-Terrain\-\_\-\-Voxel\-C\-B} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, char $\ast$buffer)}
+\label{d2/d9d/classLevel_ae5b82cc5a68b06d00501b504359ef94b}
+
+\item 
+\hypertarget{classLevel_aae7d7a58e0d1e50df97af6692e0e7064}{
+static int {\bfseries other\-\_\-\-Planes\-\_\-\-Voxel\-C\-B} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, char $\ast$buffer)}
+\label{d2/d9d/classLevel_aae7d7a58e0d1e50df97af6692e0e7064}
+
+\item 
+\hypertarget{classLevel_a4cacc1a6f1655a3598d2f7704016aedf}{
+static int {\bfseries other\-\_\-\-Perlin\-\_\-\-Voxel\-C\-B} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, char $\ast$buffer)}
+\label{d2/d9d/classLevel_a4cacc1a6f1655a3598d2f7704016aedf}
+
+\item 
+\hypertarget{classLevel_ae28e10fcf944707f4076b081fc30d7da}{
+static int {\bfseries other\-\_\-\-Sphere\-\_\-\-Voxel\-C\-B} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, char $\ast$buffer)}
+\label{d2/d9d/classLevel_ae28e10fcf944707f4076b081fc30d7da}
+
+\item 
+\hypertarget{classLevel_aa34fbddfab8ce6434f9186f4f8306b3c}{
+static void {\bfseries other\-\_\-\-Invert} ()}
+\label{d2/d9d/classLevel_aa34fbddfab8ce6434f9186f4f8306b3c}
+
+\item 
+\hypertarget{classLevel_a5f1df80a628306a984d90b120986cc2f}{
+static void {\bfseries other\-\_\-\-Apply\-Textures} (int first\-X=1, int first\-Y=1, int first\-Z=1, int last\-X=\-V\-O\-L\-U\-M\-E\-\_\-\-S\-I\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-I\-N\-\_\-\-V\-O\-X\-E\-L\-S-\/2, int last\-Y=\-V\-O\-L\-U\-M\-E\-\_\-\-S\-I\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-I\-N\-\_\-\-V\-O\-X\-E\-L\-S-\/2, int last\-Z=\-V\-O\-L\-U\-M\-E\-\_\-\-S\-I\-D\-E\-\_\-\-L\-E\-N\-G\-T\-H\-\_\-\-I\-N\-\_\-\-V\-O\-X\-E\-L\-S-\/2)}
+\label{d2/d9d/classLevel_a5f1df80a628306a984d90b120986cc2f}
+
+\item 
+\hypertarget{classLevel_a1641140e1a51ad4e34cc2915e89d6728}{
+static void {\bfseries other\-\_\-autotex\-Callback} (int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z, char $\ast$voxel\-Buffer, unsigned char $\ast$buffer)}
+\label{d2/d9d/classLevel_a1641140e1a51ad4e34cc2915e89d6728}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLevel_a5fc5b06ee2593eb4b56d6ac761316a5a}{
+float {\bfseries scale}}
+\label{d2/d9d/classLevel_a5fc5b06ee2593eb4b56d6ac761316a5a}
+
+\item 
+\hypertarget{classLevel_a30e1326b2b3c9d96aaec266e6123518a}{
+\hyperlink{classLevel_acfda2c619231d9623457ebb133ef6b84}{\-Element\-List} {\bfseries elements} \mbox{[}\-N\-U\-M\-\_\-\-L\-E\-V\-E\-L\-S\mbox{]}\mbox{[}\-N\-U\-M\-\_\-\-L\-E\-V\-E\-L\-\_\-\-L\-A\-Y\-E\-R\-S\mbox{]}}
+\label{d2/d9d/classLevel_a30e1326b2b3c9d96aaec266e6123518a}
+
+\item 
+\hypertarget{classLevel_a619587a5e40034ebe0f3e6b4c61276a1}{
+\hyperlink{classLevelElement}{\-Level\-Element} $\ast$ {\bfseries temp\-Element\-List} \mbox{[}\-N\-U\-M\-\_\-\-L\-E\-V\-E\-L\-\_\-\-L\-A\-Y\-E\-R\-S\mbox{]}\mbox{[}\-M\-A\-X\-\_\-\-E\-L\-E\-M\-E\-N\-T\-S\-\_\-\-P\-E\-R\-\_\-\-B\-L\-O\-C\-K\mbox{]}}
+\label{d2/d9d/classLevel_a619587a5e40034ebe0f3e6b4c61276a1}
+
+\item 
+\hypertarget{classLevel_aa671d688f9ed322f06a9b66fb7d73f69}{
+int {\bfseries temp\-Element\-List\-Size} \mbox{[}\-N\-U\-M\-\_\-\-L\-E\-V\-E\-L\-\_\-\-L\-A\-Y\-E\-R\-S\mbox{]}}
+\label{d2/d9d/classLevel_aa671d688f9ed322f06a9b66fb7d73f69}
+
+\item 
+\hypertarget{classLevel_a8e49a146fcafe25fa234be3103f1a49a}{
+\hyperlink{classLevel_a428c83121a224ffd28a71b01d808352b}{\-Texture\-List} {\bfseries textures} \mbox{[}\-N\-U\-M\-\_\-\-L\-E\-V\-E\-L\-S\mbox{]}}
+\label{d2/d9d/classLevel_a8e49a146fcafe25fa234be3103f1a49a}
+
+\item 
+\hypertarget{classLevel_a31c9042b0321a0156cab6940f18d84a1}{
+\hyperlink{classLevelTextureElement}{\-Level\-Texture\-Element} $\ast$ {\bfseries temp\-Texture\-List} \mbox{[}\-M\-A\-X\-\_\-\-E\-L\-E\-M\-E\-N\-T\-S\-\_\-\-P\-E\-R\-\_\-\-B\-L\-O\-C\-K\mbox{]}}
+\label{d2/d9d/classLevel_a31c9042b0321a0156cab6940f18d84a1}
+
+\item 
+\hypertarget{classLevel_ac099df327bb9007e550c9c24304cbcc1}{
+int {\bfseries temp\-Texture\-List\-Size}}
+\label{d2/d9d/classLevel_ac099df327bb9007e550c9c24304cbcc1}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries \-Building\-Direction} \{ {\bfseries \-B\-P\-L\-U\-S\-X} =  1 $<$$<$ 0, 
+{\bfseries \-B\-M\-I\-N\-U\-S\-X} =  1 $<$$<$ 1, 
+{\bfseries \-B\-P\-L\-U\-S\-Z} =  1 $<$$<$ 2, 
+{\bfseries \-B\-M\-I\-N\-U\-S\-Z} =  1 $<$$<$ 3
+ \}
+\item 
+\hypertarget{classLevel_a67a03fd7187682a20e7bcdf1536a7577}{
+typedef std\-::vector$<$ \hyperlink{classLevel_1_1Connection}{\-Connection} $\ast$ $>$ {\bfseries \-Connection\-List}}
+\label{d2/d9d/classLevel_a67a03fd7187682a20e7bcdf1536a7577}
+
+\item 
+\hypertarget{classLevel_a62d34b376916a91eafe88e6a59186abe}{
+typedef \-Connection\-List\-::iterator {\bfseries \-Connection\-List\-Itr}}
+\label{d2/d9d/classLevel_a62d34b376916a91eafe88e6a59186abe}
+
+\item 
+\hypertarget{classLevel_aa7e01756ef86c11c1edf0eb4bd3fd1e3}{
+typedef std\-::vector$<$ \hyperlink{structLevel_1_1LevelObject}{\-Level\-Object} $>$ {\bfseries \-Object\-List}}
+\label{d2/d9d/classLevel_aa7e01756ef86c11c1edf0eb4bd3fd1e3}
+
+\item 
+\hypertarget{classLevel_a8672f3d18ab87fdc2b4273872a465524}{
+typedef \-Object\-List\-::iterator {\bfseries \-Object\-List\-Itr}}
+\label{d2/d9d/classLevel_a8672f3d18ab87fdc2b4273872a465524}
+
+\item 
+\hypertarget{classLevel_a1701cb3b7d371ff7b4014788e0ab23f8}{
+typedef std\-::vector\*
+$<$ \hyperlink{structLevel_1_1DoorOrWindowSpace}{\-Door\-Or\-Window\-Space} $>$ {\bfseries \-Door\-Or\-Window\-Space\-List}}
+\label{d2/d9d/classLevel_a1701cb3b7d371ff7b4014788e0ab23f8}
+
+\item 
+\hypertarget{classLevel_a9fd21b65f5bc6d257eec438e0a2f3bed}{
+typedef std\-::vector$<$ \hyperlink{structLevel_1_1Building}{\-Building} $\ast$ $>$ {\bfseries \-Building\-List}}
+\label{d2/d9d/classLevel_a9fd21b65f5bc6d257eec438e0a2f3bed}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLevel_ad794dac496c7c487652bbd8333da3277}{
+void {\bfseries get\-Level\-Elements\-In\-Range} (int level\-Number, int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z)}
+\label{d2/d9d/classLevel_ad794dac496c7c487652bbd8333da3277}
+
+\item 
+\hypertarget{classLevel_a11fdab484d5197c3d204f6b7ed0a8222}{
+void {\bfseries get\-Level\-Textures\-In\-Range} (int level\-Number, int first\-X, int first\-Y, int first\-Z, int last\-X, int last\-Y, int last\-Z)}
+\label{d2/d9d/classLevel_a11fdab484d5197c3d204f6b7ed0a8222}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLevel_ae62fe80ca28a82222ed024f322869603}{
+int \hyperlink{classLevel_ae62fe80ca28a82222ed024f322869603}{act\-Level}}
+\label{d2/d9d/classLevel_ae62fe80ca28a82222ed024f322869603}
+
+\begin{DoxyCompactList}\small\item\em \-Number of level which is currently generated. \end{DoxyCompactList}\item 
+\hypertarget{classLevel_a2813d85c0ceee4fdfdad01db52ff4630}{
+\-Object\-List \hyperlink{classLevel_a2813d85c0ceee4fdfdad01db52ff4630}{objects}}
+\label{d2/d9d/classLevel_a2813d85c0ceee4fdfdad01db52ff4630}
+
+\begin{DoxyCompactList}\small\item\em \-The level generation functions fill this list with object information. \-At the end of the level generation, all objects are generated and added to the game\-Data\-Store and this list is cleared. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Represents the game world. \-Provides functions for level generation and callbacks to fill the voxel blocks accordingly. \-Also creates the objects in the level. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/level.\-h\item 
+src/level.\-cpp\item 
+src/level\-\_\-other.\-cpp\end{DoxyCompactItemize}

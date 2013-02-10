@@ -1,0 +1,17 @@
+IngameOverlay
+{
+    zorder 200
+
+    container Panel(CrosshairPanel)
+    {
+        // Centered
+		horz_align center
+		vert_align center
+		metrics_mode pixels
+        left -16
+        top -16
+        width 32
+        height 32
+        material CrosshairMaterial
+    }
+}

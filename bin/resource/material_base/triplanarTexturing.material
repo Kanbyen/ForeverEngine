@@ -1,0 +1,38 @@
+material TriplanarTexturing
+{
+	technique
+	{
+		pass
+		{
+			vertex_program_ref TriplanarTexturingVertexProgram
+			{
+				param_named_auto world world_matrix
+				param_named_auto viewProj viewproj_matrix
+				param_named_auto camPos camera_position
+				
+				// 0.083333333 = 1/12.0
+				param_named textureScale float 0.083333333
+				param_named lightColor float3 1.3 1.3 1.3
+				param_named darkColor float3 0.2 0.2 0.2
+				param_named dirToLight float3 0 0.957826285 -0.287347886
+				param_named_auto fogParams fog_params
+				
+				param_named_auto light0.position light_position 0
+				param_named_auto light0.diffuseColour light_diffuse_colour 0
+				param_named_auto light0.attenuation light_attenuation 0
+				param_named_auto light1.position light_position 1
+				param_named_auto light1.diffuseColour light_diffuse_colour 1
+				param_named_auto light1.attenuation light_attenuation 1
+				param_named_auto light2.position light_position 2
+				param_named_auto light2.diffuseColour light_diffuse_colour 2
+				param_named_auto light2.attenuation light_attenuation 2
+			}
+			fragment_program_ref TriplanarTexturingFragmentProgram
+			{
+				param_named_auto fogColor fog_colour
+				param_named textureSize float 1024.0
+				param_named noOfTexturesPerDimension float 4.0
+			}
+		}
+	}
+}

@@ -1,0 +1,87 @@
+particle_system GlowRingRed
+{
+	material        	GlowRing
+	particle_width  	0.75
+	particle_height 	0.75
+	quota           	5
+	billboard_type  	perpendicular_self
+
+	emitter Point
+	{
+		duration			0.1
+		direction       	0 0 -1
+		angle           	0
+    	emission_rate   	50
+    	time_to_live		0.5
+    	velocity			7
+    	colour				1 0 0
+	}
+   	
+	affector ColourInterpolator
+	{
+		time0	0
+		colour0	1 0 0 1
+		time1	1
+		colour1	1 0.2 0.2 0
+	}
+}
+
+particle_system GlowRingBlue
+{
+	material        	GlowRing
+	particle_width  	0.75
+	particle_height 	0.75
+	quota           	5
+	billboard_type  	perpendicular_self
+
+	emitter Point
+	{
+		duration			0.1
+		direction       	0 0 -1
+		angle           	0
+    	emission_rate   	50
+    	time_to_live		0.5
+    	velocity			7
+    	colour				0 0 1
+	}
+   	
+	affector ColourInterpolator
+	{
+		time0	0
+		colour0	0 0 1 1
+		time1	1
+		colour1	0.2 0.2 1 0
+	}
+}
+
+particle_system RingEmitBlue
+{
+	material        	GlowRing
+	particle_width  	0.4
+	particle_height 	0.4
+	quota           	3
+	billboard_type  	point
+
+	emitter Point
+	{
+		duration			0.5
+		angle           	180
+    	emission_rate   	10
+    	time_to_live		0.6
+    	velocity			0
+    	colour				0 0 1
+	}
+	
+	affector Scaler
+	{
+		rate	6
+	}
+   	
+	affector ColourInterpolator
+	{
+		time0	0
+		colour0	0 0 1 1
+		time1	1
+		colour1	0.2 0.2 1 0
+	}
+}

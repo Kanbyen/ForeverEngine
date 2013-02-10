@@ -1,0 +1,156 @@
+\hypertarget{classWeaponInHand}{
+\section{\-Weapon\-In\-Hand \-Class \-Reference}
+\label{dc/d08/classWeaponInHand}\index{\-Weapon\-In\-Hand@{\-Weapon\-In\-Hand}}
+}
+
+
+\-Handles the display and animation of the weapon in hands.  
+
+
+
+
+{\ttfamily \#include $<$weapon\-In\-Hand.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classWeaponInHand_a0e844c4b0589d42c70dda2acf8bf292c}{
+void \hyperlink{classWeaponInHand_a0e844c4b0589d42c70dda2acf8bf292c}{change\-Weapon} (\hyperlink{classComponentWeapon}{\-Component\-Weapon} $\ast$change\-To)}
+\label{dc/d08/classWeaponInHand_a0e844c4b0589d42c70dda2acf8bf292c}
+
+\begin{DoxyCompactList}\small\item\em \-Starts the process of changing the weapon. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_a7fbad04e01f13105cc8d5409893eb404}{
+bool \hyperlink{classWeaponInHand_a7fbad04e01f13105cc8d5409893eb404}{is\-Ready} ()}
+\label{dc/d08/classWeaponInHand_a7fbad04e01f13105cc8d5409893eb404}
+
+\begin{DoxyCompactList}\small\item\em \-Returns if the weapon doesn't fire at the moment and is held in the hand (not half-\/readied) \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_a841607071276193c0f67596f17a26257}{
+void \hyperlink{classWeaponInHand_a841607071276193c0f67596f17a26257}{fire} (int mode)}
+\label{dc/d08/classWeaponInHand_a841607071276193c0f67596f17a26257}
+
+\begin{DoxyCompactList}\small\item\em \-Starts firing. 0-\/\-L\-M\-B, 1-\/\-R\-M\-B. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_af2de44e6c86743086d2c091e2de5e173}{
+void \hyperlink{classWeaponInHand_af2de44e6c86743086d2c091e2de5e173}{update} (float dt)}
+\label{dc/d08/classWeaponInHand_af2de44e6c86743086d2c091e2de5e173}
+
+\begin{DoxyCompactList}\small\item\em \-Should be called every frame. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_aff6d3b6ad7c86f9a7563d6bb7e4b9f83}{
+void \hyperlink{classWeaponInHand_aff6d3b6ad7c86f9a7563d6bb7e4b9f83}{init} (\-Scene\-Node $\ast$parent\-Node, \hyperlink{classComponent}{\-Component} $\ast$\hyperlink{classWeaponInHand_a57c4ee1eadbe84472318dfa13b7b1848}{holder})}
+\label{dc/d08/classWeaponInHand_aff6d3b6ad7c86f9a7563d6bb7e4b9f83}
+
+\begin{DoxyCompactList}\small\item\em \-Creates the scene node, etc. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_abacdc20ee105851f295a00260b3e1b2a}{
+void \hyperlink{classWeaponInHand_abacdc20ee105851f295a00260b3e1b2a}{exit} ()}
+\label{dc/d08/classWeaponInHand_abacdc20ee105851f295a00260b3e1b2a}
+
+\begin{DoxyCompactList}\small\item\em \-Cleans up. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_a639c9ecada596c637d1041d73542e24a}{
+void {\bfseries \-\_\-attach\-Weapon} ()}
+\label{dc/d08/classWeaponInHand_a639c9ecada596c637d1041d73542e24a}
+
+\item 
+\hypertarget{classWeaponInHand_a51734c78679ff03cc4b487cdd98f1474}{
+void {\bfseries \-\_\-detach\-Weapon} ()}
+\label{dc/d08/classWeaponInHand_a51734c78679ff03cc4b487cdd98f1474}
+
+\item 
+\hypertarget{classWeaponInHand_a1daaef674e1b24e77b707ae14534feb3}{
+void {\bfseries \-\_\-set\-Weapon\-Start\-Position} (\-Vector3 where)}
+\label{dc/d08/classWeaponInHand_a1daaef674e1b24e77b707ae14534feb3}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classWeaponInHand_aa2402590077403d4262c1f26532a0a18}{
+\hyperlink{classComponentWeapon}{\-Component\-Weapon} $\ast$ {\bfseries act\-Weapon}}
+\label{dc/d08/classWeaponInHand_aa2402590077403d4262c1f26532a0a18}
+
+\item 
+\hypertarget{classWeaponInHand_aed2ba79eeb8b5e45b6dfa3106e9bfd83}{
+\hyperlink{classComponentWeapon}{\-Component\-Weapon} $\ast$ {\bfseries next\-Weapon}}
+\label{dc/d08/classWeaponInHand_aed2ba79eeb8b5e45b6dfa3106e9bfd83}
+
+\item 
+\hypertarget{classWeaponInHand_a217b1a4cd5d5d793a939d3a9abecc4bb}{
+bool {\bfseries is\-Next\-Weapon\-Valid}}
+\label{dc/d08/classWeaponInHand_a217b1a4cd5d5d793a939d3a9abecc4bb}
+
+\item 
+\hypertarget{classWeaponInHand_a0eaad1b09528cd430a02180aea0a2b80}{
+bool {\bfseries weapon\-Change\-Started}}
+\label{dc/d08/classWeaponInHand_a0eaad1b09528cd430a02180aea0a2b80}
+
+\item 
+\hypertarget{classWeaponInHand_a4ab7ef76f0c9deae5b8cb2c4784aab35}{
+\hyperlink{classComponentPosition}{\-Component\-Position} \hyperlink{classWeaponInHand_a4ab7ef76f0c9deae5b8cb2c4784aab35}{offset}}
+\label{dc/d08/classWeaponInHand_a4ab7ef76f0c9deae5b8cb2c4784aab35}
+
+\begin{DoxyCompactList}\small\item\em \-The current offset of the weapon. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_aa39e0c3fd56bc59f67e8f4d051c3ce8d}{
+\hyperlink{classComponentPosition}{\-Component\-Position} \hyperlink{classWeaponInHand_aa39e0c3fd56bc59f67e8f4d051c3ce8d}{offset\-To}}
+\label{dc/d08/classWeaponInHand_aa39e0c3fd56bc59f67e8f4d051c3ce8d}
+
+\begin{DoxyCompactList}\small\item\em \-The target for the offset; it will be interpolated to this value. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_adfc64d03eedc9f503de59d2defd070dd}{
+\-Vector3 \hyperlink{classWeaponInHand_adfc64d03eedc9f503de59d2defd070dd}{move\-Velocity}}
+\label{dc/d08/classWeaponInHand_adfc64d03eedc9f503de59d2defd070dd}
+
+\begin{DoxyCompactList}\small\item\em \-The velocity with which the weapon is moving. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_a42987cb82ce4248219cb40837982d54d}{
+\-Vector3 \hyperlink{classWeaponInHand_a42987cb82ce4248219cb40837982d54d}{rot\-Velocity}}
+\label{dc/d08/classWeaponInHand_a42987cb82ce4248219cb40837982d54d}
+
+\begin{DoxyCompactList}\small\item\em \-The velocity with which the weapon is rotating. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_a73a91f70b2238c6509f958053300e425}{
+\-Scene\-Node $\ast$ \hyperlink{classWeaponInHand_a73a91f70b2238c6509f958053300e425}{scenenode}}
+\label{dc/d08/classWeaponInHand_a73a91f70b2238c6509f958053300e425}
+
+\begin{DoxyCompactList}\small\item\em \-The scenenode the weapon is attached to. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_ae3a7d28c16ff2947fadc51134daf2db5}{
+uint8 {\bfseries entity\-Old\-Render\-Queue\-Group}}
+\label{dc/d08/classWeaponInHand_ae3a7d28c16ff2947fadc51134daf2db5}
+
+\item 
+\hypertarget{classWeaponInHand_a57c4ee1eadbe84472318dfa13b7b1848}{
+\hyperlink{classComponent}{\-Component} $\ast$ \hyperlink{classWeaponInHand_a57c4ee1eadbe84472318dfa13b7b1848}{holder}}
+\label{dc/d08/classWeaponInHand_a57c4ee1eadbe84472318dfa13b7b1848}
+
+\begin{DoxyCompactList}\small\item\em \-The weapon holder. \end{DoxyCompactList}\item 
+\hypertarget{classWeaponInHand_ab4d2202bb710d21406325264841004e1}{
+float {\bfseries time}}
+\label{dc/d08/classWeaponInHand_ab4d2202bb710d21406325264841004e1}
+
+\item 
+\hypertarget{classWeaponInHand_ace27dc9674016589d766437a2ba5f892}{
+float {\bfseries idle\-Time}}
+\label{dc/d08/classWeaponInHand_ace27dc9674016589d766437a2ba5f892}
+
+\item 
+\hypertarget{classWeaponInHand_a1b8b691049b4142f8aa2b2bab16c3f46}{
+float {\bfseries smooth\-Time}}
+\label{dc/d08/classWeaponInHand_a1b8b691049b4142f8aa2b2bab16c3f46}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classWeaponInHand_ac4cbbcc5725fa7fd701b9a0b26b676a0}{
+static \-Vector3 {\bfseries \-W\-E\-A\-P\-O\-N\-S\-T\-A\-R\-T\-\_\-\-B\-E\-L\-O\-W} = \-Vector3(0, -\/1.\-2f, 0)}
+\label{dc/d08/classWeaponInHand_ac4cbbcc5725fa7fd701b9a0b26b676a0}
+
+\item 
+\hypertarget{classWeaponInHand_a2fc038a5c47878102bc1713ca9789988}{
+static \-Vector3 {\bfseries \-W\-E\-A\-P\-O\-N\-S\-T\-A\-R\-T\-\_\-\-V\-E\-L\-O\-C\-I\-T\-Y} = \-Vector3(0, 1.\-0f, 0)}
+\label{dc/d08/classWeaponInHand_a2fc038a5c47878102bc1713ca9789988}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Handles the display and animation of the weapon in hands. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/weapon\-In\-Hand.\-h\item 
+src/weapon\-In\-Hand.\-cpp\end{DoxyCompactItemize}

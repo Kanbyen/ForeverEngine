@@ -1,0 +1,45 @@
+\hypertarget{classAIPositionRating}{
+\section{\-A\-I\-Position\-Rating \-Class \-Reference}
+\label{d8/d90/classAIPositionRating}\index{\-A\-I\-Position\-Rating@{\-A\-I\-Position\-Rating}}
+}
+
+
+\-Contains static methods to check if positions are tactically good or bad. \-All methods with float return values return values (haha) in the range \mbox{[}0; 1\mbox{]}.  
+
+
+
+
+{\ttfamily \#include $<$ai\-Position\-Rating.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIPositionRating_a426315e060d12975be0df1802647c3b8}{
+static \-Vector3 \hyperlink{classAIPositionRating_a426315e060d12975be0df1802647c3b8}{move\-Away\-From\-Neighbours} (\-Vector3 pos, \hyperlink{classObject}{\-Object} $\ast$obj, float radius, float scaling, int steps)}
+\label{d8/d90/classAIPositionRating_a426315e060d12975be0df1802647c3b8}
+
+\begin{DoxyCompactList}\small\item\em \-Moves the position away from neighbours, returns the updated position. \-The maximum offset caused by a single neighbour is 1 (but something like 0.\-25 is more likely) -\/ set scaling accordingly. \end{DoxyCompactList}\item 
+\hypertarget{classAIPositionRating_ad723f60001e82961022f3ce8f111dfff}{
+static float \hyperlink{classAIPositionRating_ad723f60001e82961022f3ce8f111dfff}{get\-Position\-In\-Air} (\-Vector3 pos, int radius)}
+\label{d8/d90/classAIPositionRating_ad723f60001e82961022f3ce8f111dfff}
+
+\begin{DoxyCompactList}\small\item\em \-Is there free air at the position (checks the voxel data, not the physics engine)? \-Returns 0 if the position is out of the volume. \end{DoxyCompactList}\item 
+\hypertarget{classAIPositionRating_a4a66d4c0f0b49216453c8e1ca39c4467}{
+static bool \hyperlink{classAIPositionRating_a4a66d4c0f0b49216453c8e1ca39c4467}{get\-Free\-Way\-To\-Pos} (\-Vector3 pos, \hyperlink{classObject}{\-Object} $\ast$obj)}
+\label{d8/d90/classAIPositionRating_a4a66d4c0f0b49216453c8e1ca39c4467}
+
+\begin{DoxyCompactList}\small\item\em \-Is the way to the target position free? \end{DoxyCompactList}\item 
+\hypertarget{classAIPositionRating_a97bc1f6a55b555935e05ffd057172a86}{
+static bool \hyperlink{classAIPositionRating_a97bc1f6a55b555935e05ffd057172a86}{get\-Free\-Line\-Of\-Fire\-To\-Target} (\-Vector3 pos, \hyperlink{classObject}{\-Object} $\ast$obj, \hyperlink{classObject}{\-Object} $\ast$target, float shooting\-Range)}
+\label{d8/d90/classAIPositionRating_a97bc1f6a55b555935e05ffd057172a86}
+
+\begin{DoxyCompactList}\small\item\em \-Is there a free line-\/of-\/fire to the target? \-Also checks if the distance to the target is below shooting\-Range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Contains static methods to check if positions are tactically good or bad. \-All methods with float return values return values (haha) in the range \mbox{[}0; 1\mbox{]}. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/ai\-Position\-Rating.\-h\item 
+src/ai\-Position\-Rating.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,167 @@
+\hypertarget{classComponentWeapon}{
+\section{\-Component\-Weapon \-Class \-Reference}
+\label{de/df8/classComponentWeapon}\index{\-Component\-Weapon@{\-Component\-Weapon}}
+}
+
+
+\-Weapon \hyperlink{classComponent}{\-Component}.  
+
+
+
+
+{\ttfamily \#include $<$component\-Weapon.\-h$>$}
+
+\-Inheritance diagram for \-Component\-Weapon\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{de/df8/classComponentWeapon}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentWeapon_a447cd283b09cf3a6d32cfe6163bc685e}{
+void {\bfseries place\-In\-World} ()}
+\label{de/df8/classComponentWeapon_a447cd283b09cf3a6d32cfe6163bc685e}
+
+\item 
+\hypertarget{classComponentWeapon_a0125f5accb3f47e0a96385c4098d5b89}{
+void {\bfseries place\-In\-Invectory} ()}
+\label{de/df8/classComponentWeapon_a0125f5accb3f47e0a96385c4098d5b89}
+
+\item 
+\hypertarget{classComponentWeapon_a339e6ffc6e33c8853672f46a7f4a5aa2}{
+virtual void \hyperlink{classComponentWeapon_a339e6ffc6e33c8853672f46a7f4a5aa2}{exit} ()}
+\label{de/df8/classComponentWeapon_a339e6ffc6e33c8853672f46a7f4a5aa2}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentWeapon_a4392a86c64f4334559d0692b54595b0c}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentWeapon_a487f0d3fe05e8f8dec2f672739f6a87d}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentWeapon_a24b24a2349c5e4b9c5cc8344b5c170d7}{
+string {\bfseries name}}
+\label{de/df8/classComponentWeapon_a24b24a2349c5e4b9c5cc8344b5c170d7}
+
+\item 
+\hypertarget{classComponentWeapon_a7d0f0a32ce7cd7a06ba328db5f7fbc7e}{
+string {\bfseries short\-Name}}
+\label{de/df8/classComponentWeapon_a7d0f0a32ce7cd7a06ba328db5f7fbc7e}
+
+\item 
+\hypertarget{classComponentWeapon_a7d71a3fc57f138236c80a4b06ff46fb0}{
+string {\bfseries description}}
+\label{de/df8/classComponentWeapon_a7d71a3fc57f138236c80a4b06ff46fb0}
+
+\item 
+\hypertarget{classComponentWeapon_a93e31e547fc0c45d7436fa594c778152}{
+\-Weapon\-Type {\bfseries type}}
+\label{de/df8/classComponentWeapon_a93e31e547fc0c45d7436fa594c778152}
+
+\item 
+\hypertarget{classComponentWeapon_ad2cc9f5471ba9dde6e7bb6c0d6baef2a}{
+float {\bfseries importance}}
+\label{de/df8/classComponentWeapon_ad2cc9f5471ba9dde6e7bb6c0d6baef2a}
+
+\item 
+\hypertarget{classComponentWeapon_acfd64fc78a40b2aeb6c83beebe05487f}{
+string {\bfseries throw\-Name}}
+\label{de/df8/classComponentWeapon_acfd64fc78a40b2aeb6c83beebe05487f}
+
+\item 
+\hypertarget{classComponentWeapon_a5b2564b02ca5eab1bbf94a5e71a9be51}{
+\hyperlink{classComponentPosition}{\-Component\-Position} {\bfseries hold\-Pos}}
+\label{de/df8/classComponentWeapon_a5b2564b02ca5eab1bbf94a5e71a9be51}
+
+\item 
+\hypertarget{classComponentWeapon_a27403382acaf9c1faba0df2f430ba94f}{
+\hyperlink{classComponentPosition}{\-Component\-Position} {\bfseries muzzle\-Pos}}
+\label{de/df8/classComponentWeapon_a27403382acaf9c1faba0df2f430ba94f}
+
+\item 
+\hypertarget{classComponentWeapon_ab2d91e84ccac0a8b88929b5f502a4a79}{
+\hyperlink{classObjectScriptExecutor}{\-Object\-Script\-Executor} $\ast$ {\bfseries script\-L\-M\-B}}
+\label{de/df8/classComponentWeapon_ab2d91e84ccac0a8b88929b5f502a4a79}
+
+\item 
+\hypertarget{classComponentWeapon_a9a1614125eba4bbdfb819452d75b8979}{
+\hyperlink{classObjectScriptExecutor}{\-Object\-Script\-Executor} $\ast$ {\bfseries script\-R\-M\-B}}
+\label{de/df8/classComponentWeapon_a9a1614125eba4bbdfb819452d75b8979}
+
+\item 
+\hypertarget{classComponentWeapon_a30994bd6ddd153d5ac04c1cb93ae107e}{
+\hyperlink{classComponent}{\-Component} $\ast$ \hyperlink{classComponentWeapon_a30994bd6ddd153d5ac04c1cb93ae107e}{holder}}
+\label{de/df8/classComponentWeapon_a30994bd6ddd153d5ac04c1cb93ae107e}
+
+\begin{DoxyCompactList}\small\item\em \-The weapon holder or \-N\-U\-L\-L. \end{DoxyCompactList}\item 
+\hypertarget{classComponentWeapon_ad075c58c5ffd1f62ce78f59f97ac5a00}{
+\hyperlink{classComponentTemplateWeapon}{\-Component\-Template\-Weapon} $\ast$ {\bfseries creator}}
+\label{de/df8/classComponentWeapon_ad075c58c5ffd1f62ce78f59f97ac5a00}
+
+\item 
+\hypertarget{classComponentWeapon_a6149391a5282d85bdac2e33073a4d295}{
+bool \hyperlink{classComponentWeapon_a6149391a5282d85bdac2e33073a4d295}{in\-World}}
+\label{de/df8/classComponentWeapon_a6149391a5282d85bdac2e33073a4d295}
+
+\begin{DoxyCompactList}\small\item\em is the weapon in the world (or in the inventory of an agent)? \end{DoxyCompactList}\item 
+\hypertarget{classComponentWeapon_abff538843898a88b4313d4a073f69d83}{
+int {\bfseries touch\-Trigger\-I\-D}}
+\label{de/df8/classComponentWeapon_abff538843898a88b4313d4a073f69d83}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Weapon \hyperlink{classComponent}{\-Component}. 
+
+\-Parameters\-:\par
+ \-Type \mbox{[}required\mbox{]} -\/ in which weapon inventory the weapon will apear (parameter\-: value, can be normal, grenade or tool) \-Importance \mbox{[}required\mbox{]} -\/ at which position the weapon apperas in the weapon inventory (parameter\-: value) 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentWeapon_a487f0d3fe05e8f8dec2f672739f6a87d}{
+\index{\-Component\-Weapon@{\-Component\-Weapon}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentWeapon@{\-Component\-Weapon}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Weapon\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{de/df8/classComponentWeapon_a487f0d3fe05e8f8dec2f672739f6a87d}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentWeapon_a4392a86c64f4334559d0692b54595b0c}{
+\index{\-Component\-Weapon@{\-Component\-Weapon}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentWeapon@{\-Component\-Weapon}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Weapon\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{de/df8/classComponentWeapon_a4392a86c64f4334559d0692b54595b0c}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Weapon.\-h\item 
+src/component\-Weapon.\-cpp\end{DoxyCompactItemize}

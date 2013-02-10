@@ -1,0 +1,113 @@
+\hypertarget{classObject}{
+\section{\-Object \-Class \-Reference}
+\label{d8/d4b/classObject}\index{\-Object@{\-Object}}
+}
+
+
+\-Represents a game object, which is a collection of components (-\/$>$ \hyperlink{component_8h_source}{component.\-h})  
+
+
+
+
+{\ttfamily \#include $<$object.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObject_aa6a6da506bdaa17fd66f17c85792a96d}{
+const \-Component\-List \& {\bfseries get\-Component\-List} () const }
+\label{d8/d4b/classObject_aa6a6da506bdaa17fd66f17c85792a96d}
+
+\item 
+\hypertarget{classObject_a991613e7bfb1da6a999c840faf72a482}{
+void \hyperlink{classObject_a991613e7bfb1da6a999c840faf72a482}{add\-Component} (\hyperlink{classComponent}{\-Component} $\ast$component, bool forward=true)}
+\label{d8/d4b/classObject_a991613e7bfb1da6a999c840faf72a482}
+
+\begin{DoxyCompactList}\small\item\em \-Add a new component, will be broadcasted over the network if forward is set. \end{DoxyCompactList}\item 
+\hypertarget{classObject_aadf73fe4d5c43d135389d1b4f13823bd}{
+void \hyperlink{classObject_aadf73fe4d5c43d135389d1b4f13823bd}{remove\-Component} (\hyperlink{classComponent}{\-Component} $\ast$component, bool forward=true)}
+\label{d8/d4b/classObject_aadf73fe4d5c43d135389d1b4f13823bd}
+
+\begin{DoxyCompactList}\small\item\em \-Remove a component from the list. \-Warning\-: you have to delete the component yourself (call its exit method)! \end{DoxyCompactList}\item 
+\hypertarget{classObject_a40860402e64d8008fb42329df7097cdb}{
+\hyperlink{classObject_a40860402e64d8008fb42329df7097cdb}{\-Object} ()}
+\label{d8/d4b/classObject_a40860402e64d8008fb42329df7097cdb}
+
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classObject_a3db4f59a78c5efe2c9beb73a6d976592}{
+bool \hyperlink{classObject_a3db4f59a78c5efe2c9beb73a6d976592}{send\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L, \hyperlink{classComponent}{\-Component} $\ast$exclude=\-N\-U\-L\-L)}
+\label{d8/d4b/classObject_a3db4f59a78c5efe2c9beb73a6d976592}
+
+\begin{DoxyCompactList}\small\item\em \-Send a message to all components except the one \char`\"{}exclude\char`\"{} points to. \-Be careful, the object could delete itself as response -\/ then the function returns false! \end{DoxyCompactList}\item 
+\hypertarget{classObject_a96d2fd2a5b913832dd01ed7bb94d6bee}{
+bool \hyperlink{classObject_a96d2fd2a5b913832dd01ed7bb94d6bee}{send\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L, \hyperlink{classComponent}{\-Component} $\ast$exclude=\-N\-U\-L\-L) const }
+\label{d8/d4b/classObject_a96d2fd2a5b913832dd01ed7bb94d6bee}
+
+\begin{DoxyCompactList}\small\item\em \-Same as send\-Message, but the caller expects a result to be written to $\ast$data. \-Differences to send\-Message\-: 1. stops as soon as a component gives a result 2. returns true if a result is there, false otherwise. \end{DoxyCompactList}\item 
+\hypertarget{classObject_aad9150d0a134febaa6cb645fc6f0f81b}{
+\hyperlink{classComponent}{\-Component} $\ast$ {\bfseries get\-Component} (string \hyperlink{classObject_af849c7778ff8399ac4440062ac5a38a3}{name})}
+\label{d8/d4b/classObject_aad9150d0a134febaa6cb645fc6f0f81b}
+
+\item 
+\hypertarget{classObject_abebc48ad87f55931b69a9e1e1dd8ff2f}{
+void \hyperlink{classObject_abebc48ad87f55931b69a9e1e1dd8ff2f}{exit} ()}
+\label{d8/d4b/classObject_abebc48ad87f55931b69a9e1e1dd8ff2f}
+
+\begin{DoxyCompactList}\small\item\em \-Destroys the object and all its components. \-Caution, deletes itself! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObject_af849c7778ff8399ac4440062ac5a38a3}{
+string \hyperlink{classObject_af849c7778ff8399ac4440062ac5a38a3}{name}}
+\label{d8/d4b/classObject_af849c7778ff8399ac4440062ac5a38a3}
+
+\begin{DoxyCompactList}\small\item\em the name with which this object was created \end{DoxyCompactList}\item 
+\hypertarget{classObject_aa7caf12457afb8b79152cfaf0158c827}{
+int \hyperlink{classObject_aa7caf12457afb8b79152cfaf0158c827}{id}}
+\label{d8/d4b/classObject_aa7caf12457afb8b79152cfaf0158c827}
+
+\begin{DoxyCompactList}\small\item\em \-The unique \-I\-D of the object with which it can be looked up in the object manager. \end{DoxyCompactList}\item 
+\hypertarget{classObject_ac6cad05b3feb870850791666b8568310}{
+int \hyperlink{classObject_ac6cad05b3feb870850791666b8568310}{creator\-I\-D}}
+\label{d8/d4b/classObject_ac6cad05b3feb870850791666b8568310}
+
+\begin{DoxyCompactList}\small\item\em \-The id of the object which created this object. \end{DoxyCompactList}\item 
+\hypertarget{classObject_a90fa2f2b5de115aaf2f3afeb9eb7e229}{
+\hyperlink{classComponentMesh}{\-Component\-Mesh} $\ast$ \hyperlink{classObject_a90fa2f2b5de115aaf2f3afeb9eb7e229}{mesh}}
+\label{d8/d4b/classObject_a90fa2f2b5de115aaf2f3afeb9eb7e229}
+
+\begin{DoxyCompactList}\small\item\em \-Quick way to get the mesh component. \end{DoxyCompactList}\item 
+\hypertarget{classObject_ada6b49bf1d36879f1ce84cd29d5f8e8e}{
+\-Vector3 \hyperlink{classObject_ada6b49bf1d36879f1ce84cd29d5f8e8e}{position}}
+\label{d8/d4b/classObject_ada6b49bf1d36879f1ce84cd29d5f8e8e}
+
+\begin{DoxyCompactList}\small\item\em \-Quick way to get the position. \end{DoxyCompactList}\item 
+\hypertarget{classObject_afd5675ae29e7e79c2d39f0d21fc92fa2}{
+int \hyperlink{classObject_afd5675ae29e7e79c2d39f0d21fc92fa2}{tag}}
+\label{d8/d4b/classObject_afd5675ae29e7e79c2d39f0d21fc92fa2}
+
+\begin{DoxyCompactList}\small\item\em \-Here, components can enter bit flags from \-Object\-Tag to enable some quick checks. \end{DoxyCompactList}\item 
+\hypertarget{classObject_aeaeabbec837aa3b66f2591798e006ed2}{
+\-Trigger\-Type \hyperlink{classObject_aeaeabbec837aa3b66f2591798e006ed2}{listen\-To}}
+\label{d8/d4b/classObject_aeaeabbec837aa3b66f2591798e006ed2}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classTrigger}{\-Trigger} types the object wants to listen to. \end{DoxyCompactList}\item 
+\hypertarget{classObject_a35d64b5d4f34d6d9a9dc6ee2a04d39dc}{
+\-Object\-Delete\-State \hyperlink{classObject_a35d64b5d4f34d6d9a9dc6ee2a04d39dc}{deleted}}
+\label{d8/d4b/classObject_a35d64b5d4f34d6d9a9dc6ee2a04d39dc}
+
+\begin{DoxyCompactList}\small\item\em \-If the object should be deleted / removed from the object list in the next delete loop. \end{DoxyCompactList}\item 
+\hypertarget{classObject_a07e90f915ed305aee66a34f67702900a}{
+\-Scene\-Node $\ast$ \hyperlink{classObject_a07e90f915ed305aee66a34f67702900a}{anchor\-Node}}
+\label{d8/d4b/classObject_a07e90f915ed305aee66a34f67702900a}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classObject}{\-Object} anchor scene node (if edit\-Objects is true) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Represents a game object, which is a collection of components (-\/$>$ \hyperlink{component_8h_source}{component.\-h}) 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/object.\-h\item 
+src/object.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{classPlayerInputHandler}{
+\section{\-Player\-Input\-Handler \-Class \-Reference}
+\label{db/d40/classPlayerInputHandler}\index{\-Player\-Input\-Handler@{\-Player\-Input\-Handler}}
+}
+
+
+\-Input handler for player control. \-Pseudo-\/\-Singleton\-: use the global variable player\-Input\-Handler.  
+
+
+
+
+{\ttfamily \#include $<$component\-Player.\-h$>$}
+
+\-Inheritance diagram for \-Player\-Input\-Handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{db/d40/classPlayerInputHandler}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPlayerInputHandler_abc4095c729728dceeb68ae839d8e6db1}{
+virtual void \hyperlink{classPlayerInputHandler_abc4095c729728dceeb68ae839d8e6db1}{update} (float time\-Since\-Last\-Frame)}
+\label{db/d40/classPlayerInputHandler_abc4095c729728dceeb68ae839d8e6db1}
+
+\begin{DoxyCompactList}\small\item\em \-Can be used to query some input states directly. \end{DoxyCompactList}\item 
+\hypertarget{classPlayerInputHandler_a167344af0c00c75ffb694851b6642b01}{
+virtual bool {\bfseries mouse\-Moved} (const \-O\-I\-S\-::\-Mouse\-Event \&evt)}
+\label{db/d40/classPlayerInputHandler_a167344af0c00c75ffb694851b6642b01}
+
+\item 
+\hypertarget{classPlayerInputHandler_a7fe3974ac2a2fa1f6f55e842dda544e1}{
+virtual bool {\bfseries mouse\-Pressed} (const \-O\-I\-S\-::\-Mouse\-Event \&evt, \-O\-I\-S\-::\-Mouse\-Button\-I\-D btn)}
+\label{db/d40/classPlayerInputHandler_a7fe3974ac2a2fa1f6f55e842dda544e1}
+
+\item 
+\hypertarget{classPlayerInputHandler_a844e8461b7ee04d3397ff284650dc204}{
+virtual bool {\bfseries key\-Pressed} (const \-O\-I\-S\-::\-Key\-Event \&evt)}
+\label{db/d40/classPlayerInputHandler_a844e8461b7ee04d3397ff284650dc204}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPlayerInputHandler_a6fac2a632c6e298e8121e8b872b9c71f}{
+void {\bfseries handle\-Mouse} (float time\-Since\-Last\-Frame)}
+\label{db/d40/classPlayerInputHandler_a6fac2a632c6e298e8121e8b872b9c71f}
+
+\item 
+\hypertarget{classPlayerInputHandler_ae48e66c518d5cbee69546698a48049ed}{
+void {\bfseries handle\-Keyboard} (float time\-Since\-Last\-Frame)}
+\label{db/d40/classPlayerInputHandler_ae48e66c518d5cbee69546698a48049ed}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPlayerInputHandler_a5dec7946d871772783da38d39bb02a7f}{
+\-Radian {\bfseries rot\-X}}
+\label{db/d40/classPlayerInputHandler_a5dec7946d871772783da38d39bb02a7f}
+
+\item 
+\hypertarget{classPlayerInputHandler_abfb5a452976f9e803d176945a539b711}{
+\-Radian {\bfseries rot\-Y}}
+\label{db/d40/classPlayerInputHandler_abfb5a452976f9e803d176945a539b711}
+
+\item 
+\hypertarget{classPlayerInputHandler_a1a6a109b28f7cb63939b2ba7be287b8e}{
+bool {\bfseries text\-Entry\-Line\-Active}}
+\label{db/d40/classPlayerInputHandler_a1a6a109b28f7cb63939b2ba7be287b8e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Input handler for player control. \-Pseudo-\/\-Singleton\-: use the global variable player\-Input\-Handler. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Player.\-h\item 
+src/component\-Player.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\hypertarget{classComponentLight}{
+\section{\-Component\-Light \-Class \-Reference}
+\label{d1/daa/classComponentLight}\index{\-Component\-Light@{\-Component\-Light}}
+}
+
+
+\-Light \hyperlink{classComponent}{\-Component}.  
+
+
+
+
+{\ttfamily \#include $<$component\-Light.\-h$>$}
+
+\-Inheritance diagram for \-Component\-Light\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d1/daa/classComponentLight}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentLight_ac1a452429644772aa159d6fb7b9168d3}{
+virtual void \hyperlink{classComponentLight_ac1a452429644772aa159d6fb7b9168d3}{exit} ()}
+\label{d1/daa/classComponentLight_ac1a452429644772aa159d6fb7b9168d3}
+
+\begin{DoxyCompactList}\small\item\em \-Must free all allocated memory and delete itself. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentLight_a7782881c1c2c38287c6f3d9d53eb8acf}{handle\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classComponentLight_a0510cdf9e4488e0ac07c262d8b02544d}{handle\-Get\-Message} (int msg\-I\-D, void $\ast$data, void $\ast$data2=\-N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em \-Must process the message; for the details of the return value semantic, see the detailed description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classComponentLight_a55611e0f3afc52acb3c817f3addb7fe1}{
+\-Scene\-Node $\ast$ {\bfseries scene\-Node}}
+\label{d1/daa/classComponentLight_a55611e0f3afc52acb3c817f3addb7fe1}
+
+\item 
+\hypertarget{classComponentLight_a6eb7e2d16411f641beea38f30d6218a9}{
+\-Light $\ast$ {\bfseries light}}
+\label{d1/daa/classComponentLight_a6eb7e2d16411f641beea38f30d6218a9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Light \hyperlink{classComponent}{\-Component}. 
+
+\-Currently only point lights are supported. \-Parameters\-:\par
+ \-Radius \mbox{[}required\mbox{]} -\/ the radius of the point light (parameter\-: value)\par
+ \-Color -\/ the light color (parameters\-: r, g, b) 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classComponentLight_a0510cdf9e4488e0ac07c262d8b02544d}{
+\index{\-Component\-Light@{\-Component\-Light}!handle\-Get\-Message@{handle\-Get\-Message}}
+\index{handle\-Get\-Message@{handle\-Get\-Message}!ComponentLight@{\-Component\-Light}}
+\subsubsection[{handle\-Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Light\-::handle\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d1/daa/classComponentLight_a0510cdf9e4488e0ac07c262d8b02544d}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For \-\_\-\-G\-E\-T\-\_\- messages\-: return true if the search for the correct component should continue, false if the result was passed in and the search should be stopped 
+
+\-Implements \hyperlink{classComponent_aee22af179cf21f929cd273a22bc6324c}{\-Component}.
+
+\hypertarget{classComponentLight_a7782881c1c2c38287c6f3d9d53eb8acf}{
+\index{\-Component\-Light@{\-Component\-Light}!handle\-Message@{handle\-Message}}
+\index{handle\-Message@{handle\-Message}!ComponentLight@{\-Component\-Light}}
+\subsubsection[{handle\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Component\-Light\-::handle\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\-I\-D, }
+\item[{void $\ast$}]{data, }
+\item[{void $\ast$}]{data2 = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{d1/daa/classComponentLight_a7782881c1c2c38287c6f3d9d53eb8acf}
+
+
+\-Must process the message; for the details of the return value semantic, see the detailed description. 
+
+\-For normal messages\-: \hyperlink{classComponent}{\-Component} must return false if it has deleted itself or the trigger which caused the message (\char`\"{}it doesn't want to live on\char`\"{}) 
+
+\-Implements \hyperlink{classComponent_a5c34b629ba4b6e2925045ef965d4d560}{\-Component}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/component\-Light.\-h\item 
+src/component\-Light.\-cpp\end{DoxyCompactItemize}

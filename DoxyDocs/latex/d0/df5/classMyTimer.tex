@@ -1,0 +1,81 @@
+\hypertarget{classMyTimer}{
+\section{\-My\-Timer \-Class \-Reference}
+\label{d0/df5/classMyTimer}\index{\-My\-Timer@{\-My\-Timer}}
+}
+
+
+\-Measures time intervals.  
+
+
+
+
+{\ttfamily \#include $<$timer.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMyTimer_a75440365bcfd96d34be38d8a0c9c014b}{
+\hyperlink{classMyTimer_a75440365bcfd96d34be38d8a0c9c014b}{\-My\-Timer} ()}
+\label{d0/df5/classMyTimer_a75440365bcfd96d34be38d8a0c9c014b}
+
+\begin{DoxyCompactList}\small\item\em \-Standard constructor, starts the timer. \-You don't need to call start explicitly. \end{DoxyCompactList}\item 
+\hypertarget{classMyTimer_a34d3d8fa5340709ffa65c6da8f641b80}{
+void \hyperlink{classMyTimer_a34d3d8fa5340709ffa65c6da8f641b80}{start} ()}
+\label{d0/df5/classMyTimer_a34d3d8fa5340709ffa65c6da8f641b80}
+
+\begin{DoxyCompactList}\small\item\em \-Resets the timer to zero. \end{DoxyCompactList}\item 
+\hypertarget{classMyTimer_a31f7879ce9e912151bb6d55538964005}{
+void \hyperlink{classMyTimer_a31f7879ce9e912151bb6d55538964005}{pause} ()}
+\label{d0/df5/classMyTimer_a31f7879ce9e912151bb6d55538964005}
+
+\begin{DoxyCompactList}\small\item\em \-Pauses the timer. \end{DoxyCompactList}\item 
+\hypertarget{classMyTimer_a3dfc5de2fd5cd294f2b46fd7be41757b}{
+void \hyperlink{classMyTimer_a3dfc5de2fd5cd294f2b46fd7be41757b}{resume} ()}
+\label{d0/df5/classMyTimer_a3dfc5de2fd5cd294f2b46fd7be41757b}
+
+\begin{DoxyCompactList}\small\item\em \-Resumes the timer. \end{DoxyCompactList}\item 
+\hypertarget{classMyTimer_a25463345b8562ab2baba586e60c11e71}{
+void \hyperlink{classMyTimer_a25463345b8562ab2baba586e60c11e71}{set\-Time} (float t)}
+\label{d0/df5/classMyTimer_a25463345b8562ab2baba586e60c11e71}
+
+\begin{DoxyCompactList}\small\item\em \-Sets the time. \end{DoxyCompactList}\item 
+\hypertarget{classMyTimer_ad9c510838c0e2dc67069aceeefdb7e61}{
+float \hyperlink{classMyTimer_ad9c510838c0e2dc67069aceeefdb7e61}{get\-Time} ()}
+\label{d0/df5/classMyTimer_ad9c510838c0e2dc67069aceeefdb7e61}
+
+\begin{DoxyCompactList}\small\item\em \-Returns the time in seconds since the timer was started. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMyTimer_a97961060bd3fd25ee701e2430c53d217}{
+static long long \hyperlink{classMyTimer_a97961060bd3fd25ee701e2430c53d217}{abs\-Time} ()}
+\label{d0/df5/classMyTimer_a97961060bd3fd25ee701e2430c53d217}
+
+\begin{DoxyCompactList}\small\item\em \-Returns the time in milliseconds since the system is running. \end{DoxyCompactList}\item 
+\hypertarget{classMyTimer_ab91eb329e15b5ff9ffa0de9e6286aa5b}{
+static void \hyperlink{classMyTimer_ab91eb329e15b5ff9ffa0de9e6286aa5b}{sleep} (long long interval)}
+\label{d0/df5/classMyTimer_ab91eb329e15b5ff9ffa0de9e6286aa5b}
+
+\begin{DoxyCompactList}\small\item\em \-Sleeps the specified number of milliseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMyTimer_a0ced069fba5774d6753adba174013fbe}{
+long long \hyperlink{classMyTimer_a0ced069fba5774d6753adba174013fbe}{time\-Value}}
+\label{d0/df5/classMyTimer_a0ced069fba5774d6753adba174013fbe}
+
+\begin{DoxyCompactList}\small\item\em \-If running, the time the timer was started; if paused, the time the timer was running before. \end{DoxyCompactList}\item 
+\hypertarget{classMyTimer_a2bba9fc5ee49bc266f3960ec03796a95}{
+bool {\bfseries paused}}
+\label{d0/df5/classMyTimer_a2bba9fc5ee49bc266f3960ec03796a95}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Measures time intervals. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/timer.\-h\item 
+src/timer.\-cpp\end{DoxyCompactItemize}

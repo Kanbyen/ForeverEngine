@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="EditorRoot" >
+        <Property Name="Font" Value="Sans" />
+        <Property Name="InheritsAlpha" Value="False" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="MousePassThroughEnabled" Value="True" />
+        
+        <Window Type="Style/TabControl" Name="EditorTabControl" >
+            <Property Name="Font" Value="Sans" />
+            <Property Name="Alpha" Value="0.7" />
+            <Property Name="TabHeight" Value="{0,26.1008}" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="TabPanePosition" Value="Top" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0.72,0},{1,0},{1,0}}" />
+            <Window Type="DefaultWindow" Name="EditorRoot//Tab 1" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Generate" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                <Window Type="Style/Button" Name="Generate_Cube" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Cubes" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.2,0},{0.25,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Generate_Sphere" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Spheres" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.25,0},{0.2,0},{0.5,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Generate_PerlinNoise" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Perlin Noise" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.2,0},{0,0},{0.4,0},{0.25,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Generate_Planes" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Planes" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.2,0},{0.25,0},{0.4,0},{0.5,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Generate_ForeverWar" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Forever War" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.2,0},{0.5,0},{0.4,0},{0.75,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Generate_ForeverWarMini" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Forever War - mini" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.2,0},{0.75,0},{0.4,0},{1,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Generate_Terrain" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Terrain" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.5,0},{0.2,0},{0.75,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Generate_PerlinNoiseCave" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Perlin Noise Cave" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.75,0},{0.2,0},{1,0}}" />
+                </Window>
+                <Window Type="Style/StaticText" Name="VolumeScale" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Volume scale" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.8,0},{0,0},{1,0},{0.22,0}}" />
+                </Window>
+                <Window Type="Style/Editbox" Name="VolumeScaleEdit" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="VOLUME SCALE" />
+                    <Property Name="MaxTextLength" Value="1073741823" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.8,0},{0.22,0},{1,0},{0.44,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Generate_Invert" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Invert" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.8,0},{0.75,0},{1,0},{1,0}}" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="EditorRoot//Tab 2" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Edit" />
+                <Property Name="Visible" Value="False" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                <Window Type="Style/StaticText" Name="BrushSize" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Brush radius" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.15,0},{0.22,0}}" />
+                </Window>
+                <Window Type="Style/Editbox" Name="BrushSizeEdit" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="BRUSH SIZE" />
+                    <Property Name="MaxTextLength" Value="1073741823" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.22,0},{0.15,0},{0.44,0}}" />
+                </Window>
+                <Window Type="Style/StaticText" Name="BrushTexture" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Brush texture" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.56,0},{0.15,0},{0.78,0}}" />
+                </Window>
+                <Window Type="Style/Editbox" Name="BrushTextureEdit" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="BRUSH TEX" />
+                    <Property Name="MaxTextLength" Value="1073741823" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.78,0},{0.15,0},{1,0}}" />
+                </Window>
+                <Window Type="Style/StaticText" Name="BrushShape" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Brush shape" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.15,0},{0,0},{0.3,0},{0.22,0}}" />
+                </Window>
+                <Window Type="Style/Listbox" Name="BrushShapeEdit" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.15,0},{0.22,0},{0.3,0},{1,0}}" />
+                </Window>
+                <Window Type="Style/StaticText" Name="BrushOp" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Operation" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.3,0},{0,0},{0.5,0},{0.22,0}}" />
+                </Window>
+                <Window Type="Style/Listbox" Name="BrushOpEdit" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.3,0},{0.22,0},{0.5,0},{1,0}}" />
+                </Window>
+                <Window Type="Style/Checkbox" Name="AutoTexturize" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Auto-texturize" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.75,0},{0,0},{1,0},{0.22,0}}" />
+                </Window>
+                <Window Type="Style/Checkbox" Name="FloatingRockReduction" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Floating rock reduction" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.75,0},{0.22,0},{1,0},{0.44,0}}" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="EditorRoot//Tab 3" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Objects" />
+                <Property Name="Visible" Value="False" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                
+                <Window Type="Style/Listbox" Name="SpawnObjectEdit" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.3,0},{.88,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="SpawnObject" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Create" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.88,0},{0.3,0},{1,0}}" />
+                </Window>
+                
+                <Window Type="Style/Button" Name="DeleteObject" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Delete" />
+                    <Property Name="Enabled" Value="False" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.75,0},{0,0},{1,0},{0.22,0}}" />
+                </Window>
+                <Window Type="Style/Checkbox" Name="RunSimulation" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Run simulation" />
+                    <Property Name="Selected" Value="True" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.75,0},{0.78,0},{1,0},{1,0}}" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="EditorRoot//Tab 4" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Autotexture" />
+                <Property Name="Visible" Value="False" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                <Window Type="Style/StaticText" Name="AutotexTop" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Top" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.15,0},{0.2,0}}" />
+                </Window>
+                <Window Type="Style/Editbox" Name="AutotexTopEdit" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="TOP" />
+                    <Property Name="MaxTextLength" Value="1073741823" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.15,0},{0,0},{0.3,0},{0.2,0}}" />
+                </Window>
+                <Window Type="Style/StaticText" Name="AutotexSide" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Side" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.2,0},{0.15,0},{0.4,0}}" />
+                </Window>
+                <Window Type="Style/Editbox" Name="AutotexSideEdit" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="SIDE" />
+                    <Property Name="MaxTextLength" Value="1073741823" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.15,0},{0.2,0},{0.3,0},{0.4,0}}" />
+                </Window>
+                <Window Type="Style/StaticText" Name="AutotexInner1" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Inner1" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.4,0},{0.15,0},{0.6,0}}" />
+                </Window>
+                <Window Type="Style/Editbox" Name="AutotexInner1Edit" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="INNER1" />
+                    <Property Name="MaxTextLength" Value="1073741823" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.15,0},{0.4,0},{0.3,0},{0.6,0}}" />
+                </Window>
+                <Window Type="Style/StaticText" Name="AutotexInner2" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Inner2" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.6,0},{0.15,0},{0.8,0}}" />
+                </Window>
+                <Window Type="Style/Editbox" Name="AutotexInner2Edit" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="INNER2" />
+                    <Property Name="MaxTextLength" Value="1073741823" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.15,0},{0.6,0},{0.3,0},{0.8,0}}" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="EditorRoot//Tab 5" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Paging" />
+                <Property Name="Visible" Value="False" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                <Window Type="Style/RadioButton" Name="PagingModeClosed" >
+				    <Property Name="Text" Value="closed mode" />
+				    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+				    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0,0},{0.15,0},{0.2,0}}" />
+				</Window>
+                <Window Type="Style/RadioButton" Name="PagingModeOpen" >
+				    <Property Name="Text" Value="open mode" />
+				    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+				    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.2,0},{0.15,0},{0.4,0}}" />
+				    <Property Name="Selected" Value="true" />
+				</Window>
+                <Window Type="Style/Checkbox" Name="AutomaticPaging" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Automatic" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.4,0},{0.15,0},{0.6,0}}" />
+                    <Property Name="Selected" Value="true" />
+                </Window>
+				<Window Type="Style/StaticText" Name="MoveWindow" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Move window" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.15,0},{0,0},{0.33,0},{0.2,0}}" />
+                </Window>
+                
+                <Window Type="Style/Button" Name="MoveWindowPX" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="+X" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.15,0},{0.2,0},{0.18,0},{0.4,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="MoveWindowMX" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="-X" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.18,0},{0.2,0},{0.21,0},{0.4,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="MoveWindowPY" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="+Y" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.21,0},{0.2,0},{0.24,0},{0.4,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="MoveWindowMY" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="-Y" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.24,0},{0.2,0},{0.27,0},{0.4,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="MoveWindowPZ" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="+Z" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.27,0},{0.2,0},{0.30,0},{0.4,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="MoveWindowMZ" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="-Z" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.30,0},{0.2,0},{0.33,0},{0.4,0}}" />
+                </Window>
+                
+                <Window Type="Style/Checkbox" Name="DisplayFog" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Display fog" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.75,0},{0.78,0},{1,0},{1,0}}" />
+                    <Property Name="Selected" Value="false" />
+                </Window>
+                
+				<Window Type="Style/StaticText" Name="YourPos" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="YOUR POS" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.8,0},{0,0},{1,0},{0.2,0}}" />
+                </Window>
+				<Window Type="Style/StaticText" Name="VolumePos" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="VOLUME POS" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.8,0},{0.2,0},{1,0},{0.4,0}}" />
+                </Window>          
+            </Window>
+            <Window Type="DefaultWindow" Name="EditorRoot//Tab 7" >
+                <Property Name="Font" Value="Sans" />
+                <Property Name="Text" Value="Storage" />
+                <Property Name="Visible" Value="False" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                <Window Type="Style/Button" Name="Save_Voxel_Data" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Save voxel data" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.2,0},{0.25,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Load_Voxel_Data" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Load voxel data" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.2,0},{0,0},{0.4,0},{0.25,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Save_Object_Data" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Save object data" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.25,0},{0.2,0},{0.5,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Load_Object_Data" >
+                    <Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Load object data" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.2,0},{0.25,0},{0.4,0},{0.5,0}}" />
+                </Window>
+                <Window Type="Style/Button" Name="Load_All_Data" >
+                	<Property Name="Font" Value="Sans" />
+                    <Property Name="Text" Value="Load all data" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.75,0},{0.2,0},{1,0}}" />
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

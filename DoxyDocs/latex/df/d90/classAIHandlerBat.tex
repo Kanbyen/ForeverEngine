@@ -1,0 +1,149 @@
+\hypertarget{classAIHandlerBat}{
+\section{\-A\-I\-Handler\-Bat \-Class \-Reference}
+\label{df/d90/classAIHandlerBat}\index{\-A\-I\-Handler\-Bat@{\-A\-I\-Handler\-Bat}}
+}
+
+
+\-A\-I handler for bats.  
+
+
+
+
+{\ttfamily \#include $<$ai\-Handler\-Bat.\-h$>$}
+
+\-Inheritance diagram for \-A\-I\-Handler\-Bat\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{df/d90/classAIHandlerBat}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIHandlerBat_aa8367eed1b40136350017b5f4600fd15}{
+void {\bfseries get\-Target\-From\-List} (\-A\-I\-Perception\-::\-Perception\-Map \&list, bool pick\-Last\-Percepted)}
+\label{df/d90/classAIHandlerBat_aa8367eed1b40136350017b5f4600fd15}
+
+\item 
+\hypertarget{classAIHandlerBat_a70aef0197e2625b344909a5bbe41d734}{
+void {\bfseries remove\-Targets\-Without\-Attitude\-From\-List} (\-A\-I\-Perception\-::\-Perception\-Map \&list, int attitude\-To\-Preserve)}
+\label{df/d90/classAIHandlerBat_a70aef0197e2625b344909a5bbe41d734}
+
+\item 
+\hypertarget{classAIHandlerBat_a6e6cea09fcb6aba2f48afb8d4abe3e80}{
+void {\bfseries do\-Target\-Selection} ()}
+\label{df/d90/classAIHandlerBat_a6e6cea09fcb6aba2f48afb8d4abe3e80}
+
+\item 
+\hypertarget{classAIHandlerBat_a216bba342106f58ed01229280889631c}{
+void \hyperlink{classAIHandlerBat_a216bba342106f58ed01229280889631c}{notify\-Neighbours\-Of\-Percepted\-Agents} ()}
+\label{df/d90/classAIHandlerBat_a216bba342106f58ed01229280889631c}
+
+\begin{DoxyCompactList}\small\item\em \-Sends a \-C\-O\-M\-P\-M\-S\-G\-\_\-\-A\-I\-\_\-\-P\-E\-R\-C\-E\-P\-T\-I\-O\-N\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N to all friendly neighbours. \end{DoxyCompactList}\item 
+\hypertarget{classAIHandlerBat_abd619bf0e8e3ad05711ca79f2850323b}{
+virtual void {\bfseries perception\-Notification} (\hyperlink{classAIPerception}{\-A\-I\-Perception} $\ast$msg)}
+\label{df/d90/classAIHandlerBat_abd619bf0e8e3ad05711ca79f2850323b}
+
+\item 
+\hypertarget{classAIHandlerBat_a4033a9f60581fb9abdd24981c3ed1bcc}{
+virtual void {\bfseries attacked\-By} (\hyperlink{classObject}{\-Object} $\ast$obj, float damage)}
+\label{df/d90/classAIHandlerBat_a4033a9f60581fb9abdd24981c3ed1bcc}
+
+\item 
+\hypertarget{classAIHandlerBat_af11978aa6e8e975a0221de7a941327c6}{
+virtual void {\bfseries pos\-Update} (float time\-Since\-Last\-Frame)}
+\label{df/d90/classAIHandlerBat_af11978aa6e8e975a0221de7a941327c6}
+
+\item 
+\hypertarget{classAIHandlerBat_abcce1fe85cd30492655b30e0187bcf6d}{
+virtual void {\bfseries logic\-Update} ()}
+\label{df/d90/classAIHandlerBat_abcce1fe85cd30492655b30e0187bcf6d}
+
+\item 
+\hypertarget{classAIHandlerBat_a30c39cfc0a39d9f2b526cdb9aa5f5436}{
+virtual void {\bfseries init} ()}
+\label{df/d90/classAIHandlerBat_a30c39cfc0a39d9f2b526cdb9aa5f5436}
+
+\item 
+\hypertarget{classAIHandlerBat_ad45bfdddf777d4183ca75c21c4966347}{
+virtual void {\bfseries exit} ()}
+\label{df/d90/classAIHandlerBat_ad45bfdddf777d4183ca75c21c4966347}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAIHandlerBat_ac2317e50d6586d3ab2cfdfad373dfa35}{
+\hyperlink{classAIPerception}{\-A\-I\-Perception} $\ast$ {\bfseries perception}}
+\label{df/d90/classAIHandlerBat_ac2317e50d6586d3ab2cfdfad373dfa35}
+
+\item 
+\hypertarget{classAIHandlerBat_a8667efbe5a60c62f98db5f06942c6010}{
+\hyperlink{classJitteredIntervalTimer}{\-Jittered\-Interval\-Timer} $\ast$ {\bfseries perception\-Timer}}
+\label{df/d90/classAIHandlerBat_a8667efbe5a60c62f98db5f06942c6010}
+
+\item 
+\hypertarget{classAIHandlerBat_a5f9a545cc10f4116b4ebca35375ad51d}{
+\hyperlink{classAIGetNeighbours}{\-A\-I\-Get\-Neighbours} $\ast$ {\bfseries neighbours}}
+\label{df/d90/classAIHandlerBat_a5f9a545cc10f4116b4ebca35375ad51d}
+
+\item 
+\hypertarget{classAIHandlerBat_aed7a97c75e44b2b802ee3ed3fd21ef91}{
+\hyperlink{classAIMovementController}{\-A\-I\-Movement\-Controller} $\ast$ {\bfseries movement\-Controller}}
+\label{df/d90/classAIHandlerBat_aed7a97c75e44b2b802ee3ed3fd21ef91}
+
+\item 
+\hypertarget{classAIHandlerBat_a499ac8c11e8b1953bd96dd57a902a341}{
+\hyperlink{classAIStateMachine}{\-A\-I\-State\-Machine}$<$ \hyperlink{classAIHandlerBat}{\-A\-I\-Handler\-Bat} $>$ $\ast$ {\bfseries state\-Machine}}
+\label{df/d90/classAIHandlerBat_a499ac8c11e8b1953bd96dd57a902a341}
+
+\item 
+\hypertarget{classAIHandlerBat_a599a9d131fba92900a239d25a366ae84}{
+float {\bfseries time}}
+\label{df/d90/classAIHandlerBat_a599a9d131fba92900a239d25a366ae84}
+
+\item 
+\hypertarget{classAIHandlerBat_a1136d7ad40f3d793a39788799ff7b532}{
+bool {\bfseries has\-Target}}
+\label{df/d90/classAIHandlerBat_a1136d7ad40f3d793a39788799ff7b532}
+
+\item 
+\hypertarget{classAIHandlerBat_a94b8ce0f83e1996d6d1ad33b1a4e89f4}{
+int {\bfseries target}}
+\label{df/d90/classAIHandlerBat_a94b8ce0f83e1996d6d1ad33b1a4e89f4}
+
+\item 
+\hypertarget{classAIHandlerBat_ae6ea6058e152781a4b04f3ba4fde4643}{
+\hyperlink{classAIPerceptedObject}{\-A\-I\-Percepted\-Object} $\ast$ {\bfseries target\-Entry}}
+\label{df/d90/classAIHandlerBat_ae6ea6058e152781a4b04f3ba4fde4643}
+
+\item 
+\hypertarget{classAIHandlerBat_a008b65b419add70e4ad5500573f880fd}{
+\-Vector3 {\bfseries guard\-Pos}}
+\label{df/d90/classAIHandlerBat_a008b65b419add70e4ad5500573f880fd}
+
+\item 
+\hypertarget{classAIHandlerBat_ad93b8f03768fe541598e8b19a5a1a189}{
+\-Vector3 {\bfseries desired\-Heading}}
+\label{df/d90/classAIHandlerBat_ad93b8f03768fe541598e8b19a5a1a189}
+
+\item 
+\hypertarget{classAIHandlerBat_a525fbf04d219c9f02af802b0e35f8ee7}{
+bt\-Vector3 {\bfseries angular\-Velocity}}
+\label{df/d90/classAIHandlerBat_a525fbf04d219c9f02af802b0e35f8ee7}
+
+\item 
+\hypertarget{classAIHandlerBat_a3a7ef49c368568e5cfe3cbf49b18daa1}{
+bool {\bfseries has\-Anim\-Fly}}
+\label{df/d90/classAIHandlerBat_a3a7ef49c368568e5cfe3cbf49b18daa1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A\-I handler for bats. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/ai\-Handler\-Bat.\-h\item 
+src/ai\-Handler\-Bat.\-cpp\end{DoxyCompactItemize}
